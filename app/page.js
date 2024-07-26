@@ -1,95 +1,35 @@
+import Link from "next/link";
 import Image from "next/image";
+import { comfort } from "./ui/fonts";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <div>
+        <h1>Invest in the future.</h1><br />
+        <p className={comfort.className}>Open a STARCH Monetary Systems account today and start your journey to financial independence.</p>
+        <Link href="/login"><a>Invest</a></Link>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      
+      <div>
+        <h1>Blockchain-powered platform for 100% security</h1><br />
+        <p className={comfort.className}>Use our user-friendly and secured platform with peace-of-mind nor compromise to achieve excellent customer satisfaction.</p>
+        <Link href="/components/platform"><a>Read more</a></Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      
+      <div>
+        <h1>Access funds that support your industry.</h1><br />
+        <p>Get funding for your SME to support your capital expenditure dreams.</p>
+        <Link href="/products/funding"><a>View Funds</a></Link>
       </div>
+      
+      <div>
+        <h1>Sell your products or offer your services</h1><br />
+        <p>Easily sell your products in our online shop or advertise your services in our marketplace to generate sales and boost mark=eting.</p>
+        <Link href="/sell"><a>Sell Now</a></Link>
+        <Link href="/advertise"><a>Advertise</a></Link>
+      </div>  
     </main>
   );
 }
