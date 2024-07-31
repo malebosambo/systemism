@@ -1,6 +1,5 @@
-import { Header } from "./components/header"
-import { footer } from "./components/footer"
-import { prime } from "./ui/fonts";
+import Header from "./components/header";
+import Footer from "./components/footer";
 import "./globals.css";
 
 export const metadata = {
@@ -11,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${prime.className} antialised`}>
+      <body>
         <div><Header /></div>
         <div>{children}</div>
         <div><Footer /></div>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Dashboard() {
   
   return (
@@ -6,12 +8,12 @@ export default function Dashboard() {
         <h1>Hello</h1>
       </div>
       <div>
-        <Link href="/profile"><a>Profile</a></Link>
+        <Link href="/profile">Profile</Link>
       </div>
       <div className="Financials">
         <div>
           <h4>Cash Flow</h4><br />
-          {StatsCard}
+          
         </div>
       </div>
     </div>

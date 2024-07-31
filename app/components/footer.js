@@ -1,4 +1,4 @@
-import { Navigation } from "./navigation"
+import Navigation from "./navigation"
 import Link from "next/link"
 
 export default function Footer() {
@@ -11,9 +11,9 @@ export default function Footer() {
       </div>
       <div className="Contacts">
         <p>E-mail:</p>
-        <Link href="hello@starch.co.za"><a>hello@starch.co.za</a></Link>
+        <Link href="hello@starch.co.za">hello@starch.co.za</Link>
         <p>Tel:</p>
-        <Link href="+27630013711"><a>063 001 3711</a></Link>
+        <Link href="+27630013711">063 001 3711</Link>
       </div>
       <div className="Links">
         <Navigation />
