@@ -1,5 +1,4 @@
 import { clientPromise } from "./mongodb"
-import { useEffect } from "react"
 import { useRouter } from "next/router"
 
 export function signIn(credentials, formData) {
@@ -20,11 +19,7 @@ export function signIn(credentials, formData) {
       console.log(admin);
   }
   
-  /*
-  useEffect(() => {
-    router.push("/login")
-  })
-  */
+
 }
 
 export function signOut() {
