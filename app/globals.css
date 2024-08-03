@@ -1,0 +1,48 @@
+@media only screen and (max-width: 600px) {
+  
+  .Header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .Home {
+    padding: 20px 10px;
+  }
+  
+  .Logo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Menu {
+    display: none;
+  }
+
+  .Menu-Visible {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    transition: right 0.4s;
+  }
+  
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+  
+  .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+}

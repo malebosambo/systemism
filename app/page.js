@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className="Home">
       <div>
         <h1>Invest in the future.</h1><br />
         <p>Open a STARCH Monetary Systems account today and start your journey to financial independence.</p>
