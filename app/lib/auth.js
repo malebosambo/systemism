@@ -1,9 +1,9 @@
 import { clientPromise } from "./mongodb"
-import { useRouter } from "next/router"
+
 
 export function signIn(credentials, formData) {
   
-  const router = useRouter();
+  
   
   const email = formData.get.email;
   const password = formData.get.password;
