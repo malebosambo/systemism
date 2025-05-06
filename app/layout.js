@@ -3,7 +3,7 @@ import Footer from "./components/footer";
 import "./globals.css";
 
 export const metadata = {
-  title: "STARCH Platform",
+  title: "SYSTEMISM",
   description: "Compound annual investments and business monetary solutions.",
 };
 

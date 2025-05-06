@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import Navigation from "./navigation"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "../../public/STARCH.png"
+import logo from "../../public/Systemism-Logo.png"
 
 export default function Header() {
   
@@ -18,12 +18,12 @@ export default function Header() {
         <div>
           <Link href="/"><Image src={logo} alt="Logo" style={{ height: "60px" }} /></Link>
         </div>
-        <div className="Mobile-Menu">
+        <div className="Mobile_Menu">
           <button onClick={showMenu} className={ !mobileMenu ? "" : "Menu" }>=</button>
           <button onClick={showMenu} className={ mobileMenu ? "" : "Menu" }>X</button>
         </div>
       </div>
-      <div className={ mobileMenu ? "Menu-Visible" : "Menu" }>
+      <div className={ mobileMenu ? "Menu_Visible" : "Menu" }>
         <Navigation />
       </div>
     </div>
