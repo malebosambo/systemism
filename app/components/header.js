@@ -15,8 +15,8 @@ export default function Header() {
   return (
     <div className="Header">
       <div className="Logo">
-        <div>
-          <Link href="/"><Image src={logo} alt="Logo" className="Image_Logo" style={{ height: "60px" }} /></Link>
+        <div className="Image_Logo">
+          <Link href="/"><Image src={logo} alt="Logo" height={50} width={50} /></Link>
         </div>
         <div className="Mobile_Menu">
           <button onClick={showMenu} className={ !mobileMenu ? "" : "Menu" }>=</button>
