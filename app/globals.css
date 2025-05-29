@@ -63,6 +63,15 @@
     display: none;
   }
 
+  .Navigation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Navigation > div {
+    padding-right: 10px;
+  }
+
   .Navigation > a {
     color: white;
     text-decoration: none;
