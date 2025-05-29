@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="Home">
       <div>
-        <h1>Invest in the future.</h1><br />
-        <p>Open a STARCH Monetary Systems account today and start your journey to financial independence.</p>
+        <h1>Products and services for individual and institutional growth.</h1><br />
+        <p>Open a SYSTEMISM Investment account today and start your journey to financial independence.</p>
         <Link href="/login">Invest</Link>
       </div>
       
