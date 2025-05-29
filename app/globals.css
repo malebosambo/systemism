@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 @media only screen and (max-width: 600px) {
   
   .Header {
@@ -40,7 +45,6 @@
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
   
   .Header {
-    background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -72,7 +76,7 @@
     padding-right: 10px;
   }
 
-  .Navigation > a {
+  .Navigation > div > a {
     color: white;
     text-decoration: none;
   }
