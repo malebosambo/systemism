@@ -6,7 +6,7 @@ export default function Navigation() {
     <div className="Navigation">
       <div><Link href="/">Home</Link></div>
       <div><Link href="/invest">Invest</Link></div>
-      <div><Link href="/funds">Funding</Link></div>
+      <div><Link href="/funding">Funding</Link></div>
       <div><Link href="/shop">Shop</Link></div>
       <div><Link href="/listing">Listing</Link></div>
       <div><Link href="/trading">Trading</Link></div>

@@ -1,24 +1,19 @@
 import { clientPromise } from "./mongodb"
 
-
 export function signIn(credentials, formData) {
-  
-  
   
   const email = formData.get.email;
   const password = formData.get.password;
   
   async function findUser() {
-    
       
-      const database = clientPromise.db("administration");
-      const admins = database.collection("administration");
+      const database = await clientPromise.db("website");
+      const users = await database.collection("users");
       
-      const admin = await admins.find();
+      const user = await users.find();
     
-      console.log(admin);
+      console.log(user);
   }
-  
 
 }
 

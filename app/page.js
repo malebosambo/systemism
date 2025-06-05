@@ -6,9 +6,10 @@ export default function Home() {
   return (
     <main className="Home">
       <div>
-        <h1>Products and services for individual and institutional growth.</h1><br />
-        <p>Open a SYSTEMISM Investment account today and start your journey to financial independence.</p>
-        <Link href="/login">Invest</Link>
+        <h1>Products and services for individual and institutional needs.</h1><br />
+        
+        <Link href="/login">Sign In</Link>
+        <Link href="/signup">Sign Up</Link>
       </div>
       
       <div>
@@ -25,10 +26,18 @@ export default function Home() {
       
       <div>
         <h1>Sell your products or offer your services</h1><br />
-        <p>Easily sell your products in our online shop or advertise your services in our marketplace to generate sales and boost mark=eting.</p>
+        <p>Easily sell your products in our online shop or advertise your services in our marketplace to generate sales and boost marketing.</p>
         <Link href="/sell">Sell Now</Link>
         <Link href="/advertise">Advertise</Link>
-      </div>  
+      </div>
+      
+      <div>
+        <h1>SMME Development</h1>
+      </div>to
+      
+      <div>
+        <h1>Forex trading at Your fingertips</h1>
+      </div>
     </main>
   );
 }
