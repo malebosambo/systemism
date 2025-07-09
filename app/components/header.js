@@ -23,6 +23,7 @@ export default function Header() {
           <button onClick={showMenu} className={ mobileMenu ? "" : "Menu" }>X</button>
         </div>
       </div>
+      
       <div className={ mobileMenu ? "Menu_Visible" : "Menu" }>
         <Navigation />
       </div>

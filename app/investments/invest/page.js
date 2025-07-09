@@ -1,8 +1,8 @@
-export default function Listings() {
+export default function Invest() {
   
   return (
     <div>
-      <div><h1>My Listings</h1></div>
+      <div><h1>Start Investing</h1></div>
       
       <div>
         

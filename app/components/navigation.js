@@ -8,9 +8,8 @@ export default function Navigation() {
       <div><Link href="/invest">Invest</Link></div>
       <div><Link href="/funding">Funding</Link></div>
       <div><Link href="/shop">Shop</Link></div>
-      <div><Link href="/listing">Listing</Link></div>
-      <div><Link href="/trading">Trading</Link></div>
-      <div><Link href="/business-development">SMME Development</Link></div>
+      <div><Link href="/directory">Directory</Link></div>
+      <div><Link href="/business-development">Business Development</Link></div>
       <div><Link href="/contacts">Contacts</Link></div>
       <div><Link href="/login">Login</Link></div>
       <div><Link href="/signup">Sign Up</Link></div>

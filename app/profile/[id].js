@@ -11,6 +11,13 @@ export default function Profile() {
       
       <div>
         <h1>Personal Details</h1>
+        <p>Email:</p>
+        <p>Cellphone:</p>
+      </div>
+      
+      <div>
+        <h1>Security Details</h1>
+        <p>Password</p>
       </div>
     </div>
   )
