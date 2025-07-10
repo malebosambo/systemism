@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="Home">
-      <div>
+      <div className="Home_Banner">
         <h1>Products and services for individual and institutional needs.</h1><br />
         
-        <Link href="/login">Sign In</Link>
-        <Link href="/signup">Sign Up</Link>
+        <Link href="/../login">Sign In</Link>
+        <Link href="/../signup">Sign Up</Link>
       </div>
       
       <div>

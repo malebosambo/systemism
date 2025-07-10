@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: black;
   color: white;
@@ -6,6 +10,7 @@ body {
 @media only screen and (max-width: 600px) {
   
   .Header {
+    background-color: white;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -13,6 +18,10 @@ body {
   
   .Home {
     padding: 20px 10px;
+  }
+
+  .Home_Banner {
+    padding: 90px 0;
   }
   
   .Logo {
