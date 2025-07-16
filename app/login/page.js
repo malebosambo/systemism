@@ -18,8 +18,8 @@ export default function SignIn() {
       
       <div>
         <Form action={signIn}>
-          <input type="email" name="email" placeholder="Email" onChange="" value={user.email} required />
-          <input type="password" name="password" placeholder="Password" onChange="" value={user.password} required />
+          <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
+          <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
           <button type="submit">Login</button>
         </Form>
       </div>

@@ -13,18 +13,18 @@ export default function Dashboard() {
       
       <div className="Investments_Overview">
         <div>
-          <h4>My Investments</h4>
+          <h4>Investments : </h4>
         </div>
         <div></div>
-        <Link href="/investments/my-investments">View</Link>
+        <Link href="/investments/">View</Link>
       </div>
       
       <div className="Funds_Overview">
         <div>
-          <h4>Active Funds</h4>
+          <h4>Funds: Active</h4>
         </div>
         <div></div>
-        <Link href="/funds/my-active-funds">View</Link>
+        <Link href="/funds/active">View</Link>
       </div>
       
       <div className="Shopping_Overview">
@@ -37,7 +37,7 @@ export default function Dashboard() {
       
       <div className="Inventory_Overview">
         <div>
-          <h4>Inventory Levels</h4>
+          <h4>Inventory : Levels</h4>
         </div>
         <div></div>
         <Link href="/marketplace/inventory">View</Link>

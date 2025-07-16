@@ -10,7 +10,7 @@ export default function Navigation() {
       <div><Link href="/shop">Shop</Link></div>
       <div><Link href="/directory">Directory</Link></div>
       <div><Link href="/business-development">Business Development</Link></div>
-      <div><Link href="/contacts">Contacts</Link></div>
+      <div><Link href="/contact-us">Contacts</Link></div>
       <div><Link href="/login">Login</Link></div>
       <div><Link href="/signup">Sign Up</Link></div>
     </div>  

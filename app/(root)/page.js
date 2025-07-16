@@ -18,33 +18,35 @@ export default function Home() {
       
       <div>
         <h1>Blockchain secure technology.</h1><br />
-        <p>Use our user-friendly and secured platform with peace-of-mind nor compromise to achieve excellent customer satisfaction.</p>
-        <Link href="/components/platform">Read more</Link>
+        <p></p>
+        <Link href="/">Read more</Link>
       </div>
       
       <div>
         <h1>Access funding for every business stage.</h1><br />
         
-        <p>Apply for funding at different stages of your business lifecycle.</p>
+        <p>Apply for funding that is tailored for different stages of your business lifecycle.</p>
         <Link href="/funding">Funding</Link>
       </div>
       
       <div>
-        <h1>Sell products locally and internationally.</h1><br />
-        <p>The vendor marketplace provides businesses an opportunity to generate sales by placing their products in our online shop.</p>
-        <Link href="/sell">Start Selling</Link>
+        <h1>Sell or buy products on our shop.</h1><br />
+        <p></p>
+        <Link href="/shop/sell">Start Selling</Link>
+        <Link href="/shop/buy">Buy</Link>
       </div>
       
       <div>
-        <h1>Develop your business strategically.</h1>
+        <h1>Give your business a strategic advantage.</h1>
         <p></p>
         <Link href="/smme-development"></Link>
-      </div>to
+      </div>
       
       <div>
-        <h1>Need services fast? Search for a local business.</h1>
+        <h1>Need services fast? Search for a business in your area.</h1>
         <p></p>
         
+        <h2>List your business on our directory.</h2>
         <div>
           <div>
             <p>1. Register</p>

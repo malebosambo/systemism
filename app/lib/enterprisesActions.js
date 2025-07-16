@@ -1,9 +1,14 @@
 import { clientPromise } from "./mongodb"
 
-export function createEnterprise(formData) {
+export function getSMME(formData) {
   
 }
 
-export function updateEnterprise(formData) {
+export function createSMME(formData) {
   
 }
+
+export function updateSMME(formData) {
+  
+}
+
