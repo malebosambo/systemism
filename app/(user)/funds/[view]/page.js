@@ -1,6 +1,6 @@
 "use client";
 
-export default function Fund() {
+export default function ViewFund() {
   
   return (
     <main>
