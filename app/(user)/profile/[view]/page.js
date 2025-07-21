@@ -3,9 +3,8 @@ import Image from "next/image";
 export default function ViewProfile() {
   
   return (
-    <div>
+    <main>
       <div>
-        <Image src="" alt="" height={50} width={50} />
         <h1></h1>
       </div>
       
@@ -28,6 +27,6 @@ export default function ViewProfile() {
         <h1>Security Details</h1>
         <p>Password</p>
       </div>
-    </div>
+    </main>
   )
 }
