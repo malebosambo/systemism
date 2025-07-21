@@ -1,11 +1,11 @@
 import Form from "next/form";
 
-export default function RequestFunding() {
+export default function RequestFunds() {
   
   return (
-    <div>
+    <main>
       <div><h1>Resquest Business Funding</h1></div>
       
-    </div>
+    </main>
   )
 }
