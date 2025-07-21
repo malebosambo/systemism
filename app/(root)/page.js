@@ -17,12 +17,6 @@ export default function Home() {
       </div>
       
       <div>
-        <h1>Blockchain secure technology.</h1><br />
-        <p></p>
-        <Link href="/">Read more</Link>
-      </div>
-      
-      <div>
         <h1>Access funding for every business stage.</h1><br />
         
         <p>Apply for funding that is tailored for different stages of your business lifecycle.</p>
@@ -30,21 +24,29 @@ export default function Home() {
       </div>
       
       <div>
-        <h1>Sell or buy products on our shop.</h1><br />
-        <p></p>
-        <Link href="/shop/sell">Start Selling</Link>
-        <Link href="/shop/buy">Buy</Link>
+        <h1>Sell or buy products on the marketplace.</h1><br />
+        
+        <div>
+          <div>
+            <Link href="/marketplace/vendor-application">Start Vendor Application</Link>
+          </div>
+          <div>
+            <Link href="/shop">Marketplace</Link>
+          </div>
+        </div>
+      </div>
+      
+      <div className="Academy">
+        <h1>Our academy programs offer strategic development.</h1>
+        
+        <Link href="/academy/enroll">Enroll Today</Link>
+        <Link href="/academy/programs">Browse Programs</Link>
       </div>
       
       <div>
-        <h1>Give your business a strategic advantage.</h1>
-        <p></p>
-        <Link href="/smme-development"></Link>
-      </div>
-      
-      <div>
-        <h1>Need services fast? Search for a business in your area.</h1>
-        <p></p>
+        <h1>Need services fast? Search for a business in your area.</h1><br/>
+        
+        
         
         <h2>List your business on our directory.</h2>
         <div>
