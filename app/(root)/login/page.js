@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { signIn } from "../lib/auth";
 
-export default function SignIn() {
+export default function Login() {
   
   const [ user, setUser ] = useState({
     email: "",
