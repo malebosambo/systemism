@@ -1,9 +1,11 @@
+import Form from "next/form";
+
 export default function AddInventoryItem() {
   
   return (
     <div className="Add_Inventory_Item">
       <div>
-        <h1>Add Inventory Item</h1>
+        <h1>New Inventory Item</h1>
       </div>
       
       <div>
