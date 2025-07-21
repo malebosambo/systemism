@@ -11,10 +11,6 @@ export default function Funds() {
       <div>
         <Link href="/request-funds"></Link>
       </div>
-      
-      <div>
-        
-      </div>
     </div>
   )
 }
