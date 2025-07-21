@@ -4,7 +4,6 @@ export default function Users() {
     <main>
       <div className="Users"><h1>Users</h1></div>
       
-      
     </main>
   )
 }
