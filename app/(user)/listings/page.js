@@ -1,12 +1,9 @@
 export default function Listings() {
   
   return (
-    <div>
+    <main>
       <div><h1>My Listings</h1></div>
       
-      <div>
-        
-      </div>
-    </div>
+    </main>
   )
 }
