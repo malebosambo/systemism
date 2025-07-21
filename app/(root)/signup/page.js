@@ -17,7 +17,7 @@ export default function Signup() {
   });
   
   return (
-    <div>
+    <main>
       <div><h1>Sign Up</h1></div>
       
       <div>
@@ -34,6 +34,6 @@ export default function Signup() {
       <div>
         <p>Already have an account? Login <span><Link href="/login">here</Link></span></p>
       </div>
-    </div>
+    </main>
   )
 }
