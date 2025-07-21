@@ -1,6 +1,6 @@
 "use client";
 
-export default function Enterprise() {
+export default function ViewSMME() {
   
   return (
     <div>
@@ -11,7 +11,7 @@ export default function Enterprise() {
       <div>
         <h2>Finances</h2>
       
-        <h3>Profit & Loss</h3>
+        <h3>Profit Loss</h3>
         
         <h3>Cash Flow Projection</h3>
         
