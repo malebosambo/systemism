@@ -3,7 +3,7 @@
 import Form from "next/form";
 import Link from "next/link";
 import { useState } from "react";
-import { signIn } from "../lib/auth";
+
 
 export default function Login() {
   
@@ -17,7 +17,7 @@ export default function Login() {
       <div><h1>Sign In</h1></div>
       
       <div>
-        <Form action={signIn}>
+        <Form action="">
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
           <button type="submit">Login</button>
