@@ -2,7 +2,7 @@ export default function BusinessDetailsCard() {
   
   return (
     <>
-      <div className="Business_Logo"><Image href="" alt="Business Logo" width="" height="" /></div>
+      <div className="Business_Logo"></div>
       
       <h1 className="Business_Name"></h1>
       <h2 className="Enterprise_Number"></h2>
