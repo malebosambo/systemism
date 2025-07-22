@@ -1,6 +1,13 @@
 "use client";
 
+import { useState } from "react";
+
 export default function AddInventoryItem() {
+  
+  const [ product, setProduct ] = useState({
+    name: "",
+    description: ""
+  });
   
   return (
     <div className="Add_Inventory_Item">
