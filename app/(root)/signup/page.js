@@ -21,7 +21,7 @@ export default function Signup() {
       <div><h1>Sign Up</h1></div>
       
       <div>
-        <Form action="">
+        <form action="">
           <input type="text" name="firstName" placeholder="First Name" onChange={(e) => setUser.firstName(e.target.value)} value={user.firstName} required />
           <input type="text" name="surname" placeholder="Surname" onChange={(e) => setUser.surname(e.target.value)} value={user.surname} required />
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
@@ -29,7 +29,7 @@ export default function Signup() {
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
           <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={(e) => setUser.confirmPassword(e.target.value)} value={user.confirmPassword} />
           <button type="submit">Submit</button>
-        </Form>
+        </form>
       </div>
       <div>
         <p>Already have an account? Login <span><Link href="/login">here</Link></span></p>

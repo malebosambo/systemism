@@ -1,4 +1,4 @@
-import Form from "next/form";
+"use client";
 
 export default function AddSMME() {
   
@@ -7,7 +7,8 @@ export default function AddSMME() {
       <div><h1>Add New SMME</h1></div>
       
       <div>
-        <Form action="">
+        
+        <form action="">
           <input type="text" name="Business Name" placeholder="Business Name" onChange="" value="" required />
           <input type="text" name="Enterprise Number" placeholder="Enterprise Number" onChange="" value="" required />
     
@@ -20,7 +21,8 @@ export default function AddSMME() {
           <input type="text" name="Directors" placeholder="Director Full Name" onChange="" value="" required />
     
           <button type="submit">Add SMME</button>
-        </Form>
+        </form>
+        
       </div>
     </div>
   )
