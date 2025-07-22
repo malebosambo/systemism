@@ -1,9 +1,9 @@
-import { Balthazar } from "next/font/google"; 
+import { CourierPrime } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../globals.css";
 
-const balthazar = Balthazar({
+const courierPrime = CourierPrime({
   subsets: ["latin"],
   weight: '400'
 });
@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={balthazar.className}>
+    <html lang="en" className={courierPrime.className}>
       <body>
         <div><Header /></div>
         <div>{children}</div>
