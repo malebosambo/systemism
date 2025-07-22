@@ -8,7 +8,7 @@ export default function Home() {
         <h1>Products and services for individuals and SMMEs.</h1><br />
         
         <div className="Home_Banner_Btns">
-          <div><Link href="/../login">Sign In</Link></div>
+          <div className="Button"><Link href="/../login">Sign In</Link></div>
           <div><Link href="/../signup">Sign Up</Link></div>
         </div>
       </div>
