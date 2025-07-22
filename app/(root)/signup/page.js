@@ -3,7 +3,7 @@
 import Form from "next/form";
 import Link from "next/link";
 import { useState } from "react";
-import { signUp } from "../lib/auth";
+
 
 export default function Signup() {
   
@@ -21,7 +21,7 @@ export default function Signup() {
       <div><h1>Sign Up</h1></div>
       
       <div>
-        <Form action={signUp}>
+        <Form action="">
           <input type="text" name="firstName" placeholder="First Name" onChange={(e) => setUser.firstName(e.target.value)} value={user.firstName} required />
           <input type="text" name="surname" placeholder="Surname" onChange={(e) => setUser.surname(e.target.value)} value={user.surname} required />
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
