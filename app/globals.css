@@ -1,4 +1,5 @@
 a {
+  color: white;
   text-decoration: none;
 }
 
@@ -7,13 +8,17 @@ body {
   color: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #F9F9E1;
+}
+
 @media only screen and (max-width: 600px) {
 
   .Footer {
     background-color: white;
     color: black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
   }
   
@@ -34,6 +39,11 @@ body {
 
   .Home_Banner {
     padding: 90px 0;
+  }
+  
+  .Home_Banner_Btns {
+    display: flex;
+    flex-direction: column;
   }
 
   .Home_Directory {

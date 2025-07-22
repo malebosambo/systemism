@@ -5,28 +5,34 @@ export default function Home() {
   return (
     <main className="Home">
       <div className="Home_Banner">
-        <h1>Products and services for individual and institutional needs.</h1><br />
+        <h1>Products and services for individuals and SMMEs.</h1><br />
         
-        <Link href="/../login">Sign In</Link>
-        <Link href="/../signup">Sign Up</Link>
+        <div className="Home_Banner_Btns">
+          <div><Link href="/../login">Sign In</Link></div>
+          <div><Link href="/../signup">Sign Up</Link></div>
+        </div>
       </div>
       
-      <div>
-        <h1>Invest for now and the future.</h1>
-        <Link href="/investing"></Link>
-      </div>
-      
-      <div>
-        <h1>Access funding for every business stage.</h1><br />
+      <div className="Home_Investing">
+        <h1>Invest for now and the future.</h1><br />
         
-        <p>Apply for funding that is tailored for different stages of your business lifecycle.</p>
-        <Link href="/funding">Funding</Link>
+        <p>Our investments provide short, medium and long term returns.</p><br />
+        
+        <Link href="/investing">Start Investing</Link>
       </div>
       
-      <div>
+      <div className="Home_Funding">
+        <h1>Access funding for any business stage.</h1><br />
+        
+        <p>Apply for funding that is tailored for different stages of your business lifecycle.</p><br />
+        
+        <Link href="/funding">Apply</Link>
+      </div>
+      
+      <div className="Home_Marketplace">
         <h1>Sell or buy products on the marketplace.</h1><br />
         
-        <div>
+        <div className="Home_Marketplace_Btns">
           <div>
             <Link href="/marketplace/vendor-application">Start Vendor Application</Link>
           </div>
@@ -36,26 +42,30 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="Academy">
-        <h1>Our academy programs offer strategic development.</h1>
+      <div className="Home_Academy">
+        <h1>Our academy programs offer strategic development.</h1><br />
         
-        <Link href="/academy/enroll">Enroll Today</Link>
-        <Link href="/academy/programs">Browse Programs</Link>
+        <div className="Home_Academy_Btns">
+          <div><Link href="/academy/enroll">Enroll</Link></div>
+          <div><Link href="/academy/programs">Browse</Link></div>
+        </div>
       </div>
       
-      <div>
+      <div className="Home_Directory">
         <h1>Need services fast? Search for a business in your area.</h1><br/>
         
         
         
-        <h2>List your business on our directory.</h2>
+        <h2>List your business on our directory.</h2><br />
+        
         <div>
           <div>
             <p>1. Register</p>
-            <p>2. Submit form</p>
+            <p>2. Submit listing</p>
             <p>3. Share</p>
           </div>
-          <Link href="/directory-listing">List a business</Link>
+          
+          <Link href="/directory">List SMME</Link>
         </div>
       </div>
     </main>
