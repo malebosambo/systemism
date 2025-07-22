@@ -7,9 +7,11 @@ export default function Funds() {
       <div>
         <h1>Funds</h1>
       </div>
-      
+
+      <p>Nothing to display.</p>
+    
       <div>
-        <Link href="/request-funds"></Link>
+        <Link href="/request">Request</Link>
       </div>
     </div>
   )
