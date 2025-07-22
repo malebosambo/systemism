@@ -1,9 +1,9 @@
-import { Courier } from "next/font/google"; 
+import { Courier_Prime } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../globals.css";
 
-const courierPrime = CourierPrime({
+const courierPrime = Courier_Prime({
   subsets: ["latin"],
   weight: '400'
 });
