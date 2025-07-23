@@ -3,13 +3,11 @@ import Link from "next/link";
 export default function ContactUs() {
   
   return (
-    <div className="Contacts">
-      <div>
-        <h1>Contact Us</h1>
-      </div>
+    <main className="Contacts">
+      <div><h1>Contact Us</h1></div>
       
       <div>
-        <h2></h2>
+        <h2>Basic Details:</h2>
         
         <div>
           <h3>Email</h3>
@@ -25,7 +23,51 @@ export default function ContactUs() {
         </div>
       </div>
       
+      <div>
+        <h2>Investments:</h2>
+        
+        <div>
+          <h3>Email</h3>
+          <p>investments@systemism.co.za</p>
+        </div>
+      </div>
       
-    </div>
+      <div>
+        <h2>Funding:</h2>
+        
+        <div>
+          <h3>Email</h3>
+          <p>funding@systemism.co.za</p>
+        </div>
+      </div>
+      
+      <div>
+        <h2>Marketplace:</h2>
+        
+        <div>
+          <h3>Email</h3>
+          <p>marketplace@systemism.co.za</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3>Directory:</h3>
+        
+        <div>
+          <h3>Email</h3>
+          <p>directory@systemism.co.za</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3>Academy:</h3>
+        
+        <div>
+          <h3>Email</h3>
+          <p>academy@systemism.co.za</p>
+        </div>
+      </div>
+      
+    </main>
   )
 }

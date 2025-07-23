@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div className="Legal">
-        <p>Copyright 2024</p>
-        <p>STARCH Monetary Systems</p>
+        <p>© 2024</p>
+        <p>Systemism</p>
       </div>
       
       <div className="Contacts">
         <p>E-mail:</p>
-        <Link href="hello@starch.co.za">hello@starch.co.za</Link>
+        <Link href="admin@systemism.co.za">admin@systemism.co.za</Link>
         <p>Tel:</p>
         <Link href="+27630013711">063 001 3711</Link>
       </div>

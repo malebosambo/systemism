@@ -10,10 +10,11 @@ const courierPrime = Courier_Prime({
 
 export const metadata = {
   title: "SYSTEMISM",
-  description: "Compound annual investments and business monetary solutions.",
+  description: "Fintech solutions for individuals and SMMEs.",
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en" className={courierPrime.className}>
       <body>

@@ -12,7 +12,7 @@ export default function Login() {
   });
   
   return (
-    <div>
+    <main>
       <div><h1>Sign In</h1></div>
       
       <div>
@@ -22,10 +22,10 @@ export default function Login() {
           <button type="submit">Login</button>
         </form>
       </div>
+      
       <div><p>Reset password <span><Link href="/reset-password">here</Link></span></p></div>
-      <div>
-        <p>Do not have an account? Sign up <span><Link href="/signup">here</Link></span></p>
-      </div>
-    </div>
+      
+      <div><p>Do not have an account? Sign up <span><Link href="/signup">here</Link></span></p></div>
+    </main>
   )
 }

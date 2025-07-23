@@ -1,11 +1,5 @@
-a {
-  color: white;
-  text-decoration: none;
-}
-
 body {
   background-color: black;
-  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +11,9 @@ h1, h2, h3, h4, h5, h6 {
   .Button {
     background-color: #F9F9E1;
     border: none;
+    border-radius: 3px;
     color: black;
+    margin: 3px;
     padding: 15px;
     text-align: center;
   }
@@ -32,9 +28,14 @@ h1, h2, h3, h4, h5, h6 {
   
   .Header {
     background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
+  }
+  
+  .Hide {
+    display: none;
   }
   
   .Home {
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 0;
   }
   
-  .Home_Banner_Btns {
+  .Home_Buttons {
     display: flex;
     flex-direction: column;
   }
@@ -75,16 +76,25 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
   }
 
-  .Menu {
-    display: none;
-  }
-
-  .Menu_Visible {
-    display: flex;
-    flex-direction: column;
+  .Mobile_Menu_Visible {
     padding: 20px;
     position: fixed;
     transition: right 0.4s;
+  }
+  
+  .Navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Navigation > div {
+    margin: 2px 0;
+    padding: 3px;
+  }
+  
+  .Navigation > div > a {
+    color: black;
+    text-decoration: none;
   }
   
 }
@@ -98,6 +108,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
+  
+  .Button {
+    background-color: #F9F9E1;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    margin: 3px;
+    padding: 15px;
+    text-align: center;
+  }
 
   .Footer {
     background-color: white;
@@ -109,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .Header {
     background-color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,6 +141,11 @@ h1, h2, h3, h4, h5, h6 {
   
   .Home_Banner {
     padding: 90px 20px;
+  }
+  
+  .Home_Buttons {
+    display: flex;
+    flex-direction: row;
   }
 
   .Home_Directory {
@@ -138,20 +164,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 20px;
   }
 
-  .Logo {
-    
-  }
-
   .Logo_Image {
     width: 100px;
   }
 
-  .Menu {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .Mobile_Menu {
+  .Mobile_Menu_Btns {
     display: none;
   }
 

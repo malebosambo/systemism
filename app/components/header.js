@@ -10,21 +10,22 @@ export default function Header() {
   
   const [ mobileMenu, setMobileMenu ] = useState(false);
 
-  const showMenu = () => setMobileMenu(!mobileMenu);  
+  const showMobileMenu = () => setMobileMenu(!mobileMenu);  
   
   return (
     <div className="Header">
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Logo" height={50} width={50} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={50} width={50} /></Link>
         </div>
-        <div className="Mobile_Menu">
-          <button onClick={showMenu} className={ !mobileMenu ? "" : "Menu" }>=</button>
-          <button onClick={showMenu} className={ mobileMenu ? "" : "Menu" }>X</button>
+        
+        <div className="Mobile_Menu_Btns">
+          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }>=</button>
+          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }>X</button>
         </div>
       </div>
       
-      <div className={ mobileMenu ? "Menu_Visible" : "Menu" }>
+      <div className={ mobileMenu ? "Mobile_Menu_Visible" : "" }>
         <Navigation />
       </div>
     </div>

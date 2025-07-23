@@ -7,9 +7,9 @@ export default function Home() {
       <div className="Home_Banner">
         <h1>Products and services for individuals and SMMEs.</h1><br />
         
-        <div className="Home_Banner_Btns">
-          <div className="Button"><Link href="/../login">Sign In</Link></div>
-          <div><Link href="/../signup">Sign Up</Link></div>
+        <div className="Home_Buttons">
+          <div className="Button"><Link href="/login">Sign In</Link></div>
+          <div className="Button"><Link href="/signup">Sign Up</Link></div>
         </div>
       </div>
       
@@ -32,12 +32,12 @@ export default function Home() {
       <div className="Home_Marketplace">
         <h1>Sell or buy products on the marketplace.</h1><br />
         
-        <div className="Home_Marketplace_Btns">
-          <div>
-            <Link href="/marketplace/vendor-application">Start Vendor Application</Link>
+        <div className="Home_Buttons">
+          <div className="Button">
+            <Link href="/marketplace/vendor-application">Vendor Application</Link>
           </div>
-          <div>
-            <Link href="/shop">Marketplace</Link>
+          <div className="Button">
+            <Link href="/marketplace">Shop</Link>
           </div>
         </div>
       </div>
@@ -45,16 +45,16 @@ export default function Home() {
       <div className="Home_Academy">
         <h1>Our academy programs offer strategic development.</h1><br />
         
-        <div className="Home_Academy_Btns">
-          <div><Link href="/academy/enroll">Enroll</Link></div>
-          <div><Link href="/academy/programs">Browse</Link></div>
+        <div className="Home_Buttons">
+          <div className="Button"><Link href="/academy/enroll">Enroll</Link></div>
+          <div className="Button"><Link href="/academy/programs">Browse</Link></div>
         </div>
       </div>
       
       <div className="Home_Directory">
         <h1>Need services fast? Search for a business in your area.</h1><br/>
         
-        
+       
         
         <h2>List your business on our directory.</h2><br />
         
