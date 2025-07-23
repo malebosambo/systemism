@@ -77,9 +77,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .Mobile_Menu_Visible {
-    padding: 20px;
-    position: fixed;
-    transition: right 0.4s;
+    background-color: white;
+  }
+  
+  .Nav > a {
+    color: white;
+    text-decoration: none;
   }
   
   .Navigation {
