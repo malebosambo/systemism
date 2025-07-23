@@ -18,7 +18,7 @@ export default function Home() {
         
         <p>Our investments provide short, medium and long term returns.</p><br />
         
-        <div><Link href="/investing">Start Investing</Link></div>
+        <div className="Nav"><Link href="/investing">Start Investing</Link></div>
       </div>
       
       <div className="Home_Funding">
@@ -26,7 +26,7 @@ export default function Home() {
         
         <p>Apply for funding that is tailored for different stages of your business lifecycle.</p><br />
         
-        <div><Link href="/funding">Apply</Link></div>
+        <div className="Nav"><Link href="/funding">Apply</Link></div>
       </div>
       
       <div className="Home_Marketplace">
@@ -65,7 +65,7 @@ export default function Home() {
             <p>3. Share</p>
           </div>
           
-          <div><Link href="/directory">List SMME</Link></div>
+          <div className="Nav"><Link href="/directory">List SMME</Link></div>
         </div>
       </div>
     </main>
