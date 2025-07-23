@@ -76,12 +76,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Login {
+    padding: 50px;
     text-align: center;  
   }
   
   .Login_Form {
+    color: white;
     display: flex;
     align-items: center;
+  }
+  
+  .Login_Form > input {
+    height: 20px;
   }
   
   .Logo {
@@ -91,11 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .Mobile_Menu_Visible {
     background-color: white;
-  }
-  
-  .Nav > a {
-    color: white;
-    text-decoration: none;
   }
   
   .Navigation {
@@ -119,10 +120,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   a {
-    color: black;
     text-decoration: none;
   }
-  
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
