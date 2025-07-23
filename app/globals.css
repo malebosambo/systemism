@@ -71,6 +71,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 0;
   }
   
+  .Links {
+    padding: 20px 10px;
+  }
+  
   .Logo {
     display: flex;
     justify-content: space-between;
@@ -88,6 +92,11 @@ h1, h2, h3, h4, h5, h6 {
   .Navigation {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+  }
+  
+  .Navigation > .Button {
+    padding: 10px 0;
   }
   
   .Navigation > div {
