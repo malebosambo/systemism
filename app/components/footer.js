@@ -6,8 +6,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div className="Legal">
-        <p>© 2024</p>
-        <p>Systemism</p>
+        <p>© 2024 Systemism</p>
       </div>
       
       <div className="Contacts">

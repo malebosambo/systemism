@@ -19,7 +19,7 @@ export default function Login() {
         <form action="">
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
-          <button type="submit">Login</button>
+          <button type="submit" className="Button">Login</button>
         </form>
       </div>
       

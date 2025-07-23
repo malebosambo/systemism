@@ -97,6 +97,11 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
   }
   
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {

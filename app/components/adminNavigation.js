@@ -6,7 +6,7 @@ export default function AdminNavigation() {
     <div className="Navigation">
       <div><Link href="/settings">Settings</Link></div>
       <div><Link href="/users">Users</Link></div>
-      <div><Link href="/logout">Logout</Link></div>
+      <div className="Button"><Link href="/logout">Logout</Link></div>
     </div>  
   );
 }

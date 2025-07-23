@@ -27,7 +27,7 @@ export default function Signup() {
           <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={(e) => setUser.cellphone(e.target.value)} value={user.cellphone} required />
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
           <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={(e) => setUser.confirmPassword(e.target.value)} value={user.confirmPassword} />
-          <button type="submit">Submit</button>
+          <button type="submit" className="Button">Submit</button>
         </form>
       </div>
       

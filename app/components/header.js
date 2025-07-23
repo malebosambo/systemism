@@ -25,7 +25,7 @@ export default function Header() {
         </div>
       </div>
       
-      <div className={ mobileMenu ? "Mobile_Menu_Visible" : "" }>
+      <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
         <Navigation />
       </div>
     </div>

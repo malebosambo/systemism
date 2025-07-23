@@ -11,7 +11,7 @@ export default function UserNavigation() {
       <div><Link href="/listings">Listings</Link></div>
       <div><Link href="/programs">Programs</Link></div>
       <div><Link href="/profile">Profile</Link></div>
-      <div><Link href="/logout">Logout</Link></div>
+      <div className="Button"><Link href="/logout">Logout</Link></div>
     </div>  
   );
 }
