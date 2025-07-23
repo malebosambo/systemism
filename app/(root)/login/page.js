@@ -12,10 +12,10 @@ export default function Login() {
   });
   
   return (
-    <main>
-      <div><h1>Sign In</h1></div>
+    <main className="Login">
+      <div><h1>Login</h1></div>
       
-      <div>
+      <div className="Login_Form">
         <form action="">
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />

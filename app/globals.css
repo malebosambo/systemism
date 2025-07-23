@@ -75,6 +75,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 10px;
   }
   
+  .Login {
+    text-align: center;  
+  }
+  
+  .Login_Form {
+    display: flex;
+    align-items: center;
+  }
+  
   .Logo {
     display: flex;
     justify-content: space-between;
