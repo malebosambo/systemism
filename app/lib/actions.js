@@ -28,7 +28,7 @@ export async function UserSignup(formData) {
     email: formData.get("email"),
     cellphone: formData.get("cellphone"),
     password: formData.get("password"),
-    confirmPass: formData.get("confirmPassword
+    confirmPass: formData.get("confirmPassword")
    }
    await signUp(user);
  } catch {
