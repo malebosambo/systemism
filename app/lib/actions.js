@@ -20,7 +20,20 @@ export async function UserLogin(formData) {
 }
 
 export async function UserSignup(formData) {
-  
+
+ try {
+   const user = {
+    firstname: formData.get("firstName"),
+    surname: formData.get("surname"),
+    email: formData.get("email"),
+    cellphone: formData.get("cellphone"),
+    password: formData.get("password"),
+    confirmPass: formData.get("confirmPassword
+   }
+   await signUp(user);
+ } catch {
+    console.log("Error creating user.");
+ }
 }
 
 export async function UserLogout() {
@@ -28,11 +41,10 @@ export async function UserLogout() {
 }
 
 export async function ViewUser() {
-  
 }
 
 export async function UpdateUser(formData) {
-  
+
 }
 
 export async function ViewProfile() {
