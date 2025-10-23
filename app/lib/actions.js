@@ -19,7 +19,7 @@ export async function UserLogin(formData) {
   }
 }
 
-export async function UserSignup(formData) {
+export async function userSignUp(formData) {
 
  try {
    const user = {
