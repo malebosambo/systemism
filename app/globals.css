@@ -1,13 +1,14 @@
 body {
-  background-color: black;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #F9F9E1;
+  color: black;
 }
 
 .Header {
-  margin: -8;
+  background-color: black;
+  margin: -8px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -31,8 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Header {
-    background-color: white;
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -101,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .Mobile_Menu_Visible {
     background-color: white;
+    margin: -5px;
   }
   
   .Nav > a {
