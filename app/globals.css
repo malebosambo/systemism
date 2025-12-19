@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #F9F9E1;
 }
 
+.Header {
+  margin: -8;
+}
+
 @media only screen and (max-width: 600px) {
 
   .Button {
