@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="Home">
       <div className="Home_Banner">
-        <h1>Products and services for individuals and SMMEs.</h1><br />
+        <div><h1>Products and services for individuals and SMMEs.</h1></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/login">Sign In</Link></div>
@@ -14,23 +14,23 @@ export default function Home() {
       </div>
       
       <div className="Home_Investing">
-        <h1>Invest for now and the future.</h1><br />
+        <div><h1>Invest for now and the future.</h1></div>
         
-        <p>Our investments provide short, medium and long term returns.</p><br />
+        <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
         
-        <div className="Nav"><Link href="/investing">Start Investing</Link></div>
+        <div className="Nav"><Link href="/investing">Investing</Link></div>
       </div>
       
       <div className="Home_Funding">
-        <h1>Access funding for any business stage.</h1><br />
+        <div><h1>Access funding for any business stage.</h1></div>
         
-        <p>Apply for funding that is tailored for different stages of your business lifecycle.</p><br />
+        <div><p>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
         <div className="Nav"><Link href="/funding">Apply</Link></div>
       </div>
       
       <div className="Home_Marketplace">
-        <h1>Sell or buy products on the marketplace.</h1><br />
+        <div><h1>Sell or buy products on the marketplace.</h1></div>
         
         <div className="Home_Buttons">
           <div className="Button">
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
       
       <div className="Home_Academy">
-        <h1>Our academy programs offer strategic development.</h1><br />
+        <div><h1>Our academy programs offer strategic development.</h1></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/academy/enroll">Enroll</Link></div>
@@ -52,17 +52,15 @@ export default function Home() {
       </div>
       
       <div className="Home_Directory">
-        <h1>Need services fast? Search for a business in your area.</h1><br/>
+        <div><h1>Need services fast? Search for a business in your area.</h1></div>
         
-       
-        
-        <h2>List your business on our directory.</h2><br />
+        <div><h2>List your business on our directory.</h2></div>
         
         <div>
           <div>
             <p>1. Register</p>
             <p>2. Submit listing</p>
-            <p>3. Share</p>
+            <p>3. Share & earn</p>
           </div>
           
           <div className="Nav"><Link href="/directory">List SMME</Link></div>

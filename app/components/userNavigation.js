@@ -1,16 +1,18 @@
-import Link from 'next/link'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function UserNavigation() {
   
   return (
-    <div className="Navigation">
+    <div className="UserNavigation">
       <div><Link href="/dashboard">Dashboard</Link></div>
       <div><Link href="/investments">Investments</Link></div>
       <div><Link href="/funds">Funds</Link></div>
       <div><Link href="/marketplace">Marketplace</Link></div>
-      <div><Link href="/listings">Listings</Link></div>
+      <div><Link href="/directory">Directory</Link></div>
       <div><Link href="/programs">Programs</Link></div>
-      <div><Link href="/profile">Profile</Link></div>
+      <div><Link href="/profile"><Image src="" alt="Profile Thumbnail" height={20} width={20} /></Link></div>
+      
       <div className="Button"><Link href="/logout">Logout</Link></div>
     </div>  
   );
