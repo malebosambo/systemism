@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { userLogin } from "../lib/actions";
+import { UserLogin } from "../../lib/actions";
 
 
 export default function Login() {
@@ -17,7 +17,7 @@ export default function Login() {
       <div><h1>Login</h1></div>
       
       <div className="Login_Form">
-        <form action={userLogin}>
+        <form action={UserLogin}>
           <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
           <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
           <div><button type="submit" className="Button">Login</button></div>

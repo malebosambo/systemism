@@ -1,6 +1,6 @@
 "use server";
  
-import { signIn, signOut, signUp } from './auth'
+import { signIn, signOut, signUp } from '../../auth'
  
 export async function UserLogin(formData) {
   
