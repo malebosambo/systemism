@@ -22,17 +22,17 @@ export default function Signup() {
       
       <div>
         <form action={UserSignUp}>
-          <input type="text" name="firstName" placeholder="First Name" onChange={(e) => setUser.firstName(e.target.value)} value={user.firstName} required />
+          <input type="text" name="firstName" placeholder="First Name" onChange="" value={user.firstName} required />
 
-          <input type="text" name="surname" placeholder="Surname" onChange={(e) => setUser.surname(e.target.value)} value={user.surname} required />
+          <input type="text" name="surname" placeholder="Surname" onChange="" value={user.surname} required />
 
-          <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} required />
+          <input type="email" name="email" placeholder="Email" onChange="" value={user.email} required />
 
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={(e) => setUser.cellphone(e.target.value)} value={user.cellphone} required />
+          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value={user.cellphone} required />
 
-          <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} required />
+          <input type="password" name="password" placeholder="Password" onChange="" value={user.password} required />
 
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={(e) => setUser.confirmPassword(e.target.value)} value={user.confirmPassword} required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value={user.confirmPassword} required />
 
           <button type="submit" className="Button">Submit</button>
         </form>
