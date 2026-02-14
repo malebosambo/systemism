@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { userSignUp } from "./../../lib/actions";
+import { UserSignUp } from "../../lib/actions";
 
 
 export default function Signup() {
@@ -21,7 +21,7 @@ export default function Signup() {
       <div><h1>Sign Up</h1></div>
       
       <div>
-        <form action={userSignUp}>
+        <form action={UserSignUp}>
           <input type="text" name="firstName" placeholder="First Name" onChange={(e) => setUser.firstName(e.target.value)} value={user.firstName} required />
 
           <input type="text" name="surname" placeholder="Surname" onChange={(e) => setUser.surname(e.target.value)} value={user.surname} required />

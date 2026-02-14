@@ -1,6 +1,7 @@
 "use server";
  
-import { signIn, signOut, signUp } from '../../auth'
+import { signIn, signOut, signUp } from "../../auth";
+import { CreateUser } from "./firestore";
  
 export async function UserLogin(formData) {
   
@@ -19,9 +20,10 @@ export async function UserLogin(formData) {
   }
 }
 
-export async function userSignUp(formData) {
+export async function UserSignUp(formData) {
 
  try {
+   
    const user = {
     firstname: formData.get("firstName"),
     surname: formData.get("surname"),
@@ -30,7 +32,9 @@ export async function userSignUp(formData) {
     password: formData.get("password"),
     confirmPass: formData.get("confirmPassword")
    }
-   await signUp(user);
+   
+   await CreateUser(user);
+   
  } catch {
     console.log("Error creating user.");
  }

@@ -1,7 +1,7 @@
 import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "./../../firebase.js";
 
-export async function getUser(data) {
+export async function GetUser(data) {
   
   try {
     
@@ -10,7 +10,7 @@ export async function getUser(data) {
   }
 }
 
-export async function createUser(data) {
+export async function CreateUser(data) {
   
   try {
     await setDoc(doc(db, "users", 2), data);
