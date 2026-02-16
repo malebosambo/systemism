@@ -7,19 +7,14 @@ import { UserLogin } from "../../lib/actions";
 
 export default function Login() {
   
-  const [ user, setUser ] = useState({
-    email: "",
-    password: ""
-  });
-  
   return (
     <main className="Login">
       <div><h1>Login</h1></div>
       
       <div className="Login_Form">
         <form action={UserLogin}>
-          <input type="email" name="email" placeholder="Email" onChange={(e) => setUser.email(e.target.value)} value={user.email} height={} width={} required />
-          <input type="password" name="password" placeholder="Password" onChange={(e) => setUser.password(e.target.value)} value={user.password} height={} width={} required />
+          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" required />
+          <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
           <div><button type="submit" className="Button">Login</button></div>
         </form>
       </div>
