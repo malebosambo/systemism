@@ -37,7 +37,7 @@ export default function ViewProfile() {
         </div>
         
         <div>
-          <form action={updateProfile}>
+          <form action={UpdateProfile}>
             <div></div>
             
             <div>
