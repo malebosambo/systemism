@@ -1,13 +1,21 @@
 "use server";
  
-import { signIn, signOut, signUp } from "../../auth";
+import { signIn, signOut } from "../../auth";
 import { CreateUser } from "./firestore";
  
 export async function UserLogin(formData) {
   
+  const user = {
+    email: formData.get("email"),
+    password: formData.get("password")
+  }
+  
   try {
-    await signIn(formData)
+    
+    await signIn("credentials", { redirectTo: "/dashboard" });
+    
   } catch (error) {
+    
     if (error) {
       switch (error.type) {
         case 'CredentialsSignin':
@@ -17,31 +25,35 @@ export async function UserLogin(formData) {
       }
     }
     throw error
+    
   }
 }
 
 export async function UserSignUp(formData) {
-
- try {
-   
-   const user = {
+  
+  const user = {
     firstname: formData.get("firstName"),
     surname: formData.get("surname"),
     email: formData.get("email"),
     cellphone: formData.get("cellphone"),
     password: formData.get("password"),
     confirmPass: formData.get("confirmPassword")
-   }
+  }
+
+ try {
    
    await CreateUser(user);
    
  } catch {
+   
     console.log("Error creating user.");
+    
  }
 }
 
 export async function UserLogout() {
   
+  await signOut({ redirectTo: "/" })
 }
 
 export async function ViewUser() {

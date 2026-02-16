@@ -22,17 +22,17 @@ export default function Signup() {
       
       <div>
         <form action={UserSignUp}>
-          <input type="text" name="firstName" placeholder="First Name" onChange="" value={user.firstName} required />
+          <input type="text" name="firstName" placeholder="First Name" onChange="" value={user.firstName} height={} width={} required />
 
-          <input type="text" name="surname" placeholder="Surname" onChange="" value={user.surname} required />
+          <input type="text" name="surname" placeholder="Surname" onChange="" value={user.surname} height={} width={} required />
 
-          <input type="email" name="email" placeholder="Email" onChange="" value={user.email} required />
+          <input type="email" name="email" placeholder="Email" onChange="" value={user.email} height={} width={} required />
 
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value={user.cellphone} required />
+          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value={user.cellphone} height={} width={} required />
 
-          <input type="password" name="password" placeholder="Password" onChange="" value={user.password} required />
+          <input type="password" name="password" placeholder="Password" onChange="" value={user.password} height={} width={} required />
 
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value={user.confirmPassword} required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value={user.confirmPassword} height={} width={} required />
 
           <button type="submit" className="Button">Submit</button>
         </form>

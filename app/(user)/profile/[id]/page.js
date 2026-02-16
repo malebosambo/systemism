@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { updateProfile } from "../../../lib/actions";
+import { UpdateProfile } from "../../../lib/actions";
 
 export default function ViewProfile() {
   
