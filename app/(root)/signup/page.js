@@ -22,17 +22,17 @@ export default function Signup() {
       
       <div>
         <form action={UserSignUp}>
-          <input type="text" name="firstName" placeholder="First Name" onChange="" value={user.firstName} height="10" width="20" required />
+          <input type="text" name="firstName" placeholder="First Name" onChange="" value="" height="10" width="20" required />
 
-          <input type="text" name="surname" placeholder="Surname" onChange="" value={user.surname} height="10" width="20" required />
+          <input type="text" name="surname" placeholder="Surname" onChange="" value="" height="10" width="20" required />
 
-          <input type="email" name="email" placeholder="Email" onChange="" value={user.email} height="10" width="20" required />
+          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" required />
 
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value={user.cellphone} height="10" width="20" required />
+          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value="" height="10" width="20" required />
 
-          <input type="password" name="password" placeholder="Password" onChange="" value={user.password} height="10" width="20" required />
+          <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
 
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value={user.confirmPassword} height="10" width="20" required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value="" height="10" width="20" required />
 
           <button type="submit" className="Button">Submit</button>
         </form>

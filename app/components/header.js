@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react"
+import { useState } from "react"
 import Navigation from "./navigation"
 import Link from "next/link"
 import Image from "next/image"

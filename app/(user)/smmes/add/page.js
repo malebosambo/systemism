@@ -10,6 +10,7 @@ export default function AddSMME() {
         
         <form action="">
           <input type="text" name="Business Name" placeholder="Business Name" onChange="" value="" required />
+          
           <input type="text" name="Enterprise Number" placeholder="Enterprise Number" onChange="" value="" required />
     
           <ul>
@@ -18,6 +19,7 @@ export default function AddSMME() {
           </ul>
     
           <input type="textarea" name="Physical Address" placeholder="Physical Address" onChange="" value="" required />
+          
           <input type="text" name="Directors" placeholder="Director Full Name" onChange="" value="" required />
     
           <button type="submit">Add SMME</button>

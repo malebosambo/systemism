@@ -18,8 +18,10 @@ export default function AddInventoryItem() {
       <div>
         <form action="">
           <input type="file" name="image" accept="image" required />
-          <input type="text" name="name" placeholder="Product Name" onChange={(e) => setProduct.name(e.target.value)} value={product.name} minLength="2" maxLength="50" required />
-          <textarea name="description" placeholder="Description" onChange={(e) => setProduct.description(e.target.value)} value={product.description} minLength="50" maxLength="250" rows="5" required></textarea>
+          
+          <input type="text" name="name" placeholder="Product Name" onChange="" value="" minLength="2" maxLength="50" required />
+          
+          <textarea name="description" placeholder="Description" onChange="" value="" minLength="50" maxLength="250" rows="5" required></textarea>
           
           <label for="category">Category</label>
           <select name="category">

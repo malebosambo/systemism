@@ -14,7 +14,9 @@ export default function Login() {
       <div className="Login_Form">
         <form action={UserLogin}>
           <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" required />
+          
           <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
+          
           <div><button type="submit" className="Button">Login</button></div>
         </form>
       </div>

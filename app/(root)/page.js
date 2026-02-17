@@ -7,6 +7,8 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1>Products and services for individuals and SMMEs.</h1></div>
         
+        <div><p>Join the all-in-one platform that provides financial independence, wealth generation and economic participation.</p></div>
+        
         <div className="Home_Buttons">
           <div className="Button"><Link href="/login">Sign In</Link></div>
           <div className="Button"><Link href="/signup">Sign Up</Link></div>
