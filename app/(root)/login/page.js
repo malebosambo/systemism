@@ -13,7 +13,7 @@ export default function Login() {
       
       <div className="Login_Form">
         <form action={UserLogin}>
-          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" required />
+          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" style={{ marginBottom: "20px" }} required />
           
           <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
           
