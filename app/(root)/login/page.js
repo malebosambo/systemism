@@ -13,15 +13,17 @@ export default function Login() {
       
       <div className="Login_Form">
         <form action={UserLogin}>
-          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" style={{ marginBottom: "20px" }} required />
+          <input type="email" name="email" placeholder="Email" onChange="" value="" required />
           
-          <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
+          <input type="password" name="password" placeholder="Password" onChange="" value="" required />
           
-          <div><button type="submit" className="Button">Login</button></div>
+          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Login</button></div>
         </form>
       </div>
       
       <div><p>Reset password <span><Link href="/reset-password">here</Link></span></p></div>
+      
+      <div><hr /></div>
       
       <div><p>Do not have an account? Sign up <span><Link href="/signup">here</Link></span></p></div>
     </main>

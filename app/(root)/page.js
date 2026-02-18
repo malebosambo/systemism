@@ -68,6 +68,10 @@ export default function Home() {
           <div className="Nav"><Link href="/directory">List SMME</Link></div>
         </div>
       </div>
+      
+      <div className="Home_Partners">
+        
+      </div>
     </main>
   );
 }

@@ -1,4 +1,3 @@
-import Navigation from "./navigation"
 import Link from "next/link"
 
 export default function Footer() {
@@ -6,7 +5,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div className="Legal">
-        <p>© 2025 Systemism</p>
+        <p>© 2026 Systemism</p>
       </div>
       
       <div className="Contacts">
@@ -15,10 +14,7 @@ export default function Footer() {
         <p>Tel:</p>
         <Link href="+27630013711">063 001 3711</Link>
       </div>
-      
-      <div className="Links">
-        <Navigation />
-      </div>
+    
     </div>
   );
 }

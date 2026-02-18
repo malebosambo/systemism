@@ -17,24 +17,24 @@ export default function Signup() {
   });
   
   return (
-    <main>
+    <main className="SignUp">
       <div><h1>Sign Up</h1></div>
       
-      <div>
+      <div className="SignUp_Form">
         <form action={UserSignUp}>
-          <input type="text" name="firstName" placeholder="First Name" onChange="" value="" height="10" width="20" required />
+          <input type="text" name="firstName" placeholder="First Name" onChange="" value="" required />
 
-          <input type="text" name="surname" placeholder="Surname" onChange="" value="" height="10" width="20" required />
+          <input type="text" name="surname" placeholder="Surname" onChange="" value="" required />
 
-          <input type="email" name="email" placeholder="Email" onChange="" value="" height="10" width="20" required />
+          <input type="email" name="email" placeholder="Email" onChange="" value="" required />
 
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value="" height="10" width="20" required />
+          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange="" value="" required />
 
-          <input type="password" name="password" placeholder="Password" onChange="" value="" height="10" width="20" required />
+          <input type="password" name="password" placeholder="Password" onChange="" value="" required />
 
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value="" height="10" width="20" required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange="" value="" required />
 
-          <button type="submit" className="Button">Submit</button>
+          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Submit</button></div>
         </form>
       </div>
       
