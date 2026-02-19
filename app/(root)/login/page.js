@@ -7,15 +7,26 @@ import { UserLogin } from "../../lib/actions";
 
 export default function Login() {
   
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+  
+  function handlePasswordChange(e) {
+    setPassword(e.target.value);
+  }
+  
   return (
     <main className="Login">
       <div><h1>Login</h1></div>
       
       <div className="Login_Form">
         <form action={UserLogin}>
-          <input type="email" name="email" placeholder="Email" onChange="" value="" required />
+          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={email} required />
           
-          <input type="password" name="password" placeholder="Password" onChange="" value="" required />
+          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={password} required />
           
           <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Login</button></div>
         </form>
