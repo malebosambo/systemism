@@ -71,7 +71,10 @@ export async function UpdateProfile(formData) {
   
 }
 
-export async function AddSMME(formData) {
+export async function AddEnterprise(formData) {
+  
+  const user
+  const form
   
 }
 

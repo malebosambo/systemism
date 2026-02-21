@@ -24,3 +24,7 @@ export async function CreateUser(data) {
     
   }
 }
+
+export async function CreateEnterprise() {
+  
+}

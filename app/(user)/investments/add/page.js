@@ -1,4 +1,4 @@
-export default function AddInvestment() {
+export default function NewInvestment() {
   
   return (
     <main>
