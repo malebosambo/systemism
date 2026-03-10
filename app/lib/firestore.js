@@ -1,4 +1,4 @@
-import { collection, setDoc, doc } from "firebase/firestore";
+import { collection, addDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export async function GetUser(data) {
@@ -14,7 +14,7 @@ export async function CreateUser(data) {
   
   try {
     
-    await setDoc(doc(db, "Users", 2), data);
+    await addDoc(doc(db, "Users", 2), data);
     
     console.log("Successful write to db.");
     
