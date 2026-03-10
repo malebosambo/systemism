@@ -1,4 +1,4 @@
-import EnterpriseCard from '../components/enterpriseDetailsCard';
+
 
 export default function Enterprises() {
   
