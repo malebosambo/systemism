@@ -64,7 +64,7 @@ export default function ViewProfile() {
         </div>
         
         <div>
-          <form action={}>
+          <form action="">
             <div><input type="textarea" name="phyAddress" required /></div>
             
             <div><input type="textarea" name="postalAddress" /></div>
@@ -77,7 +77,7 @@ export default function ViewProfile() {
         </div>
         
         <div>
-          <form action={}>
+          <form action="">
             <div><input type="number" name="accNumber" required /></div>
             
             <div>
