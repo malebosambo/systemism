@@ -14,7 +14,7 @@ export async function CreateUser(data) {
   
   try {
     
-    await setDoc(doc(db, "users", 2), data);
+    await setDoc(doc(db, "Users", 2), data);
     
     console.log("Successful write to db.");
     
