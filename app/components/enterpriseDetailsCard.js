@@ -2,7 +2,7 @@ export default function EnterpriseDetailsCard() {
   
   return (
     <>
-      <div className="Enterprise_Logo"><Image src="" alt="Enterprise Logo" height={100} width={100} /></div>
+      <div className="Enterprise_Logo"></div>
       
       <div>
         <h1 className="Enterprise_Name"></h1>
