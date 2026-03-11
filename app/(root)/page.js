@@ -20,7 +20,7 @@ export default function Home() {
         
         <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
         
-        <div className="Nav"><Link href="/investing">Investing</Link></div>
+        <div className="Button"><Link href="/investing">Investing</Link></div>
       </div>
       
       <div className="Home_Funding">
@@ -28,7 +28,7 @@ export default function Home() {
         
         <div><p>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
-        <div className="Nav"><Link href="/funding">Apply</Link></div>
+        <div className="Button"><Link href="/funding">Apply</Link></div>
       </div>
       
       <div className="Home_Marketplace">
@@ -65,7 +65,7 @@ export default function Home() {
             <p>3. Share & earn</p>
           </div>
           
-          <div className="Nav"><Link href="/directory">List SMME</Link></div>
+          <div className="Button"><Link href="/directory">List SMME</Link></div>
         </div>
       </div>
       

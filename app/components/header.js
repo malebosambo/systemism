@@ -16,7 +16,7 @@ export default function Header() {
     <div className="Header">
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={50} width={50} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={40} width={70} /></Link>
         </div>
         
         <div className="Mobile_Menu_Btns">
