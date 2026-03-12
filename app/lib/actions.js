@@ -13,7 +13,7 @@ export async function UserLogin(formData) {
   
   try {
 
-    await GetUser(user);
+    const user = await GetUser(user);
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
@@ -32,19 +32,18 @@ export async function UserLogin(formData) {
     
   }
 
-  redirect("/");
+  redirect("/dashboard");
 
 }
 
 export async function UserSignUp(formData) {
   
   const user = {
-    firstname: formData.get("firstName"),
+    name: formData.get("firstName"),
     surname: formData.get("surname"),
     email: formData.get("email"),
     cellphone: formData.get("cellphone"),
     password: formData.get("password"),
-    confirmPass: formData.get("confirmPassword")
   }
 
   try {
@@ -57,7 +56,7 @@ export async function UserSignUp(formData) {
   
   }
 
-  redirect("/");
+  redirect("/login");
 }
 
 export async function UserLogout() {

@@ -4,14 +4,14 @@ import { db } from "../../firebase";
 export async function GetUser(data) {
 
   const user = data;
-  const username = user.username;
-  console.log({user});
+  const email = user.email;
+  console.log({ user });
   
   try {
 
-    const users = await doc(db, "Users", username);
-    console.log({users});
-    return users;
+    const currUser = await doc(db, "Users", email);
+    console.log({ currUser });
+    return currUser;
     
   } catch {
 
@@ -23,12 +23,12 @@ export async function GetUser(data) {
 export async function CreateUser(data) {
 
   const user = data;
-  const username = user.username;
-  console.log({user});
+  const email = user.email;
+  console.log({ user });
   
   try {
     
-    const newUser = await addDoc(doc(db, "Users", username), user);
+    const newUser = await addDoc(doc(db, "Users", email), user);
     console.log("Successful write to db.");
     return newUser;
     
