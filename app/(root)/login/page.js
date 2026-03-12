@@ -32,11 +32,11 @@ export default function Login() {
         </form>
       </div>
       
-      <div><p>Reset password <span><Link href="/reset-password">here</Link></span></p></div>
+      <div><p>Reset password <span style={{ color: "blue" }}><Link href="/reset-password">here</Link></span></p></div>
       
       <div><hr /></div>
       
-      <div><p>Do not have an account? Sign up <span><Link href="/signup">here</Link></span></p></div>
+      <div><p>Do not have an account? Sign up <span style={{ color: "blue" }}><Link href="/signup">here</Link></span></p></div>
     </main>
   );
 }

@@ -1,7 +1,8 @@
 "use server";
- 
+
+import { redirect } from "next/navigation";
 import { signIn, signOut } from "../../auth";
-import { CreateUser } from "./firestore";
+import { CreateUser, GetUser } from "./firestore";
  
 export async function UserLogin(formData) {
   
@@ -11,8 +12,10 @@ export async function UserLogin(formData) {
   }
   
   try {
+
+    await GetUser(user);
     
-    await signIn("credentials", { redirectTo: "/dashboard" });
+    // await signIn("credentials", { redirectTo: "/dashboard" });
     
   } catch (error) {
     
@@ -24,9 +27,13 @@ export async function UserLogin(formData) {
           return 'Something went wrong.'
       }
     }
-    throw error
+    
+    throw error;
     
   }
+
+  redirect("/");
+
 }
 
 export async function UserSignUp(formData) {
@@ -40,23 +47,27 @@ export async function UserSignUp(formData) {
     confirmPass: formData.get("confirmPassword")
   }
 
- try {
+  try {
    
-   await CreateUser(user);
+    await CreateUser(user);
    
- } catch {
+  } catch {
    
     console.log("Error creating user.");
-    
- }
+  
+  }
+
+  redirect("/");
 }
 
 export async function UserLogout() {
   
-  await signOut({ redirectTo: "/" })
+  await signOut({ redirectTo: "/" });
+
 }
 
 export async function ViewUser() {
+
 }
 
 export async function UpdateUser(formData) {
@@ -72,9 +83,6 @@ export async function UpdateProfile(formData) {
 }
 
 export async function AddEnterprise(formData) {
-  
-  
-  
   
 }
 
