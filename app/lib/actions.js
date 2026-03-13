@@ -39,7 +39,7 @@ export async function UserLogin(formData) {
 export async function UserSignUp(formData) {
   
   const user = {
-    name: formData.get("firstName"),
+    name: formData.get("name"),
     surname: formData.get("surname"),
     email: formData.get("email"),
     cellphone: formData.get("cellphone"),
