@@ -32,7 +32,7 @@ export async function UserLogin(formData) {
     
   }
 
-  redirect("/dashboard");
+  redirect("/signup");
 
 }
 
