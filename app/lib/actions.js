@@ -13,7 +13,8 @@ export async function UserLogin(formData) {
   
   try {
 
-    const user = await GetUser(user);
+    const currUser = await GetUser({ user });
+    console.log(currUser);
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
@@ -48,7 +49,8 @@ export async function UserSignUp(formData) {
 
   try {
    
-    await CreateUser(user);
+    const newUser = await CreateUser(user);
+    console.log(newUser)
    
   } catch {
    
