@@ -1,4 +1,4 @@
-import { collection, setDoc, doc } from "firebase/firestore";
+import { collection, setDoc, getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export async function GetUser(data) {
@@ -9,7 +9,7 @@ export async function GetUser(data) {
   
   try {
 
-    const currUser = await doc(db, "Users", email);
+    const currUser = await getDoc(doc(db, "Users", email));
     console.log({ currUser });
     return currUser;
     
