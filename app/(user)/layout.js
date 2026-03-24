@@ -1,15 +1,18 @@
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import UserNavigation from "../components/userNavigation";
 
 export default function UserLayout({ children }) {
   
   const router = useRouter();
-  
-  if () {
+  const { data } = useSession();
+  console.log(data);
+  /*
+  if ( data ) {
     router.push("/login");
     router.refresh();
   }
-  
+  */
   return (
     <html lang="en">
       <body>

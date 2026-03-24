@@ -1,15 +1,11 @@
 import Link from 'next/link';
-import { auth } from '../../../auth';
 
 export default async function Dashboard() {
-  
-  const session = await auth();
-  const name = session.user.name;
   
   return (
     <div className="Dashboard">
       <div className="Account_Overview">
-        <div><h1>Hello, {name}</h1></div>
+        <div><h1>Hello,</h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>

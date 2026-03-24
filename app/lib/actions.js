@@ -57,13 +57,11 @@ export async function UserSignUp(formData) {
     password: formData.get("password"),
   };
   
-  const 
-  
   const dbUser = await GetUser(user.email);
 
   try {
     
-    if (dbUser === null) {
+    if (dbUser === null && user.email === dbUser.email) {
       return null;
     }
    
