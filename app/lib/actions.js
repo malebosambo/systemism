@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { signIn, signOut } from "../../auth";
 import { CreateUser, GetUser } from "./firestore";
+import { hash } from "bcrypt";
  
 export async function UserLogin(formData) {
   
@@ -12,14 +13,20 @@ export async function UserLogin(formData) {
   }
   
   try {
-
-    const currUser = await GetUser({ user });
+    
+    const currUser = await GetUser(user.email);
     console.log(currUser);
+    
+    const checkPassword = await compare(user?.password || "", currUser.password);
+    
+    if (!currUser && !checkPassword) {
+      return null;
+    }
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
   } catch (error) {
-    
+    /*
     if (error) {
       switch (error.type) {
         case 'CredentialsSignin':
@@ -30,6 +37,9 @@ export async function UserLogin(formData) {
     }
     
     throw error;
+    */
+    
+    console.log("Error logging in user.");
     
   }
 
@@ -45,9 +55,17 @@ export async function UserSignUp(formData) {
     email: formData.get("email"),
     cellphone: formData.get("cellphone"),
     password: formData.get("password"),
-  }
+  };
+  
+  const 
+  
+  const dbUser = await GetUser(user.email);
 
   try {
+    
+    if (dbUser === null) {
+      return null;
+    }
    
     const newUser = await CreateUser(user);
     console.log(newUser)
@@ -63,7 +81,7 @@ export async function UserSignUp(formData) {
 
 export async function UserLogout() {
   
-  await signOut({ redirectTo: "/" });
+  await signOut({ redirectTo: "/login" });
 
 }
 

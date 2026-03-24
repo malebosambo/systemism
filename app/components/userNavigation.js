@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { UserLogout } from "../lib/actions"
 
 export default function UserNavigation() {
   
@@ -13,7 +16,7 @@ export default function UserNavigation() {
       <div><Link href="/programs">Programs</Link></div>
       <div><Link href="/profile"><Image src="" alt="Profile Thumbnail" height={20} width={20} /></Link></div>
       
-      <div className="Button"><Link href="/logout">Logout</Link></div>
+      <div className="Button" onClick={ UserLogout }>Logout</div>
     </div>  
   );
 }

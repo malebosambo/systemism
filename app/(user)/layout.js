@@ -1,6 +1,14 @@
+import { useRouter } from "next/navigation";
 import UserNavigation from "../components/userNavigation";
 
 export default function UserLayout({ children }) {
+  
+  const router = useRouter();
+  
+  if () {
+    router.push("/login");
+    router.refresh();
+  }
   
   return (
     <html lang="en">

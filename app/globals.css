@@ -10,7 +10,15 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
+.Footer {
+  background-color: black;
+  color: white;
+  margin: -8px;
+}
+
 .Header {
+  background-color: black;
+  color: white;
   margin: -8px;
 }
 
@@ -106,6 +114,8 @@ h1, h2, h3, h4, h5, h6 {
   .Mobile_Menu_Visible {
     background-color: white;
     margin: -5px;
+    position: fixed;
+    top: 0;
   }
   
   .Nav > a {
@@ -153,6 +163,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
+  
+  .Navigation > div > a:active {
+    color: #F9F9E1;
+    text-decoration: underline;
+  }
+
+  .Navigation > div > a:hover {
+    background-color: grey;
+  }
   
 }
 
@@ -251,5 +270,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .Navigation > .Button > a {
     color: black;
+  }
+  
+  .Navigation > div > a:active {
+    color: #F9F9E1;
+  }
+  
+  .Navigation > div > a:hover {
+    background-color: grey;
   }
 }

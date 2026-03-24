@@ -1,0 +1,41 @@
+'use client';
+
+import Link from "next/link";
+import { useState } from "react";
+import { UserLogin } from "../../lib/actions";
+
+export default function LoginForm() {
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handlePasswordChange(e) {
+    setPassword(e.target.value);
+  }
+
+  return (
+    <main className="Login">
+      <div><h1>Login</h1></div>
+      
+      <div className="Login_Form">
+        <form action={UserLogin}>
+          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={email} required />
+          
+          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={password} required />
+          
+          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Login</button></div>
+        </form>
+      </div>
+      
+      <div><p>Reset password <span style={{ color: "blue" }}><Link href="/reset-password">here</Link></span></p></div>
+      
+      <div><hr /></div>
+      
+      <div><p>Do not have an account? Sign up <span style={{ color: "blue" }}><Link href="/signup">here</Link></span></p></div>
+    </main>
+  )
+}
