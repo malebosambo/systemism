@@ -176,11 +176,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
-
-  a {
-    color: black;
-  }
   
+  .Account_Overview {
+    width: 30%;
+  }
+
   .Button {
     background-color: #F9F9E1;
     border: none;
@@ -192,6 +192,21 @@ h1, h2, h3, h4, h5, h6 {
 
   .Button > a {
     color: black;
+  }
+  
+  .Consumer {
+    width: 70%;
+  }
+  
+  .Dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .Director {
+    width: 70%;
   }
 
   .Footer {
@@ -208,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  
+  .Heading {
+    text-align: center;
   }
 
   .Home_Academy {
@@ -237,6 +256,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .Home_Marketplace {
     padding: 90px 20px;
+  }
+  
+  .Login {
+    padding: 20px;
   }
 
   .Logo_Image {
@@ -278,5 +301,9 @@ h1, h2, h3, h4, h5, h6 {
   
   .Navigation > div > a:hover {
     background-color: grey;
+  }
+  
+  .Signup {
+    padding: 20px;
   }
 }

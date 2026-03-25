@@ -19,7 +19,7 @@ export default function LoginForm() {
 
   return (
     <main className="Login">
-      <div><h1>Login</h1></div>
+      <div className="Heading"><h1>Login</h1></div>
       
       <div className="Login_Form">
         <form action={UserLogin}>
@@ -31,7 +31,7 @@ export default function LoginForm() {
         </form>
       </div>
       
-      <div><p>Reset password <span style={{ color: "blue" }}><Link href="/reset-password">here</Link></span></p></div>
+      <div><p>Reset password <span style={{ fontColor: "blue" }}><Link href="/reset-password">here</Link></span></p></div>
       
       <div><hr /></div>
       

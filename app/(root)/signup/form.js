@@ -41,10 +41,10 @@ export default function SignupForm() {
   }
 
   return (
-    <main className="SignUp">
-      <div><h1>Sign Up</h1></div>
+    <main className="Signup">
+      <div className="Heading"><h1>Sign Up</h1></div>
       
-      <div className="SignUp_Form">
+      <div className="Signup_Form">
         <form action={UserSignUp}>
           <input type="text" name="name" placeholder="First Name" onChange={handleNameChange} value={user.name} required />
 
