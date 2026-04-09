@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import { signOut } from "next-auth/react";
 import { CreateUser, GetUser } from "./firestore";
-import { hash } from "bcrypt";
+import { hash, compare } from "bcrypt";
  
 export async function UserLogin(formData) {
   
@@ -26,18 +26,6 @@ export async function UserLogin(formData) {
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
   } catch (error) {
-    /*
-    if (error) {
-      switch (error.type) {
-        case 'CredentialsSignin':
-          return 'Invalid credentials.'
-        default:
-          return 'Something went wrong.'
-      }
-    }
-    
-    throw error;
-    */
     
     console.log("Error logging in user.");
     
