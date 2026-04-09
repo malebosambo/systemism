@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { signIn, signOut } from "../../auth";
+import { signOut } from "next-auth/react";
 import { CreateUser, GetUser } from "./firestore";
 import { hash } from "bcrypt";
  

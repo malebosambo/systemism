@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
-import { auth } from "./auth";
+// import { auth } from "./auth";
 
 const protectedRoutes = ["/dashboard", "/enterprises", "/funds", "/investments", "/listings", "/market", "/profile", "/programs"];
 
 export default async function middleware(request) {
   
-  const session = await auth();
+  /*const session = await auth();
   
   const { pathname} = request.nextUrl;
   
@@ -17,4 +17,5 @@ export default async function middleware(request) {
   }
   
   return NextResponse.next();
+  */
 }
