@@ -12,7 +12,7 @@ export default function UserNavigation() {
       <div><Link href="/investments">Investments</Link></div>
       <div><Link href="/funds">Funds</Link></div>
       <div><Link href="/marketplace">Marketplace</Link></div>
-      <div><Link href="/directory">Directory</Link></div>
+      <div><Link href="/enterprise">Enterprise</Link></div>
       <div><Link href="/programs">Programs</Link></div>
       <div><Link href="/profile"><Image src="" alt="Profile Thumbnail" height={20} width={20} /></Link></div>
       
