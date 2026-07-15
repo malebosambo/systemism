@@ -33,16 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .Button {
     background-color: #F9F9E1;
-    border: none;
+    border: thin solid black;
     border-radius: 10px;
     color: black;
     margin: 10px;
     padding: 10px;
     text-align: center;
-  }
-  
-  .Button > p {
-    font-weight: bold;
   }
   
   .Footer {
@@ -77,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 20px;
   }
   
-  .Home_Banner > h1, p {
+  .Home_Banner > p {
     color: white;
   }
   
@@ -177,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   p {
+    color: black;
     font-size: 14px;
   }
 }

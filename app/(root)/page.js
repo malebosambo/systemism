@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <main className="Home">
       <div className="Home_Banner">
-        <div><h1 style={{ color: "white" }}>Products and services for individuals and SMMEs.</h1></div>
+        <div><h1 style={{ color: "white" }}>Products and services for people and businesses.</h1></div>
         
-        <div><p>Join the all-in-one platform that provides financial independence, wealth generation and economic participation.</p></div>
+        <div><p>Our platform provides financial independence, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
-          <div className="Button"><Link href="/login"><p>Log In</p></Link></div>
-          <div className="Button"><Link href="/signup">Create Account</Link></div>
+          <div className="Button"><Link href="/login">Personal</Link></div>
+          <div className="Button"><Link href="/signup">Business</Link></div>
         </div>
       </div>
       
@@ -19,6 +19,19 @@ export default function Home() {
         <div><h1>Invest for now and the future.</h1></div>
         
         <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
+        
+        <div>
+          <h6>Short Term</h6>
+          <span className="material-symbols-outlined">chevron_right</span>
+        </div>
+        
+        <div>
+          <h6>Medium Term</h6>
+        </div>
+        
+        <div>
+          <h6>Long Term</h6>
+        </div>
         
         <div className="Button"><Link href="/investing">Investing</Link></div>
       </div>

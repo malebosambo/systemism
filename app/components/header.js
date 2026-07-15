@@ -20,8 +20,8 @@ export default function Header() {
         </div>
         
         <div className="Mobile_Menu_Btns">
-          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">Menu</span></button>
-          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">Close</span></button>
+          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">menu</span></button>
+          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">close</span></button>
         </div>
       </div>
       
