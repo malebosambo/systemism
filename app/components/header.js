@@ -4,7 +4,7 @@ import { useState } from "react"
 import Navigation from "./navigation"
 import Link from "next/link"
 import Image from "next/image"
-import logo from "../../public/Systemism-Logo.png"
+import logo from "../../public/SystemismLogoZoom.jpg"
 
 export default function Header() {
   
@@ -21,7 +21,7 @@ export default function Header() {
         
         <div className="Mobile_Menu_Btns">
           <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }>=</button>
-          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }>X</button>
+          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">menu</span></button>
         </div>
       </div>
       
