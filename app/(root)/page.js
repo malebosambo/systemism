@@ -27,7 +27,7 @@ export default function Home() {
             <h3>Short Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><span className="material-symbols-outlined">chevron_right</span>
+              <Link href="/investing/short-term"><span className="material-symbols-outlined">arrow_right</span>
               </Link>
             </div>
           </div>
@@ -53,6 +53,7 @@ export default function Home() {
       </div>
       
       <div className="Home_Funding">
+        
         <div><h1>Access funding for any business stage.</h1></div>
         
         <div><p>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>

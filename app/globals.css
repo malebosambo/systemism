@@ -29,6 +29,13 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+.Home_Funding {
+  background-image: url("/root/funding.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (max-width: 600px) {
 
   .Button {
@@ -54,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   .Circled_Icon {
     background-color: white;
     border-radius: 50%;
-    width: 20%;
+    width: 10%;
   }
   
   .Footer {
@@ -100,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .Home_Funding {
-    padding: 90px 0;
+    padding: 90px 20px;
   }
   
   .Home_InvestingTerms {
@@ -112,7 +119,6 @@ h1, h2, h3, h4, h5, h6 {
     border: thin solid black;
     border-radius: 10px;
     margin: 10px 0;
-    padding: 5px;
   }
 
   .Home_Investing {
