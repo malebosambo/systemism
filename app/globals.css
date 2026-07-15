@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   .Button {
     background-color: #F9F9E1;
     border: none;
+    border-radius: 10px;
     color: black;
     margin: 10px;
     padding: 10px;
@@ -130,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   .Mobile_Menu_Visible {
     background-color: white;
     margin: -5px;
+    padding: 20px;
     position: fixed;
     top: 0;
     width: 80%;
