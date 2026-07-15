@@ -16,24 +16,40 @@ export default function Home() {
       </div>
       
       <div className="Home_Investing">
+        
         <div><h1>Invest for now and the future.</h1></div>
         
         <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
         
-        <div className="Home_InvestTime">
-          <h6>Short Term</h6>
-          <div className="Circled_Icon"><span className="material-symbols-outlined">chevron_right</span></div>
+        <div className="Home_InvestingTerms">
+          
+          <div className="Home_InvestTime">
+            <h3>Short Term</h3>
+          
+            <div className="Circled_Icon">
+              <Link href="/investing/short-term"><span className="material-symbols-outlined">chevron_right</span>
+              </Link>
+            </div>
+          </div>
+        
+          <div className="Home_InvestTime">
+            <h3>Medium Term</h3>
+          
+            <div className="Circled_Icon">
+              <Link href="/investing/medium-term"><span className="material-symbols-outlined">chevron_right</span></Link>
+            </div>
+          </div>
+        
+          <div className="Home_InvestTime">
+            <h3>Long Term</h3>
+          
+            <div className="Circled_Icon">
+              <Link href="/investing/long-term"><span className="material-symbols-outlined">chevron_right</span></Link>
+            </div>
+          </div>
+          
         </div>
         
-        <div>
-          <h6>Medium Term</h6>
-        </div>
-        
-        <div>
-          <h6>Long Term</h6>
-        </div>
-        
-        <div className="Button"><Link href="/investing">Investing</Link></div>
       </div>
       
       <div className="Home_Funding">

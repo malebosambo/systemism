@@ -41,9 +41,20 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   
+  .Button_Small {
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 10px;
+    color: black;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+  }
+  
   .Circled_Icon {
     background-color: white;
     border-radius: 50%;
+    width: 20%;
   }
   
   .Footer {
@@ -92,9 +103,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 0;
   }
   
+  .Home_InvestingTerms {
+    padding: 20px 0;
+  }
+  
   .Home_InvestTime {
     background-color: #F9F9E1;
-    border: thick solid black;
+    border: thin solid black;
+    border-radius: 10px;
     margin: 10px 0;
     padding: 5px;
   }
