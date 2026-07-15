@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   
+  .Circled_Icon {
+    background-color: white;
+    border-radius: 50%;
+  }
+  
   .Footer {
     background-color: white;
     color: black;
@@ -73,13 +78,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 20px;
   }
   
-  .Home_Banner > p {
-    color: white;
-  }
-  
   .Home_Buttons {
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
   }
 
   .Home_Directory {
@@ -88,6 +90,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .Home_Funding {
     padding: 90px 0;
+  }
+  
+  .Home_InvestTime {
+    background-color: #F9F9E1;
+    border: thick solid black;
+    margin: 10px 0;
+    padding: 5px;
   }
 
   .Home_Investing {
@@ -169,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   
   a {
     color: black;
-    text-decoration: none;
+    font-weight: bold;
   }
   
   p {

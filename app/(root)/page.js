@@ -7,7 +7,7 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Products and services for people and businesses.</h1></div>
         
-        <div><p>Our platform provides financial independence, wealth generation and economic participation.</p></div>
+        <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/login">Personal</Link></div>
@@ -20,9 +20,9 @@ export default function Home() {
         
         <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
         
-        <div>
+        <div className="Home_InvestTime">
           <h6>Short Term</h6>
-          <span className="material-symbols-outlined">chevron_right</span>
+          <div className="Circled_Icon"><span className="material-symbols-outlined">chevron_right</span></div>
         </div>
         
         <div>
