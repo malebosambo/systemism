@@ -1,9 +1,9 @@
-import { Courier_Prime } from "next/font/google"; 
+import { Lato } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../globals.css";
 
-const courierPrime = Courier_Prime({
+const lato = Lato({
   subsets: ["latin"],
   weight: '400'
 });
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en" className={courierPrime.className}>
+    <html lang="en" className={lato.className}>
       <body>
         <div><Header /></div>
         <div>{children}</div>
