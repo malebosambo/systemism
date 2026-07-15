@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 .Header {
   background-color: black;
   color: white;
-  margin: -8px;
+  margin: -8px -8px 0 -8px;
 }
 
 .Home_Banner {
@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
   .Button {
     background-color: #F9F9E1;
     border: none;
-    border-radius: 10px;
     color: black;
     margin: 10px;
     padding: 15px;
@@ -73,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .Home_Banner {
+    margin: 0 -8px;
     padding: 90px 20px;
   }
   
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

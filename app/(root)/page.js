@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <main className="Home">
       <div className="Home_Banner">
-        <div><h1>Products and services for individuals and SMMEs.</h1></div>
+        <div><h1 style={{ color: "white" }}>Products and services for individuals and SMMEs.</h1></div>
         
         <div><p>Join the all-in-one platform that provides financial independence, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
-          <div className="Button"><Link href="/login"><p>Sign In</p></Link></div>
-          <div className="Button"><Link href="/signup">Sign Up</Link></div>
+          <div className="Button"><Link href="/login">Log In</Link></div>
+          <div className="Button"><Link href="/signup">Create Account</Link></div>
         </div>
       </div>
       
