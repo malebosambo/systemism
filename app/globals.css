@@ -34,11 +34,15 @@ h1, h2, h3, h4, h5, h6 {
   .Button {
     background-color: #F9F9E1;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     color: black;
-    margin: 3px;
+    margin: 10px;
     padding: 15px;
     text-align: center;
+  }
+  
+  .Button > p {
+    font-weight: bold;
   }
   
   .Footer {
@@ -61,15 +65,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Home {
-    padding: 20px 10px;
+
   }
 
   .Home_Academy {
-    padding: 90px 0;
+    padding: 90px 20px;
   }
 
   .Home_Banner {
-    padding: 90px 0;
+    padding: 90px 20px;
+  }
+  
+  .Home_Banner > h1, p {
+    color: white;
   }
   
   .Home_Buttons {
@@ -162,6 +170,10 @@ h1, h2, h3, h4, h5, h6 {
   a {
     color: black;
     text-decoration: none;
+  }
+  
+  p {
+    font-size: 16px;
   }
 }
 
