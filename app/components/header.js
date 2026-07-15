@@ -16,12 +16,12 @@ export default function Header() {
     <div className="Header">
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={40} width={70} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={50} style={{ display: "block", marginLeft: "auto", marginRight: "auto" }}width={80} /></Link>
         </div>
         
         <div className="Mobile_Menu_Btns">
-          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }>=</button>
-          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">menu</span></button>
+          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button" : "Hide" }>menu</button>
+          <button onClick={showMobileMenu} className={ mobileMenu ? "Button" : "Hide" }><span className="material-symbols-outlined">close</span></button>
         </div>
       </div>
       
