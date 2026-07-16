@@ -47,6 +47,8 @@ export async function UserSignUp(formData) {
     if (dbUser === null && user.email === dbUser.email) {
       return null;
     }
+
+   CreateUser(user);
    
   } catch {
    
