@@ -3,6 +3,8 @@
 import { redirect } from "next/navigation";
 import { signIn, signOut } from "../../auth";
 import { CreateUser, GetUser } from "./firestore";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
  
 export async function UserLogin(formData) {
   
@@ -16,24 +18,15 @@ export async function UserLogin(formData) {
     const currUser = await GetUser({ user });
     console.log(currUser);
     
-    // await signIn("credentials", { redirectTo: "/dashboard" });
+    const checkPassword = await compare(user?.password || "", currUser.password);
     
-  } catch (error) {
-    
-    if (error) {
-      switch (error.type) {
-        case 'CredentialsSignin':
-          return 'Invalid credentials.'
-        default:
-          return 'Something went wrong.'
-      }
+    if (!currUser && !checkPassword) {
+      return null;
     }
     
-    throw error;
+  } catch {
     
   }
-
-  redirect("/dashboard");
 
 }
 
@@ -46,11 +39,14 @@ export async function UserSignUp(formData) {
     cellphone: formData.get("cellphone"),
     password: formData.get("password"),
   }
+   
+    const dbUser = await GetUser(user.email);
 
   try {
-   
-    const newUser = await CreateUser(user);
-    console.log(newUser)
+    
+    if (dbUser === null && user.email === dbUser.email) {
+      return null;
+    }
    
   } catch {
    
@@ -58,12 +54,11 @@ export async function UserSignUp(formData) {
   
   }
 
-  redirect("/login");
 }
 
 export async function UserLogout() {
   
-  await signOut({ redirectTo: "/" });
+  await signOut(auth);
 
 }
 
