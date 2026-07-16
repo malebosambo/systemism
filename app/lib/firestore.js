@@ -1,5 +1,6 @@
 import { collection, setDoc, getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export async function GetUser(data) {
 
@@ -24,11 +25,12 @@ export async function CreateUser(data) {
 
   const user = data;
   const email = user.email;
+  const password = user.password;
   console.log({ user });
   
   try {
     
-    const newUser = await setDoc(doc(db, "Users", email), user);
+    const newUser = await createUserWithEmailAndPassword(email, password);
     console.log("Successful write to db.");
     return newUser;
     
