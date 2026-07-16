@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="Home">
       <div className="Home_Banner">
-        <div><h1 style={{ color: "white" }}>Products and services for people and businesses.</h1></div>
+        <div><h1 style={{ color: "white" }}>Products and services for people and businesses</h1></div>
         
         <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div>
         
@@ -19,7 +19,7 @@ export default function Home() {
         
         <div><h1>Invest for now and the future.</h1></div>
         
-        <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
+        <div><p>Our investments provide short-term, medium-term and long-term returns on capital</p></div>
         
         <div className="Home_InvestingTerms">
           
@@ -54,15 +54,17 @@ export default function Home() {
       
       <div className="Home_Funding">
         
-        <div><h1>Access funding for any business stage.</h1></div>
+        <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
         
-        <div><p>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
+        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
         <div className="Button"><Link href="/funding">Apply</Link></div>
+        
       </div>
       
       <div className="Home_Marketplace">
-        <div><h1>Sell or buy products on the marketplace.</h1></div>
+        
+        <div><h1>Sell or buy products on the marketplace</h1></div>
         
         <div className="Home_Buttons">
           <div className="Button">
@@ -72,19 +74,23 @@ export default function Home() {
             <Link href="/marketplace">Shop</Link>
           </div>
         </div>
+        
       </div>
       
       <div className="Home_Academy">
-        <div><h1>Our academy programs offer strategic development.</h1></div>
+        
+        <div><h1>Enroll in our academy programs for professional & business development</h1></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/academy/enroll">Enroll</Link></div>
           <div className="Button"><Link href="/academy/programs">Browse</Link></div>
         </div>
+        
       </div>
       
       <div className="Home_Directory">
-        <div><h1>Need services fast? Search for a business in your area.</h1></div>
+        
+        <div><h1>Need services fast? Search for a business in your area</h1></div>
         
         <div><h2>List your business on our directory.</h2></div>
         
@@ -97,6 +103,7 @@ export default function Home() {
           
           <div className="Button"><Link href="/directory">List SMME</Link></div>
         </div>
+        
       </div>
       
       <div className="Home_Partners">
