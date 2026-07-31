@@ -28,7 +28,7 @@ export default function Home() {
             <h3>Short Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} />
+              <Link href="/investing/short-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} />
               </Link>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
             <h3>Medium Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/medium-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
+              <Link href="/investing/medium-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
             </div>
           </div>
         
@@ -47,7 +47,7 @@ export default function Home() {
             <h3>Long Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/long-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
+              <Link href="/investing/long-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
             </div>
           </div>
           
