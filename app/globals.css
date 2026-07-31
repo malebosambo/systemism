@@ -161,6 +161,19 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
   }
   
+  .Menu_Nav_Active{
+    border-bottom: 2px solid #F9F9E1;
+  }
+  /* Dont forget to remove the "_link" from className when understood how to find active link in a jsx page to change className in the page dynamically */
+  .Menu_Nav_Link > a:active {
+    color: #F9F9E1;
+  }
+  
+  .Menu_Nav_Link {
+    border-bottom: 1px solid black;
+    padding: 3px 0;
+  }
+  
   .Mobile_Menu {
     width: 80%;
   }
@@ -171,6 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .Mobile_Menu_Visible {
     background-color: white;
+    display: flex;
+    flex-direction: row;
     margin: -5px;
     padding: 20px;
     position: fixed;
@@ -220,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   p {
     color: black;
     font-size: 15px;
-    line-height: 1px;
+    line-height: 5px;
   }
 }
 
