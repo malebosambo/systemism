@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .Circled_Icon {
     background-color: white;
+    border: 1px solid black;
     border-radius: 50%;
     width: 10%;
   }
@@ -122,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
     border: thin solid black;
     border-radius: 10px;
     margin: 10px 0;
+    padding: 5px;
   }
 
   .Home_Investing {
@@ -158,6 +160,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
   }
+  
+  .Mobile_Menu {
+    width: 80%;
+  }
+  
+  .Mobile_Menu_Close {
+    width: 20%;
+  }
 
   .Mobile_Menu_Visible {
     background-color: white;
@@ -165,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 100%;
   }
   
   .Nav > a {
@@ -209,7 +219,8 @@ h1, h2, h3, h4, h5, h6 {
   
   p {
     color: black;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1px;
   }
 }
 

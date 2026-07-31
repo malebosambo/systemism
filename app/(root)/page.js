@@ -19,32 +19,35 @@ export default function Home() {
         
         <div><h1>Invest for now and the future.</h1></div>
         
-        <div><p>Our investments provide short-term, medium-term and long-term returns on capital</p></div>
+        <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
         
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
             <h3>Short Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><span className="material-symbols-outlined">arrow_right</span>
+              <Link href="/investing/short-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} />
               </Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
             <h3>Medium Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/medium-term"><span className="material-symbols-outlined">chevron_right</span></Link>
+              <Link href="/investing/medium-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
             <h3>Long Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/long-term"><span className="material-symbols-outlined">chevron_right</span></Link>
+              <Link href="/investing/long-term"><Image src="/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
             </div>
           </div>
           
