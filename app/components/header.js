@@ -20,7 +20,7 @@ export default function Header() {
           <Link href="/"><Image src={logo} alt="Company Logo" height={70} width={100} /></Link>
         </div>
         
-        <div>
+        <div style={{ display: "grid", placeItems: "center" }}>
           <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
         </div>
       </div>

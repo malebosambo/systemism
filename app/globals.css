@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Header {
-  background-color: black;
   color: white;
   margin: -8px -8px 0 -8px;
 }
@@ -52,14 +51,14 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     background-color: #F9F9E1;
     border: thin solid black;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     padding: 5px;
   }
   
   .Circled_Icon {
-    float: right;
+    
   }
   
   .Footer {
@@ -168,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
   
   .Menu_Nav_Link {
     border-bottom: 1px solid black;
-    padding: 3px 0;
+    margin-right: 10px;
+    padding: 5px 0;
   }
   
   .Mobile_Menu {
@@ -176,6 +176,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Mobile_Menu_Close {
+    align-items: center;
+    display: grid;
+    justify-items: center;
     width: 20%;
   }
 
@@ -232,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   p {
     color: black;
     font-size: 15px;
-    line-height: 13px;
+    line-height: 15px;
   }
 }
 
