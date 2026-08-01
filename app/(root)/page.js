@@ -24,30 +24,30 @@ export default function Home() {
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             <h3>Short Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} />
+              <Link href="/investing/short-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={20} width={20} />
               </Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             <h3>Medium Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/medium-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
+              <Link href="/investing/medium-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={40} width={40} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             <h3>Long Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/long-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={30} width={30} /></Link>
+              <Link href="/investing/long-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
             </div>
           </div>
           

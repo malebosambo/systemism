@@ -59,9 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Circled_Icon {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 50%;
+    
   }
   
   .Footer {
@@ -234,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
   p {
     color: black;
     font-size: 15px;
-    line-height: 5px;
+    line-height: 10px;
   }
 }
 
