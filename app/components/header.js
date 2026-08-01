@@ -14,12 +14,13 @@ export default function Header() {
   
   return (
     <div className="Header">
+      
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={90} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={70} width={100} /></Link>
         </div>
         
-        <div className="Mobile_Menu_Btns">
+        <div>
           <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
         </div>
       </div>
@@ -28,6 +29,7 @@ export default function Header() {
         <div className={ mobileMenu ? "Mobile_Menu" : "" }><Navigation /></div>
         <div className={ mobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
       </div>
+      
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function Home() {
             <h3>Short Term</h3>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><Image src="/icons/right-arrow.png" alt="Right Arrow" height={20} width={20} />
+              <Link href="/investing/short-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} />
               </Link>
             </div>
           </div>
