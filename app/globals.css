@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Header {
+  background-color: black;
   color: white;
   margin: -8px -8px 0 -8px;
 }
@@ -70,10 +71,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .Header {
-    color: white;
     display: flex;
     flex-direction: column;
-    padding: 1px;
   }
   
   .Hide {
@@ -167,18 +166,18 @@ h1, h2, h3, h4, h5, h6 {
   
   .Menu_Nav_Link {
     border-bottom: 1px solid black;
-    margin-right: 10px;
     padding: 5px 0;
   }
   
   .Mobile_Menu {
+    padding-right: 15px;
     width: 80%;
   }
   
   .Mobile_Menu_Close {
-    align-items: center;
+    /* align-items: center;
     display: grid;
-    /* justify-items: center; */
+    justify-items: center; */
     width: 20%;
   }
 

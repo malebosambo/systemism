@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="Home">
+      
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Products and services for people and businesses</h1></div>
         
@@ -24,8 +25,10 @@ export default function Home() {
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            
             <h3>Short Term</h3>
+            <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
               <Link href="/investing/short-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} />
@@ -34,8 +37,10 @@ export default function Home() {
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            
             <h3>Medium Term</h3>
+            <p>Moderate Risk, Moderate Reward</p>
           
             <div className="Circled_Icon">
               <Link href="/investing/medium-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
@@ -43,8 +48,10 @@ export default function Home() {
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            
             <h3>Long Term</h3>
+            <p>Low Risk, Low Reward</p>
           
             <div className="Circled_Icon">
               <Link href="/investing/long-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
@@ -67,11 +74,13 @@ export default function Home() {
       
       <div className="Home_Marketplace">
         
-        <div><h1>Sell or buy products on the marketplace</h1></div>
+        <div><h1>Sell products on the marketplace</h1></div>
+        
+        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link href="/marketplace/vendor-application">Vendor Application</Link>
+            <Link href="/marketplace/vendor-application">Vendor Application<span><Image src="circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
           </div>
           <div className="Button">
             <Link href="/marketplace">Shop</Link>
