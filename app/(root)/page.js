@@ -76,11 +76,11 @@ export default function Home() {
         
         <div><h1>Sell products on the marketplace</h1></div>
         
-        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
+        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link href="/marketplace/vendor-application">Vendor Application<span><Image src="circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
+            <Link href="/marketplace/vendor-application">Vendor Application<span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
           </div>
           <div className="Button">
             <Link href="/marketplace">Shop</Link>
