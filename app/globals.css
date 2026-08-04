@@ -166,7 +166,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .Menu_Nav_Link {
     border-bottom: 1px solid black;
-    padding: 5px 0;
   }
   
   .Mobile_Menu {
@@ -208,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .Navigation > div {
     margin: 2px 0;
-    padding: 3px;
+    padding: 5px;
   }
   
   .SignUp {

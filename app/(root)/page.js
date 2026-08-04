@@ -76,14 +76,11 @@ export default function Home() {
         
         <div><h1>Sell products on the marketplace</h1></div>
         
-        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
+        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link href="/marketplace/vendor-application">Vendor Application<span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
-          </div>
-          <div className="Button">
-            <Link href="/marketplace">Shop</Link>
+            <Link href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "3px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
           </div>
         </div>
         
@@ -93,16 +90,23 @@ export default function Home() {
         
         <div><h1>Enroll in our academy programs for professional & business development</h1></div>
         
-        <div className="Home_Buttons">
-          <div className="Button"><Link href="/academy/enroll">Enroll</Link></div>
-          <div className="Button"><Link href="/academy/programs">Browse</Link></div>
-        </div>
         
       </div>
       
       <div className="Home_Directory">
         
         <div><h1>Need services fast? Search for a business in your area</h1></div>
+        
+        <div>
+          <iframe
+            src="https://maps.google.com"
+            title="Google Maps"
+            width="100%"
+            height="450"
+            loading="lazy"
+            sandbox="allow-scripts allow-same-origin"
+          />
+        </div>
         
         <div><h2>List your business on our directory.</h2></div>
         
