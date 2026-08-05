@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { UserLogin } from "../../lib/actions";
 
-export default function LoginForm() {
+export default function LoginForm()
+
+{
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,6 +21,7 @@ export default function LoginForm() {
 
   return (
     <main className="Login">
+      
       <div className="Heading"><h1>Login</h1></div>
       
       <div className="Login_Form">
@@ -36,6 +39,7 @@ export default function LoginForm() {
       <div><hr /></div>
       
       <div><p>Do not have an account? Sign up <span style={{ color: "blue" }}><Link href="/signup">here</Link></span></p></div>
+      
     </main>
   )
 }

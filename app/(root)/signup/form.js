@@ -5,7 +5,9 @@ import { useState } from "react";
 import { UserSignUp } from "../../lib/actions";
 
 
-export default function SignupForm() {
+export default function SignupForm() 
+
+{
   
   const [user, setUser] = useState({
     name: "",
@@ -42,6 +44,7 @@ export default function SignupForm() {
 
   return (
     <main className="Signup">
+      
       <div className="Heading"><h1>Sign Up</h1></div>
       
       <div className="Signup_Form">
@@ -63,6 +66,7 @@ export default function SignupForm() {
       </div>
       
       <div><p>Already have an account? Login <span><Link href="/login">here</Link></span></p></div>
+      
     </main>
   )
 }
