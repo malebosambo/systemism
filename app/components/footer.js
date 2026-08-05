@@ -23,14 +23,15 @@ export default function Footer() {
       
       <div style={{ marginTop: "5px" }}><h3 style={{ color: "white" }}>Legal</h3></div>
       
-      <div>
+      <div className="Legal">
         <div><Link href="/legal/faq">FAQ</Link></div>
         <div><Link href="/legal/terms-conditions">Terms and Conditions</Link></div>
         <div><Link href="/legal/privacy-policy">Privacy Policy</Link></div>
-      </div>
       
-      <div className="Legal">
-        <p>© 2026 Systemism</p>
+       
+        <div>
+          <p>© 2026 Systemism</p>
+        </div>
       </div>
     
     </div>

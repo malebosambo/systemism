@@ -17,7 +17,7 @@ export default function Header() {
       
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={70} width={100} style={{ border: "1px solid #F9F9E1" }} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={100} style={{ border: "1px solid #F9F9E1" }} /></Link>
         </div>
         
         <div style={{ display: "grid", paddingRight: "5px", placeItems: "center" }}>

@@ -10,6 +10,14 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
+input:focus {
+  border: 1px solid #F9F9E1;
+}
+
+input:focus-visible {
+  border: 1px solid #F9F9E1;
+}
+
 .Footer {
   background-color: black;
   margin: -8px;
@@ -24,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .Footer > .Contacts > a {
+  color: white;
+}
+
+.Footer > .Legal > a {
   color: white;
 }
 
