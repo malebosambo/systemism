@@ -7,18 +7,22 @@ export default function Footer() {
     <div className="Footer">
       
       <div>
-        <Image src="/SystemismLogoZoom.png" alt="Systemism Logo" height={70} weight={100} />
+        <Image src="/SystemismLogoZoom.jpg" alt="Systemism Logo" height={70} weight={100} />
       </div>
       
-      <div className="Legal">
-        <p>© 2026 Systemism</p>
-      </div>
+      <div style={{ marginTop: "5px" }}><h3 style={{ color: "white" }}>Contacts</h3></div>
       
       <div className="Contacts">
         <p>E-mail:</p>
         <Link href="admin@systemism.co.za">admin@systemism.co.za</Link>
         <p>Tel:</p>
         <Link href="+27630013711">063 001 3711</Link>
+      </div>
+      
+      <div style={{ marginTop: "5px" }}><h3 style={{ color: "white" }}>Legal</h3></div>
+      
+      <div className="Legal">
+        <p>© 2026 Systemism</p>
       </div>
     
     </div>

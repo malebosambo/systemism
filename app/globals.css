@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: -8px;
 }
 
-.Footer > .Contacts, .Legal {
+.Footer > .Contacts > p {
   color: white;
 }
 
@@ -58,15 +58,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 10px;
   }
   
   .Circled_Icon {
     
-  }
-  
-  .Contacts {
-    margin-top: 5px;
   }
   
   .Footer {
@@ -139,10 +135,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .Home_Partners {
     padding: 50px 20px;
-  }
-  
-  .Legal {
-    margin-top: 5px;
   }
   
   .Links {

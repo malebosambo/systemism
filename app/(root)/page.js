@@ -76,7 +76,7 @@ export default function Home() {
         
         <div><h1>Sell products on the marketplace</h1></div>
         
-        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={400} /></div>
+        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
