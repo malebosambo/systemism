@@ -10,6 +10,7 @@ export default function Navigation() {
       <div className="Menu_Nav_Link"><Link href="/marketplace">Marketplace</Link></div>
       <div className="Menu_Nav_Link"><Link href="/directory">Directory</Link></div>
       <div className="Menu_Nav_Link"><Link href="/academy">Academy</Link></div>
+      <div className="Menu_Nav_Link"><Link href="/accelerator">Accelerator</Link></div>
       <div><Link href="/contact-us">Contact Us</Link></div>
     </div>  
   );

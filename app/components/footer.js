@@ -17,9 +17,17 @@ export default function Footer() {
         <Link href="admin@systemism.co.za">admin@systemism.co.za</Link>
         <p>Tel:</p>
         <Link href="+27630013711">063 001 3711</Link>
+        <p>Address:</p>
+        <Link href="">462B Cuba Crescent, Lulekani, Phalaborwa, 1392</Link>
       </div>
       
       <div style={{ marginTop: "5px" }}><h3 style={{ color: "white" }}>Legal</h3></div>
+      
+      <div>
+        <div><Link href="/faq">FAQ</Link></div>
+        <div><Link href="/terms-conditions">Terms and Conditions</Link></div>
+        <div><Link href="/privacy-policy">Privacy Policy</Link></div>
+      </div>
       
       <div className="Legal">
         <p>© 2026 Systemism</p>

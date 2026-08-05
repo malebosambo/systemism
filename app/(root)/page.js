@@ -80,7 +80,7 @@ export default function Home() {
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "3px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
+            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
           </div>
         </div>
         
@@ -95,7 +95,7 @@ export default function Home() {
       
       <div className="Home_Directory">
         
-        <div><h1>Need services fast? Search for a business in your area</h1></div>
+        <div><h1>Need services fast? Search for a service provider in your area</h1></div>
         
         <div>
           <iframe
@@ -124,7 +124,7 @@ export default function Home() {
       
       <div className="Home_Partners">
         
-        <div><h1>Partners</h1></div>
+        <div style={{ textAlign: "center" }}><h1>Partners</h1></div>
         
         <div className="PartnerLogos">
           <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>
