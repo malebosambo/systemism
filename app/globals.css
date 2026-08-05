@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.Footer > .Contacts > a {
+  color: white;
+}
+
 .Header {
   background-color: black;
   color: white;
@@ -215,6 +219,10 @@ h1, h2, h3, h4, h5, h6 {
   .Navigation > div {
     margin: 5px 0;
     padding: 5px;
+  }
+  
+  .PartnerLogos {
+    margin-top: 10px 0;
   }
   
   .SignUp {

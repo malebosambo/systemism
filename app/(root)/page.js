@@ -12,7 +12,7 @@ export default function Home() {
         
         <div className="Home_Buttons">
           <div className="Button"><Link className="Nav" href="/login">Personal</Link></div>
-          <div className="Button"><Link href="/signup">Business</Link></div>
+          <div className="Button"><Link className="Nav" href="/signup">Business</Link></div>
         </div>
       </div>
       
@@ -68,7 +68,7 @@ export default function Home() {
         
         <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
-        <div className="Button"><Link href="/funding">Apply</Link></div>
+        <div className="Button"><Link className="Nav" href="/funding">Apply</Link></div>
         
       </div>
       
@@ -80,7 +80,7 @@ export default function Home() {
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "3px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
+            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "3px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
           </div>
         </div>
         
@@ -117,14 +117,16 @@ export default function Home() {
             <p>3. Share & earn</p>
           </div>
           
-          <div className="Button"><Link href="/directory">List SMME</Link></div>
+          <div className="Button"><Link className="Nav" href="/directory">List SMME</Link></div>
         </div>
         
       </div>
       
       <div className="Home_Partners">
         
-        <div>
+        <div><h1>Partners</h1></div>
+        
+        <div className="PartnerLogos">
           <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>
         </div>
         
