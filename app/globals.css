@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: -8px;
 }
 
-.Footer > a, p, h1, h2, h3, h4, h5, h6 {
+.Footer > .Contacts, .Legal {
   color: white;
 }
 
@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
   
   .Circled_Icon {
     
+  }
+  
+  .Contacts {
+    margin-top: 5px;
   }
   
   .Footer {
@@ -135,6 +139,10 @@ h1, h2, h3, h4, h5, h6 {
   
   .Home_Partners {
     padding: 50px 20px;
+  }
+  
+  .Legal {
+    margin-top: 5px;
   }
   
   .Links {

@@ -4,6 +4,11 @@ export default function Footer() {
   
   return (
     <div className="Footer">
+      
+      <div>
+        <Image src="/SystemismLogoZoom.png" alt="Systemism Logo" height={70} weight={100} />
+      </div>
+      
       <div className="Legal">
         <p>© 2026 Systemism</p>
       </div>
