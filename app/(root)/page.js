@@ -34,7 +34,7 @@ export default function Home()
             <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} />
+              <Link href="/investing/short-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span>
               </Link>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function Home()
             <p>Moderate Risk, Moderate Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/medium-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
+              <Link href="/investing/medium-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
             </div>
           </div>
         
@@ -57,7 +57,7 @@ export default function Home()
             <p>Low Risk, Low Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/long-term"><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></Link>
+              <Link href="/investing/long-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
             </div>
           </div>
           
@@ -111,13 +111,15 @@ export default function Home()
           />
         </div>
         
-        <div><h2>List your business on our directory.</h2></div>
+        <div><h2>List on the directory</h2></div>
         
         <div>
           <div>
-            <p>1. Register</p>
-            <p>2. Submit listing</p>
-            <p>3. Share & earn</p>
+            <ul>
+              <li><div><span><Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} /></span><p>Create a profile</p></div></li>
+              <li><div><p>Share in the ecosystem</p></div></li>
+              <li><div><p>Generate revenue</p></div></li>
+            </ul>
           </div>
           
           <div className="Button"><Link className="Nav" href="/directory">List SMME</Link></div>

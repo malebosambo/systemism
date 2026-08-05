@@ -78,7 +78,7 @@ input:focus-visible {
     border-radius: 15px;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 8px;
   }
   
   .Circled_Icon {
