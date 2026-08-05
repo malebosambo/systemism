@@ -11,7 +11,7 @@ export default function Home() {
         <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
-          <div className="Button"><Link href="/login">Personal</Link></div>
+          <div className="Button"><Link className="Nav" href="/login">Personal</Link></div>
           <div className="Button"><Link href="/signup">Business</Link></div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function Home() {
         
         <div><h1>Sell products on the marketplace</h1></div>
         
-        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
+        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={400} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
@@ -88,7 +88,7 @@ export default function Home() {
       
       <div className="Home_Academy">
         
-        <div><h1>Enroll in our academy programs for professional & business development</h1></div>
+        <div><h1>Enroll in our academy programs for professional development</h1></div>
         
         
       </div>
@@ -99,7 +99,7 @@ export default function Home() {
         
         <div>
           <iframe
-            src="https://maps.google.com"
+            src="https://maps.app.goo.gl/pFnUxfgW8fqiQC3f9?g_st=ac"
             title="Google Maps"
             width="100%"
             height="450"
@@ -123,6 +123,10 @@ export default function Home() {
       </div>
       
       <div className="Home_Partners">
+        
+        <div>
+          <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>
+        </div>
         
       </div>
     </main>
