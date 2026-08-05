@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: -8px;
 }
 
-.Footer > .Contacts > p, a {
+.Footer > .Contacts > p {
   color: white;
 }
 
@@ -86,10 +86,6 @@ h1, h2, h3, h4, h5, h6 {
   
   .Home {
 
-  }
-  
-  .Home > a {
-    font-weight: bold;
   }
 
   .Home_Academy {
@@ -202,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
   
-  .Nav > a {
+  .Nav {
     font-weight: bold;
   }
   

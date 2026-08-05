@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       
-      <div>
+      <div style={{ border: "1px solid #F9F9E1" }}>
         <Image src="/SystemismLogoZoom.jpg" alt="Systemism Logo" height={70} weight={100} />
       </div>
       
