@@ -18,6 +18,11 @@ input:focus-visible {
   border: 1px solid #F9F9E1;
 }
 
+ul {
+  list-style-image: url("/icons/circled-right.png");
+  list-style-type: disc;
+}
+
 .Footer {
   background-color: black;
   margin: -8px;

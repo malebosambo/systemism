@@ -116,7 +116,7 @@ export default function Home()
         <div>
           <div>
             <ul>
-              <li><div><span><Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} /></span><p>Create a profile</p></div></li>
+              <li><div><p>Create a profile</p></div></li>
               <li><div><p>Share in the ecosystem</p></div></li>
               <li><div><p>Generate revenue</p></div></li>
             </ul>
