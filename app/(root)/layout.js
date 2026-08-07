@@ -1,10 +1,10 @@
-import { DMSans } from "next/font/google"; 
+import { Rubik } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../globals.css";
 import "../globalsicons.css";
 
-const dmsans = DMSans({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: '400'
 });
