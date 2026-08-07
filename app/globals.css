@@ -19,8 +19,7 @@ input:focus-visible {
 }
 
 ul {
-  list-style-image: url("/icons/circled-right.png");
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 .Footer {

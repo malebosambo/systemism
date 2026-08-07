@@ -1,10 +1,10 @@
-import { Lato } from "next/font/google"; 
+import { DMSans } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 import "../globals.css";
 import "../globalsicons.css";
 
-const lato = Lato({
+const dmsans = DMSans({
   subsets: ["latin"],
   weight: '400'
 });

@@ -116,9 +116,9 @@ export default function Home()
         <div>
           <div>
             <ul>
-              <li><div><p>Create a profile</p></div></li>
-              <li><div><p>Share in the ecosystem</p></div></li>
-              <li><div><p>Generate revenue</p></div></li>
+              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Create a profile</p></span></div></li>
+              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your profile</p></span></div></li>
+              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></span></div></li>
             </ul>
           </div>
           
