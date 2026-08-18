@@ -83,7 +83,7 @@ export default function Home()
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application<span style={{ marginLeft: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={10} width={10} /></span></Link>
+            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application</Link>
           </div>
         </div>
         

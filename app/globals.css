@@ -161,6 +161,11 @@ ul {
     padding: 50px 20px;
   }
   
+  .Legal {
+    display: flex;
+    flex-direction: row;
+  }
+  
   .Links {
     padding: 20px 10px;
   }
@@ -238,7 +243,7 @@ ul {
   }
   
   .PartnerLogos {
-    margin-top: 10px 0;
+    margin: 30px 0;
   }
   
   .SignUp {
