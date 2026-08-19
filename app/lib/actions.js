@@ -17,13 +17,15 @@ export async function UserLogin(formData) {
     const currUser = await GetUser(user.email);
     console.log(currUser);
     
-    const checkPassword = await compare(user?.password || "", currUser.password);
+    // const checkPassword = await compare(user?.password || "", currUser.password);
     
-    if (!currUser && !checkPassword) {
+    /* if (!currUser && !checkPassword) {
       return null;
-    }
+    } */
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
+    
+    redirect("/dashboard");
     
   } catch (error) {
     
@@ -31,7 +33,7 @@ export async function UserLogin(formData) {
     
   }
 
-  redirect("/dashboard");
+  // redirect("/dashboard");
 
 }
 

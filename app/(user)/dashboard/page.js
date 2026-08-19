@@ -4,6 +4,7 @@ export default async function Dashboard() {
   
   return (
     <div className="Dashboard">
+      
       <div className="Account_Overview">
         <div><h1>Hello,</h1></div>
         <div><h2>Account balance: 0</h2></div>

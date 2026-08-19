@@ -36,7 +36,7 @@ export async function CreateUser(data) {
   try {
     
     const newUser = await setDoc(doc(db, "Users", email), user);
-    console.log("Successful write to db.");
+    console.log("Successful write to db.", user);
     return newUser;
     
   } catch {
