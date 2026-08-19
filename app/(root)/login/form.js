@@ -26,9 +26,9 @@ export default function LoginForm()
       
       <div className="Login_Form">
         <form action={UserLogin}>
-          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={email} required />
+          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={email} required className="Input" />
           
-          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={password} required />
+          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={password} required className="Input" />
           
           <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Login</button></div>
         </form>

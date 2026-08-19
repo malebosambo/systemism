@@ -49,17 +49,17 @@ export default function SignupForm()
       
       <div className="Signup_Form">
         <form action={UserSignUp}>
-          <input type="text" name="name" placeholder="First Name" onChange={handleNameChange} value={user.name} required />
+          <input type="text" name="name" placeholder="First Name" onChange={handleNameChange} value={user.name} required className="Input" />
 
-          <input type="text" name="surname" placeholder="Surname" onChange={handleSurnameChange} value={user.surname} required />
+          <input type="text" name="surname" placeholder="Surname" onChange={handleSurnameChange} value={user.surname} required className="Input" />
 
-          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={user.email} required />
+          <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={user.email} required className="Input" />
 
           <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleCellphoneChange} value={user.cellphone} required />
 
-          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={user.password} required />
+          <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={user.password} required className="Input" />
 
-          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={handleConfirmPasswordChange} value={user.confirmPassword} required />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={handleConfirmPasswordChange} value={user.confirmPassword} required className="Input" />
 
           <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Submit</button></div>
         </form>
