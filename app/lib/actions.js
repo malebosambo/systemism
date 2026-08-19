@@ -14,7 +14,7 @@ export async function UserLogin(formData) {
   
   try {
     
-    const currUser = await GetUser(user.email);
+    const currUser = await GetUser(user);
     console.log(currUser);
     
     // const checkPassword = await compare(user?.password || "", currUser.password);
