@@ -19,21 +19,21 @@ export async function UserLogin(formData) {
     
     // const checkPassword = await compare(user?.password || "", currUser.password);
     
-    /* if (!currUser && !checkPassword) {
+    if (user.password == currUser.password) {
+      return currUser;
+    } else {
       return null;
-    } */
+    }
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
     redirect("/dashboard");
     
-  } catch (error) {
+  } catch {
     
     console.log("Error logging in user.");
     
   }
-
-  // redirect("/dashboard");
 
 }
 
@@ -47,7 +47,7 @@ export async function UserSignUp(formData) {
     password: formData.get("password"),
   };
   
-  const dbUser = await GetUser(user.email);
+  const dbUser = await GetUser(user);
 
   try {
     
