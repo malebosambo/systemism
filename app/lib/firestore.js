@@ -11,20 +11,25 @@ export async function GetUser(data) {
 
     const currUser = await getDoc(doc(db, "Users", email));
     
-    if (!currUser.exists()) {
+    if (currUser.exists()) {
+      
+      const dbUser = currUser.data();
+      console.log("DB user found", currUser);
+      return dbUser;
+      
+    } else {
+      
       console.log("DB user not found.");
       return null;
+      
     }
     
-    const dbUser = currUser.data();
-    console.log("DB user found", currUser);
-    return dbUser;
-    
-  } catch(error) {
+  } catch() {
 
-    console.log("Error reading from db.", error);
+    console.log("Error reading from db.");
 
   }
+  
 }
 
 export async function CreateUser(data) {
