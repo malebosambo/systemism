@@ -24,7 +24,7 @@ export async function GetUser(data) {
       
     }
     
-  } catch() {
+  } catch {
 
     console.log("Error reading from db.");
 
