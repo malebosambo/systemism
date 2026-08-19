@@ -20,14 +20,12 @@ export async function UserLogin(formData) {
     // const checkPassword = await compare(user?.password || "", currUser.password);
     
     if (user.password == currUser.password) {
-      return currUser;
+      redirect("/dashboard");
     } else {
       return null;
     }
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
-    
-    redirect("/dashboard");
     
   } catch {
     
