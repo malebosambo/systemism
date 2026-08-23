@@ -27,13 +27,13 @@ export async function UserLogin(formData) {
     
     // await signIn("credentials", { redirectTo: "/dashboard" });
     
-    redirect("/dashboard");
-    
   } catch {
     
     console.log("Error logging in user.");
     
   }
+  
+  redirect("/dashboard");
 
 }
 

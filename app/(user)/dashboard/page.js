@@ -1,6 +1,9 @@
+import { GetUser } from "../../lib/firestore";
 import Link from 'next/link';
 
-export default async function Dashboard() {
+export default async function Dashboard({user}) {
+  
+  
   
   return (
     <div className="Dashboard">
