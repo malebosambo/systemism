@@ -1,6 +1,6 @@
 //import { GetUser } from "../../lib/firestore";
 import { redirect } from "next/navigation";
-import { auth } from "../../lib/auth";
+import { auth } from "../../../auth";
 import Link from 'next/link';
 
 export default async function Dashboard() {

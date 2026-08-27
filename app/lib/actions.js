@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 // import { signOut } from "next-auth/react";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
-import { signIn } from "./auth";
+import { signIn } from "../../auth";
  
 export async function UserLogin(formData) {
   
