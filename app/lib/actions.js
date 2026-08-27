@@ -1,9 +1,10 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { signOut } from "next-auth/react";
+// import { signOut } from "next-auth/react";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
+import { signIn } from "./auth";
  
 export async function UserLogin(formData) {
   
@@ -14,26 +15,16 @@ export async function UserLogin(formData) {
   
   try {
     
-    const currUser = await GetUser(user);
-    console.log(currUser);
+    // const currUser = await GetUser(user);
+    // console.log(currUser);
     
-    // const checkPassword = await compare(user?.password || "", currUser.password);
-    
-    /* if (user.password == currUser.password) {
-      return currUser;
-    } else {
-      return null;
-    } */
-    
-    // await signIn("credentials", { redirectTo: "/dashboard" });
+    await signIn("google", { redirectTo: "/dashboard" });
     
   } catch {
     
     console.log("Error logging in user.");
     
   }
-  
-  redirect("/dashboard");
 
 }
 
@@ -66,7 +57,7 @@ export async function UserSignUp(formData) {
 
   redirect("/login");
 }
-
+/*
 export async function UserLogout() {
   
   await signOut({ redirectTo: "/login" });
@@ -100,3 +91,4 @@ export async function ViewSMME() {
 export async function UpdateSMME(formData) {
   
 }
+*/

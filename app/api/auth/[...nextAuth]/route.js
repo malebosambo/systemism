@@ -1,18 +1,3 @@
-import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
+import { handlers } from "../../../lib/auth";
 
-const handler = NextAuth({
-  pages: {
-    signIn: "/login"
-  },
-  providers: [
-    CredentialsProvider({
-      credentials: {
-        email: {},
-        password: {}
-      }
-    })
-  ]
-})
-
-export { handler as GET, handler as POST };
+export const { GET, POST } = handlers;
