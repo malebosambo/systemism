@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { UserLogout } from "../lib/actions"
+// import { UserLogout } from "../lib/actions"
 
 export default function UserNavigation() {
   
@@ -18,7 +18,7 @@ export default function UserNavigation() {
       <div><Link href="/hub">Hub</Link></div>
       <div><Link href="/profile"><Image src="/circled-profile.png" alt="Profile Icon" height={20} width={20} /></Link></div>
       
-      <div className="Button" onClick={ UserLogout }>Logout</div>
+      <div className="Button" >Logout</div>
     </div>  
   );
 }

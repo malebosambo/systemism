@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UpdateProfile } from "../../../lib/actions";
+// import { UpdateProfile } from "../../../lib/actions";
 
 export default function ViewProfile() {
   
@@ -43,7 +43,7 @@ export default function ViewProfile() {
         </div>
         
         <div>
-          <form action={UpdateProfile}>
+          <form action="">
             <div>
               <input type="text" name="fullName" />
             </div>
