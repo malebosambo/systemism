@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 // import { signOut } from "next-auth/react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
 import { signIn } from "../../auth";
@@ -41,13 +42,16 @@ export async function UserSignUp(formData) {
   const dbUser = await GetUser(user);
 
   try {
-    
+    /*
     if (dbUser === null && user.email === dbUser.email) {
       return null;
     }
    
     const newUser = await CreateUser(user);
     console.log(newUser)
+   */
+   
+    await createUserWithEmailAndPassword(user.email, user.password);
    
   } catch {
    
