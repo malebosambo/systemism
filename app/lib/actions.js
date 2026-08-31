@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 // import { signOut } from "next-auth/react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
 import { signIn } from "../../auth";
@@ -39,7 +40,7 @@ export async function UserSignUp(formData) {
     password: formData.get("password"),
   };
   
-  const dbUser = await GetUser(user);
+  // const dbUser = await GetUser(user);
 
   try {
     /*
@@ -51,7 +52,7 @@ export async function UserSignUp(formData) {
     console.log(newUser)
    */
    
-    await createUserWithEmailAndPassword(user.email, user.password);
+    await createUserWithEmailAndPassword(auth, user.email, user.password);
    
   } catch {
    
