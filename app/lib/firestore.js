@@ -19,8 +19,16 @@ export async function GetUser(data) {
       
     } else {
       
+      const emptyUser = {
+        name: "",
+        surname: "",
+        email: "",
+        cellphone: "",
+        password: ""
+      }
+      
       console.log("DB user not found.");
-      return null;
+      return emptyUser;
       
     }
     
@@ -36,7 +44,7 @@ export async function CreateUser(data) {
 
   const user = data;
   const email = user.email;
-  console.log({ user });
+  console.log(user);
   
   try {
     

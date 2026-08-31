@@ -44,13 +44,12 @@ export async function UserSignUp(formData) {
 
   try {
     
-    if (dbUser === null && user.email === dbUser.email) {
+    if (user.email === dbUser.email) {
       return null;
     }
    
     const newUser = await CreateUser(user);
     console.log(newUser)
-   
    
     await createUserWithEmailAndPassword(auth, user.email, user.password);
    
