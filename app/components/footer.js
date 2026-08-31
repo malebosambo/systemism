@@ -24,10 +24,10 @@ export default function Footer() {
       <div style={{ marginTop: "5px" }}><h3 style={{ color: "white" }}>Legal</h3></div>
       
       <div className="Legal">
-        <Link href="/legal/faq">FAQ</Link>
-        <Link href="/legal/terms-conditions">Terms and Conditions</Link>
-        <Link href="/legal/privacy-policy">Privacy Policy</Link>
-        <p>© 2026 Systemism</p>
+        <div><Link href="/legal/faq">FAQ</Link></div>
+        <div><Link href="/legal/terms-conditions">Terms and Conditions</Link></div>
+        <div><Link href="/legal/privacy-policy">Privacy Policy</Link></div>
+        <div><p>© 2026 Systemism</p></div>
       </div>
     
     </div>

@@ -40,17 +40,17 @@ export async function UserSignUp(formData) {
     password: formData.get("password"),
   };
   
-  // const dbUser = await GetUser(user);
+  const dbUser = await GetUser(user);
 
   try {
-    /*
+    
     if (dbUser === null && user.email === dbUser.email) {
       return null;
     }
    
     const newUser = await CreateUser(user);
     console.log(newUser)
-   */
+   
    
     await createUserWithEmailAndPassword(auth, user.email, user.password);
    

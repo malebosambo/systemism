@@ -223,6 +223,7 @@ ul {
 
   .Mobile_Menu_Visible {
     background-color: white;
+    border-bottom: 1.5px solid black;
     display: flex;
     flex-direction: row;
     margin: -5px;
@@ -263,6 +264,7 @@ ul {
   .SignUp_Form {
     align-items: center;
     display: flex;
+    margin-top: 30px;
   }
   
   .SignUp_Form > input {

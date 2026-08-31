@@ -43,11 +43,11 @@ export default function SignupForm()
   }
 
   return (
-    <main className="Signup">
+    <main className="SignUp">
       
       <div className="Heading"><h1>Sign Up</h1></div>
       
-      <div className="Signup_Form">
+      <div className="SignUp_Form">
         <form action={UserSignUp}>
           <input type="text" name="name" placeholder="First Name" onChange={handleNameChange} value={user.name} required className="Input" />
 
@@ -55,13 +55,13 @@ export default function SignupForm()
 
           <input type="email" name="email" placeholder="Email" onChange={handleEmailChange} value={user.email} required className="Input" />
 
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleCellphoneChange} value={user.cellphone} required />
+          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleCellphoneChange} value={user.cellphone} required className="Input" />
 
           <input type="password" name="password" placeholder="Password" onChange={handlePasswordChange} value={user.password} required className="Input" />
 
           <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={handleConfirmPasswordChange} value={user.confirmPassword} required className="Input" />
 
-          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Submit</button></div>
+          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Create Account</button></div>
         </form>
       </div>
       
