@@ -1,4 +1,5 @@
 //import { GetUser } from "../../lib/firestore";
+import { useEffect, useState } from "react";
 import { redirect } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../firebase";
@@ -6,6 +7,9 @@ import { auth } from "../../../firebase";
 import Link from 'next/link';
 
 export default function Dashboard() {
+  
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   
   // const session = await auth();
   
@@ -18,16 +22,38 @@ export default function Dashboard() {
     const name = user.displayName;
   }
   */
-  onAuthStateChanged(auth, async (user) => {
-    if (user) {
-      const name = user.displayName;
-    }
-  });
+  
+  useEffect(() => {
+
+    // 3. Subscribe to auth state on the client side
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        // Extract only the plain data fields to prevent complex object mutations
+        setUser({
+          uid: currentUser.uid,
+          email: currentUser.email,
+          displayName: currentUser.displayName,
+          photoURL: currentUser.photoURL,
+        });
+      } else {
+        setUser(null);
+      }
+      setLoading(false);
+    });
+
+    // 4. Unsubscribe when the component unmounts to prevent memory leaks
+    return () => unsubscribe();
+  }, []);
+  
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h1>Hello, {name}</h1></div>
+        <div><h1>Hello, {user.email}</h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>
