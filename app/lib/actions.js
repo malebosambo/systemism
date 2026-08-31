@@ -1,8 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-// import { signOut } from "next-auth/react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
@@ -20,13 +19,16 @@ export async function UserLogin(formData) {
     // const currUser = await GetUser(user);
     // console.log(currUser);
     
-    await signIn("google", { redirectTo: "/dashboard" });
+    await signInWithEmailAndPassword(auth, user.email, user.password);
     
   } catch {
     
     console.log("Error logging in user.");
+    return null;
     
   }
+  
+  redirect("/dashboard");
 
 }
 
@@ -56,6 +58,7 @@ export async function UserSignUp(formData) {
   } catch {
    
     console.log("Error creating user.");
+    return null;
   
   }
 
