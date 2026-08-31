@@ -21,7 +21,7 @@ export async function UserLogin(formData) {
     
     const loggedUser = await signInWithEmailAndPassword(auth, user.email, user.password);
     
-    console.log(loggedUser);
+    console.log(loggedUser.user);
     
   } catch {
     

@@ -1,11 +1,11 @@
 //import { GetUser } from "../../lib/firestore";
 import { redirect } from "next/navigation";
-// import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../../firebase";
 // import { auth } from "../../../auth";
 import Link from 'next/link';
 
-export default async function Dashboard() {
+export default function Dashboard() {
   
   // const session = await auth();
   
@@ -18,11 +18,16 @@ export default async function Dashboard() {
     const name = user.displayName;
   }
   */
+  onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      const name = user.displayName;
+    }
+  });
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h1>Hello, </h1></div>
+        <div><h1>Hello, {name}</h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>
