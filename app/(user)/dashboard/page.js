@@ -12,17 +12,17 @@ export default async function Dashboard() {
   /*if (!session) {
     redirect("/login");
   }*/
-  
+  /*
   const user = auth.currentUser;
   if (user !== null) {
     const name = user.displayName;
   }
-  
+  */
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h1>Hello, {name}</h1></div>
+        <div><h1>Hello, </h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>
