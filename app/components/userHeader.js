@@ -4,7 +4,7 @@ import { useState } from "react";
 import UserNavigation from "./userNavigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "/SystemismLogoZoom.jpg";
+import logo from "../../public/SystemismLogoZoom.jpg";
 
 export default function UserHeader() {
   
