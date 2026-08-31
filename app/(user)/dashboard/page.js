@@ -1,7 +1,7 @@
 //import { GetUser } from "../../lib/firestore";
 import { redirect } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../../firebase";
 // import { auth } from "../../../auth";
 import Link from 'next/link';
 
