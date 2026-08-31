@@ -1,5 +1,6 @@
 //import { GetUser } from "../../lib/firestore";
 import { redirect } from "next/navigation";
+import { auth, onAuthStateChanged } from "firebase/auth";
 // import { auth } from "../../../auth";
 import Link from 'next/link';
 
@@ -11,11 +12,19 @@ export default async function Dashboard() {
     redirect("/login");
   }*/
   
+  await onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+    } else {
+      redirect("/login");
+    }
+  });
+  
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h1>Hello, </h1></div>
+        <div><h1>Hello, {uid}</h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>

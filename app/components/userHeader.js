@@ -21,7 +21,7 @@ export default function UserHeader() {
         </div>
         
         <div style={{ display: "grid", paddingRight: "5px", placeItems: "center" }}>
-          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
+          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/circled-profile.png" alt="Circled Profile Icon" height={20} width={20} /></button>
         </div>
       </div>
       

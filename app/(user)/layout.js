@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Analytics } from "@vercel/analytics/next"
-import UserNavigation from "../components/userNavigation";
+import UserHeader from "../components/userHeader";
 
 export default function UserLayout({ children }) {
   /*
@@ -20,7 +20,7 @@ export default function UserLayout({ children }) {
     <html lang="en">
       <body>
         <Analytics />
-        <div><UserNavigation /></div>
+        <div><UserHeader /></div>
         {/* Place children where you want to render a page or nested layout */}
         <main>{children}</main>
       </body>
