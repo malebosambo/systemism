@@ -1,3 +1,5 @@
+"use client";
+
 //import { GetUser } from "../../lib/firestore";
 import { useEffect, useState } from "react";
 import { redirect } from "next/navigation";
