@@ -64,6 +64,13 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
+  
+  .Account_Overview {
+    background-color: #F9F9E1;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 5px;
+  }
 
   .Button {
     background-color: #F9F9E1;
