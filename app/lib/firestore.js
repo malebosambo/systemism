@@ -58,6 +58,11 @@ export async function CreateUser(data) {
     
   }
 }
+
+export async function UpdateUser(data) {
+  
+  const user = data;
+}
 /*
 export async function CreateEnterprise() {
   

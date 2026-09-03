@@ -28,19 +28,8 @@ export default function Dashboard() {
   useEffect(() => {
 
     // 3. Subscribe to auth state on the client side
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        // Extract only the plain data fields to prevent complex object mutations
-        setUser({
-          uid: currentUser.uid,
-          email: currentUser.email,
-          displayName: currentUser.displayName,
-          photoURL: currentUser.photoURL,
-        });
-        console.log(currentUser);
-      } else {
-        setUser(null);
-      }
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
       setLoading(false);
     });
 
@@ -51,6 +40,7 @@ export default function Dashboard() {
   if (loading) {
     return <p>Loading...</p>;
   }
+  console.log(user);
 
   return (
     <div className="Dashboard">

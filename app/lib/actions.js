@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { CreateUser, GetUser } from "./firestore";
 // import { hash, compare } from "bcrypt";
@@ -33,7 +33,18 @@ export async function UserLogin(formData) {
   redirect("/dashboard");
 
 }
-
+/*
+export async function GetLoggedUser() {
+  
+  const user = await onAuthStateChanged(auth, (user) => {
+    if (user) {
+      
+    } else {
+      
+    }
+  }
+}
+*/
 export async function UserSignUp(formData) {
   
   const user = {

@@ -5,6 +5,7 @@ export default function ViewProfile() {
   
   return (
     <main>
+      
       <div>
         <div><Image src="" alt="Profile Image" height={100} width={100} /></div>
         
