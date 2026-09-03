@@ -1,4 +1,4 @@
-import { AuthProvider } from "./lib/authContext";
+import { AuthProvider } from "@/app/lib/authContext";
 import { Rubik } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
