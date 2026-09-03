@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { UserSignUp } from "../../lib/actions";
-
+import { UserSignUp } from "../../../lib/actions";
 
 export default function SignupForm() 
 

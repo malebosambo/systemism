@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next"
 import { useAuth } from "@/app/lib/authContext";
-import UserHeader from "../components/userHeader";
-import "../globals.css";
+import UserHeader from "../../components/userHeader";
+import "../../globals.css";
 
 export default function UserLayout({ children }) {
   const { user, loading } = useAuth();

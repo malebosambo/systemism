@@ -1,4 +1,4 @@
-import AdminNavigation from "../components/adminNavigation";
+import AdminNavigation from "../../components/adminNavigation";
 
 export default function DashboardLayout({ children }) {
   
