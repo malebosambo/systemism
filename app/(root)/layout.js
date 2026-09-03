@@ -1,3 +1,4 @@
+import { AuthProvider } from "./lib/authContext";
 import { Rubik } from "next/font/google"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={rubik.className}>
       <body>
         <div><Header /></div>
-        <div>{children}</div>
+        <AuthProvider>{children}</AuthProvider>
         <div><Footer /></div>
       </body>
     </html>
