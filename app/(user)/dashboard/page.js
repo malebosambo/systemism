@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
-import { useAuth } from "../lib/authContext";
+import { useAuth } from "@/app/lib/authContext";
 
 export default function Dashboard() {
   
