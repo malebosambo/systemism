@@ -1,6 +1,6 @@
 import { AuthProvider } from "@/app/lib/authContext";
 import { Rubik } from "next/font/google"; 
-import "../globals.css";
+import "./globals.css";
 
 const rubik = Rubik({
   subsets: ["latin"],
