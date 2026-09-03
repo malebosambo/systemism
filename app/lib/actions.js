@@ -77,13 +77,13 @@ export async function UserSignUp(formData) {
 
   redirect("/login");
 }
-/*
+
 export async function UserLogout() {
   
-  await signOut({ redirectTo: "/login" });
+  await signOut(auth);
 
 }
-
+/*
 export async function ViewUser() {
 
 }
