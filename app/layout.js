@@ -1,3 +1,5 @@
+"use client";
+
 import { AuthProvider } from "@/app/lib/authContext";
 import { Rubik } from "next/font/google"; 
 import "./globals.css";

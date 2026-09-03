@@ -15,6 +15,9 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     // Subscribe to auth state changes
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+      
+      console.log("Auth state changed", firebaseUser?.name);
+      
       if (firebaseUser) {
         // User is logged in
         setUser(firebaseUser);
@@ -23,11 +26,13 @@ export function AuthProvider({ children }) {
         try {
           const dbUser = await GetUser({ email: firebaseUser.email });
           setUserData(dbUser);
+          console.log("User data loaded:", dbUser);
         } catch (error) {
           console.error('Error fetching user data:', error);
         }
       } else {
         // User is logged out
+        console.log("User logged out.");
         setUser(null);
         setUserData(null);
       }

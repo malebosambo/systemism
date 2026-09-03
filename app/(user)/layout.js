@@ -14,6 +14,7 @@ export default function UserLayout({ children }) {
   useEffect(() => {
     
     if (!loading && !user) {
+      console.log("User not authenticated, redirecting to login.");
       router.push("/login");
     }
     }, [ user, loading, router ]
