@@ -33,18 +33,7 @@ export async function UserLogin(formData) {
   redirect("/dashboard");
 
 }
-/*
-export async function GetLoggedUser() {
-  
-  const user = await onAuthStateChanged(auth, (user) => {
-    if (user) {
-      
-    } else {
-      
-    }
-  }
-}
-*/
+
 export async function UserSignUp(formData) {
   
   const user = {

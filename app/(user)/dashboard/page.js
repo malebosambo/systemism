@@ -1,52 +1,36 @@
-"use client";
+"use client":
 
-//import { GetUser } from "../../lib/firestore";
-import { useEffect, useState } from "react";
-import { redirect } from "next/navigation";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../../firebase";
-// import { auth } from "../../../auth";
+import { useEffect } from "react";
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
+import { useAuth } from "../lib/authContext";
 
 export default function Dashboard() {
   
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  
-  // const session = await auth();
-  
-  /*if (!session) {
-    redirect("/login");
-  }*/
-  /*
-  const user = auth.currentUser;
-  if (user !== null) {
-    const name = user.displayName;
-  }
-  */
+  const { user, userData, loading } = useAuth();
+  const router = useRouter();
   
   useEffect(() => {
 
-    // 3. Subscribe to auth state on the client side
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-
-    // 4. Unsubscribe when the component unmounts to prevent memory leaks
-    return () => unsubscribe();
-  }, []);
+    if (!loading & !user) {
+      router.push("/login");
+    }
+  
+  }, [user, loading, router]);
   
   if (loading) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>
   }
-  console.log(user);
+  
+  if (!user) {
+    return null;
+  }
 
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h1>Hello, {user}</h1></div>
+        <div><h1>Hello, {userData?name || user.email}</h1></div>
         <div><h2>Account balance: 0</h2></div>
         <div><Link href="/account/deposit">Deposit</Link></div>
         <div><Link href="/account/withdraw">Withdraw</Link></div>
