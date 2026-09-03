@@ -1,6 +1,3 @@
-"use client";
-
-import { AuthProvider } from "@/app/lib/authContext";
 import { Rubik } from "next/font/google"; 
 import "./globals.css";
 
@@ -18,9 +15,7 @@ export default function Layout({ children }) {
   
   return (
     <html lang="en" className={rubik.className}>
-      <body>
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
