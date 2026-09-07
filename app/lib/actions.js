@@ -1,11 +1,9 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, setPersistence, browserLocalPersistence, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { CreateUser, GetUser } from "./firestore";
-// import { hash, compare } from "bcrypt";
-import { signIn } from "../../auth";
  
 export async function UserLogin(formData) {
   
@@ -16,6 +14,7 @@ export async function UserLogin(formData) {
   
   try {
     
+    await setPersistence(auth, browserLocalPersistence);
     const currUser = await GetUser(user);
     console.log(currUser);
     
@@ -23,10 +22,10 @@ export async function UserLogin(formData) {
     
     await new Promise(resolve => setTimeout(resolve, 500));
     
-  } catch {
+  } catch (error), {
     
-    console.log("Error logging in user.");
-    return null;
+    console.error("Error logging in user.", error.message);
+    throw new Error(error.message);
     
   }
   
@@ -49,27 +48,39 @@ export async function UserSignUp(formData) {
   try {
     
     if (user.email === dbUser.email) {
-      return null;
+      throw new Error("User already exists.");
     }
    
     const newUser = await CreateUser(user);
     console.log(newUser)
+    
+    await setPersistence(auth, browserLocalPersistence);
    
     await createUserWithEmailAndPassword(auth, user.email, user.password);
    
-  } catch {
+  } catch (error) {
    
-    console.log("Error creating user.");
-    return null;
+    console.error("Error creating user.", error.message);
+    throw new Error(error.message);
   
   }
 
-  redirect("/login");
+  redirect("/dashboard");
 }
 
 export async function UserLogout() {
   
-  await signOut(auth);
+  try {
+    
+    await signOut(auth);
+    console.log("Successfully logged out.");
+    
+  } catch (error) {
+    
+    console.error("Error logging out", error.message);
+    
+  }
+  
   redirect("/login");
 
 }

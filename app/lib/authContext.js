@@ -13,8 +13,10 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
     // Subscribe to auth state changes
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+      if (!isMounted) return;
       
       console.log("Auth state changed", firebaseUser?.name);
       
@@ -25,10 +27,11 @@ export function AuthProvider({ children }) {
         // Fetch user data from Firestore
         try {
           const dbUser = await GetUser({ email: firebaseUser.email });
-          setUserData(dbUser);
+          if (isMounted) setUserData(dbUser);
           console.log("User data loaded:", dbUser);
         } catch (error) {
           console.error('Error fetching user data:', error);
+          if (isMounted) setUserData({});
         }
       } else {
         // User is logged out
@@ -36,11 +39,14 @@ export function AuthProvider({ children }) {
         setUser(null);
         setUserData(null);
       }
-      setLoading(false);
+      if (isMounted) setLoading(false);
     });
 
     // Cleanup subscription
-    return () => unsubscribe();
+    return () => {
+      isMounted = false;
+      unsubscribe();
+    };  
   }, []);
 
   return (

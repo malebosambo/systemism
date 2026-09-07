@@ -13,7 +13,7 @@ export default function Login()
   const router = useRouter();
   
   useEffect(() => {
-    if (!loading && user) {
+    if (loading === false && user) {
       router.push("/dashboard");
     }
   }, [ user, loading, router ]);
