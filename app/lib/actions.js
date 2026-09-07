@@ -22,7 +22,7 @@ export async function UserLogin(formData) {
     
     await new Promise(resolve => setTimeout(resolve, 500));
     
-  } catch (error), {
+  } catch (error) {
     
     console.error("Error logging in user.", error.message);
     throw new Error(error.message);
