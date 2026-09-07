@@ -21,6 +21,8 @@ export async function UserLogin(formData) {
     
     await signInWithEmailAndPassword(auth, user.email, user.password);
     
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
   } catch {
     
     console.log("Error logging in user.");
@@ -68,6 +70,7 @@ export async function UserSignUp(formData) {
 export async function UserLogout() {
   
   await signOut(auth);
+  redirect("/login");
 
 }
 /*
