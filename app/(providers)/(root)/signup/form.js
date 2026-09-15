@@ -24,7 +24,7 @@ export default function SignupForm() {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setUser(prev => ({ ...prev, [name]: value }));
   }
 
   async handleSubmit(e) {
