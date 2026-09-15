@@ -27,7 +27,7 @@ export default function SignupForm() {
     setUser(prev => ({ ...prev, [name]: value }));
   }
 
-  async handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setError("");
     setIsLoading(true);
