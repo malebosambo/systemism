@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth } from "@/firebase";
 import { CreateUser } from "@/app/lib/firestore";
-// import { UserSignUp } from "../../../lib/actions";
+import { UserSignUp } from "../../../lib/actions";
 
 export default function SignupForm() {
   
@@ -33,12 +33,12 @@ export default function SignupForm() {
     setIsLoading(true);
 
     try {
-      await CreateUser(formData);
+      await CreateUser(user);
       console.log("✅ User created in Firestore");
 
       await setPersistence(auth, browserLocalPersistence);
 
-      const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+      const userCredential = await createUserWithEmailAndPassword(auth, user.email, user.password);
       console.log("✅ Signup successful:", userCredential.user.email);
 
       await new Promise(resolve => setTimeout(resolve, 500));
