@@ -83,7 +83,7 @@ export default function SignupForm() {
       <div className="Heading"><h1>Sign Up</h1></div>
       
       <div className="SignUp_Form">
-        <form action={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="First Name" onChange={handleChange} value={user.name} required className="Input" />
 
           <input type="text" name="surname" placeholder="Surname" onChange={handleChange} value={user.surname} required className="Input" />
