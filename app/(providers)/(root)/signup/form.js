@@ -18,6 +18,9 @@ export default function SignupForm() {
     password: "",
   });
 
+  const email = user.email;
+  const password = user.password;
+
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -38,12 +41,12 @@ export default function SignupForm() {
 
       await setPersistence(auth, browserLocalPersistence);
 
-      const userCredential = await createUserWithEmailAndPassword(auth, user.email, user.password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log("✅ Signup successful:", userCredential.user.email);
 
       await new Promise(resolve => setTimeout(resolve, 500));
 
-      router.push("/dashboard");
+      router.push("/login");
     } catch (error) {
       console.error("Signup error:", error.message);
       setError(error.message || "Signup failed. Please try again.");
