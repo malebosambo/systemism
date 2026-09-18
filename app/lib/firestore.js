@@ -43,12 +43,11 @@ export async function GetUser(data) {
 export async function CreateUser(data) {
 
   const user = data;
-  const email = user.email;
   console.log(user);
   
   try {
     
-    const newUser = await setDoc(doc(db, "Users", email), user);
+    const newUser = await setDoc(doc(db, "Users", user.id), user);
     console.log("Successful write to db.", user);
     return newUser;
     

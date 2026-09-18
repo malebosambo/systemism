@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth } from "@/firebase";
 import { CreateUser } from "@/app/lib/firestore";
-import { UserSignUp } from "../../../lib/actions";
 
 export default function SignupForm() {
   
@@ -18,7 +17,7 @@ export default function SignupForm() {
     password: "",
   });
 
-  const email = user.email;
+  const email = user.email.trim;
   const password = user.password;
 
   const [error, setError] = useState("");
@@ -36,21 +35,44 @@ export default function SignupForm() {
     setIsLoading(true);
 
     try {
-      await CreateUser(user);
-      console.log("✅ User created in Firestore");
 
       await setPersistence(auth, browserLocalPersistence);
 
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log("✅ Signup successful:", userCredential.user.email);
 
-      await new Promise(resolve => setTimeout(resolve, 500));
-
-      router.push("/login");
+      const firebaseUser = userCredential.user;
+      
+      await CreateUser({
+        uid: "firebaseUser.uid",
+        name: user.name.trim(),
+        surname: user.surname.trim(),
+        email: firebaseUser.email,
+        cellphone: user.cellphone.trim()
+      });
+      
+      console.log("Signup successful:", firebaseUser.uid);
+      
+      router.replace("/dashboard");
     } catch (error) {
-      console.error("Signup error:", error.message);
-      setError(error.message || "Signup failed. Please try again.");
+      console.error("Signup error:", error);
+      setError(getSignUpErrorMessage(error));
       setIsLoading(false);
+    }
+  }
+  
+  function getSignUpErrorMessage(error) {
+    switch (error.code) {
+      case "auth/email-already-in-use":
+        return "An account with this email already exists.";
+      case "auth/invalid-email":
+        return "Please enter a valid email address.";
+      case "auth/weak-password":
+        return "Password must be atleast six characters";
+      case "auth/operation-not-allowed";
+        return "Email/password authentication is not enabled in firebase.";
+      default:
+        return error.message || "Sign up failed. Please try again.";
     }
   }
 
