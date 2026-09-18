@@ -68,22 +68,6 @@ export async function UserSignUp(formData) {
   redirect("/dashboard");
 }
 
-export async function UserLogout() {
-  
-  try {
-    
-    await signOut(auth);
-    console.log("Successfully logged out.");
-    
-  } catch (error) {
-    
-    console.error("Error logging out", error.message);
-    
-  }
-  
-  redirect("/login");
-
-}
 /*
 export async function ViewUser() {
 
