@@ -52,7 +52,7 @@ export default function LoginForm() {
       <div className="Heading"><h1>Login</h1></div>
       
       <div className="Login_Form">
-        <form action={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} required className="Input" />
           
           <input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} required className="Input" />
