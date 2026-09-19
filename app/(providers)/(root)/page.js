@@ -1,9 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() 
-
-{
+export default function Home() {
   
   return (
     <main className="Home">
@@ -14,8 +12,8 @@ export default function Home()
         <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
-          <div className="Button"><Link className="Nav" href="/login">Personal</Link></div>
-          <div className="Button"><Link className="Nav" href="/signup">Business</Link></div>
+          <div className="Button"><Link className="Nav" href="/login">Login</Link></div>
+          <div className="Button"><Link className="Nav" href="/signup">Sign Up</Link></div>
         </div>
       </div>
       
