@@ -45,25 +45,13 @@ export async function CreateUser(data) {
   const user = data;
   console.log(user);
   
-  try {
-    
-    const newUser = await setDoc(doc(db, "Users", user.uid), user);
-    console.log("Successful write to db.", user);
-    return newUser;
-    
-  } catch {
-    
-    console.log("Error writing to db.");
-    
+  if (!user.uid) {
+    throw new Error("Cannot create Firestore profile without a Firebase UID.");
   }
-}
+  
+  const newUser = await setDoc(doc(db, "Users", user.uid), user);
+  console.log("Successful write to db.", user);
+  
+  return newUser;
 
-export async function UpdateUser(data) {
-  
-  const user = data;
 }
-/*
-export async function CreateEnterprise() {
-  
-}
-*/

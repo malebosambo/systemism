@@ -17,7 +17,7 @@ export default function SignupForm() {
     password: "",
   });
 
-  const email = user.email.trim;
+  const email = user.email.trim();
   const password = user.password;
 
   const [error, setError] = useState("");
@@ -44,7 +44,7 @@ export default function SignupForm() {
       const firebaseUser = userCredential.user;
       
       await CreateUser({
-        uid: "firebaseUser.uid",
+        uid: firebaseUser.uid,
         name: user.name.trim(),
         surname: user.surname.trim(),
         email: firebaseUser.email,
