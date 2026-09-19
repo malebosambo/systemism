@@ -69,7 +69,7 @@ export default function SignupForm() {
         return "Please enter a valid email address.";
       case "auth/weak-password":
         return "Password must be atleast six characters";
-      case "auth/operation-not-allowed";
+      case "auth/operation-not-allowed":
         return "Email/password authentication is not enabled in firebase.";
       default:
         return error.message || "Sign up failed. Please try again.";
