@@ -30,10 +30,12 @@ export default function Dashboard() {
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h3>Hello, {user?.name || user.email}</h3></div>
+        <div><h3>Hello, {user.name || user.email}</h3></div>
         <div><h4>Balance: R0</h4></div>
-        <div><Link href="/account/deposit">Deposit</Link></div>
-        <div><Link href="/account/withdraw">Withdraw</Link></div>
+        <div className="Wallet_Buttons">
+          <div><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
+          <div><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
+        </div>
       </div>
       
       <div className="Consumer">

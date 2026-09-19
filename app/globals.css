@@ -279,6 +279,16 @@ ul {
     margin-bottom: 20px;
   }
   
+  .Wallet_Buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .Wallet_Buttons > div {
+    width: 50%;
+  }
+  
   a {
     color: black;
   }
