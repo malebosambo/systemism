@@ -7,7 +7,7 @@ export default function Investing()
       <div><h1>Investing</h1></div>
       
       <div>
-        <div><h2><Link href="/investing/private-companies">Private Companies</Link></h2></div>
+        <div><Link href="/investing/private-companies"><h2>Private Companies</h2></Link></div>
         
         <div><h2><Link href="/investing/public-companies">Public Companies</Link></h2></div>
         
