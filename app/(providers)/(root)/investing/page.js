@@ -1,5 +1,6 @@
-export default function Investing() 
-{
+import Link from "next/link";
+
+export default function Investing() {
   
   return (
     <main>
