@@ -102,6 +102,10 @@ ul {
     padding: 20px;
   }
   
+  .Funds_Overview {
+    background-color: darkgrey;
+  }
+  
   .Header {
     display: flex;
     flex-direction: column;
@@ -177,6 +181,14 @@ ul {
     width: 100%;
   }
   
+  .Inventory_Overview {
+    background-color: darkgrey;
+  }
+  
+  .Investments_Overview {
+    background-color: darkgrey;
+  }
+  
   .Legal {
     display: flex;
     flex-direction: row;
@@ -184,6 +196,10 @@ ul {
   
   .Links {
     padding: 20px 10px;
+  }
+  
+  .Listings_Overview {
+    background-color: darkgrey;
   }
   
   .Login {
@@ -205,6 +221,10 @@ ul {
   .Logo {
     display: flex;
     justify-content: space-between;
+  }
+  
+  .Market_Overview {
+    background-color: darkgrey;
   }
   
   .Menu_Nav_Active{
@@ -261,6 +281,10 @@ ul {
   
   .PartnerLogos {
     margin: 30px 0;
+  }
+  
+  .Programs_Overview {
+    background-color: darkgrey;
   }
   
   .SignUp {

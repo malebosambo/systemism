@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from 'next/link';
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
 
@@ -84,14 +85,7 @@ export default function Dashboard() {
         
           <div><Link href="/listings/approved"></Link></div>
         </div>
-      
-        <div>
-          <div><Link href="/enterprises/add">+</Link></div>
-          <div><h1>My Enterprises</h1></div>
-          <div><p>No enterprises to show.</p></div>
-        
-          <div><Link href="/enterprises">View</Link></div>
-        </div>
+    
       </div>
     </div>
   );
