@@ -34,14 +34,20 @@ export default function Dashboard() {
         <div><h3>Hello, {user.name || user.email}</h3></div>
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
-          <div><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
-          <div><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
+          <div>
+            <div><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
+            <div><p>Deposit</p></div>
+          </div>
+          <div>
+            <div><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
+            <div><p>Withdraw</p></div>
+          </div>
         </div>
       </div>
       
       <div className="Consumer">
         <div className="Investments_Overview">
-          <div><Link href="/investments/add">+</Link></div>
+          <div><Link href="/investments/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h4>Investments: Active</h4></div>
           <div><p>Nothing to display.</p></div>
