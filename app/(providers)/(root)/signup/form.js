@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth } from "@/firebase";
-import { CreateUser } from "@/app/lib/firestore";
+import { CreateProfile } from "@/app/lib/firestore";
 
 export default function SignupForm() {
   
@@ -43,7 +43,7 @@ export default function SignupForm() {
 
       const firebaseUser = userCredential.user;
       
-      await CreateUser({
+      await CreateProfile({
         uid: firebaseUser.uid,
         name: user.name.trim(),
         surname: user.surname.trim(),

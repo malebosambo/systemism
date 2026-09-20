@@ -283,6 +283,10 @@ ul {
     margin: 30px 0;
   }
   
+  .Profile_Form {
+    display: none;
+  }
+  
   .Programs_Overview {
     background-color: darkgrey;
   }

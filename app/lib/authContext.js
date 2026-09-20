@@ -9,7 +9,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [userData, setUserData] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,18 +26,18 @@ export function AuthProvider({ children }) {
         
         // Fetch user data from Firestore
         try {
-          const dbUser = await GetUser({ email: firebaseUser.email });
-          if (isMounted) setUserData(dbUser);
-          console.log("User data loaded:", dbUser);
+          const dbProfile = await GetUser({ email: firebaseUser.email });
+          if (isMounted) setProfile(dbProfile);
+          console.log("User profile loaded:", dbProfile);
         } catch (error) {
           console.error('Error fetching user data:', error);
-          if (isMounted) setUserData({});
+          if (isMounted) setProfile({});
         }
       } else {
         // User is logged out
         console.log("User logged out.");
         setUser(null);
-        setUserData(null);
+        setProfile(null);
       }
       if (isMounted) setLoading(false);
     });
@@ -50,7 +50,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, userData, loading }}>
+    <AuthContext.Provider value={{ user, profile, loading }}>
       {children}
     </AuthContext.Provider>
   );

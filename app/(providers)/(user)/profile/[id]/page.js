@@ -1,42 +1,65 @@
-import Image from "next/image";
-// import { UpdateProfile } from "../../../lib/actions";
+"use client";
 
-export default function ViewProfile() {
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import Image from "next/image";
+import { useAuth } from "@/app/lib/authContext";
+
+export default function Profile() {
+  
+  const { user, profile, loading } = useAuth();
+  const router = useRouter();
+  
+  useEffect(() => {
+
+    if (loading === false && !user) {
+      router.push("/login");
+    }
+  
+  }, [user, loading, router]);
+  
+  if (loading) {
+    return <div>Loading...</div>
+  }
+  
+  if (!user) {
+    return null;
+  }
+  
+  const fullName = profile.name + profile.surname;
   
   return (
     <main>
       
       <div>
-        <div><Image src="" alt="Profile Image" height={100} width={100} /></div>
+        <div>
+          <div><Image src="" alt="Profile Image" height={100} width={100} /></div>
         
-        <div><h1></h1></div>
+          <div><h1>{fullName}</h1></div>
+        </div>
+      
+        <div>
+          <h1>Personal Details</h1>
+          <hr />
+          <p>Email: {user.email}</p>
+          <p>Cellphone: {profile.cellphone}</p>
+        </div>
+      
+        <div>
+          <h1>Address Details</h1>
+          <hr />
+          <p>Physical Address:</p>
+          <p>Postal Address:</p>
+        </div>
+      
+        <div>
+          <h1>Banking Details</h1>
+        </div>
       </div>
       
-      <div>
-        <h1>Personal Details</h1>
-        <hr />
-        <p>Email:</p>
-        <p>Cellphone:</p>
-      </div>
-      
-      <div>
-        <h1>Address Details</h1>
-        <hr />
-        <p>Physical Address:</p>
-        <p>Postal Address:</p>
-      </div>
-      
-      <div>
-        <h1>Banking Details</h1>
-      </div>
-      
-      <div>
-        <h1>Security Details</h1>
-        <hr />
-        <p>Password</p>
-      </div>
-      
-      <div>
+      <div className="Profile_Form">
+        
         <div>
           <div></div>
           <div><h1></h1></div>

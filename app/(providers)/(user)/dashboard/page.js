@@ -8,7 +8,7 @@ import { useAuth } from "@/app/lib/authContext";
 
 export default function Dashboard() {
   
-  const { user, userData, loading } = useAuth();
+  const { user, profile, loading } = useAuth();
   const router = useRouter();
   
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function Dashboard() {
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h3>Hello, {user.name || user.email}</h3></div>
+        <div><h3>Hello, {profile.name || user.email}</h3></div>
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>

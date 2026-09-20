@@ -1,34 +1,33 @@
 import { collection, setDoc, getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-export async function GetUser(data) {
+export async function GetProfile(data) {
 
-  const user = data;
-  const email = user.email;
-  console.log(user);
+  const profile = data;
+  const email = profile.email;
+  console.log(profile);
   
   try {
 
-    const currUser = await getDoc(doc(db, "Users", email));
+    const currProfile = await getDoc(doc(db, "Profiles", email));
     
-    if (currUser.exists()) {
+    if (currProfile.exists()) {
       
-      const dbUser = currUser.data();
-      console.log("DB user found", currUser);
-      return dbUser;
+      const dbProfile = currProfile.data();
+      console.log("DB profile found", dbProfile);
+      return dbProfile;
       
     } else {
       
-      const emptyUser = {
+      const emptyProfile = {
         name: "",
         surname: "",
         email: "",
         cellphone: "",
-        password: ""
       }
       
-      console.log("DB user not found.");
-      return emptyUser;
+      console.log("DB profile not found.");
+      return emptyProfile;
       
     }
     
@@ -40,18 +39,18 @@ export async function GetUser(data) {
   
 }
 
-export async function CreateUser(data) {
+export async function CreateProfile(data) {
 
-  const user = data;
-  console.log(user);
+  const profile = data;
+  console.log(profile);
   
-  if (!user.uid) {
+  if (!profile.uid) {
     throw new Error("Cannot create Firestore profile without a Firebase UID.");
   }
   
-  const newUser = await setDoc(doc(db, "Users", user.uid), user);
-  console.log("Successful write to db.", user);
+  const newProfile = await setDoc(doc(db, "Profiles", profile.uid), profile);
+  console.log("Successful write to db.", newProfile);
   
-  return newUser;
+  return newProfile;
 
 }
