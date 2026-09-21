@@ -20,6 +20,7 @@ export async function GetProfile(data) {
     } else {
       
       const emptyProfile = {
+        uid: "",
         name: "",
         surname: "",
         email: "",
