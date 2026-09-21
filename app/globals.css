@@ -68,8 +68,8 @@ ul {
   .Account_Overview {
     background-color: #F9F9E1;
     border: 1px solid grey;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 0 5px 5px 0;
+    padding: 5px;
   }
 
   .Button {
@@ -92,10 +92,6 @@ ul {
     padding: 8px;
   }
   
-  .Circled_Icon {
-    
-  }
-  
   .Footer {
     display: flex;
     flex-direction: column;
@@ -104,6 +100,8 @@ ul {
   
   .Funds_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    padding: 5px;
   }
   
   .Header {
@@ -183,10 +181,14 @@ ul {
   
   .Inventory_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
   }
   
   .Investments_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
   }
   
   .Legal {
@@ -200,6 +202,8 @@ ul {
   
   .Listings_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
   }
   
   .Login {
@@ -225,6 +229,8 @@ ul {
   
   .Market_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
   }
   
   .Menu_Nav_Active{
@@ -289,6 +295,8 @@ ul {
   
   .Programs_Overview {
     background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
   }
   
   .SignUp {

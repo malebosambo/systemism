@@ -35,12 +35,12 @@ export default function Dashboard() {
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>
-            <div><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
-            <div><p>Deposit</p></div>
+            <div style={{ alignItems: "center" }}><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
+            <div style={{ textAlign: "center" }}><p>Deposit</p></div>
           </div>
           <div>
-            <div><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
-            <div><p>Withdraw</p></div>
+            <div style={{ alignItems: "center" }}><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
+            <div style={{ textAlign: "center" }}><p>Withdraw</p></div>
           </div>
         </div>
       </div>
@@ -50,16 +50,12 @@ export default function Dashboard() {
           <div><Link href="/investments/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h4>Investments: Active</h4></div>
-          <div><p>Nothing to display.</p></div>
+          <div><p>No active investments.</p></div>
         
-          <div><Link href="/investments">View</Link></div>
         </div>
         
         <div className="Market_Overview">
-          <div><h4>Shop: Cart</h4></div>
-          <div><p>No invoices available.</p></div>
-        
-          <div><Link href="/market/invoices">View</Link></div>
+          <div><h4>Shop: Sales</h4></div>
         </div>
       </div>
       

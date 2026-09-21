@@ -54,3 +54,15 @@ export async function CreateProfile(data) {
   return newProfile;
 
 }
+
+export async function UpdateProfile(data) {
+  
+  const profile = data;
+  console.log(profile);
+  
+  const updatedProfile = await updateDoc(doc(db, "Profiles", profile.uid), profile);
+  console.log("Successful write to db.", updatedProfile);
+  
+  return updatedProfile;
+  
+}
