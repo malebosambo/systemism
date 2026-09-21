@@ -35,11 +35,11 @@ export default function Dashboard() {
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>
-            <div style={{ alignItems: "center" }}><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
+            <div style={{ display: "flex", justifyContent: "space-around" }}><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
             <div style={{ textAlign: "center" }}><p>Deposit</p></div>
           </div>
           <div>
-            <div style={{ alignItems: "center" }}><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
+            <div style={{ display: "flex", justifyContent: "space-around" }}><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
             <div style={{ textAlign: "center" }}><p>Withdraw</p></div>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Dashboard() {
         
         </div>
         
-        <div className="Market_Overview">
+        <div className="Shop_Overview">
           <div><h4>Shop: Sales</h4></div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function Dashboard() {
           <div><Link href="/funds/active">View</Link></div>
         </div>
       
-        <div className="Inventory_Overview">
+        <div className="Marketplace_Overview">
           <div><h4>Inventory: Levels</h4></div>
           <div><p>No inventory available.</p></div>
         
