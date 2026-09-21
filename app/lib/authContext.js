@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
         
         // Fetch user data from Firestore
         try {
-          const dbProfile = await GetUser({ email: firebaseUser.email });
+          const dbProfile = await GetProfile({ email: firebaseUser.email });
           if (isMounted) setProfile(dbProfile);
           console.log("User profile loaded:", dbProfile);
         } catch (error) {
