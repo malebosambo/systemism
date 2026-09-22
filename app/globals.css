@@ -449,8 +449,9 @@ ul {
   }
   
   .Home_Banner {
+    height: 500px;
+    margin: 9px -7px 0 -7px;
     padding: 90px 20px;
-    margin-top: 10px;
   }
   
   .Home_Buttons {
@@ -495,6 +496,7 @@ ul {
   .Navigation {
     align-items: center;
     display: flex;
+    height: 100%;
     flex-direction: row;
     padding-right: 10px;
   }
