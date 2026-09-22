@@ -450,7 +450,7 @@ ul {
   
   .Home_Banner {
     padding: 90px 20px;
-    margin-top: -10px;
+    margin-top: 10px;
   }
   
   .Home_Buttons {
@@ -496,11 +496,12 @@ ul {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     padding-right: 10px;
   }
 
   .Navigation > div {
+    display: flex;
+    justify-content: space-around;
     padding-right: 10px;
   }
 
