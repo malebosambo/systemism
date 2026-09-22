@@ -17,7 +17,7 @@ export default function UserHeader() {
       
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={100} /></Link>
+          <Image src={logo} alt="Company Logo" height={60} width={100} />
         </div>
         
         <div style={{ display: "grid", paddingRight: "5px", placeItems: "center" }}>

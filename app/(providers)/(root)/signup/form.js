@@ -14,7 +14,8 @@ export default function SignupForm() {
     surname: "",
     email: "",
     cellphone: "",
-    password: "",
+    type: "",
+    password: ""
   });
 
   const email = user.email.trim();
@@ -48,7 +49,8 @@ export default function SignupForm() {
         name: user.name.trim(),
         surname: user.surname.trim(),
         email: firebaseUser.email,
-        cellphone: user.cellphone.trim()
+        cellphone: user.cellphone.trim(),
+        type: user.type
       });
       
       console.log("Signup successful:", firebaseUser.uid);
@@ -76,32 +78,6 @@ export default function SignupForm() {
     }
   }
 
-  /*
-  function handleNameChange(e) {
-    setUser({ ...user, name: e.target.value });
-  }
-
-  function handleSurnameChange(e) {
-    setUser({ ...user, surname: e.target.value });
-  }
-
-  function handleEmailChange(e) {
-    setUser({ ...user, email: e.target.value });
-  }
-
-  function handleCellphoneChange(e) {
-    setUser({ ...user, cellphone: e.target.value });
-  }
-
-  function handlePasswordChange(e) {
-    setUser({ ...user, password: e.target.value });
-  }
-
-  function handleConfirmPasswordChange(e) {
-    setUser({ ...user, confirmPassword: e.target.value });
-  }
-*/
-
   return (
     <main className="SignUp">
       
@@ -116,6 +92,11 @@ export default function SignupForm() {
           <input type="email" name="email" placeholder="Email" onChange={handleChange} value={user.email} required className="Input" />
 
           <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" />
+          
+          <select id="profileType" name="profileType" value={user.type} onChange={handleChange}>
+            <option value="Consumer">Consumer</option>
+            <option value="Director">Director</option>
+          </select>
 
           <input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" />
 

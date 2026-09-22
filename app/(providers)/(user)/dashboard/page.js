@@ -27,13 +27,13 @@ export default function Dashboard() {
     return null;
   }
   
-  const consumer = profile.type;
+  const profileType = profile.type;
 
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h3>Hello, {profile.name || user.email}</h3></div>
+        <div><h3>Hello, {profile?.name || user.email}</h3></div>
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>
@@ -47,7 +47,7 @@ export default function Dashboard() {
         </div>
       </div>
       
-      <div className={ consumer ? "Consumer" : "Hide" }>
+      <div className={ profileType == "Consumer" ? "Consumer" : "Hide" }>
         <div className="Investments_Overview">
           
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
@@ -70,17 +70,18 @@ export default function Dashboard() {
         </div>
       </div>
       
-      <div className={ !consumer ? "Director" : "Hide" }>
+      <div className={ profileType == "Director" ? "Director" : "Hide" }>
         <div className="Funds_Overview">
           
           <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h4>Funds: Active</h4></div>
+          
           <div><p>Nothing to display.</p></div>
         
         </div>
       
-        <div className="Market_Overview">
+        <div className="Inventory_Overview">
           
           <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           

@@ -28,7 +28,7 @@ export default function Header() {
       
       <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
         <div className={ mobileMenu ? "Mobile_Menu" : "" }><Navigation /></div>
-        <div className={ mobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
+        <div className={ mobileMenu ? "Mobile_Menu_Close" : "Hide" }><button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
       </div>
       
     </div>

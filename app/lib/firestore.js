@@ -25,6 +25,7 @@ export async function GetProfile(data) {
         surname: "",
         email: "",
         cellphone: "",
+        type: ""
       }
       
       console.log("DB profile not found.");
