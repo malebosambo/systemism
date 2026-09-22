@@ -11,7 +11,8 @@ export default function AddEnterprise() {
   const [director, setDirector] = useState("");
   
   return (
-    <div>
+    <main>
+      
       <div><h1>Add New Enterprise</h1></div>
       
       <div>
@@ -34,6 +35,6 @@ export default function AddEnterprise() {
         </form>
         
       </div>
-    </div>
+    </main>
   )
 }

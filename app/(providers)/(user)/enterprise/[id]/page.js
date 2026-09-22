@@ -1,7 +1,8 @@
-export default function ViewEnterprise({ enterprise }) {
+export default function ViewEnterprise() {
   
   return (
-    <div>
+    <main>
+      
       <div><h1></h1></div>
       
       <div>
@@ -31,6 +32,6 @@ export default function ViewEnterprise({ enterprise }) {
         <h3>Balance Sheet</h3>
       </div>
       
-    </div>
+    </main>
   )
 }

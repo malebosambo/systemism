@@ -1,10 +1,10 @@
-export default function ViewListing() {
+export default function ViewInventoryItem() {
   
   return (
     <main>
       
       <div><h1></h1></div>
-    
+      
     </main>
   )
 }

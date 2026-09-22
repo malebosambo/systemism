@@ -26,6 +26,8 @@ export default function Dashboard() {
   if (!user) {
     return null;
   }
+  
+  const consumer = profile.type;
 
   return (
     <div className="Dashboard">
@@ -45,9 +47,10 @@ export default function Dashboard() {
         </div>
       </div>
       
-      <div className="Consumer">
+      <div className={ consumer ? "Consumer" : "Hide" }>
         <div className="Investments_Overview">
-          <div><Link href="/investments/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
+          <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h4>Investments: Active</h4></div>
           <div><p>No active investments.</p></div>
@@ -55,37 +58,56 @@ export default function Dashboard() {
         </div>
         
         <div className="Shop_Overview">
-          <div><h4>Shop: Sales</h4></div>
+          
+          <div><h4>Shop: Latest Sales</h4></div>
+          
+        </div>
+        
+        <div className="Directory_Overview">
+          
+          <div><h4>Directory: New Listings</h4></div>
+          
         </div>
       </div>
       
-      <div className="Director">
+      <div className={ !consumer ? "Director" : "Hide" }>
         <div className="Funds_Overview">
+          
+          <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
           <div><h4>Funds: Active</h4></div>
           <div><p>Nothing to display.</p></div>
         
-          <div><Link href="/funds/active">View</Link></div>
         </div>
       
-        <div className="Marketplace_Overview">
-          <div><h4>Inventory: Levels</h4></div>
+        <div className="Market_Overview">
+          
+          <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
+          <div><h4>Inventory: Latest Statistics</h4></div>
+          
           <div><p>No inventory available.</p></div>
         
-          <div><Link href="/marketplace/inventory">View</Link></div>
         </div>
       
         <div className="Programs_Overview">
+          
+          <div><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
           <div><h4>Programs: Enrolled</h4></div>
+          
           <div><p>No programs enrolled.</p></div>
         
-          <div><Link href="/programs/enrolled">View</Link></div>
         </div>
       
         <div className="Listings_Overview">
+          
+          <div><Link href="/listings/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
           <div><h4>Listings: Approved</h4></div>
+          
           <div><p>No listings available.</p></div>
         
-          <div><Link href="/listings/approved"></Link></div>
         </div>
     
       </div>

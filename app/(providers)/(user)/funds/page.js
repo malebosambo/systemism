@@ -11,7 +11,7 @@ export default function Funds() {
       <p>Nothing to display.</p>
     
       <div>
-        <Link href="/request">Request</Link>
+        <Link href="/funds/request">Request</Link>
       </div>
     </div>
   )

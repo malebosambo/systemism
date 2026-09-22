@@ -99,7 +99,6 @@ export default function Home() {
         
         <div><h1>Enroll in our academy programs for professional development</h1></div>
         
-        
       </div>
       
       <div className="Home_Directory">

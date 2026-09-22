@@ -1,4 +1,4 @@
-export default function ViewListing() {
+export default function ViewInventorySales() {
   
   return (
     <main>

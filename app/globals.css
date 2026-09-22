@@ -93,6 +93,14 @@ ul {
     padding: 8px;
   }
   
+  .Directory_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 0;
+  }
+  
   .Footer {
     display: flex;
     flex-direction: column;

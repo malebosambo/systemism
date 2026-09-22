@@ -1,13 +1,10 @@
-
-
 export default function Enterprises() {
   
   return (
-    <div>
+    <main>
+      
       <div><h1>My Enterprises</h1></div>
       
-      
-      
-    </div>
+    </main>
   )
 }
