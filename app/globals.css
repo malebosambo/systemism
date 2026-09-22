@@ -484,6 +484,12 @@ ul {
   .Mobile_Menu_Btns {
     display: none;
   }
+  
+  .Mobile_Menu_Open {
+    display: grid;
+    padding-right: 5px;
+    place-items: center;
+  }
 
   .Navigation {
     align-items: center;
