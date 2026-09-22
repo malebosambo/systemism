@@ -439,6 +439,10 @@ ul {
   .Heading {
     text-align: center;
   }
+  
+  .Hide {
+    display: none;
+  }
 
   .Home_Academy {
     padding: 90px 20px;
