@@ -27,7 +27,7 @@ export default function Dashboard() {
     return null;
   }
   
-  const profileType = profile.type;
+  const profileType = profile?.type;
 
   return (
     <div className="Dashboard">
