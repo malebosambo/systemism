@@ -14,7 +14,7 @@ export default function Dashboard() {
   useEffect(() => {
 
     if (loading === false && !user) {
-      router.push("/login");
+      router.replace("/login");
     }
   
   }, [user, loading, router]);
@@ -27,13 +27,17 @@ export default function Dashboard() {
     return null;
   }
   
-  const profileType = profile?.type;
+  if (!profile) {
+    return <div>Loading profile...</div>
+  }
+  
+  const profileType = profile.type;
 
   return (
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h3>Hello, {profile?.name || user.email}</h3></div>
+        <div><h3>Hello, {profile.name || user.email}</h3></div>
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>

@@ -2,42 +2,14 @@ import { collection, setDoc, getDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export async function GetProfile(data) {
-
-  const profile = data;
-  const email = profile.email;
-  console.log(profile);
   
-  try {
-
-    const currProfile = await getDoc(doc(db, "Profiles", email));
-    
-    if (currProfile.exists()) {
-      
-      const dbProfile = currProfile.data();
-      console.log("DB profile found", dbProfile);
-      return dbProfile;
-      
-    } else {
-      
-      const emptyProfile = {
-        uid: "",
-        name: "",
-        surname: "",
-        email: "",
-        cellphone: "",
-        type: ""
-      }
-      
-      console.log("DB profile not found.");
-      return emptyProfile;
-      
-    }
-    
-  } catch {
-
-    console.log("Error reading from db.");
-
+  const profile = await getDoc(doc(db, "Profiles", data));
+  
+  if (!profile.exists()) {
+    return null;
   }
+  
+  return profile.data();
   
 }
 

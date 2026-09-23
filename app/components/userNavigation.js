@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function UserNavigation() {
   
-  const router = useRouter;
+  const router = useRouter();
   
   async function handleLogout() {
     try {

@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (!isMounted) return;
       
-      console.log("Auth state changed", firebaseUser?.name);
+      console.log("Auth state changed", firebaseUser?.email);
       
       if (firebaseUser) {
         // User is logged in
@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
         
         // Fetch user data from Firestore
         try {
-          const dbProfile = await GetProfile({ email: firebaseUser.email });
+          const dbProfile = await GetProfile(firebaseUser.uid);
           if (isMounted) setProfile(dbProfile);
           console.log("User profile loaded:", dbProfile);
         } catch (error) {

@@ -496,8 +496,8 @@ ul {
   .Navigation {
     align-items: center;
     display: flex;
-    height: 100%;
     flex-direction: row;
+    height: 100%;
     padding-right: 10px;
   }
 
