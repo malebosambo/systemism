@@ -10,17 +10,17 @@ export default function UserHeader() {
   
   const [ mobileMenu, setMobileMenu ] = useState(false);
 
-  const showMobileMenu = () => setMobileMenu(!mobileMenu);  
+  const showMobileMenu = () => setMobileMenu(true);  
   
   return (
     <div className="Header">
       
       <div className="Logo">
         <div className="Image_Logo">
-          <Image src={logo} alt="Company Logo" height={60} width={100} />
+          <Link href="/dashboard"><Image src={logo} alt="Company Logo" height={60} width={100} /></Link>
         </div>
         
-        <div className={ mobileMenu ? "Mobile_Menu_Open" : "Hide" }>
+        <div className={ !mobileMenu ? "Mobile_Menu_Open" : "Hide" }>
           <button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/circled-profile.png" alt="Circled Profile Icon" height={20} width={20} /></button>
         </div>
       </div>
