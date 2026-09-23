@@ -57,6 +57,7 @@ export default function Dashboard() {
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h3>Investments: Active</h3></div>
+          
           <div><p>No active investments.</p></div>
         
         </div>
@@ -64,6 +65,8 @@ export default function Dashboard() {
         <div className="Shop_Overview">
           
           <div><h3>Shop: Latest Sales</h3></div>
+          
+          <div><p>No latest sales.</p></div>
           
         </div>
         
@@ -80,6 +83,8 @@ export default function Dashboard() {
         <div className="Directory_Overview">
           
           <div><h3>Directory: New Listings</h3></div>
+          
+          <div><p>No listings in the area.</p></div>
           
         </div>
       </div>
