@@ -20,10 +20,12 @@ export default function UserHeader() {
           <Image src={logo} alt="Company Logo" height={60} width={100} />
         </div>
         
-        <div style={{ display: "grid", paddingRight: "5px", placeItems: "center" }}>
+        <div className={ mobileMenu ? "Mobile_Menu_Open" : "Hide" }>
           <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/circled-profile.png" alt="Circled Profile Icon" height={20} width={20} /></button>
         </div>
       </div>
+      
+      <div><UserNavigation /></div>
       
       <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
         <div className={ mobileMenu ? "Mobile_Menu" : "" }><UserNavigation /></div>

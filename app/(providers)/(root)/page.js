@@ -32,7 +32,7 @@ export default function Home() {
             <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/short-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span>
+              <Link href="/investing/terms/short-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span>
               </Link>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function Home() {
             <p>Moderate Risk, Moderate Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/medium-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
+              <Link href="/investing/terms/medium-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
             </div>
           </div>
         
@@ -55,7 +55,7 @@ export default function Home() {
             <p>Low Risk, Low Reward</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/long-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
+              <Link href="/investing/terms/long-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
             </div>
           </div>
           

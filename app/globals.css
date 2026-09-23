@@ -389,7 +389,7 @@ ul {
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
   
   .Account_Overview {
-    width: 30%;
+    background-color: #F9F9E1;
   }
 
   .Button {
@@ -419,12 +419,28 @@ ul {
   .Director {
     width: 70%;
   }
+  
+  .Directory_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 
   .Footer {
-    background-color: white;
-    color: black;
+    background-color: black;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .Funds_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
     padding: 10px;
   }
   
@@ -466,13 +482,53 @@ ul {
   .Home_Funding {
     padding: 90px 20px;
   }
+  
+  .Home_FundingOption {
+    background-color: white;
+    border: 2px solid #F9F9E1;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
 
   .Home_Investing {
     padding: 90px 20px;
   }
+  
+  .Home_InvestTime {
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+  }
 
   .Home_Marketplace {
     padding: 90px 20px;
+  }
+  
+  .Inventory_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .Investments_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .Listings_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
   }
   
   .Login {
@@ -528,7 +584,24 @@ ul {
     background-color: grey;
   }
   
+  .Programs_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .Shop_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
   .Signup {
     padding: 20px;
   }
+  
 }
