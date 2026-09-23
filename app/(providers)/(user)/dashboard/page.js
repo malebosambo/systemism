@@ -37,8 +37,8 @@ export default function Dashboard() {
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h2>Hello, {profile.name || user.email}</h2></div>
-        <div><h4>Balance: R0</h4></div>
+        <div><h1>Hello, {profile.name || user.email}</h1></div>
+        <div><h2>Balance: R0</h2></div>
         <div className="Wallet_Buttons">
           <div>
             <div style={{ display: "flex", justifyContent: "space-around" }}><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
@@ -56,20 +56,30 @@ export default function Dashboard() {
           
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
-          <div><h4>Investments: Active</h4></div>
+          <div><h3>Investments: Active</h3></div>
           <div><p>No active investments.</p></div>
         
         </div>
         
         <div className="Shop_Overview">
           
-          <div><h4>Shop: Latest Sales</h4></div>
+          <div><h3>Shop: Latest Sales</h3></div>
           
+        </div>
+        
+        <div className="Programs_Overview">
+          
+          <div><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          
+          <div><h3>Programs: Enrolled</h3></div>
+          
+          <div><p>No programs enrolled.</p></div>
+        
         </div>
         
         <div className="Directory_Overview">
           
-          <div><h4>Directory: New Listings</h4></div>
+          <div><h3>Directory: New Listings</h3></div>
           
         </div>
       </div>
@@ -79,7 +89,7 @@ export default function Dashboard() {
           
           <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
-          <div><h4>Funds: Active</h4></div>
+          <div><h3>Funds: Active</h3></div>
           
           <div><p>Nothing to display.</p></div>
         
@@ -89,19 +99,9 @@ export default function Dashboard() {
           
           <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
-          <div><h4>Inventory: Latest Statistics</h4></div>
+          <div><h3>Inventory: Latest Statistics</h3></div>
           
           <div><p>No inventory available.</p></div>
-        
-        </div>
-      
-        <div className="Programs_Overview">
-          
-          <div><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
-          
-          <div><h4>Programs: Enrolled</h4></div>
-          
-          <div><p>No programs enrolled.</p></div>
         
         </div>
       
@@ -109,10 +109,17 @@ export default function Dashboard() {
           
           <div><Link href="/listings/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
-          <div><h4>Listings: Approved</h4></div>
+          <div><h3>Listings: Approved</h3></div>
           
           <div><p>No listings available.</p></div>
         
+        </div>
+        
+        <div className="Hub_Overview">
+          
+          <div><h3>Enterprise Hub: Tasks</h3></div>
+          
+          <div><p>No tasks available.</p></div>
         </div>
     
       </div>
