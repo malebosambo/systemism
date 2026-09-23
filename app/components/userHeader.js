@@ -25,7 +25,7 @@ export default function UserHeader() {
         </div>
       </div>
       
-      <div><UserNavigation /></div>
+      <div className="Menu"><UserNavigation /></div>
       
       <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
         <div className={ mobileMenu ? "Mobile_Menu" : "" }><UserNavigation /></div>

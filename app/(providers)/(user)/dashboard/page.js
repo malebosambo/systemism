@@ -37,7 +37,7 @@ export default function Dashboard() {
     <div className="Dashboard">
       
       <div className="Account_Overview">
-        <div><h3>Hello, {profile.name || user.email}</h3></div>
+        <div><h2>Hello, {profile.name || user.email}</h2></div>
         <div><h4>Balance: R0</h4></div>
         <div className="Wallet_Buttons">
           <div>

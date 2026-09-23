@@ -69,7 +69,7 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid grey;
     border-radius: 0 0 5px 5px;
-    margin: 0 -5px;
+    margin: 0 -7px;
     padding: 5px;
   }
 
@@ -214,8 +214,8 @@ ul {
     background-color: darkgrey;
     border: 2px solid black;
     border-radius: 5px;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 12px 0;
+    padding: 11px;
   }
   
   .Legal {
@@ -254,6 +254,10 @@ ul {
   .Logo {
     display: flex;
     justify-content: space-between;
+  }
+  
+  .Menu {
+    display: none;
   }
   
   .Menu_Nav_Active{
@@ -370,6 +374,8 @@ ul {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
+  
+  
   
 }
 
