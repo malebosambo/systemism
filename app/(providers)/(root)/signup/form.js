@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence, sendEmailVerification, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
 import { CreateProfile } from "@/app/lib/firestore";
 
@@ -44,18 +44,27 @@ export default function SignupForm() {
 
       const firebaseUser = userCredential.user;
       
+      await sendEmailVerification(firebaseUser, {
+        url: `${window.location.origin}/login`,
+        handleCodeInApp: false
+        }
+      );
+      
       await CreateProfile({
         uid: firebaseUser.uid,
         name: user.name.trim(),
         surname: user.surname.trim(),
         email: firebaseUser.email,
         cellphone: user.cellphone.trim(),
-        type: user.type
+        type: user.type,
+        emailVerified: false
       });
       
       console.log("Signup successful:", firebaseUser.uid);
       
-      router.replace("/dashboard");
+      await signOut(auth);
+      
+      router.replace("/verify-email");
     } catch (error) {
       console.error("Signup error:", error);
       setError(getSignUpErrorMessage(error));
@@ -93,7 +102,7 @@ export default function SignupForm() {
 
           <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" />
           
-          <select id="profileType" name="profileType" value={user.type} onChange={handleChange}>
+          <select id="profileType" name="type" value={user.type} onChange={handleChange}>
             <option value="Consumer">Consumer</option>
             <option value="Director">Director</option>
           </select>

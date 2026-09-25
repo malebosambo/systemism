@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { signInWithEmailAndPassword, setPersistence, browserLocalPersistence, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
-//import { UserLogin } from "../../../lib/actions";
 
 export default function LoginForm() {
   
@@ -25,6 +24,14 @@ export default function LoginForm() {
 
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("✅ Login successful:", userCredential.user.email);
+      
+      const firebaseUser = userCredential.user;
+      
+      if (!firebaseUser.emailVerified) {
+        await signOut(auth);
+        router.replace("/verify-email");
+        return;
+      }
 
       await new Promise(resolve => setTimeout(resolve, 500));
 

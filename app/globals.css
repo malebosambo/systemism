@@ -484,7 +484,7 @@ ul {
   
   .Home_Banner {
     height: 500px;
-    margin: 9px -7px 0 -7px;
+    margin: 7px -8px 0 -8px;
     padding: 90px 20px;
   }
   
@@ -620,6 +620,10 @@ ul {
   
   .Signup {
     padding: 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
   }
   
 }
