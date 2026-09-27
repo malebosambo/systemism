@@ -21,8 +21,8 @@ export default function Header() {
           <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={100} /></Link>
         </div>
         
-        <div className={ mobileMenu ? "Mobile_Menu_Open" : "Hide" }>
-          <button onClick={showMobileMenu} className={ !mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
+        <div className="Mobile_Menu_Open">
+          <button onClick={showMobileMenu} className="Button_Small"><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
         </div>
       </div>
       
