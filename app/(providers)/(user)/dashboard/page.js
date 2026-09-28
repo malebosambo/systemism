@@ -51,7 +51,7 @@ export default function Dashboard() {
         </div>
       </div>
       
-      <div className={ profileType == "Consumer" ? "Consumer" : "Hide" }>
+      <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         <div className="Investments_Overview">
           
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
@@ -62,11 +62,11 @@ export default function Dashboard() {
         
         </div>
         
-        <div className="Shop_Overview">
+        <div className="Store_Overview">
           
-          <div><h3>Shop: Latest Sales</h3></div>
+          <div><h3>Store: Local Sales</h3></div>
           
-          <div><p>No latest sales.</p></div>
+          <div><p>No local sales available.</p></div>
           
         </div>
         
@@ -76,27 +76,27 @@ export default function Dashboard() {
           
           <div><h3>Programs: Enrolled</h3></div>
           
-          <div><p>No programs enrolled.</p></div>
+          <div><p>No programs enrolled yet.</p></div>
         
         </div>
         
-        <div className="Directory_Overview">
+        <div className="Listings_Overview">
           
-          <div><h3>Directory: New Listings</h3></div>
+          <div><h3>Listings: Top Providers</h3></div>
           
           <div><p>No listings in the area.</p></div>
           
         </div>
       </div>
       
-      <div className={ profileType == "Director" ? "Director" : "Hide" }>
+      <div className={ profileType == "Business" ? "Business" : "Hide" }>
         <div className="Funds_Overview">
           
           <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h3>Funds: Active</h3></div>
           
-          <div><p>Nothing to display.</p></div>
+          <div><p>No funds have been activated.</p></div>
         
         </div>
       
@@ -106,25 +106,25 @@ export default function Dashboard() {
           
           <div><h3>Inventory: Latest Statistics</h3></div>
           
-          <div><p>No inventory available.</p></div>
+          <div><p>No inventory has been added.</p></div>
         
         </div>
       
-        <div className="Listings_Overview">
+        <div className="Enterprise_Overview">
           
-          <div><Link href="/listings/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
-          <div><h3>Listings: Approved</h3></div>
+          <div><h3>Enterprises: Approved</h3></div>
           
-          <div><p>No listings available.</p></div>
+          <div><p>You are not a director of an enterprise.</p></div>
         
         </div>
         
         <div className="Hub_Overview">
           
-          <div><h3>Enterprise Hub: Tasks</h3></div>
+          <div><h3>Hub: Tasks</h3></div>
           
-          <div><p>No tasks available.</p></div>
+          <div><p>No tasks to be completed.</p></div>
         </div>
     
       </div>

@@ -25,8 +25,6 @@ export default function UserHeader() {
         </div>
       </div>
       
-      <div className="Menu"><UserNavigation /></div>
-      
       <div className={ !closedMobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
         <div className={ !closedMobileMenu ? "Mobile_Menu" : "" }><UserNavigation /></div>
         <div className={ !closedMobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ !closedMobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>

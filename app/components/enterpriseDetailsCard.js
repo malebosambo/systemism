@@ -1,20 +1,25 @@
-export default function EnterpriseDetailsCard() {
+import Link from "next/link";
+
+export default function EnterpriseDetailsCard({ enterprise }) {
   
   return (
     <>
-      <div className="Enterprise_Logo"></div>
+      <div key={enterprise.name}><Link href="/enterprise/${enterprise.name}">
+        <div className="Enterprise_Logo"></div>
       
-      <div>
-        <h1 className="Enterprise_Name"></h1>
-        <hr />
-        <h2 className="Enterprise_Number"></h2>
-        <h2 className="Enterprise_Type"></h2>
-        <h2 className="Enterprise_Director"></h2>
-      </div>
+        <div className="Enterprise_Details">
+          <h1>{enterprise.name}</h1>
+          <hr />
+          <h2>{enterprise.number}</h2>
+          <h2{enterprise.type}></h2>
+          <h2>{enterprise.director}</h2>
+        </div>
       
-      <div className="Business_Location">
-        
-      </div>
+        <div className="Enterprise_Location">
+          <h3>Location:</h3>
+          <p>{enterprise.address}</p>
+        </div>
+      </Link></div>  
     </>
   )
 }

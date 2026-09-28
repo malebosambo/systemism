@@ -43,8 +43,15 @@ export async function UpdateProfile(data) {
 
 export async function AddEnterprise(data) {
   
+  const profile = await GetProfile();
+  const oldEnterprise = profile.enterprise;
+  
   const enterprise = data;
   console.log(enterprise);
   
+  const newEnterprise = await updateDoc(doc(db, "Profiles", profile.uid), { "enterprise": {enterprise},
+  });
+  
+  return newEnterprise;
   
 }
