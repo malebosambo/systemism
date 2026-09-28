@@ -40,3 +40,11 @@ export async function UpdateProfile(data) {
   return updatedProfile;
   
 }
+
+export async function AddEnterprise(data) {
+  
+  const enterprise = data;
+  console.log(enterprise);
+  
+  
+}

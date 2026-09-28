@@ -12,6 +12,14 @@ export default function Navigation() {
       <div className="Menu_Nav_Link"><Link href="/academy">Academy</Link></div>
       <div className="Menu_Nav_Link"><Link href="/accelerator">Accelerator</Link></div>
       <div><Link href="/contact-us">Contact Us</Link></div>
+      <div className="Menu_Buttons">
+        <div className="Menu_Button">
+          <div className="Button"><Link href="/login">Login</Link></div>
+        </div>
+        <div className="Menu_Button">
+          <div className="Button"><Link href="/signup">Sign Up</Link></div>
+        </div>
+      </div>
     </div>  
   );
 }

@@ -162,7 +162,7 @@ ul {
   .Home_FundingOption {
     background-color: darkgrey;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 5px;
     padding: 5px;
   }
@@ -268,6 +268,17 @@ ul {
     display: none;
   }
   
+  .Menu_Button {
+    width: 50%;
+  }
+  
+  .Menu_Buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+  }
+  
   .Menu_Nav_Active{
     border-bottom: 2px solid #F9F9E1;
   }
@@ -286,7 +297,7 @@ ul {
   }
   
   .Mobile_Menu_Open {
-    
+    justify-content: space-around;
   }
   
   .Mobile_Menu_Close {
@@ -316,7 +327,7 @@ ul {
   }
   
   .Navigation > .Button {
-    padding: 10px 0;
+    padding: 10px 0
   }
   
   .Navigation > div {
@@ -324,9 +335,17 @@ ul {
     padding: 5px;
   }
   
-  .PartnerLogos {
+  .Partner_Logos {
     margin: 30px 0;
   }
+  
+  .Profile_Tag {
+    background-color: #F9F9E1;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+  } 
   
   .Profile_Form {
     display: none;

@@ -7,17 +7,19 @@ export default function Home() {
     <main className="Home">
       
       <div className="Home_Banner">
-        <div><h1 style={{ color: "white" }}>Products and services for people and businesses</h1></div>
+        <div><h1 style={{ color: "white" }}>Products and services for personal and business</h1></div>
         
-        <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div>
+        <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div><br />
         
         <div className="Home_Buttons">
-          <div className="Button"><Link className="Nav" href="/login">Login</Link></div>
-          <div className="Button"><Link className="Nav" href="/signup">Sign Up</Link></div>
+          <div className="Button"><Link className="Nav" href="/profiles/personal">Personal</Link></div>
+          <div className="Button"><Link className="Nav" href="/profiles/business">Business</Link></div>
         </div>
       </div>
       
       <div className="Home_Investing">
+        
+        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
         <div><h1>Invest for now and the future.</h1></div>
         
@@ -65,6 +67,8 @@ export default function Home() {
       
       <div className="Home_Funding">
         
+        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        
         <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
         
         <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
@@ -74,26 +78,32 @@ export default function Home() {
             <Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link>
             <p>Raise crowdfunded funding with flexible requirements.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/equity"><h3>Equity</h3></Link>
             <p>Sell some shares to investors for funding.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/invoice-financing"><h3>Invoince Financing</h3></Link>
             <p>Receive partial or full payment on an invoice sent to debtors.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/asset-rental"><h3>Asset Rental</h3></Link>
             <p>Rent assets that you pay the due amount.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/loan"><h3>Loan</h3></Link>
             <p>Apply for long-term, low interest funding.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/credit"><h3>Credit</h3></Link>
             <p>Receive an advance from your vendors.</p>
           </div>
+          
           <div className="Home_FundingOption">
             <Link href="/funding/balance-sheet"><h3>Balance Sheet</h3></Link>
           </div>
@@ -102,6 +112,8 @@ export default function Home() {
       </div>
       
       <div className="Home_Marketplace">
+        
+        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         
         <div><h1>Sell products on the marketplace</h1></div>
         
@@ -117,11 +129,15 @@ export default function Home() {
       
       <div className="Home_Academy">
         
+        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        
         <div><h1>Enroll in our academy programs for professional development</h1></div>
         
       </div>
       
       <div className="Home_Directory">
+        
+        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
         <div><h1>Need services fast? Search for a service provider in your area</h1></div>
         
@@ -149,6 +165,14 @@ export default function Home() {
           
           <div className="Button"><Link className="Nav" href="/directory">List SMME</Link></div>
         </div>
+        
+      </div>
+      
+      <div>
+        
+        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        
+        <div><h1>Accelerator</h1></div>
         
       </div>
       
