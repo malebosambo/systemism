@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function EnterpriseDetailsCard({ enterprise }) {
   
@@ -8,16 +9,17 @@ export default function EnterpriseDetailsCard({ enterprise }) {
         <div className="Enterprise_Logo"></div>
       
         <div className="Enterprise_Details">
-          <h1>{enterprise.name}</h1>
+          <h5>{enterprise.name}</h5>
           <hr />
-          <h2>{enterprise.number}</h2>
-          <h2{enterprise.type}></h2>
-          <h2>{enterprise.director}</h2>
+          <p>{enterprise.number}</p>
+          <p>{enterprise.status}</p>
+          <p>{enterprise.type}</p>
+          <p>{enterprise.director}</p>
         </div>
-      
-        <div className="Enterprise_Location">
-          <h3>Location:</h3>
-          <p>{enterprise.address}</p>
+        
+        <div>
+          <div><p>AR:</p></div>
+          <div><p>BO:</p></div>
         </div>
       </Link></div>  
     </>

@@ -3,7 +3,9 @@ import { db } from "../../firebase";
 
 export async function GetProfile(data) {
   
-  const profile = await getDoc(doc(db, "Profiles", data));
+  const type = data.type;
+  
+  const profile = await getDoc(doc(db, type, data));
   
   if (!profile.exists()) {
     return null;
@@ -22,7 +24,10 @@ export async function CreateProfile(data) {
     throw new Error("Cannot create Firestore profile without a Firebase UID.");
   }
   
-  const newProfile = await setDoc(doc(db, "Profiles", profile.uid), profile);
+  const docRef = doc(db, "Profiles", type, profile.uid);
+  const type = profile.type;
+  
+  const newProfile = await setDoc(docRef, profile);
   console.log("Successful write to db.", newProfile);
   
   return newProfile;
@@ -33,8 +38,10 @@ export async function UpdateProfile(data) {
   
   const profile = data;
   console.log(profile);
+  const type = profile.type;
+  const docRef = doc(db, "Profiles", type, profile.uid);
   
-  const updatedProfile = await updateDoc(doc(db, "Profiles", profile.uid), profile);
+  const updatedProfile = await updateDoc(docRef, profile);
   console.log("Successful write to db.", updatedProfile);
   
   return updatedProfile;

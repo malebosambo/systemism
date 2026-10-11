@@ -9,27 +9,28 @@ import { useAuth } from "@/app/lib/authContext";
 export default function Dashboard() {
   
   const { user, profile, loading } = useAuth();
+  
   const router = useRouter();
   
   useEffect(() => {
 
     if (loading === false && !user) {
       router.replace("/login");
-    }
+    };
   
   }, [user, loading, router]);
   
   if (loading) {
     return <div>Loading...</div>
-  }
+  };
   
   if (!user) {
     return null;
-  }
+  };
   
   if (!profile) {
-    return <div>Loading profile...</div>
-  }
+    return <div style={{ display: "none" }}>Loading profile...</div>
+  };
   
   const profileType = profile.type;
 
@@ -37,18 +38,27 @@ export default function Dashboard() {
     <div className="Dashboard">
       
       <div className="Account_Overview">
+        
         <div><h1>Hello, {profile.name || user.email}</h1></div>
-        <div><h2>Balance: R0</h2></div>
+        
+        <div><h2>Balance: R0.00</h2></div>
+        
         <div className="Wallet_Buttons">
           <div>
             <div style={{ display: "flex", justifyContent: "space-around" }}><Link href="/account/deposit"><Image src="/icons/circled-add.png" alt="Add Icon" height={35} width={35} /></Link></div>
             <div style={{ textAlign: "center" }}><p>Deposit</p></div>
           </div>
+          
           <div>
             <div style={{ display: "flex", justifyContent: "space-around" }}><Link href="/account/withdraw"><Image src="/icons/circled-minus.png" alt="Minus Icon" height={35} width={35} /></Link></div>
             <div style={{ textAlign: "center" }}><p>Withdraw</p></div>
           </div>
         </div>
+        
+        <div>
+          <div><p>Your profit/loss margin is balanced.</p></div>
+        </div>
+        
       </div>
       
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
@@ -62,11 +72,11 @@ export default function Dashboard() {
         
         </div>
         
-        <div className="Store_Overview">
+        <div className="Market_Overview">
           
-          <div><h3>Store: Local Sales</h3></div>
+          <div><h3>Market: Local Sales</h3></div>
           
-          <div><p>No local sales available.</p></div>
+          <div><p>No local sales available on the market.</p></div>
           
         </div>
         

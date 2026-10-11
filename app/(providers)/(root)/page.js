@@ -9,10 +9,11 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Products and services for personal and business</h1></div>
         
-        <div><p style={{ color: "white" }}>Our platform provides financial independence, wealth generation and economic participation.</p></div><br />
+        <div><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div><br />
         
         <div className="Home_Buttons">
           <div className="Button"><Link className="Nav" href="/profiles/personal">Personal</Link></div>
+          
           <div className="Button"><Link className="Nav" href="/profiles/business">Business</Link></div>
         </div>
       </div>
@@ -21,9 +22,9 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
-        <div><h1>Invest for now and the future.</h1></div>
+        <div><h1>Invest for now and the future</h1></div>
         
-        <div><p>Our investments provide short-term, medium-term and long-term returns on capital.</p></div>
+        <div><p>Our investments provide short-term, medium-term and long-term returns.</p></div>
         
         <div className="Home_InvestingTerms">
           
@@ -71,9 +72,10 @@ export default function Home() {
         
         <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
         
-        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
+        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div><br />
         
         <div className="Home_FundingOptions">
+          
           <div className="Home_FundingOption">
             <Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link>
             <p>Raise crowdfunded funding with flexible requirements.</p>
@@ -107,21 +109,33 @@ export default function Home() {
           <div className="Home_FundingOption">
             <Link href="/funding/balance-sheet"><h3>Balance Sheet</h3></Link>
           </div>
+          
         </div>
         
       </div>
       
       <div className="Home_Marketplace">
         
-        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
-        
-        <div><h1>Sell products on the marketplace</h1></div>
-        
-        <div style={{ borderRadius: "15px", marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace Admin Console" height={250} width={300} /></div>
+        <div style={{ marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} /></div>
         
         <div className="Home_Buttons">
           <div className="Button">
-            <Link className="Nav" href="/marketplace/vendor-application">Vendor Application</Link>
+            <Link className="Nav" href="/market/">Visit Market</Link>
+          </div>
+        </div>
+        
+        <div className="Vendor_Benefits">
+          <div><h1>Marketplace Vendor Benefits</h1></div>
+          
+          <div>
+            <ul>
+              <li>Add and monitor inventory</li>
+              <li>Accept payments</li>
+            </ul>
+          </div>
+          
+          <div className="Button">
+            <Link className="Nav" href="/enterprise/add">Vendor Application</Link>
           </div>
         </div>
         
@@ -131,7 +145,11 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
-        <div><h1>Enroll in our academy programs for professional development</h1></div>
+        <div><h1>Get certified with our academy programs</h1></div>
+        
+        <div><p>Browse programs by selecting an industry below.</p></div>
+        
+        <div className="Program_Industries"></div>
         
       </div>
       
@@ -141,7 +159,7 @@ export default function Home() {
         
         <div><h1>Need services fast? Search for a service provider in your area</h1></div>
         
-        <div>
+        <div className="Listings_Map">
           <iframe
             src="https://maps.app.goo.gl/pFnUxfgW8fqiQC3f9?g_st=ac"
             title="Google Maps"
@@ -155,30 +173,39 @@ export default function Home() {
         <div><h2>List on the directory</h2></div>
         
         <div>
-          <div>
+          <div className="Listing_Process">
             <ul>
-              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Create a profile</p></span></div></li>
-              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your profile</p></span></div></li>
-              <li><div><span><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></span></div></li>
+              
+              <li><div style={{ marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
+              
+              <li><div style={{ marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
+              
+              <li><div><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
             </ul>
           </div>
           
-          <div className="Button"><Link className="Nav" href="/directory">List SMME</Link></div>
+          <div className="Button"><Link className="Nav" href="/directory">List Enterprise</Link></div>
         </div>
         
       </div>
       
-      <div>
+      <div className="Home_Accelerator">
         
         <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         
         <div><h1>Accelerator</h1></div>
         
+        <div>
+          <div><p>Business management</p></div>
+          <div><p>Finance management</p></div>
+          <div><p>Branding & marketing</p></div>
+        </div>
+        
       </div>
       
       <div className="Home_Partners">
         
-        <div style={{ textAlign: "center" }}><h1>Partners</h1></div>
+        <div style={{ textAlign: "center" }}><h1>Partners</h1></div><br />
         
         <div className="PartnerLogos">
           <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>

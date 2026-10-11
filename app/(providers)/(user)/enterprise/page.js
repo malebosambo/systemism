@@ -10,6 +10,7 @@ import EnterpriseDetailsCard from "@/app/components/enterpriseDetailsCard";
 export default function Enterprises() {
   
   const { user, profile, loading } = useAuth();
+  
   const router = useRouter();
   
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function Enterprises() {
   }
   
   if (!profile) {
-    return <div style={{ display: "none" }}>Loading...</div>
+    return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
   return (
@@ -37,9 +38,9 @@ export default function Enterprises() {
       
       <div><h1>My Enterprises</h1></div>
       
-      <div>
-        {profile.enterprises.map((enterprise) => (<EnterpriseDetailsCard key={enterprise.name} enterprise={enterprise} />))}
-      </div>
+      <div><Link href="/enterprise/add">Add</Link></div>
+      
+      <div></div>
       
     </main>
   )

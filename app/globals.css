@@ -107,6 +107,10 @@ ul {
     padding: 20px;
   }
   
+  .Form_ProfileDetails {
+    display: none;
+  }
+  
   .Funds_Overview {
     background-color: darkgray;
     border: 1.5px solid black;
@@ -133,6 +137,10 @@ ul {
     margin: 0 -8px;
     padding: 90px 20px;
   }
+  
+  .Home_Accelerator {
+    background-color: #F9F9E1;
+  }
 
   .Home_Banner {
     margin: 0 -8px;
@@ -155,16 +163,20 @@ ul {
     padding: 90px 20px;
   }
   
-  .Home_FundingOptions > a {
+  .Home_FundingOption > a {
+    color: white;
+  }
+  
+  .Home_FundingOption > p {
     color: white;
   }
   
   .Home_FundingOption {
     background-color: darkgrey;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 10px;
-    margin-top: 5px;
-    padding: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
   }
   
   .Home_InvestingTerms {
@@ -233,6 +245,14 @@ ul {
   
   .Links {
     padding: 20px 10px;
+  }
+  
+  .Listings_Map {
+    margin: 15px 0;
+  }
+  
+  .Listing_Process {
+    margin: 15px;
   }
   
   .Listings_Overview {

@@ -5,12 +5,20 @@ import { AddEnterprise } from "@/app/lib/actions"
 
 export default function AddEnterprise() {
   
-  const [enterprise, setEnterprise] = useState({
+  const [ enterprise, setEnterprise ] = useState({
     "name": "",
     "number": "",
     "type": "",
-    "address": "",
-    "director": ""
+    "registrationDate": "",
+    "startDate": "",
+    "status": "",
+    "finYearEnd": "",
+    "taxNumber": 0,
+    "phyAddress": "",
+    "postalAddress": "",
+    "director": "",
+    "annualReturns": false,
+    "beneficialOwnership": false
   });
   
   function handleChange(e) {
@@ -34,8 +42,27 @@ export default function AddEnterprise() {
             <li><input type="radio" name="type" value="Private" />Private</li>
             <li><input type="radio" name="type" value="Close Corporation" />Close Corporation</li>
           </ul>
+          
+          <p>Registration Date:</p>
+          <input type="date" name="registrationDate" />
+          
+          <p>Start Date:</p>
+          <input type="date" name="startDate" />
+          
+          <p>Status:</p>
+          <select id="enterpriseStatus" name="status" value={enterprise.status} onChange={handleChange}>
+            <option value="In Business">In Business</option>
+            <option value="De-registration">De-registration</option>
+          </select>
+          
+          <p>Financial Year End:</p>
+          <input type="date" name="finYearEnd" />
+          
+          <input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" required />
     
-          <input type="textarea" name="address" placeholder="Enterprise Address" onChange={handleChange} value={enterprise.address} required />
+          <input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} required />
+          
+          <input type="textarea" name="postalAddress" placeholder="Postal Address" onChange={handleChange} value={enterprise.postalAddress} />
           
           <input type="text" name="director" placeholder="Enterprise Director" onChange={handleChange} value={enterprise.director} required />
     

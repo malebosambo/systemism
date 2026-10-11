@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence, sendEmailVerification, signOut } from "firebase/auth";
+import { Timestamp } from "firebase/firestore";
 import { auth } from "@/firebase";
 import { CreateProfile } from "@/app/lib/firestore";
 
@@ -55,9 +56,19 @@ export default function SignupForm() {
         name: user.name.trim(),
         surname: user.surname.trim(),
         email: firebaseUser.email,
-        cellphone: user.cellphone.trim(),
+        cellphone: user.cellphone.trim(),   
         type: user.type,
-        emailVerified: false
+        emailVerified: false,
+        createdDate: new Date(),
+        updatedDate: null,
+        address: {
+          physical: "",
+          postal: ""
+        },
+        billing: {
+          accountNr: null,
+          holder: ""
+        }
       });
       
       console.log("Signup successful:", firebaseUser.uid);
@@ -103,8 +114,8 @@ export default function SignupForm() {
           <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" />
           
           <select id="profileType" name="type" value={user.type} onChange={handleChange}>
-            <option value="Consumer">Consumer</option>
-            <option value="Director">Director</option>
+            <option value="Personal">Personal</option>
+            <option value="Business">Business</option>
           </select>
 
           <input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" />

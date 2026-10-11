@@ -1,18 +1,40 @@
 "use client";
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
-import StoreItemCard from "@/app/components/shopItemCard";
 
- export default function Store() {
+export default function Market() {
    
+  const { user, profile, loading } = useAuth();
    
+  const router = useRouter();
+
+  useEffect(() => {
+  
+    if (loading === false && !user) {
+      router.replace("/login");
+    }
+  
+  }, [user, loading, router]);
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  if (!user) {
+    return null;
+  }
+
+  if (!profile) {
+    return <div style={{ display: "none" }}>Loading profile...</div>
+  }
   
   return (
     <main>
       
-      <div><h1>Store</h1></div>
+      <div><h1>Market</h1></div>
       
-      <div>{store.products.map((item) => (<StoreItemCard key={item.name} item={item} />))}</div>
     </main>
   );
 }
