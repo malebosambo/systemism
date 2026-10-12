@@ -31,7 +31,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h5>Short Term</h5>
+            <h5>Short Term</h5><br />
             <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
@@ -41,9 +41,9 @@ export default function Home() {
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h3>Medium Term</h3>
+            <h5>Medium Term</h5><br />
             <p>Moderate Risk, Moderate Reward</p>
           
             <div className="Circled_Icon">
@@ -52,9 +52,9 @@ export default function Home() {
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h3>Long Term</h3>
+            <h5>Long Term</h5><br />
             <p>Low Risk, Low Reward</p>
           
             <div className="Circled_Icon">
@@ -72,7 +72,7 @@ export default function Home() {
         
         <div><h1 style={{ color: "white", marginTop: "30px" }}>Access funding for any business stage</h1></div>
         
-        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div><br />
+        <div style={{ marginBottom: "15px" }}><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
         <div className="Home_FundingOptions">
           
@@ -147,9 +147,9 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
-        <div style={{ marginTop: "30px" }}><h1>Get certified with our academy programs</h1></div>
+        <div style={{ marginTop: "30px" }}><h1 style={{ color: "white" }}>Get certified with our academy programs</h1></div><br />
         
-        <div><p>Browse programs by selecting an industry below.</p></div>
+        <div><p style={{ color: "white" }}>Browse programs by selecting an industry below.</p></div>
         
         <div className="Program_Industries"></div>
         

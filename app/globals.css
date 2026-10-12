@@ -93,6 +93,14 @@ ul {
     padding: 8px;
   }
   
+  .Circled_Icon {
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    margin-top: 2px;
+    padding: 3px;
+  }
+  
   .Directory_Overview {
     background-color: darkgray;
     border: 1.5px solid black;
@@ -133,13 +141,15 @@ ul {
   }
 
   .Home_Academy {
-    background-color: #F9F9E1; 
+    background-color: black; 
     margin: 0 -8px;
     padding: 90px 20px;
   }
   
   .Home_Accelerator {
     background-color: #F9F9E1;
+    margin: 0 -8px;
+    padding: 10px;
   }
 
   .Home_Banner {
@@ -188,7 +198,7 @@ ul {
     border: thin solid black;
     border-radius: 10px;
     margin: 10px 0;
-    padding: 15px;
+    padding: 20px;
   }
 
   .Home_Investing {
@@ -202,7 +212,7 @@ ul {
   }
   
   .Home_Partners {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
   
   .Hub_Overview {
@@ -248,7 +258,7 @@ ul {
   }
   
   .Listings_Map {
-    margin: 15px 0;
+    margin: 15px -8px;
   }
   
   .Listing_Process {
@@ -364,8 +374,9 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
+    margin-bottom: 12px;
+    padding: 2px;
+    width: 500px;
   } 
   
   .Profile_Form {
@@ -467,6 +478,7 @@ ul {
     background-color: white;
     border: 0.5px solid black;
     border-radius: 10px;
+    padding: 5px;
   }
   
   .Consumer {
