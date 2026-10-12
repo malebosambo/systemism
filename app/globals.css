@@ -463,6 +463,12 @@ ul {
     color: black;
   }
   
+  .Circled_Icon {
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+  }
+  
   .Consumer {
     width: 70%;
   }
@@ -576,14 +582,15 @@ ul {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 10px;
+    width: 100%;
   }
   
   .Home_InvestTime {
     background-color: #F9F9E1;
     border: thin solid black;
     border-radius: 10px;
-    margin: 10px 0;
     padding: 15px;
+    width: 30%;
   }
 
   .Home_Marketplace {
@@ -674,6 +681,12 @@ ul {
     background-color: black;
     border: 1px solid #F9F9E1;
     border-radius: 5px;
+    height: 50px;
+    width: 100px;
+  }
+  
+  .Profile_Tag > p {
+    color: white;
   }
   
   .Programs_Overview {

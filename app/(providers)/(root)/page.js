@@ -29,9 +29,9 @@ export default function Home() {
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={25} width={25} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h3>Short Term</h3>
+            <h5>Short Term</h5>
             <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
@@ -70,7 +70,7 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         
-        <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
+        <div><h1 style={{ color: "white", marginTop: "30px" }}>Access funding for any business stage</h1></div>
         
         <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div><br />
         
@@ -147,7 +147,7 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
-        <div><h1>Get certified with our academy programs</h1></div>
+        <div style={{ marginTop: "30px" }}><h1>Get certified with our academy programs</h1></div>
         
         <div><p>Browse programs by selecting an industry below.</p></div>
         
@@ -159,7 +159,7 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
         
-        <div><h1>Need services fast? Search for a service provider in your area</h1></div>
+        <div style={{ marginTop: "30px", marginBottom: "20px" }}><h1>Need services fast? Search for a service provider in your area</h1></div>
         
         <div className="Listings_Map">
           <iframe
@@ -199,7 +199,7 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         
-        <div><h1>Accelerator</h1></div>
+        <div style={{ marginTop: "30px" }}><h1>Accelerator</h1></div>
         
         <div>
           <div><p>Business management</p></div>
