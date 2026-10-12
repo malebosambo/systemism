@@ -519,18 +519,30 @@ ul {
   }
 
   .Home_Academy {
+    background-color: #F9F9E1;
+    margin: 0 -8px;
     padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_Accelerator {
+    background-color: #F9F9E1;
+    margin: 0 -8px;
+    text-align: center;
   }
   
   .Home_Banner {
     height: 500px;
-    margin: 5px -8px 0 -8px;
+    margin: 4px -8px 0 -8px;
     padding: 90px 20px;
+    text-align: center;
   }
   
   .Home_Buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
   }
 
   .Home_Directory {
@@ -538,7 +550,9 @@ ul {
   }
 
   .Home_Funding {
+    margin: 0 -8px;
     padding: 90px 20px;
+    text-align: center;
   }
   
   .Home_FundingOption {
@@ -548,9 +562,21 @@ ul {
     margin: 10px 0;
     padding: 10px;
   }
+  
+  .Home_FundingOptions {
+    margin-top: 10px;
+  }
 
   .Home_Investing {
     padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_InvestingTerms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
   }
   
   .Home_InvestTime {
@@ -563,6 +589,11 @@ ul {
 
   .Home_Marketplace {
     padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_Partners {
+    margin: 20px 0;
   }
   
   .Inventory_Overview {
@@ -602,9 +633,7 @@ ul {
   }
   
   .Mobile_Menu_Open {
-    display: grid;
-    padding-right: 5px;
-    place-items: center;
+    display: none;
   }
 
   .Navigation {
@@ -642,6 +671,12 @@ ul {
     background-color: grey;
   }
   
+  .Profile_Tag {
+    background-color: black;
+    border: 1px solid #F9F9E1;
+    border-radius: 5px;
+  }
+  
   .Programs_Overview {
     background-color: darkgrey;
     border: 2px solid black;
@@ -663,7 +698,32 @@ ul {
   }
   
   h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 58px;
+  }
+  
+  h3 {
+    font-size: 56px;
+  }
+  
+  h4 {
+    font-size: 54px;
+  }
+  
+  h5 {
+    font-size: 50px;
+  }
+  
+  h6 {
     font-size: 48px;
+  }
+  
+  p {
+    font-size: 25px;
+    line-height: 30px;
   }
   
 }

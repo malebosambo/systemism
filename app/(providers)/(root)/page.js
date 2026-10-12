@@ -9,7 +9,7 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Products and services for personal and business</h1></div>
         
-        <div><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div><br />
+        <div><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link className="Nav" href="/profiles/personal">Personal</Link></div>
@@ -134,8 +134,10 @@ export default function Home() {
             </ul>
           </div>
           
-          <div className="Button">
-            <Link className="Nav" href="/enterprise/add">Vendor Application</Link>
+          <div className="Home_Buttons">
+            <div className="Button">
+              <Link className="Nav" href="/enterprise/add">Vendor Application</Link>
+            </div>
           </div>
         </div>
         
@@ -184,7 +186,11 @@ export default function Home() {
             </ul>
           </div>
           
-          <div className="Button"><Link className="Nav" href="/directory">List Enterprise</Link></div>
+          <div className="Home_Buttons">
+            <div className="Button">
+              <Link className="Nav" href="/directory">List Enterprise</Link>
+            </div>
+          </div>
         </div>
         
       </div>
