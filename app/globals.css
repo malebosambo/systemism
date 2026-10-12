@@ -189,6 +189,10 @@ ul {
     padding: 5px 10px;
   }
   
+  .Home_FundingOptions {
+    margin-top: 50px;
+  }
+  
   .Home_InvestingTerms {
     padding: 20px 0;
   }
@@ -258,7 +262,7 @@ ul {
   }
   
   .Listings_Map {
-    margin: 15px -8px;
+    margin: 15px -28px;
   }
   
   .Listing_Process {
@@ -376,7 +380,7 @@ ul {
     border-radius: 5px;
     margin-bottom: 12px;
     padding: 2px;
-    width: 500px;
+    width: 100px;
   } 
   
   .Profile_Form {

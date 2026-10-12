@@ -70,9 +70,9 @@ export default function Home() {
         
         <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         
-        <div><h1 style={{ color: "white", marginTop: "30px" }}>Access funding for any business stage</h1></div>
+        <div><h1 style={{ color: "white", marginTop: "50px" }}>Access funding for any business stage</h1></div>
         
-        <div style={{ marginBottom: "15px" }}><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
+        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
         <div className="Home_FundingOptions">
           
