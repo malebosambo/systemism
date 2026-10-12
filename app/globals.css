@@ -528,12 +528,13 @@ ul {
   .Home_Accelerator {
     background-color: #F9F9E1;
     margin: 0 -8px;
+    padding: 50px 20px;
     text-align: center;
   }
   
   .Home_Banner {
     height: 500px;
-    margin: 4px -8px 0 -8px;
+    margin: 0 -8px 0 -8px;
     padding: 90px 20px;
     text-align: center;
   }
@@ -541,8 +542,6 @@ ul {
   .Home_Buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 10px;
   }
 
   .Home_Directory {
@@ -593,7 +592,7 @@ ul {
   }
   
   .Home_Partners {
-    margin: 20px 0;
+    margin: 50px 0;
   }
   
   .Inventory_Overview {
@@ -702,28 +701,28 @@ ul {
   }
   
   h2 {
-    font-size: 58px;
-  }
-  
-  h3 {
     font-size: 56px;
   }
   
+  h3 {
+    font-size: 52px;
+  }
+  
   h4 {
-    font-size: 54px;
-  }
-  
-  h5 {
-    font-size: 50px;
-  }
-  
-  h6 {
     font-size: 48px;
   }
   
+  h5 {
+    font-size: 46px;
+  }
+  
+  h6 {
+    font-size: 44px;
+  }
+  
   p {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
   }
   
 }
