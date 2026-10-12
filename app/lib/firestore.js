@@ -24,8 +24,8 @@ export async function CreateProfile(data) {
     throw new Error("Cannot create Firestore profile without a Firebase UID.");
   }
   
-  const docRef = doc(db, "Profiles", type, profile.uid);
   const type = profile.type;
+  const docRef = doc(db, "Profiles", type, profile.uid);
   
   const newProfile = await setDoc(docRef, profile);
   console.log("Successful write to db.", newProfile);
@@ -48,7 +48,7 @@ export async function UpdateProfile(data) {
   
 }
 
-export async function AddEnterprise(data) {
+export async function CreateEnterprise(data) {
   
   const profile = await GetProfile();
   const oldEnterprise = profile.enterprise;

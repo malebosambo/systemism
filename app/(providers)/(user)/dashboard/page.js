@@ -16,21 +16,21 @@ export default function Dashboard() {
 
     if (loading === false && !user) {
       router.replace("/login");
-    };
+    }
   
   }, [user, loading, router]);
   
   if (loading) {
     return <div>Loading...</div>
-  };
+  }
   
   if (!user) {
     return null;
-  };
+  }
   
   if (!profile) {
     return <div style={{ display: "none" }}>Loading profile...</div>
-  };
+  }
   
   const profileType = profile.type;
 

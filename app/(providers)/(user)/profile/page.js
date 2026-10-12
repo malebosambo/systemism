@@ -8,12 +8,14 @@ import { UpdateProfile } from "@/app/lib/firestore";
 
 export default function Profile() {
   
-  const [ editUser, setEditUser ] = useState({
-    name: {profile.name},
-    surname: {profile.surname},
-    email: {profile.email},
+  const { user, profile, loading } = useAuth();
+  
+  const [editUser, setEditUser] = useState({
+    name: { profile.name },
+    surname: { profile.surname },
+    email: { profile.email },
     cellphone: "",
-    type: {profile.type},
+    type: { profile.type },
     address: {
       physical: "",
       postal: ""
@@ -23,8 +25,6 @@ export default function Profile() {
       holder: ""
     }
   });
-  
-  const { user, profile, loading } = useAuth();
   
   const router = useRouter();
   

@@ -26,7 +26,7 @@ export default function AddInventoryItem() {
       <div><h1>Add New Inventory</h1></div>
       
       <div>
-        <form onSubmit={}>
+        <form onSubmit="">
           <div><input type="text" name="name" value={item.name} onChange={handleChange} required /></div>
           
           <div><input type="textarea" name="description" value={item.description} onChange={handleChange} required /></div>

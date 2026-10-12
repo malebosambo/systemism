@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AddEnterprise } from "@/app/lib/actions"
+import { CreateEnterprise } from "@/app/lib/actions"
 
 export default function AddEnterprise() {
   

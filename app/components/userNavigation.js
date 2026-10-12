@@ -33,14 +33,14 @@ export default function UserNavigation() {
     <div className="UserNavigation">
       <div><Link href="/dashboard">Dashboard</Link></div>
       
-      <div className={{ profileType == "Personal" ? "" : "Hide" }}>
+      <div className={ profileType == "Personal" ? "" : "Hide" }>
         <div><Link href="/investments">Investments</Link></div>
         <div><Link href="/market">Market</Link></div>
         <div><Link href="/programs">Programs</Link></div>
         <div><Link href="/listings">Listings</Link></div>
       </div>
       
-      <div className={{ profileType == "Business" ? "" : "Hide" }}>
+      <div className={ profileType == "Business" ? "" : "Hide" }>
         <div><Link href="/enterprise">Enterprises</Link></div>
         <div><Link href="/funds">Funds</Link></div>
         <div><Link href="/inventory">Inventory</Link></div>
