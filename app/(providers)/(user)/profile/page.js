@@ -10,22 +10,6 @@ export default function Profile() {
   
   const { user, profile, loading } = useAuth();
   
-  const [editUser, setEditUser] = useState({
-    name: { profile.name },
-    surname: { profile.surname },
-    email: { profile.email },
-    cellphone: "",
-    type: { profile.type },
-    address: {
-      physical: "",
-      postal: ""
-    },
-    billing: {
-      accounNr: null,
-      holder: ""
-    }
-  });
-  
   const router = useRouter();
   
   useEffect(() => {
