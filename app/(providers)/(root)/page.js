@@ -211,9 +211,9 @@ export default function Home() {
       
       <div className="Home_Partners">
         
-        <div style={{ textAlign: "center" }}><h1>Partners</h1></div><br />
+        <div style={{ textAlign: "center" }}><h1>Partners</h1></div>
         
-        <div className="PartnerLogos">
+        <div className="Partner_Logos">
           <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>
         </div>
         

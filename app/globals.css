@@ -39,7 +39,7 @@ ul {
   color: white;
 }
 
-.Footer > .Legal > a {
+.Footer > .Legal > div > a {
   color: white;
 }
 
@@ -149,7 +149,7 @@ ul {
   .Home_Accelerator {
     background-color: #F9F9E1;
     margin: 0 -8px;
-    padding: 10px;
+    padding: 50px 10px;
   }
 
   .Home_Banner {
@@ -216,7 +216,7 @@ ul {
   }
   
   .Home_Partners {
-    padding: 40px 20px;
+    padding: 50px 10px;
   }
   
   .Hub_Overview {
@@ -262,7 +262,7 @@ ul {
   }
   
   .Listings_Map {
-    margin: 15px -28px;
+    margin: 15px -18px;
   }
   
   .Listing_Process {
@@ -371,7 +371,7 @@ ul {
   }
   
   .Partner_Logos {
-    margin: 30px 0;
+    margin-top: 30px;
   }
   
   .Profile_Tag {
@@ -380,6 +380,7 @@ ul {
     border-radius: 5px;
     margin-bottom: 12px;
     padding: 2px;
+    text-align: center;
     width: 100px;
   } 
   

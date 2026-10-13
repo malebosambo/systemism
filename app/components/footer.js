@@ -27,7 +27,7 @@ export default function Footer() {
         <div><Link href="/legal/faq">FAQ</Link></div>
         <div><Link href="/legal/terms-conditions">Terms and Conditions</Link></div>
         <div><Link href="/legal/privacy-policy">Privacy Policy</Link></div>
-        <div><p>© 2026 Systemism</p></div>
+        <div><p style={{ color: "white" }}>© 2026 Systemism</p></div>
       </div>
     
     </div>
