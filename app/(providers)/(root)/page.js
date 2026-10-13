@@ -21,7 +21,7 @@ export default function Home() {
       <div className="Home_Investing">
         
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+          <div className="Profile_Tag"><Link href="/profiles/personal"><p style={{ fontWeight: "bold" }}>Personal</p></Link></div>
         </div>
         
         <div><h1>Invest for now and the future</h1></div>
@@ -31,36 +31,36 @@ export default function Home() {
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <h6>Short Term</h6>
-            <p>High Risk, High Reward</p>
+            <div style={{ marginBottom: "10px" }}><h6>Short Term</h6></div>
+            <p>Medium to High Risk, High Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/short-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span>
+              <Link href="/investing/terms/short-term"><p style={{ fontWeight: "bold" }}>View more</p><span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={30} width={30} /></span>
               </Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <h6>Medium Term</h6>
-            <p>Moderate Risk, Moderate Reward</p>
+            <div style={{ marginBottom: "10px" }}><h6>Medium Term</h6></div>
+            <p>Low to Medium Risk, Low to Moderate Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/medium-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
+              <Link href="/investing/terms/medium-term"><p style={{ fontWeight: "bold" }}>View more</p><span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={30} width={30} /></span></Link>
             </div>
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
+            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <h6>Long Term</h6>
-            <p>Low Risk, Low Reward</p>
+            <div style={{ marginBottom: "10px" }}><h6>Long Term</h6></div>
+            <p>Low to High Risk, Low to High Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/long-term">View more<span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={20} width={20} /></span></Link>
+              <Link href="/investing/terms/long-term"><p style={{ fontWeight: "bold" }}>View more</p><span style={{ marginLeft: "10px" }}><Image src="/icons/circled-right.png" alt="Right Arrow" height={30} width={30} /></span></Link>
             </div>
           </div>
           
@@ -82,7 +82,7 @@ export default function Home() {
           
           <div className="Home_FundingOption">
             <Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link>
-            <p>Raise crowdfunded funding with flexible requirements.</p>
+            <p>Raise a crowdfunded project budget with flexible requirements.</p>
           </div>
           
           <div className="Home_FundingOption">
@@ -97,21 +97,22 @@ export default function Home() {
           
           <div className="Home_FundingOption">
             <Link href="/funding/asset-rental"><h3>Asset Rental</h3></Link>
-            <p>Rent assets that you pay the due amount.</p>
+            <p>Rent available assets through contracts.</p>
           </div>
           
           <div className="Home_FundingOption">
             <Link href="/funding/loan"><h3>Loan</h3></Link>
-            <p>Apply for long-term, low interest funding.</p>
+            <p>Apply for long-term & low interest cash with flexible repayment.</p>
           </div>
           
           <div className="Home_FundingOption">
             <Link href="/funding/credit"><h3>Credit</h3></Link>
-            <p>Receive an advance from your vendors.</p>
+            <p>Check availability of an advance from vendors.</p>
           </div>
           
           <div className="Home_FundingOption">
             <Link href="/funding/balance-sheet"><h3>Balance Sheet</h3></Link>
+            <p>Increase capital through your financial books.</p>
           </div>
           
         </div>
@@ -131,8 +132,8 @@ export default function Home() {
           
           <div>
             <ul>
-              <li>Add and monitor inventory</li>
-              <li>Accept payments</li>
+              <li><div style={{ display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={40} width={40} /><p>Add and monitor inventory</p></div></li>
+              <li><div><Image src="/icons/circle.png" alt="Circle Icon" height={40} width={40} /><p>Accept payments</p></div></li>
             </ul>
           </div>
           
@@ -207,7 +208,7 @@ export default function Home() {
           <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         </div>
         
-        <div><h1>Accelerator</h1></div>
+        <div><h1 style={{ color: "white" }}>Accelerator</h1></div>
         
         <div>
           <div><p>Business management</p></div>

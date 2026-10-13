@@ -201,7 +201,7 @@ ul {
     background-color: #F9F9E1;
     border: thin solid black;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 20px 10px;
     padding: 20px;
   }
 
@@ -262,7 +262,7 @@ ul {
   }
   
   .Listings_Map {
-    margin: 15px -18px;
+    margin: 15px -17px;
   }
   
   .Listing_Process {
@@ -331,8 +331,9 @@ ul {
   }
   
   .Mobile_Menu_Open {
+    display: flex;
     height: 100%;
-    justify-content: space-around;
+    justify-content: center ;
   }
   
   .Mobile_Menu_Close {
@@ -378,10 +379,11 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
-    margin-bottom: 12px;
+    height: 52px;
+    margin-bottom: 60px;
     padding: 2px;
     text-align: center;
-    width: 100px;
+    width: 62px;
   } 
   
   .Profile_Form {
@@ -568,6 +570,10 @@ ul {
     text-align: center;
   }
   
+  .Home_Accelerator > p {
+    color: white;
+  }
+  
   .Home_Banner {
     height: 500px;
     margin: 0 -8px 0 -8px;
@@ -732,6 +738,7 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
+    display: flex;
     height: 50px;
     justify-content: space-around;
     margin: 20px 0;
@@ -740,7 +747,7 @@ ul {
   }
   
   .Profile_Tag > a {
-    color: white;
+    color: black;
   }
   
   .Profile_Tag > p {
