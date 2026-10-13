@@ -483,7 +483,14 @@ ul {
     background-color: white;
     border: 0.5px solid black;
     border-radius: 10px;
+    display: grid;
+    margin-top: 10px;
     padding: 5px;
+    place-items: center;
+  }
+  
+  .Circled_Icon > a {
+    color: black;
   }
   
   .Consumer {
@@ -513,8 +520,14 @@ ul {
     background-color: black;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 25px;
     width: 100%;
+  }
+  
+  .Footer_Details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
   
   .Funds_Overview {
@@ -542,14 +555,14 @@ ul {
   }
 
   .Home_Academy {
-    background-color: #F9F9E1;
+    background-color: black;
     margin: 0 -8px;
     padding: 90px 20px;
     text-align: center;
   }
   
   .Home_Accelerator {
-    background-color: #F9F9E1;
+    background-color: black;
     margin: 0 -8px;
     padding: 50px 20px;
     text-align: center;
@@ -570,6 +583,11 @@ ul {
   .Home_Directory {
     padding: 90px 20px;
   }
+  
+  .Home_Directory > .Listing_Process > .Home_Buttons {
+    display: flex;
+    justify-content: center;
+  }
 
   .Home_Funding {
     margin: 0 -8px;
@@ -586,7 +604,9 @@ ul {
   }
   
   .Home_FundingOptions {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
   }
 
   .Home_Investing {
@@ -598,7 +618,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 10px;
+    margin-top: 40px;
     width: 100%;
   }
   
@@ -606,6 +626,7 @@ ul {
     background-color: #F9F9E1;
     border: thin solid black;
     border-radius: 10px;
+    margin: 0 20px;
     padding: 15px;
     width: 30%;
   }
@@ -613,6 +634,15 @@ ul {
   .Home_Marketplace {
     padding: 90px 20px;
     text-align: center;
+  }
+  
+  .Home_Marketplace > .Image_Placeholder {
+    height: 400px;
+  }
+  
+  .Home_Marketplace > .Vendor_Benefits > .Home_Buttons {
+    display: flex;
+    justify-content: center;
   }
   
   .Home_Partners {
@@ -649,6 +679,10 @@ ul {
 
   .Logo_Image {
     width: 100px;
+  }
+  
+  .Marketplace_Screenshot {
+    width: 100%;
   }
 
   .Mobile_Menu_Btns {
@@ -695,11 +729,18 @@ ul {
   }
   
   .Profile_Tag {
-    background-color: black;
-    border: 1px solid #F9F9E1;
+    background-color: #F9F9E1;
+    border: 1px solid black;
     border-radius: 5px;
     height: 50px;
+    justify-content: space-around;
+    margin: 20px 0;
+    text-align: center;
     width: 100px;
+  }
+  
+  .Profile_Tag > a {
+    color: white;
   }
   
   .Profile_Tag > p {

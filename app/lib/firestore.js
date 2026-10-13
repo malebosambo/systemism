@@ -25,7 +25,7 @@ export async function CreateProfile(data) {
   }
   
   const type = profile.type;
-  const docRef = doc(db, "Profiles", type, profile.uid);
+  const docRef = doc(db, "Profiles", profile.uid);
   
   const newProfile = await setDoc(docRef, profile);
   console.log("Successful write to db.", newProfile);

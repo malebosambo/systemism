@@ -7,7 +7,7 @@ export default function Home() {
     <main className="Home">
       
       <div className="Home_Banner">
-        <div><h1 style={{ color: "white" }}>Products and services for personal and business</h1></div>
+        <div><h1 style={{ color: "white" }}>Personal and business solutions</h1></div>
         
         <div><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div>
         
@@ -20,7 +20,9 @@ export default function Home() {
       
       <div className="Home_Investing">
         
-        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        </div>
         
         <div><h1>Invest for now and the future</h1></div>
         
@@ -31,7 +33,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h5>Short Term</h5><br />
+            <h6>Short Term</h6>
             <p>High Risk, High Reward</p>
           
             <div className="Circled_Icon">
@@ -43,7 +45,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h5>Medium Term</h5><br />
+            <h6>Medium Term</h6>
             <p>Moderate Risk, Moderate Reward</p>
           
             <div className="Circled_Icon">
@@ -54,7 +56,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={30} width={30} /></div>
             
-            <h5>Long Term</h5><br />
+            <h6>Long Term</h6>
             <p>Low Risk, Low Reward</p>
           
             <div className="Circled_Icon">
@@ -68,7 +70,9 @@ export default function Home() {
       
       <div className="Home_Funding">
         
-        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        </div>
         
         <div><h1 style={{ color: "white", marginTop: "50px" }}>Access funding for any business stage</h1></div>
         
@@ -116,13 +120,11 @@ export default function Home() {
       
       <div className="Home_Marketplace">
         
-        <div style={{ marginTop: "20px" }}><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} /></div>
-        
-        <div className="Home_Buttons">
-          <div className="Button">
-            <Link className="Nav" href="/market/">Visit Market</Link>
-          </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
         </div>
+        
+        <div className="Image_Placeholder"><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/></div>
         
         <div className="Vendor_Benefits">
           <div><h1>Marketplace Vendor Benefits</h1></div>
@@ -145,9 +147,11 @@ export default function Home() {
       
       <div className="Home_Academy">
         
-        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        </div>
         
-        <div style={{ marginTop: "30px" }}><h1 style={{ color: "white" }}>Get certified with our academy programs</h1></div><br />
+        <div><h1 style={{ color: "white" }}>Get certified with our academy programs</h1></div><br />
         
         <div><p style={{ color: "white" }}>Browse programs by selecting an industry below.</p></div>
         
@@ -157,9 +161,11 @@ export default function Home() {
       
       <div className="Home_Directory">
         
-        <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
+        </div>
         
-        <div style={{ marginTop: "30px", marginBottom: "20px" }}><h1>Need services fast? Search for a service provider in your area</h1></div>
+        <div><h1>Need services fast? Search for a service provider in your area</h1></div>
         
         <div className="Listings_Map">
           <iframe
@@ -197,9 +203,11 @@ export default function Home() {
       
       <div className="Home_Accelerator">
         
-        <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
+        </div>
         
-        <div style={{ marginTop: "30px" }}><h1>Accelerator</h1></div>
+        <div><h1>Accelerator</h1></div>
         
         <div>
           <div><p>Business management</p></div>
