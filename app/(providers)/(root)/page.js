@@ -33,7 +33,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <div style={{ marginBottom: "10px" }}><h6>Short Term</h6></div>
+            <div style={{ marginBottom: "10px" }}><h3>Short Term</h3></div>
             <p>Medium to High Risk, High Returns</p>
           
             <div className="Circled_Icon">
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <div style={{ marginBottom: "10px" }}><h6>Medium Term</h6></div>
+            <div style={{ marginBottom: "10px" }}><h4>Medium Term</h4></div>
             <p>Low to Medium Risk, Low to Moderate Returns</p>
           
             <div className="Circled_Icon">
@@ -56,7 +56,7 @@ export default function Home() {
           <div className="Home_InvestTime">
             <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
-            <div style={{ marginBottom: "10px" }}><h6>Long Term</h6></div>
+            <div style={{ marginBottom: "10px" }}><h2>Long Term</h2></div>
             <p>Low to High Risk, Low to High Returns</p>
           
             <div className="Circled_Icon">
@@ -130,16 +130,16 @@ export default function Home() {
         <div className="Vendor_Benefits">
           <div><h1>Marketplace Vendor Benefits</h1></div>
           
-          <div>
+          <div style={{ marginBottom: "30px", marginTop: "25px" }}>
             <ul>
-              <li><div style={{ display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={40} width={40} /><p>Add and monitor inventory</p></div></li>
-              <li><div><Image src="/icons/circle.png" alt="Circle Icon" height={40} width={40} /><p>Accept payments</p></div></li>
+              <li><div style={{ display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div></li>
+              <li><div style={{ display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div></li>
             </ul>
           </div>
           
           <div className="Home_Buttons">
             <div className="Button">
-              <Link className="Nav" href="/enterprise/add">Vendor Application</Link>
+              <Link className="Nav" href="/enterprise/add">Start Application</Link>
             </div>
           </div>
         </div>
@@ -185,11 +185,11 @@ export default function Home() {
           <div className="Listing_Process">
             <ul>
               
-              <li><div style={{ marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
+              <li><div style={{ display: flex, marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
               
-              <li><div style={{ marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
+              <li><div style={{ display: flex, marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
               
-              <li><div><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
+              <li><div style={{ display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
             </ul>
           </div>
           

@@ -39,12 +39,16 @@ export async function UpdateProfile(data) {
   const profile = data;
   console.log(profile);
   const type = profile.type;
-  const docRef = doc(db, "Profiles", type, profile.uid);
+  const docRef = doc(db, "Profiles", profile.uid);
   
   const updatedProfile = await updateDoc(docRef, profile);
   console.log("Successful write to db.", updatedProfile);
   
   return updatedProfile;
+  
+}
+
+export async function CreateInvestment(data) {
   
 }
 

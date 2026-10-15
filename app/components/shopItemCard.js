@@ -18,6 +18,7 @@ export default function StoreItemCard({ item }) {
         </div>
       
         <div><Link href="/shop/{category}/{itemname}">View</Link></div>
+        <div><button onClick="">Add to cart</button></div>
       </div>
     </>
   )

@@ -27,19 +27,19 @@ ul {
   margin: -8px;
 }
 
-.Footer > .Contacts > p {
+.Footer > .Footer_Details > .Contacts > p {
   color: white;
 }
 
-.Footer > .Legal > p {
+.Footer > .Footer_Details > .Legal > p {
   color: white;
 }
 
-.Footer > .Contacts > a {
+.Footer > .Footer_Details .Contacts > a {
   color: white;
 }
 
-.Footer > .Legal > div > a {
+.Footer > .Footer_Details .Legal > div > a {
   color: white;
 }
 
@@ -76,7 +76,7 @@ ul {
   .Button {
     background-color: #F9F9E1;
     border: thin solid black;
-    border-radius: 10px;
+    border-radius: 25px;
     color: black;
     margin: 10px;
     padding: 10px;
@@ -97,6 +97,7 @@ ul {
     background-color: white;
     border: 0.5px solid black;
     border-radius: 10px;
+    display: flex;
     margin-top: 2px;
     padding: 3px;
   }
@@ -147,9 +148,13 @@ ul {
   }
   
   .Home_Accelerator {
-    background-color: #F9F9E1;
+    background-color: black;
     margin: 0 -8px;
     padding: 50px 10px;
+  }
+  
+  .Home_Accelerator > p {
+    color: white;
   }
 
   .Home_Banner {
@@ -379,7 +384,7 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
-    height: 52px;
+    height: 32px;
     margin-bottom: 60px;
     padding: 2px;
     text-align: center;

@@ -74,9 +74,9 @@ export default function Dashboard() {
         
         <div className="Market_Overview">
           
-          <div><h3>Market: Local Sales</h3></div>
+          <div><h3>Market: Promotions</h3></div>
           
-          <div><p>No local sales available on the market.</p></div>
+          <div><p>No promotions available on the market.</p></div>
           
         </div>
         
