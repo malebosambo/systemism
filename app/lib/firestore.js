@@ -41,7 +41,7 @@ export async function UpdateProfile(data) {
   const type = profile.type;
   const docRef = doc(db, "Profiles", type, profile.uid);
   
-  const updatedProfile = await updateDoc(docRef, profile);
+  const updatedProfile = await updateDoc(docRef, profile, { merge: true });
   console.log("Successful write to db.", updatedProfile);
   
   return updatedProfile;
@@ -67,7 +67,3 @@ export async function CreateEnterprise(data) {
   
 }
 
-export function CreateInvestment(data) { 
-  
-  <div></div>
-}
