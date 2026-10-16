@@ -15,6 +15,7 @@ export default function VerifyEmail() {
   const router = useRouter();
   
   async function resendVerificationEmail(event) {
+    
     event.preventDefault();
     
     setMessage("");
@@ -22,6 +23,7 @@ export default function VerifyEmail() {
     setLoading(true);
     
     try {
+      
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
@@ -38,12 +40,17 @@ export default function VerifyEmail() {
       await sendEmailVerification(firebaseUser);
       
       setMessage("A new verification email has been sent.");
+      
     } catch (error) {
+      
       console.error("Verification email error", error);
       setError(error.message || "Unable to send verification email.");
+      
     } finally {
+      
       await auth.signOut();
       setLoading(false);
+      
     }
   }
   

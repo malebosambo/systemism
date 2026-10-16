@@ -38,6 +38,10 @@ export default function Investments() {
       
       <div><Link href="/investments/catalogue">Invest</Link></div>
       
+      <div>
+        
+      </div>
+      
     </main>
   )
 }

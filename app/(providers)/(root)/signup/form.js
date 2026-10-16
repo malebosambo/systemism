@@ -105,20 +105,26 @@ export default function SignupForm() {
       
       <div className="SignUp_Form">
         <form onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="First Name" onChange={handleChange} value={user.name} required className="Input" />
-
-          <input type="text" name="surname" placeholder="Surname" onChange={handleChange} value={user.surname} required className="Input" />
-
-          <input type="email" name="email" placeholder="Email" onChange={handleChange} value={user.email} required className="Input" />
-
-          <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" />
+          <div>
+            <div>
+              <input type="radio" name="profile type" value="Personal" checked={user.type === "Personal"} onChange={handleChange} />
+              <lable>Personal</lable>
+            </div>
+            <div>
+              <input type="radio" name="profile type" value="Business" checked={user.type === "Business"} onChange={handleChange} />
+              <label>Business</label>
+            </div>
+          </div>
           
-          <select id="profileType" name="type" value={user.type} onChange={handleChange}>
-            <option value="Personal">Personal</option>
-            <option value="Business">Business</option>
-          </select>
+          <div><input type="text" name="name" placeholder="First Name" onChange={handleChange} value={user.name} required className="Input" /></div>
 
-          <input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" />
+          <div><input type="text" name="surname" placeholder="Surname" onChange={handleChange} value={user.surname} required className="Input" /></div>
+
+          <div><input type="email" name="email" placeholder="Email" onChange={handleChange} value={user.email} required className="Input" /></div>
+
+          <div><input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" /></div>
+
+          <div><input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" /></div>
 
           <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Create Account</button></div>
         </form>

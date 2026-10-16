@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, setPersistence, browserLocalPersistence, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
+import { UpdateProfile } from "@/app/lib/firestore";
 
 export default function LoginForm() {
   
@@ -20,6 +21,7 @@ export default function LoginForm() {
     setIsLoading(true);
 
     try {
+      
       await setPersistence(auth, browserLocalPersistence);
 
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -32,26 +34,21 @@ export default function LoginForm() {
         router.replace("/verify-email");
         return;
       }
+      
+      await UpdateProfile({ emailVerified: true });
 
       await new Promise(resolve => setTimeout(resolve, 500));
 
       router.push("/dashboard");
+      
     } catch (error) {
+      
       console.error("Login error:", error.message);
       setError(error.message || "Login failed. Please try again.");
       setIsLoading(false);
-    }
-  };
       
-/*
-  function handleEmailChange(e) {
-    setEmail(e.target.value);
+    }
   }
-
-  function handlePasswordChange(e) {
-    setPassword(e.target.value);
-  }
-*/
 
   return (
     <main className="Login">
@@ -60,9 +57,9 @@ export default function LoginForm() {
       
       <div className="Login_Form">
         <form onSubmit={handleSubmit}>
-          <input type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} required className="Input" />
+          <div><input type="email" name="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} required className="Input" /></div>
           
-          <input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} required className="Input" />
+          <div><input type="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} required className="Input" /></div>
           
           <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Login</button></div>
         </form>

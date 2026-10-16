@@ -185,9 +185,9 @@ export default function Home() {
           <div className="Listing_Process">
             <ul>
               
-              <li><div style={{ display: flex, marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
+              <li><div style={{ display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
               
-              <li><div style={{ display: flex, marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
+              <li><div style={{ display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
               
               <li><div style={{ display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
             </ul>

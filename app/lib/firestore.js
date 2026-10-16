@@ -25,7 +25,7 @@ export async function CreateProfile(data) {
   }
   
   const type = profile.type;
-  const docRef = doc(db, "Profiles", profile.uid);
+  const docRef = doc(db, "Profiles", type, profile.uid);
   
   const newProfile = await setDoc(docRef, profile);
   console.log("Successful write to db.", newProfile);
@@ -39,7 +39,7 @@ export async function UpdateProfile(data) {
   const profile = data;
   console.log(profile);
   const type = profile.type;
-  const docRef = doc(db, "Profiles", profile.uid);
+  const docRef = doc(db, "Profiles", type, profile.uid);
   
   const updatedProfile = await updateDoc(docRef, profile);
   console.log("Successful write to db.", updatedProfile);
@@ -65,4 +65,9 @@ export async function CreateEnterprise(data) {
   
   return newEnterprise;
   
+}
+
+export function CreateInvestment(data) { 
+  
+  <div></div>
 }

@@ -11,11 +11,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input:focus {
-  border: 1px solid #F9F9E1;
+  
 }
 
 input:focus-visible {
-  border: 1px solid #F9F9E1;
+  
 }
 
 ul {
@@ -294,7 +294,7 @@ ul {
   }
   
   .Login_Form > input {
-    height: 20px;
+    height: 2px;
     margin-bottom: 20px;
   }
   
@@ -685,7 +685,18 @@ ul {
   }
   
   .Login {
+    display: flex;
+    justify-content: center;
     padding: 20px;
+    text-align: center;
+  }
+  
+  .Login_Form > div {
+    margin-top: 15px;
+  }
+  
+  .Login_Form > input {
+    height: 35px;
   }
 
   .Logo_Image {
@@ -731,6 +742,10 @@ ul {
     color: black;
   }
   
+  .Navigation > div > a {
+    padding: 1.5px;
+  }
+  
   .Navigation > div > a:active {
     color: #F9F9E1;
   }
@@ -767,6 +782,10 @@ ul {
     padding: 10px;
   }
   
+  .ResetPassword {
+    text-align: center;
+  }
+  
   .Shop_Overview {
     background-color: darkgrey;
     border: 2px solid black;
@@ -775,8 +794,23 @@ ul {
     padding: 10px;
   }
   
-  .Signup {
+  .SignUp {
     padding: 20px;
+    text-align: center;
+  }
+  
+  .SignUp_Form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .SignUp_Form > div {
+    margin-top: 15px;
+  }
+  
+  .SignUp_Form > input {
+    height: 35px;
   }
   
   h1 {
