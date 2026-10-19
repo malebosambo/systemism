@@ -42,7 +42,7 @@ export default function ResetPassword() {
       
       <div><h1>Reset Password</h1></div>
       
-      <div><p>Please enter your user account email address below and press "submit" to receive the reset password email.</p></div>
+      <div><p>Please enter your user account email address below and press &quot;submit&quot; to receive the reset password email.</p></div>
       
       <div>
         <form onSubmit={SendResetPasswordEmail}>

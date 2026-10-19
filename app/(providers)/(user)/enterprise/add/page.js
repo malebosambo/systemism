@@ -1,9 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CreateEnterprise } from "@/app/lib/actions"
 
 export default function AddEnterprise() {
+  
+  const [ enterprise, setEnterprise ] = useState({
+    "name": "",
+    "number": "",
+    "type": "",
+    "registrationDate": "",
+    "startDate": "",
+    "status": "",
+    "finYearEnd": "",
+    "taxNumber": 0,
+    "phyAddress": "",
+    "postalAddress": "",
+    "director": "",
+    "annualReturns": false,
+    "beneficialOwnership": false
+  });
   
   const { user, profile, loading } = useAuth();
   
@@ -26,22 +42,6 @@ export default function AddEnterprise() {
   if (!profile) {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
-  
-  const [ enterprise, setEnterprise ] = useState({
-    "name": "",
-    "number": "",
-    "type": "",
-    "registrationDate": "",
-    "startDate": "",
-    "status": "",
-    "finYearEnd": "",
-    "taxNumber": 0,
-    "phyAddress": "",
-    "postalAddress": "",
-    "director": "",
-    "annualReturns": false,
-    "beneficialOwnership": false
-  });
   
   function handleChange(e) {
     const { name, value } = e.target;
