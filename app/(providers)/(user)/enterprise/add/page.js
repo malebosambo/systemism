@@ -5,6 +5,28 @@ import { CreateEnterprise } from "@/app/lib/actions"
 
 export default function AddEnterprise() {
   
+  const { user, profile, loading } = useAuth();
+  
+  useEffect(() => {
+
+    if (loading === false && !user) {
+      router.replace("/login");
+    }
+  
+  }, [user, loading, router]);
+  
+  if (loading) {
+    return <div>Loading...</div>
+  }
+  
+  if (!user) {
+    return null;
+  }
+  
+  if (!profile) {
+    return <div style={{ display: "none" }}>Loading profile...</div>
+  }
+  
   const [ enterprise, setEnterprise ] = useState({
     "name": "",
     "number": "",

@@ -52,7 +52,7 @@ export default function SignupForm() {
       );
       
       await CreateProfile({
-        uid: firebaseUser.uid,
+        id: firebaseUser.uid,
         name: user.name.trim(),
         surname: user.surname.trim(),
         email: firebaseUser.email,
@@ -76,10 +76,13 @@ export default function SignupForm() {
       await signOut(auth);
       
       router.replace("/verify-email");
+      
     } catch (error) {
+      
       console.error("Signup error:", error);
       setError(getSignUpErrorMessage(error));
       setIsLoading(false);
+      
     }
   }
   

@@ -3,9 +3,9 @@ import { db } from "../../firebase";
 
 export async function GetProfile(data) {
   
-  const type = data.type;
+  const id = data.id;
   
-  const profile = await getDoc(doc(db, type, data));
+  const profile = await getDoc(doc(db, "Profiles", id));
   
   if (!profile.exists()) {
     return null;
@@ -20,12 +20,11 @@ export async function CreateProfile(data) {
   const profile = data;
   console.log(profile);
   
-  if (!profile.uid) {
+  if (!profile.id) {
     throw new Error("Cannot create Firestore profile without a Firebase UID.");
   }
   
-  const type = profile.type;
-  const docRef = doc(db, "Profiles", type, profile.uid);
+  const docRef = doc(db, "Profiles", profile.id);
   
   const newProfile = await setDoc(docRef, profile);
   console.log("Successful write to db.", newProfile);
@@ -38,8 +37,7 @@ export async function UpdateProfile(data) {
   
   const profile = data;
   console.log(profile);
-  const type = profile.type;
-  const docRef = doc(db, "Profiles", type, profile.uid);
+  const docRef = doc(db, "Profiles", profile.id);
   
   const updatedProfile = await updateDoc(docRef, profile, { merge: true });
   console.log("Successful write to db.", updatedProfile);
@@ -48,20 +46,27 @@ export async function UpdateProfile(data) {
   
 }
 
-export async function CreateInvestment(data) {
+export async function CreateInvestment(data, id) {
+ 
+  const investment = data;
+  const name = investment.name;
+  console.log(investment);
+  
+  const newInvestment = await setDoc(doc(db, "Profiles", id, "Investments", name), investment);
+  console.log("Successful write to db.", newInvestment);
+  
+  return investment;
   
 }
 
-export async function CreateEnterprise(data) {
-  
-  const profile = await GetProfile();
-  const oldEnterprise = profile.enterprise;
+export async function CreateEnterprise(data, id) {
   
   const enterprise = data;
+  const name = enterprise.name;
   console.log(enterprise);
   
-  const newEnterprise = await updateDoc(doc(db, "Profiles", profile.uid), { "enterprise": {enterprise},
-  });
+  const newEnterprise = await setDoc(doc(db, "Profiles", id, "Enterprises", name), enterprise);
+  console.log("Successful write to db", newEnterprise);
   
   return newEnterprise;
   

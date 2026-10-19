@@ -1,6 +1,7 @@
 export default function ViewEnterprise() {
   
   const { user, profile, loading } = useAuth();
+  
   const router = useRouter();
   
   useEffect(() => {
