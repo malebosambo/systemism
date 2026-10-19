@@ -8,7 +8,7 @@ export default function ResetPassword() {
   
   const [ email, setEmail ] = useState("");
   const [ message, setMessage ] = useState("");
-  const [ errors, setError ] = useState("");
+  const [ error, setError ] = useState("");
   const [ loading, setLoading ] = useState(false);
   
   async function SendResetPasswordEmail(event) {
