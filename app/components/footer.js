@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
       </div>
       
-      <div><p style={{ color: "white" }}>© 2026 Systemism. All rights reserved.</p></div>
+      <div><p style={{ color: "white", marginTop: "20px" }}>© 2026 Systemism. All rights reserved.</p></div>
     
     </div>
   );

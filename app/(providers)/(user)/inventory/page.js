@@ -36,6 +36,10 @@ export default function Inventory() {
       
       <div><h1>Inventory</h1></div>
       
+      <div><Link href="/enterprise/add">Add</Link></div>
+      
+      <div></div>
+      
     </main>
   )
 };

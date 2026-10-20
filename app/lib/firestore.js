@@ -46,7 +46,7 @@ export async function UpdateProfile(data) {
   
 }
 
-export async function CreateInvestment(data, id) {
+export async function CreateInvestment(data) {
  
   const investment = data;
   const name = investment.name;
@@ -59,7 +59,7 @@ export async function CreateInvestment(data, id) {
   
 }
 
-export async function CreateEnterprise(data, id) {
+export async function CreateEnterprise(data) {
   
   const enterprise = data;
   const name = enterprise.name;

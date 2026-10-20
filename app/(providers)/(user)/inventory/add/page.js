@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CreateEnterprise } from "@/app/lib/firestore";
 
 export default function AddInventoryItem() {
   
@@ -12,7 +13,9 @@ export default function AddInventoryItem() {
     stock: 0,
     sku: "",
     vat: 15,
-    vendor: ""
+    vendor: "",
+    uploadedDate: "",
+    editedOnDate: ""
   });
   
   function handleChange(e) {
@@ -26,7 +29,7 @@ export default function AddInventoryItem() {
       <div><h1>Add New Inventory</h1></div>
       
       <div>
-        <form onSubmit="">
+        <form onSubmit={CreateEnterprise}>
           <div><input type="text" name="name" value={item.name} onChange={handleChange} required /></div>
           
           <div><input type="textarea" name="description" value={item.description} onChange={handleChange} required /></div>
