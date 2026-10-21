@@ -59,6 +59,7 @@ export default function SignupForm() {
         cellphone: user.cellphone.trim(),   
         type: user.type,
         emailVerified: false,
+        walletActivated: false,
         createdDate: new Date(),
         updatedDate: null,
         address: {

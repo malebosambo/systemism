@@ -33,6 +33,7 @@ export default function Dashboard() {
   }
   
   const profileType = profile.type;
+  const walletEnabled = profile.walletEnabled;
 
   return (
     <div className="Dashboard">
@@ -41,7 +42,7 @@ export default function Dashboard() {
         
         <div><h1>Hello, {profile.name || user.email}</h1></div>
         
-        <div><h2>Balance: R0.00</h2></div>
+        {!walletEnabled ? <div><p>To interact with the features please activate your wallet.</p><div>Activate Wallet</div></div> : <div><h2>Balance: R0.00</h2></div>
         
         <div className="Wallet_Buttons">
           <div>
@@ -57,7 +58,7 @@ export default function Dashboard() {
         
         <div>
           <div><p>Your profit/loss margin is balanced.</p></div>
-        </div>
+        </div>}
         
       </div>
       
