@@ -8,7 +8,7 @@ export default function Academy() {
       
       <div><h1>Academy Programs</h1></div>
       
-      <div>{programs.map((program) => (<ProgramDetailsCard program={program} />))}</div>
+      <div>{programs.map((program) => (<ProgramDetailsCard key={program.name} program={program} />))}</div>
       
     </main>
   )

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
 import InventoryItemCard from "@/app/components/inventoryItemCard";
 
