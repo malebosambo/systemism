@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation";
 import Navigation from "./navigation"
 import Link from "next/link"
 import Image from "next/image"
@@ -9,6 +10,12 @@ import logo from "../../public/SystemismLogoZoom.jpg"
 export default function Header() {
   
   const [ mobileMenu, setMobileMenu ] = useState(false);
+  
+  const pathname = usePathname();
+  
+  useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
 
   const showMobileMenu = () => setMobileMenu(!mobileMenu);  
   

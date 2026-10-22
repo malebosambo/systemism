@@ -9,7 +9,7 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Personal and business solutions</h1></div>
         
-        <div><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div>
+        <div className="Paragraph"><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/profiles/personal">Personal</Link></div>
@@ -31,10 +31,9 @@ export default function Home() {
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
             <div style={{ marginBottom: "10px" }}><h4>Short Term</h4></div>
-            <p>Medium to High Risk, High Returns</p>
+            <p>Medium to High Risk, Low to High Returns</p>
           
             <div className="Circled_Icon">
               <Link href="/investing/terms/short-term"><p>View more</p>
@@ -43,7 +42,6 @@ export default function Home() {
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
             <div style={{ marginBottom: "10px" }}><h4>Medium Term</h4></div>
             <p>Low to Medium Risk, Low to Moderate Returns</p>
@@ -51,10 +49,10 @@ export default function Home() {
             <div className="Circled_Icon">
               <Link href="/investing/terms/medium-term"><p>View more</p></Link>
             </div>
+            
           </div>
         
           <div className="Home_InvestTime">
-            <div><Image src="/icons/clock.png" alt="Clock Icon" height={45} width={45} /></div>
             
             <div style={{ marginBottom: "10px" }}><h4>Long Term</h4></div>
             <p>Low to High Risk, Low to High Returns</p>
@@ -62,6 +60,7 @@ export default function Home() {
             <div className="Circled_Icon">
               <Link href="/investing/terms/long-term"><p>View more</p></Link>
             </div>
+            
           </div>
           
         </div>
