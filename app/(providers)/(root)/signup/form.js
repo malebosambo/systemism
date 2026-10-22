@@ -15,7 +15,7 @@ export default function SignupForm() {
     surname: "",
     email: "",
     cellphone: "",
-    type: "",
+    type: "Personal",
     password: ""
   });
 
@@ -112,11 +112,11 @@ export default function SignupForm() {
           
           <div>
             <div>
-              <input type="radio" name="profile type" value="Personal" onChange={handleChange} />
+              <input type="radio" name="profileType" value="Personal" onChange={handleChange} />
               <lable>Personal</lable>
             </div>
             <div>
-              <input type="radio" name="profile type" value="Business" onChange={handleChange} />
+              <input type="radio" name="profileType" value="Business" onChange={handleChange} />
               <label>Business</label>
             </div>
           </div>

@@ -157,6 +157,8 @@ export default function Home() {
         
         <div className="Program_Industries"></div>
         
+        <div></div>
+        
       </div>
       
       <div className="Home_Directory">

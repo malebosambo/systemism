@@ -488,7 +488,7 @@ ul {
   .Button {
     background-color: #F9F9E1;
     border: none;
-    border-radius: 3px;
+    border-radius: 25px;
     margin: 3px;
     padding: 10px;
     text-align: center;
@@ -582,7 +582,7 @@ ul {
     text-align: center;
   }
   
-  .Home_Accelerator > div > p {
+  .Home_Accelerator > div > div > p {
     color: white;
   }
   
@@ -620,7 +620,7 @@ ul {
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    width: 150px;
+    width: 450px;
   }
   
   .Home_FundingOptions {
