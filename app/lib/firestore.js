@@ -3,7 +3,7 @@ import { db } from "../../firebase";
 
 export async function GetProfile(data) {
   
-  const id = data.id;
+  const id = data.uid;
   
   const profile = await getDoc(doc(db, "Profiles", id));
   

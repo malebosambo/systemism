@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, setPersistence, browserLocalPersistence, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
-import { UpdateProfile } from "@/app/lib/firestore";
+import { GetProfile, UpdateProfile } from "@/app/lib/firestore";
 
 export default function LoginForm() {
   
@@ -35,7 +35,13 @@ export default function LoginForm() {
         return;
       }
       
-      await UpdateProfile({ emailVerified: true });
+      const profile = await GetProfile(firebaseUser);
+
+      const emailVerified = { emailVerified: profile.emailVerified};
+      
+      if (!emailVerified) {
+        await UpdateProfile(emailVerified, firebaseUser.id);
+      }
 
       await new Promise(resolve => setTimeout(resolve, 500));
 
