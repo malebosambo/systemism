@@ -33,11 +33,11 @@ export async function CreateProfile(data) {
 
 }
 
-export async function UpdateProfile(data) {
+export async function UpdateProfile(data, id) {
   
   const profile = data;
   console.log(profile);
-  const docRef = doc(db, "Profiles", profile.id);
+  const docRef = doc(db, "Profiles", id);
   
   const updatedProfile = await updateDoc(docRef, profile, { merge: true });
   console.log("Successful write to db.", updatedProfile);
