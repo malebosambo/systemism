@@ -35,7 +35,7 @@ ul {
   color: white;
 }
 
-.Footer > .Footer_Details .Contacts > a {
+.Footer > .Footer_Details .Contacts > div > a {
   color: white;
 }
 
@@ -108,6 +108,10 @@ ul {
     border-radius: 6px;
     margin-bottom: 12px;
     padding: 11px;
+  }
+  
+  .DivMargin {
+    margin-top: -10px;
   }
   
   .Footer {
@@ -297,7 +301,7 @@ ul {
   }
   
   .Login_Form > input {
-    height: 2px;
+    height: 30px;
     margin-bottom: 20px;
   }
   

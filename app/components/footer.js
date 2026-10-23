@@ -16,7 +16,7 @@ export default function Footer() {
           <div><h2 style={{ color: "white" }}>Contacts</h2></div>
           
           <p>E-mail:</p>
-          <div style={{ marginTop: "-15px" }}><Link href="admin@systemism.co.za">info@systemism.co.za</Link></div>
+          <div className="DivMargin"><Link href="admin@systemism.co.za">info@systemism.co.za</Link></div>
           <p>Tel:</p>
           <Link href="+27630013711">063 001 3711</Link>
           <p>Address:</p>

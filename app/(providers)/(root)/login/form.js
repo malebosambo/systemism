@@ -39,8 +39,8 @@ export default function LoginForm() {
 
       const emailVerified = { emailVerified: profile.emailVerified};
       
-      if (!emailVerified) {
-        await UpdateProfile(emailVerified, firebaseUser.id);
+      if (!profile.emailVerified) {
+        await UpdateProfile(emailVerified, profile.id);
       }
 
       await new Promise(resolve => setTimeout(resolve, 500));
