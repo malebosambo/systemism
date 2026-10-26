@@ -43,7 +43,7 @@ export default function Dashboard() {
         
         <div><h1>Hello, {profile.name || user.email}</h1></div>
         
-        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={UpdateProfile({ walletActivated: true})} className="ActivateButton">Activate Wallet</button></div</div> : <WalletGateway />}
+        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={UpdateProfile({ walletActivated: true})} className="ActivateButton">Activate Wallet</button></div></div> : <WalletGateway />}
         
       </div>
       
