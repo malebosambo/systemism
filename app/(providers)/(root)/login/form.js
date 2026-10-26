@@ -34,7 +34,7 @@ export default function LoginForm() {
         router.replace("/verify-email");
         return;
       }
-      
+      /*
       const profile = await GetProfile(firebaseUser);
 
       const emailVerified = { emailVerified: profile.emailVerified};
@@ -42,7 +42,7 @@ export default function LoginForm() {
       if (!profile.emailVerified) {
         await UpdateProfile(emailVerified, profile.id);
       }
-
+.     */
       await new Promise(resolve => setTimeout(resolve, 500));
 
       router.push("/dashboard");

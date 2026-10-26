@@ -298,6 +298,7 @@ ul {
     align-items: center;
     display: flex;
     margin-top: 30px;
+    width: 100%;
   }
   
   .Login_Form > input {
