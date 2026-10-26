@@ -18,9 +18,9 @@ export default function Footer() {
           <p>E-mail:</p>
           <div className="DivMargin"><Link href="admin@systemism.co.za">info@systemism.co.za</Link></div>
           <p>Tel:</p>
-          <Link href="+27630013711">063 001 3711</Link>
+          <div className="DivMargin"><Link href="+27630013711">063 001 3711</Link></div>
           <p>Address:</p>
-          <Link href="">462B Cuba Crescent, Lulekani, Phalaborwa, 1392</Link>
+          <div className="DivMargin"><Link href="">462B Cuba Crescent, Lulekani, Phalaborwa, 1392</Link></div>
         </div>
       
         <div className="Legal">
@@ -32,8 +32,8 @@ export default function Footer() {
         </div>
       </div>
       
-      <div><p style={{ color: "white", marginTop: "20px" }}>© 2026 Systemism. All rights reserved.</p></div>
+      <div><p style={{ color: "white", marginTop: "20px" }}>© 2026 - Systemism. All rights reserved.</p></div>
     
     </div>
-  );
+  )
 }

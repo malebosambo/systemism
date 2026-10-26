@@ -110,7 +110,7 @@ export default function SignupForm() {
       <div className="SignUp_Form">
         <form onSubmit={handleSubmit}>
           
-          <div>
+          <div style={{ marginBottom: "25px" }}>
             <div>
               <input type="radio" name="profileType" value="Personal" onChange={handleChange} />
               <lable>Personal</lable>

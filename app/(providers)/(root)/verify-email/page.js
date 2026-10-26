@@ -55,23 +55,23 @@ export default function VerifyEmail() {
   }
   
   return (
-    <main>
+    <main className="Verify_Email">
       
-      <div><h1>Verify your email</h1></div>
+      <div style={{ marginBottom: "30px" }}><h1>Verify your email</h1></div>
       
-      <div><p>We created your account. Please check your email and click the verification link before logging in.</p></div>
+      <div style={{ marginBottom: "30px" }}><p>We created your account. Please check your email and click the verification link before logging in.</p></div>
       
-      <div>
+      <div className="Form_VerifyEmail">
         <form onSubmit={resendVerificationEmail}>
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email" required />
+          <div><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email" required /></div>
           
-          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" required />
+          <div><input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" required /></div>
           
-          {message && <p style={{ color: "green" }}>{message}</p>}
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          <div>{message && <p style={{ color: "green" }}>{message}</p>}
+          {error && <p style={{ color: "red" }}>{error}</p>}</div>
           
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Resend verfication email"}</button>
+          <div><button type="submit" disabled={loading}>
+            {loading ? "Sending..." : "Resend verfication email"}</button></div>
         </form>
       </div>
       

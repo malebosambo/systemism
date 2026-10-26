@@ -131,7 +131,7 @@ export default function Home() {
           
           <div style={{ marginBottom: "30px", marginTop: "25px" }}>
             <ul>
-              <li><div style={{ display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div></li>
+              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div></li>
               <li><div style={{ display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div></li>
             </ul>
           </div>

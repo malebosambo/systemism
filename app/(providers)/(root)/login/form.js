@@ -81,7 +81,7 @@ export default function LoginForm() {
       
       <div><hr /></div>
       
-      <div><p>Do not have an account? Sign up <span style={{ color: "blue" }}><Link href="/signup">here</Link></span></p></div>
+      <div><p>Do not have an account? Sign up <span><Link href="/signup"><span style={{ fontColor: "blue" }}>here</span></Link></span></p></div>
       
     </main>
   )

@@ -124,6 +124,16 @@ ul {
     display: none;
   }
   
+  .Form_VerifyEmail {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .Form_VerifyEmail > div {
+    margin-bottom: 25px;
+  }
+  
   .Funds_Overview {
     background-color: darkgray;
     border: 1.5px solid black;
@@ -157,7 +167,7 @@ ul {
     padding: 50px 10px;
   }
   
-  .Home_Accelerator > div > p {
+  .Home_Accelerator > div > div > p {
     color: white;
   }
 
@@ -391,9 +401,11 @@ ul {
   }
   
   .Profile_Tag {
+    align-items: flex-start;
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
+    display: flex;
     height: 22px;
     margin-bottom: 60px;
     padding: 2px;
@@ -432,8 +444,8 @@ ul {
   }
   
   .SignUp_Form {
-    align-items: center;
     display: flex;
+    justify-content: center;
     margin-top: 30px;
   }
   
@@ -445,6 +457,11 @@ ul {
     height: 30px;
     margin-bottom: 20px;
     width: 100%;
+  }
+  
+  .Verify_Email {
+    display: flex;
+    justify-content: center;
   }
   
   .Wallet_Buttons {
