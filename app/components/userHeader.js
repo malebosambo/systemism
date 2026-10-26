@@ -8,7 +8,7 @@ import logo from "../../public/SystemismLogoZoom.jpg";
 
 export default function UserHeader() {
   
-  const [ closedMobileMenu, setClosedMobileMenu ] = useState(true);
+  const [ mobileMenu, setMobileMenu ] = useState(true);
 
   const showMobileMenu = () => setMobileMenu(!closedMobileMenu);  
   
