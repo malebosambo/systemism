@@ -47,7 +47,7 @@ export default function UserNavigation() {
         <div><Link href="/hub">Hub</Link></div>
       </div>
       
-      <div><Link href="/profile"><Image src="/icons/circled-profile.png" alt="Profile Icon" height={20} width={20} /></Link></div>
+      <div><Link href="/profile"><Image src="/icons/circled-profile.png" alt="Profile Icon" height={40} width={40} /></Link></div>
       
       <div><button type="button" onClick={handleLogout} className="Button">Logout</button></div>
     </div>  

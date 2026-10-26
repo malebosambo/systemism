@@ -160,10 +160,6 @@ ul {
   .Hide {
     display: none;
   }
-  
-  .Home {
-
-  }
 
   .Home_Academy {
     background-color: black; 
@@ -283,10 +279,6 @@ ul {
     border-radius: 6px;
     margin: 12px 0;
     padding: 11px;
-  }
-  
-  .Legal {
-    
   }
   
   .Links {
@@ -485,6 +477,21 @@ ul {
     width: 100%;
   }
   
+  .UserNavigation {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .UserNavigation > .Button {
+    padding: 10px 0;
+  }
+
+  .UserNavigation > div {
+    margin: 5px 0;
+    padding: 5px;
+  }
+  
   .Verify_Email {
     display: flex;
     justify-content: center;
@@ -601,10 +608,6 @@ ul {
   
   .Hide {
     display: none;
-  }
-  
-  .Home {
-
   }
 
   .Home_Academy {
@@ -725,10 +728,6 @@ ul {
     border-radius: 6px;
     margin: 12px 0;
     padding: 11px;
-  }
-  
-  .Legal {
-    
   }
   
   .Links {
