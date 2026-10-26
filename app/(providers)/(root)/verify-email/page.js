@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
+import { sendEmailVerification, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
 
 export default function VerifyEmail() {
@@ -48,7 +48,7 @@ export default function VerifyEmail() {
       
     } finally {
       
-      await auth.signOut();
+      await signOut(auth);
       setLoading(false);
       
     }

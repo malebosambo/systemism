@@ -295,8 +295,8 @@ ul {
   }
   
   .Login_Form {
-    align-items: center;
     display: flex;
+    justify-content: center;
     margin-top: 30px;
     width: 100%;
   }

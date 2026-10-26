@@ -39,7 +39,7 @@ export async function UpdateProfile(data, id) {
   console.log(profile);
   const docRef = doc(db, "Profiles", id);
   
-  const updatedProfile = await updateDoc(docRef, profile, { merge: true });
+  const updatedProfile = await updateDoc(docRef, profile);
   console.log("Successful write to db.", updatedProfile);
   
   return updatedProfile;

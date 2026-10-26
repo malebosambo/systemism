@@ -29,11 +29,15 @@ export default function LoginForm() {
       
       const firebaseUser = userCredential.user;
       
+      await firebaseUser.reload();
+      
       if (!firebaseUser.emailVerified) {
         await signOut(auth);
         router.replace("/verify-email");
         return;
       }
+      
+      
       /*
       const profile = await GetProfile(firebaseUser);
 
@@ -44,6 +48,8 @@ export default function LoginForm() {
       }
 .     */
       await new Promise(resolve => setTimeout(resolve, 500));
+      
+      setIsLoading(false);
 
       router.push("/dashboard");
       

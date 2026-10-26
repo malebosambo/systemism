@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import { onAuthStateChanged, reload } from 'firebase/auth';
+import { onAuthStateChanged, reload, signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 import { GetProfile } from './firestore';
 
@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
         await reload(firebaseUser);
         
         if (!firebaseUser.emailVerified) {
-          await auth.signOut();
+          await signOut(auth);
           
           if (isMounted) {
             setUser(null);
@@ -42,7 +42,7 @@ export function AuthProvider({ children }) {
           return;
         }
           
-        const dbProfile = await GetProfile(firebaseUser.uid);
+        const dbProfile = await GetProfile(firebaseUser);
           
         if (isMounted) {
           setProfile(dbProfile);
