@@ -69,8 +69,8 @@ ul {
     background-color: #F9F9E1;
     border: 1px solid grey;
     border-radius: 0 0 5px 5px;
-    margin: 0 -8px;
-    padding: 5px;
+    margin: 0 -8px 35px -8px;
+    padding: 13px;
   }
 
   .Button {
@@ -321,6 +321,14 @@ ul {
     justify-content: space-between;
   }
   
+  .Marketplace_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
   .Menu {
     display: none;
   }
@@ -398,6 +406,14 @@ ul {
   
   .Partner_Logos {
     margin-top: 30px;
+  }
+  
+  .Personal {
+    padding: 0 16px 30px 16px;
+  }
+  
+  .Personal > div {
+    margin-bottom: 10px;
   }
   
   .Profile_Tag {
@@ -491,13 +507,824 @@ ul {
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   
+  .Account_Overview {
+    background-color: #F9F9E1;
+    border: 1px solid grey;
+    border-radius: 0 0 5px 5px;
+    margin: 0 -8px 35px -8px;
+    padding: 13px;
+  }
+
+  .Button {
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 25px;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
   
+  .Button_Small {
+    align-items: center;
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
   
+  .Circled_Icon {
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 2px;
+    padding: 3px;
+  }
+  
+  .Directory_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .DivMargin {
+    margin-top: -10px;
+  }
+  
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Form_ProfileDetails {
+    display: none;
+  }
+  
+  .Form_VerifyEmail {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .Form_VerifyEmail > div {
+    margin-bottom: 25px;
+  }
+  
+  .Funds_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin: 12px 0;
+    padding: 11px;
+  }
+  
+  .Header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Hide {
+    display: none;
+  }
+  
+  .Home {
+
+  }
+
+  .Home_Academy {
+    background-color: black; 
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+  
+  .Home_Accelerator {
+    background-color: black;
+    margin: 0 -8px;
+    padding: 50px 10px;
+  }
+  
+  .Home_Accelerator > div > div > p {
+    color: white;
+  }
+
+  .Home_Banner {
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+  
+  .Home_Buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .Home_Directory {
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+
+  .Home_Funding {
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+  
+  .Home_FundingOption > a {
+    color: white;
+  }
+  
+  .Home_FundingOption > p {
+    color: white;
+  }
+  
+  .Home_FundingOption {
+    background-color: darkgrey;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  
+  .Home_FundingOptions {
+    margin-top: 50px;
+  }
+  
+  .Home_InvestingTerms {
+    padding: 20px 0;
+  }
+  
+  .Home_InvestTime {
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 10px;
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .Home_Investing {
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+
+  .Home_Marketplace {
+    margin: 0 -8px;
+    padding: 90px 20px;
+  }
+  
+  .Home_Partners {
+    padding: 50px 10px;
+  }
+  
+  .Hub_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .Image_Logo {
+    padding: 15px;
+  }
+  
+  .Input {
+    border: 1.5px solid grey;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .Inventory_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .Investments_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin: 12px 0;
+    padding: 11px;
+  }
+  
+  .Legal {
+    
+  }
+  
+  .Links {
+    padding: 20px 10px;
+  }
+  
+  .Listings_Map {
+    margin: 15px -15px;
+  }
+  
+  .Listing_Process {
+    margin: 15px;
+  }
+  
+  .Listings_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .Login {
+    padding: 50px;
+    text-align: center;  
+  }
+  
+  .Login_Form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .Login_Form > input {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .Logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Marketplace_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .Menu {
+    display: none;
+  }
+  
+  .Menu_Button {
+    width: 50%;
+  }
+  
+  .Menu_Buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .Menu_Nav_Active{
+    border-bottom: 2px solid #F9F9E1;
+  }
+  /* Dont forget to remove the "_link" from className when understood how to find active link in a jsx page to change className in the page dynamically */
+  .Menu_Nav_Link > a:active {
+    color: #F9F9E1;
+  }
+  
+  .Menu_Nav_Link {
+    border-bottom: 1px solid black;
+  }
+  
+  .Mobile_Menu {
+    padding-right: 15px;
+    width: 80%;
+  }
+  
+  .Mobile_Menu_Open {
+    padding: 20px;
+  }
+  
+  .Mobile_Menu_Close {
+    width: 20%;
+  }
+
+  .Mobile_Menu_Visible {
+    background-color: white;
+    border-bottom: 1.5px solid black;
+    display: flex;
+    flex-direction: row;
+    margin: -5px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .Nav {
+    font-weight: bold;
+  }
+  
+  .Navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .Navigation > .Button {
+    padding: 10px 0
+  }
+  
+  .Navigation > div {
+    margin: 5px 0;
+    padding: 5px;
+  }
+  
+  .Paragraph {
+    margin-bottom: 15px;
+  }
+  
+  .Partner_Logos {
+    margin-top: 30px;
+  }
+  
+  .Personal {
+    padding: 0 16px 30px 16px;
+  }
+  
+  .Personal > div {
+    margin-bottom: 10px;
+  }
+  
+  .Profile_Tag {
+    align-items: flex-start;
+    background-color: #F9F9E1;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    height: 22px;
+    margin-bottom: 60px;
+    padding: 2px;
+    text-align: center;
+    width: 62px;
+  }
+  
+  .Profile_Tag > a > p {
+    font-weight: bold;
+    vertical-align: top;
+  }
+  
+  .Profile_Form {
+    display: none;
+  }
+  
+  .Programs_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .Store_Overview {
+    background-color: darkgray;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
+  }
+  
+  .SignUp {
+    padding: 50px;
+    text-align: center; 
+  }
+  
+  .SignUp_Form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .SignUp_Form > div {
+    margin-bottom: 25px;
+  }
+  
+  .SignUp_Form > input {
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .Verify_Email {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Wallet_Buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .Wallet_Buttons > div {
+    width: 50%;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  h1 { 
+    font-size: 40px;
+  }
+  
+  p {
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   
+  .Account_Overview {
+    background-color: #F9F9E1;
+  }
+
+  .Button {
+    background-color: #F9F9E1;
+    border: none;
+    border-radius: 25px;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .Button > a {
+    color: black;
+  }
   
+  .Circled_Icon {
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    display: grid;
+    margin-top: 10px;
+    padding: 2px;
+  }
+  
+  .Circled_Icon > a {
+    color: black;
+  }
+  
+  .Consumer {
+    width: 70%;
+  }
+  
+  .Dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .Director {
+    width: 70%;
+  }
+  
+  .Directory_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .Footer {
+    background-color: black;
+    padding: 25px;
+  }
+  
+  .Footer_Details {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Funds_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .Header {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } 
+  
+  .Heading {
+    text-align: center;
+  }
+  
+  .Hide {
+    display: none;
+  }
+
+  .Home_Academy {
+    background-color: black;
+    margin: 0 -8px;
+    padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_Accelerator {
+    background-color: black;
+    margin: 0 -8px;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .Home_Accelerator > div > div > p {
+    color: white;
+  }
+  
+  .Home_Banner {
+    height: 500px;
+    margin: 0 -8px 0 -8px;
+    padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .Home_Directory {
+    padding: 90px 20px;
+  }
+  
+  .Home_Directory > .Listing_Process > .Home_Buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Home_Funding {
+    margin: 0 -8px;
+    padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_FundingOption {
+    background-color: white;
+    border: 2px solid #F9F9E1;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 450px;
+  }
+  
+  .Home_FundingOptions {
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .Home_Investing {
+    padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_InvestingTerms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .Home_InvestTime {
+    background-color: #F9F9E1;
+    border: thin solid black;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 15px;
+    width: 30%;
+  }
+
+  .Home_Marketplace {
+    padding: 90px 20px;
+    text-align: center;
+  }
+  
+  .Home_Marketplace > .Image_Placeholder {
+    height: 400px;
+  }
+  
+  .Home_Marketplace > .Vendor_Benefits > .Home_Buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Home_Partners {
+    margin: 50px 0;
+  }
+  
+  .Image_Logo {
+    padding: 10px;
+  }
+  
+  .Image_Placeholder {
+    margin-top: 30px;
+  }
+  
+  .Inventory_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .Investments_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .Listings_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .Login {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Login_Form > div {
+    margin-top: 15px;
+  }
+  
+  .Login_Form > input {
+    height: 35px;
+  }
+
+  .Logo_Image {
+    width: 100px;
+  }
+  
+  .Marketplace_Screenshot {
+    width: 100%;
+  }
+
+  .Mobile_Menu_Btns {
+    display: none;
+  }
+  
+  .Mobile_Menu_Open {
+    display: none;
+  }
+
+  .Navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-right: 10px;
+  }
+
+  .Navigation > div {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10px;
+  }
+
+  .Navigation > div > a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .Navigation > .Button {
+    padding: 5px;
+  }  
+
+  .Navigation > .Button > a {
+    color: black;
+  }
+  
+  .Navigation > div > a {
+    padding: 1.5px;
+  }
+  
+  .Navigation > div > a:active {
+    color: #F9F9E1;
+  }
+  
+  .Navigation > div > a:hover {
+    background-color: grey;
+  }
+  
+  .Paragraph {
+    margin-bottom: 30px;
+  }
+  
+  .Profile_Tag {
+    background-color: #F9F9E1;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .Profile_Tag > a {
+    color: black;
+  }
+  
+  .Programs_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .ResetPassword {
+    text-align: center;
+  }
+  
+  .Shop_Overview {
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .SignUp {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .SignUp_Form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .SignUp_Form > div {
+    margin-top: 15px;
+  }
+  
+  .SignUp_Form > input {
+    height: 35px;
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 56px;
+  }
+  
+  h3 {
+    font-size: 52px;
+  }
+  
+  h4 {
+    font-size: 48px;
+  }
+  
+  h5 {
+    font-size: 46px;
+  }
+  
+  h6 {
+    font-size: 44px;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 25px;
+  }
   
 }
 

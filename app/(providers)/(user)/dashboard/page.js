@@ -43,26 +43,26 @@ export default function Dashboard() {
         
         <div><h1>Hello, {profile.name || user.email}</h1></div>
         
-        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div>Activate Wallet</div></div> : <WalletGateway />}
+        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div className="Button">Activate Wallet</div></div> : <WalletGateway />}
         
       </div>
       
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         <div className="Investments_Overview">
           
-          <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
           
-          <div><h3>Investments: Active</h3></div>
+          <div><h3>Investments: Portfolio</h3></div>
           
-          <div><p>No active investments.</p></div>
+          <div><p>You have not added investments into your potfolio.</p></div>
         
         </div>
         
-        <div className="Market_Overview">
+        <div className="Marketplace_Overview">
           
-          <div><h3>Market: Promotions</h3></div>
+          <div><h3>Marketplace: Promotions</h3></div>
           
-          <div><p>No promotions available on the market.</p></div>
+          <div><p>No promotions available currently.</p></div>
           
         </div>
         
