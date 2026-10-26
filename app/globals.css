@@ -72,6 +72,16 @@ ul {
     margin: 0 -8px 35px -8px;
     padding: 13px;
   }
+  
+  .Account_Overview > div > button {
+    align-items: center;
+    background-color: white;
+    border: thin solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
 
   .Button {
     background-color: #F9F9E1;

@@ -17,17 +17,19 @@ export default function UserHeader() {
       
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/dashboard"><Image src={logo} alt="Company Logo" height={60} width={100} /></Link>
+          <Link href="/dashboard"><Image src={logo} alt="Company Logo" height={60} width={100} style={{ border: "1px solid #F9F9E1" }} /></Link>
         </div>
         
-        <div>
+        <div className="Mobile_Menu_Open">
           <button onClick={showMobileMenu}><Image src="/icons/circled-profile.png" alt="Circled Profile Icon" height={20} width={20} /></button>
         </div>
       </div>
       
-      <div className={ !closedMobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
-        <div className={ !closedMobileMenu ? "Mobile_Menu" : "" }><UserNavigation /></div>
-        <div className={ !closedMobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ !closedMobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
+      <div className="Menu"><UserNavigation /></div>
+      
+      <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
+        <div className={ mobileMenu ? "Mobile_Menu" : "" }><UserNavigation /></div>
+        <div className={ mobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
       </div>
       
     </div>
