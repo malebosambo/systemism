@@ -73,7 +73,7 @@ ul {
     padding: 13px;
   }
   
-  .Account_Overview > div > button {
+  .Account_Overview > div > .ActivateButton {
     align-items: center;
     background-color: white;
     border: thin solid black;
