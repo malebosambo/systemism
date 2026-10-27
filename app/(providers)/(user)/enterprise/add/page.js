@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CreateEnterprise } from "@/app/lib/actions"
+import { CreateEnterprise } from "@/app/lib/firestore"
 
 export default function AddEnterprise() {
   
