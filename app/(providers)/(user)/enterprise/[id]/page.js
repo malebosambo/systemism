@@ -25,7 +25,7 @@ export default function ViewEnterprise() {
   }
   
   return (
-    <main>
+    <main className="EnterpriseDetails">
       
       <div><h1>{profile.enterprise.name}</h1></div>
       

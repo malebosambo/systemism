@@ -50,46 +50,56 @@ export default function AddEnterprise() {
   }
   
   return (
-    <main>
+    <main className="Enterprise">
       
-      <div><h1>Add New Enterprise</h1></div>
+      <div><h1>Add Enterprise</h1></div>
       
       <div className="Form_EnterpriseDetails">
         <form onSubmit={AddEnterprise}>
-          <input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} required />
+          <div><input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} required /></div>
           
-          <input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} required />
+          <div><input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} required /></div>
     
-          <p>Enterprise Type:</p>
-          <ul>
-            <li><input type="radio" name="type" value="Private" />Private</li>
-            <li><input type="radio" name="type" value="Close Corporation" />Close Corporation</li>
-          </ul>
+          <div>
+            <p>Enterprise Type:</p>
+            <ul>
+              <li><input type="radio" name="type" value="Private" />Private</li>
+              <li><input type="radio" name="type" value="Close Corporation" />Close Corporation</li>
+            </ul>
+          </div>
           
-          <p>Registration Date:</p>
-          <input type="date" name="registrationDate" />
+          <div>
+            <p>Registration Date:</p>
+            <input type="date" name="registrationDate" />
+          </div>
           
-          <p>Start Date:</p>
-          <input type="date" name="startDate" />
+          <div>
+            <p>Start Date:</p>
+            <input type="date" name="startDate" />
+          </div>
           
-          <p>Status:</p>
-          <select id="enterpriseStatus" name="status" value={enterprise.status} onChange={handleChange}>
+          <div>
+            <p>Status:</p>
+            <select id="enterpriseStatus" name="status" value={enterprise.status} onChange={handleChange}>
             <option value="In Business">In Business</option>
             <option value="De-registration">De-registration</option>
-          </select>
+            </select>
+          </div>
           
-          <p>Financial Year End:</p>
-          <input type="date" name="finYearEnd" />
+          <div>
+            <p>Financial Year End:</p>
+            <input type="date" name="finYearEnd" />
+          </div>
           
-          <input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" required />
+          <div><input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" required /></div>
     
-          <input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} required />
+          <div><input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} required /></div>
           
-          <input type="textarea" name="postalAddress" placeholder="Postal Address" onChange={handleChange} value={enterprise.postalAddress} />
+          <div><input type="textarea" name="postalAddress" placeholder="Postal Address" onChange={handleChange} value={enterprise.postalAddress} /></div>
           
-          <input type="text" name="director" placeholder="Enterprise Director" onChange={handleChange} value={enterprise.director} required />
+          <div><input type="text" name="director" placeholder="Enterprise Director" onChange={handleChange} value={enterprise.director} required /></div>
     
-          <button type="submit">Add SMME</button>
+          <div><button type="submit">Add SMME</button></div>
         </form>
         
       </div>

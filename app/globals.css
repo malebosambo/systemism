@@ -124,10 +124,23 @@ ul {
     margin-top: -10px;
   }
   
+  .Enterprise {
+    display: flex;
+    justify-content: center;
+  }
+  
   .Footer {
     display: flex;
     flex-direction: column;
     padding: 20px;
+  }
+  
+  .Form_EnterpriseDetails {
+    display: flex;
+  }
+  
+  .Form_EnterpriseDetails > div {
+    margin-bottom: 25px;
   }
   
   .Form_ProfileDetails {
@@ -419,7 +432,7 @@ ul {
   }
   
   .Profile_Tag {
-    align-items: flex-start;
+    align-content: flex-start;
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 5px;
@@ -427,13 +440,11 @@ ul {
     height: 22px;
     margin-bottom: 60px;
     padding: 2px;
-    text-align: center;
     width: 62px;
   }
   
   .Profile_Tag > a > p {
     font-weight: bold;
-    vertical-align: top;
   }
   
   .Profile_Form {

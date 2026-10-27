@@ -20,7 +20,7 @@ export default function Home() {
       
       <div className="Home_Investing">
         
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex" }}>
           <div className="Profile_Tag"><Link href="/profiles/personal"><p style={{ fontWeight: "bold" }}>Personal</p></Link></div>
         </div>
         
@@ -131,8 +131,11 @@ export default function Home() {
           
           <div style={{ marginBottom: "30px", marginTop: "25px" }}>
             <ul>
+              
               <li><div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div></li>
-              <li><div style={{ display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div></li>
+              
+              <li><div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div></li>
+              
             </ul>
           </div>
           
@@ -186,11 +189,12 @@ export default function Home() {
           <div className="Listing_Process">
             <ul>
               
-              <li><div style={{ display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
+              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
               
-              <li><div style={{ display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
+              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
               
-              <li><div style={{ display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
+              <li><div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
+              
             </ul>
           </div>
           
