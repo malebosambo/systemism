@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { router } from "next/navigation";
+import { useState } from "react";
 import { CreateEnterprise } from "@/app/lib/actions"
 
 export default function AddEnterprise() {
@@ -22,28 +21,6 @@ export default function AddEnterprise() {
     "beneficialOwnership": false
   });
   
-  const { user, profile, loading } = useAuth();
-  
-  useEffect(() => {
-
-    if (loading === false && !user) {
-      router.replace("/login");
-    }
-  
-  }, [user, loading, router]);
-  
-  if (loading) {
-    return <div>Loading...</div>
-  }
-  
-  if (!user) {
-    return null;
-  }
-  
-  if (!profile) {
-    return <div style={{ display: "none" }}>Loading profile...</div>
-  }
-  
   function handleChange(e) {
     const { name, value } = e.target;
     setEnterprise(prev => ({ ...prev, [name]: value }));
@@ -55,7 +32,7 @@ export default function AddEnterprise() {
       <div><h1>Add Enterprise</h1></div>
       
       <div className="Form_EnterpriseDetails">
-        <form onSubmit={AddEnterprise}>
+        <form onSubmit={CreateEnterprise}>
           <div><input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} required /></div>
           
           <div><input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} required /></div>

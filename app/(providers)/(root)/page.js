@@ -20,10 +20,6 @@ export default function Home() {
       
       <div className="Home_Investing">
         
-        <div style={{ display: "flex" }}>
-          <div className="Profile_Tag"><Link href="/profiles/personal"><p style={{ fontWeight: "bold" }}>Personal</p></Link></div>
-        </div>
-        
         <div><h1>Invest for now and the future</h1></div>
         
         <div><p>Our investments provide short-term, medium-term and long-term returns.</p></div>
@@ -68,10 +64,6 @@ export default function Home() {
       </div>
       
       <div className="Home_Funding">
-        
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
-        </div>
         
         <div><h1 style={{ color: "white", marginTop: "50px" }}>Access funding for any business stage</h1></div>
         
@@ -120,10 +112,6 @@ export default function Home() {
       
       <div className="Home_Marketplace">
         
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
-        </div>
-        
         <div className="Image_Placeholder"><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/></div>
         
         <div className="Vendor_Benefits">
@@ -150,10 +138,6 @@ export default function Home() {
       
       <div className="Home_Academy">
         
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
-        </div>
-        
         <div><h1 style={{ color: "white" }}>Get certified with our academy programs</h1></div><br />
         
         <div><p style={{ color: "white" }}>Browse programs by selecting an industry below.</p></div>
@@ -165,10 +149,6 @@ export default function Home() {
       </div>
       
       <div className="Home_Directory">
-        
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/personal"><p>Personal</p></Link></div>
-        </div>
         
         <div><h1>Need services fast? Search for a service provider in your area</h1></div>
         
@@ -208,10 +188,6 @@ export default function Home() {
       </div>
       
       <div className="Home_Accelerator">
-        
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div className="Profile_Tag"><Link href="/profiles/business"><p>Business</p></Link></div>
-        </div>
         
         <div><h1 style={{ color: "white" }}>Accelerator</h1></div>
         
