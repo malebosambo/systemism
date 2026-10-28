@@ -9,7 +9,7 @@ export default function Home() {
       <div className="Home_Banner">
         <div><h1 style={{ color: "white" }}>Personal and business solutions</h1></div>
         
-        <div className="Paragraph"><p style={{ color: "white" }}>A fintech platform built for development, wealth generation and economic participation.</p></div>
+        <div className="Paragraph"><p style={{ color: "white" }}>A platform built for economic participation.</p></div>
         
         <div className="Home_Buttons">
           <div className="Button"><Link href="/profiles/personal">Personal</Link></div>
@@ -65,7 +65,7 @@ export default function Home() {
       
       <div className="Home_Funding">
         
-        <div><h1 style={{ color: "white", marginTop: "50px" }}>Access funding for any business stage</h1></div>
+        <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
         
         <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
@@ -118,13 +118,11 @@ export default function Home() {
           <div><h1>Marketplace Vendor Benefits</h1></div>
           
           <div style={{ marginBottom: "30px", marginTop: "25px" }}>
-            <ul>
               
-              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div></li>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div>
               
-              <li><div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div></li>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div>
               
-            </ul>
           </div>
           
           <div className="Home_Buttons">
@@ -150,7 +148,7 @@ export default function Home() {
       
       <div className="Home_Directory">
         
-        <div><h1>Need services fast? Search for a service provider in your area</h1></div>
+        <div><h1>Search for a service provider</h1></div>
         
         <div className="Listings_Map">
           <iframe
@@ -167,15 +165,13 @@ export default function Home() {
         
         <div>
           <div className="Listing_Process">
-            <ul>
               
-              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Submit enterprise details</p></div></li>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit enterprise details</p></div>
               
-              <li><div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Share your enterprise profile</p></div></li>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your enterprise profile</p></div>
               
-              <li><div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p>Generate revenue and reviews</p></div></li>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenue and reviews</p></div>
               
-            </ul>
           </div>
           
           <div className="Home_Buttons">

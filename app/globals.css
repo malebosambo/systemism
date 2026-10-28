@@ -192,7 +192,7 @@ ul {
 
   .Home_Banner {
     margin: 0 -8px;
-    padding: 90px 20px;
+    padding: 70px 20px;
   }
   
   .Home_Buttons {
@@ -203,28 +203,24 @@ ul {
 
   .Home_Directory {
     margin: 0 -8px;
-    padding: 90px 20px;
+    padding: 70px 20px;
   }
 
   .Home_Funding {
     margin: 0 -8px;
-    padding: 90px 20px;
-  }
-  
-  .Home_FundingOption > a {
-    color: white;
-  }
-  
-  .Home_FundingOption > p {
-    color: white;
+    padding: 0px 20px;
   }
   
   .Home_FundingOption {
     background-color: darkgrey;
-    border: 1.5px solid black;
+    border: 1.5px solid white;
     border-radius: 10px;
     margin-top: 10px;
     padding: 5px 10px;
+  }
+  
+  .Home_FundingOption > p {
+    color: black;
   }
   
   .Home_FundingOptions {
@@ -254,7 +250,7 @@ ul {
   }
   
   .Home_Partners {
-    padding: 50px 10px;
+    padding: 40px 10px;
   }
   
   .Hub_Overview {
@@ -299,7 +295,7 @@ ul {
   }
   
   .Listings_Map {
-    margin: 15px -15px;
+    margin: 25px -16 25px -15px;
   }
   
   .Listing_Process {

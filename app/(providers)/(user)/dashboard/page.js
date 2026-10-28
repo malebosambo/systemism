@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
+import { UpdateProfile } from "@/app/lib/firestore";
 import WalletGateway from "@/app/components/walletGateway";
 
 export default function Dashboard() {
@@ -33,6 +34,10 @@ export default function Dashboard() {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
+  const handleOnClick = async () => {
+    UpdateProfile({ walletActivated: true}, profile.id)  
+  }
+  
   const profileType = profile.type;
   const walletActivated = profile.walletActivated;
 
@@ -43,7 +48,7 @@ export default function Dashboard() {
         
         <div><h1>Hello, {profile.name || user.email}</h1></div>
         
-        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={UpdateProfile({ walletActivated: true})} className="ActivateButton">Activate Wallet</button></div></div> : <WalletGateway />}
+        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={handleOnClick} className="ActivateButton">Activate Wallet</button></div></div> : <WalletGateway />}
         
       </div>
       

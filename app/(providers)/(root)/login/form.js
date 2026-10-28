@@ -37,16 +37,14 @@ export default function LoginForm() {
         return;
       }
       
-      
-      /*
       const profile = await GetProfile(firebaseUser);
 
-      const emailVerified = { emailVerified: profile.emailVerified};
+      const emailVerified = { emailVerified: true };
       
       if (!profile.emailVerified) {
         await UpdateProfile(emailVerified, profile.id);
       }
-.     */
+     
       await new Promise(resolve => setTimeout(resolve, 500));
       
       setIsLoading(false);

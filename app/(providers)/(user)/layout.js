@@ -18,10 +18,7 @@ export default function UserLayout({ children }) {
       router.push("/login");
     }
     }, [ user, loading, router ]
-  );
-  
-  if (loading) return <div>Loading...</div>;
-  if (!user) return null;
+  )
   
   return (
     <>
