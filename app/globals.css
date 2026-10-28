@@ -82,6 +82,14 @@ ul {
     justify-content: center;
     padding: 8px;
   }
+  
+  .Business {
+    padding: 0 16px 30px 16px;
+  }
+  
+  .Business > div {
+    margin-bottom: 10px;
+  }
 
   .Button {
     background-color: #F9F9E1;

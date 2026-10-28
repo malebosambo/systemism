@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useAuth } from "@/app/lib/authContext";
 import { CreateEnterprise } from "@/app/lib/firestore"
 
 export default function AddEnterprise() {
+  
+  const { profile } = useAuth();
   
   const [ enterprise, setEnterprise ] = useState({
     "name": "",
@@ -16,10 +19,17 @@ export default function AddEnterprise() {
     "taxNumber": 0,
     "phyAddress": "",
     "postalAddress": "",
-    "director": "",
+    "directors": 0,
     "annualReturns": false,
-    "beneficialOwnership": false
+    "beneficialOwnership": false,
+    "taxReturns": false,
+    "verificationStatus": "pending",
+    "directorID": profile.id
   });
+  
+  const handleOnSubmit = async () => {
+    await CreateEnterprise(enterprise, profile.id);
+  }
   
   function handleChange(e) {
     const { name, value } = e.target;
@@ -32,7 +42,7 @@ export default function AddEnterprise() {
       <div><h1>Add Enterprise</h1></div>
       
       <div className="Form_EnterpriseDetails">
-        <form onSubmit={CreateEnterprise}>
+        <form onSubmit={handleOnSubmit}>
           <div><input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} required /></div>
           
           <div><input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} required /></div>

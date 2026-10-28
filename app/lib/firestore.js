@@ -59,7 +59,7 @@ export async function CreateInvestment(data) {
   
 }
 
-export async function CreateEnterprise(data) {
+export async function CreateEnterprise(data, id) {
   
   const enterprise = data;
   const name = enterprise.name;
@@ -72,3 +72,15 @@ export async function CreateEnterprise(data) {
   
 }
 
+export function GetEnterprise(data) {
+  
+  const name = data.name;
+  
+  const enterprise = getDoc(doc(db, "Enterprises", name));
+  
+  if (!enterprise.exists()) {
+    return null;
+  }
+  
+  return enterprise.data;
+}

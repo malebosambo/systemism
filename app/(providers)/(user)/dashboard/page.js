@@ -53,6 +53,7 @@ export default function Dashboard() {
       </div>
       
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
+        
         <div className="Investments_Overview">
           
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
@@ -67,7 +68,7 @@ export default function Dashboard() {
           
           <div><h3>Marketplace: Promotions</h3></div>
           
-          <div><p>No promotions available currently.</p></div>
+          <div><p>Promotions are not available in this area.</p></div>
           
         </div>
         
@@ -77,27 +78,29 @@ export default function Dashboard() {
           
           <div><h3>Programs: Enrolled</h3></div>
           
-          <div><p>No programs enrolled yet.</p></div>
+          <div><p>You are not enrolled in a program.</p></div>
         
         </div>
         
-        <div className="Listings_Overview">
+        <div className="Directory_Overview">
           
-          <div><h3>Listings: Top Providers</h3></div>
+          <div><h3>Providers: Trending</h3></div>
           
-          <div><p>No listings in the area.</p></div>
+          <div><p>Providers have not listed in this area.</p></div>
           
         </div>
+        
       </div>
       
       <div className={ profileType == "Business" ? "Business" : "Hide" }>
+        
         <div className="Funds_Overview">
           
           <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           
           <div><h3>Funds: Active</h3></div>
           
-          <div><p>No funds have been activated.</p></div>
+          <div><p>Request funding for your enterprise.</p></div>
         
         </div>
       
@@ -107,7 +110,7 @@ export default function Dashboard() {
           
           <div><h3>Inventory: Latest Statistics</h3></div>
           
-          <div><p>No inventory has been added.</p></div>
+          <div><p>Add inventory to the marketplace.</p></div>
         
         </div>
       
@@ -117,7 +120,7 @@ export default function Dashboard() {
           
           <div><h3>Enterprises: Approved</h3></div>
           
-          <div><p>You are not a director of an enterprise.</p></div>
+          <div><p>Add your enterprise for approval.</p></div>
         
         </div>
         
@@ -125,7 +128,16 @@ export default function Dashboard() {
           
           <div><h3>Hub: Tasks</h3></div>
           
-          <div><p>No tasks to be completed.</p></div>
+          <div><p>Start your entrepreneurship journey.</p></div>
+          
+        </div>
+        
+        <div className="Listings_Overview">
+          
+          <div><h3>Listings: Approved</h3></div>
+          
+          <div><p>Submit a listing for approval.</p></div>
+          
         </div>
     
       </div>

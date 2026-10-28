@@ -20,7 +20,7 @@ export default function EnterpriseDetailsCard({ enterprise }) {
         <div>
           <div><p>AR:</p></div>
           <div><p>BO:</p></div>
-          <div><p>SARS:</p></div>
+          <div><p>Tax:</p></div>
         </div>
       </Link></div>  
     </>
