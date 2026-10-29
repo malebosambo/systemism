@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from 'next/link';
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
 import { UpdateProfile } from "@/app/lib/firestore";
 import WalletGateway from "@/app/components/walletGateway";
@@ -35,7 +35,8 @@ export default function Dashboard() {
   }
   
   const handleOnClick = async () => {
-    UpdateProfile({ walletActivated: true}, profile.id)  
+    UpdateProfile({ walletActivated: true}, profile.id);
+    redirect("/dashboard");
   }
   
   const profileType = profile.type;
@@ -72,7 +73,7 @@ export default function Dashboard() {
           
         </div>
         
-        <div className="Programs_Overview">
+        <div className={ walletActivated ? "Programs_Overview" : "Feature_Disabled" }>
           
           <div><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
           

@@ -23,8 +23,12 @@ ul {
 }
 
 .Feature_Disabled {
- pointer-events: none;
- opacity: 0.5;
+  border: 1.5px solid gray;
+  border-radius: 6px;
+  margin: 12px 0;
+  opacity: 0.5;
+  padding: 11px;
+  pointer-events: none;
 }
 
 .FontColor > a > p {
