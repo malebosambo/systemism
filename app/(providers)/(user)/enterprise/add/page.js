@@ -24,7 +24,7 @@ export default function AddEnterprise() {
     "beneficialOwnership": false,
     "taxReturns": false,
     "verificationStatus": "pending",
-    "directorID": profile.id
+    "directorID": ""
   });
   
   if (loading) {
