@@ -6,7 +6,11 @@ import { CreateEnterprise } from "@/app/lib/firestore"
 
 export default function AddEnterprise() {
   
-  const { profile } = useAuth();
+  const { profile, loading } = useAuth();
+  
+  if (loading) {
+    return <div>Loading...</div>
+  }
   
   const [ enterprise, setEnterprise ] = useState({
     "name": "",
