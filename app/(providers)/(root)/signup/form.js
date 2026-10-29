@@ -112,11 +112,11 @@ export default function SignupForm() {
           
           <div style={{ marginBottom: "25px" }}>
             <div>
-              <input type="radio" name="profileType" value="Personal" onChange={handleChange} />
+              <input type="radio" name="type" value="Personal" onChange={handleChange} checked={user.type === "Personal"} />
               <lable>Personal</lable>
             </div>
             <div>
-              <input type="radio" name="profileType" value="Business" onChange={handleChange} />
+              <input type="radio" name="type" value="Business" onChange={handleChange} checked={user.type === "Business"} />
               <label>Business</label>
             </div>
           </div>

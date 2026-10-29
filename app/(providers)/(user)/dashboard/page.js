@@ -54,7 +54,7 @@ export default function Dashboard() {
       
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         
-        <div className="Investments_Overview">
+        <div className={ walletActivated ? "Investments_Overview" : "Feature_Disabled" }>
           
           <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
           
