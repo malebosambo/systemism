@@ -8,10 +8,6 @@ export default function AddEnterprise() {
   
   const { profile, loading } = useAuth();
   
-  if (loading) {
-    return <div>Loading...</div>
-  }
-  
   const [ enterprise, setEnterprise ] = useState({
     "name": "",
     "number": "",
@@ -30,6 +26,10 @@ export default function AddEnterprise() {
     "verificationStatus": "pending",
     "directorID": profile.id
   });
+  
+  if (loading) {
+    return <div>Loading...</div>
+  }
   
   const handleOnSubmit = async () => {
     await CreateEnterprise(enterprise, profile.id);
