@@ -57,7 +57,7 @@ export default function VerifyEmail() {
   return (
     <main className="Verify_Email">
       
-      <div style={{ marginBottom: "30px" }}><h1>Verify your email</h1></div>
+      <div style={{ marginBottom: "20px" }}><h1>Verify your email</h1></div>
       
       <div style={{ marginBottom: "30px" }}><p>We created your account. Please check your email and click the verification link before logging in.</p></div>
       
@@ -70,13 +70,13 @@ export default function VerifyEmail() {
           <div>{message && <p style={{ color: "green" }}>{message}</p>}
           {error && <p style={{ color: "red" }}>{error}</p>}</div>
           
-          <div><button type="submit" disabled={loading}>
+          <div><button type="submit" disabled={loading} className="Button">
             {loading ? "Sending..." : "Resend verfication email"}</button></div>
         </form>
       </div>
       
-      <div>
-        <button type="button" onClick={() => router.push("/login")}>Back to login</button>
+      <div style={{ marginBottom: "30px" }}>
+        <button type="button" onClick={() => router.push("/login")} className="Button">Back to login</button>
       </div>
     </main>
   )
