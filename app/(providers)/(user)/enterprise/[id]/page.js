@@ -34,9 +34,9 @@ export default function ViewEnterprise() {
     await GetEnterprise();
   } 
   
-  return {
+  return (
     <main className="Enterprise_Details">
-      
+    
       <div><h1></h1></div>
       
       <div>
@@ -90,6 +90,7 @@ export default function ViewEnterprise() {
       </div>
       
       <div className="EnterpriseDetails_Finances">
+        
         <div><h2>Finances</h2></div>
       
         <div><h3>Profit Loss</h3></div>
@@ -97,6 +98,7 @@ export default function ViewEnterprise() {
         <div><h3>Cash Flow Projection</h3></div>
         
         <div><h3>Balance Sheet</h3></div>
+        
       </div>
       
     </main>

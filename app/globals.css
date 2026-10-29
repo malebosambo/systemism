@@ -22,6 +22,10 @@ ul {
   list-style-type: none;
 }
 
+.FontColor > a > p {
+  color: skyblue;
+}
+
 .Footer {
   background-color: black;
   margin: -8px;
@@ -185,7 +189,7 @@ ul {
   .Home_Academy {
     background-color: black; 
     margin: 0 -8px;
-    padding: 90px 20px;
+    padding: 70px 20px;
   }
   
   .Home_Accelerator {
@@ -216,7 +220,7 @@ ul {
 
   .Home_Funding {
     margin: 0 -8px;
-    padding: 0px 20px;
+    padding: 70px 20px;
   }
   
   .Home_FundingOption {
@@ -249,16 +253,16 @@ ul {
 
   .Home_Investing {
     margin: 0 -8px;
-    padding: 90px 20px;
+    padding: 70px 20px;
   }
 
   .Home_Marketplace {
     margin: 0 -8px;
-    padding: 90px 20px;
+    padding: 70px 20px;
   }
   
   .Home_Partners {
-    padding: 40px 10px;
+    padding: 60px 10px;
   }
   
   .Hub_Overview {
@@ -307,7 +311,7 @@ ul {
   }
   
   .Listing_Process {
-    margin: 15px;
+    margin: 15px 15px 15px 0;
   }
   
   .Listings_Overview {
@@ -500,6 +504,7 @@ ul {
   
   .Verify_Email {
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
   

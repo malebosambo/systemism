@@ -117,7 +117,7 @@ export default function Home() {
         <div className="Vendor_Benefits">
           <div><h1>Marketplace Vendor Benefits</h1></div>
           
-          <div style={{ marginBottom: "30px", marginTop: "25px" }}>
+          <div style={{ marginBottom: "30px", marginTop: "25px", paddingLeft: "20px" }}>
               
             <div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div>
               

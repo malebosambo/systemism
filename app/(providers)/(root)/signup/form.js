@@ -135,7 +135,7 @@ export default function SignupForm() {
         </form>
       </div>
       
-      <div><p>Already have an account? Login <span><Link href="/login">here</Link></span></p></div>
+      <div className="FontColor"><p>Already have an account? Login <span><Link href="/login">here</Link></span></p></div>
       
     </main>
   )
