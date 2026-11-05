@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-export default function ContactUs()
-
-{
+export default function ContactUs() {
   
   return (
     <main className="Contacts">

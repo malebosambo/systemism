@@ -32,7 +32,7 @@ export default function Home() {
             <p>Medium to High Risk, Low to High Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/short-term"><p>View more</p>
+              <Link href="/investing/terms/short-term"><p>Browse</p>
               </Link>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Home() {
             <p>Low to Medium Risk, Low to Moderate Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/medium-term"><p>View more</p></Link>
+              <Link href="/investing/terms/medium-term"><p>Browse</p></Link>
             </div>
             
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
             <p>Low to High Risk, Low to High Returns</p>
           
             <div className="Circled_Icon">
-              <Link href="/investing/terms/long-term"><p>View more</p></Link>
+              <Link href="/investing/terms/long-term"><p>Browse</p></Link>
             </div>
             
           </div>
@@ -161,22 +161,24 @@ export default function Home() {
           />
         </div>
         
-        <div><h2>List on the directory</h2></div>
+        <div><h2>List your business</h2></div>
         
         <div>
           <div className="Listing_Process">
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit enterprise details</p></div>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit business details</p></div>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your enterprise profile</p></div>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Verify your listing</p></div>
               
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenue and reviews</p></div>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your listing profile</p></div>
+            
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenue and reviews</p></div
               
           </div>
           
           <div className="Home_Buttons">
             <div className="Button">
-              <Link href="/directory">List My Business</Link>
+              <Link href="/directory">List On Directory</Link>
             </div>
           </div>
         </div>
@@ -188,9 +190,13 @@ export default function Home() {
         <div><h1 style={{ color: "white" }}>Accelerator</h1></div>
         
         <div>
-          <div><p>Business management</p></div>
-          <div><p>Finance management</p></div>
-          <div><p>Branding & marketing</p></div>
+          
+          <div><p>Conceptualization</p></div>
+          
+          <div><p>Compliance</p></div>
+          
+          <div><p></p></div>
+          
         </div>
         
       </div>

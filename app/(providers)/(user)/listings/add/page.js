@@ -6,7 +6,13 @@ export default function AddListing() {
   
   const [ listing, setListing ] = useState({
     name: "",
-    description: ""
+    description: "",
+    number: 0,
+    type: "",
+    category: "",
+    location: "",
+    website: "",
+    verification: false
   });
   
   function handleChange(e) {

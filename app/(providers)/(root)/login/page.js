@@ -5,9 +5,7 @@ import { useEffect } from "react";
 import { useAuth } from "@/app/lib/authContext";
 import LoginForm from "./form";
 
-export default function Login() 
-
-{
+export default function Login() {
 
   const { user, loading } = useAuth();
   const router = useRouter();

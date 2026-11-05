@@ -1,6 +1,4 @@
-export default function Accelerator() 
-
-{
+export default function Accelerator() {
   
   return (
     <main>

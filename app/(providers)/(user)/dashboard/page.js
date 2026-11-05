@@ -57,7 +57,7 @@ export default function Dashboard() {
         
         <div className={ walletActivated ? "Investments_Overview" : "Feature_Disabled" }>
           
-          <div><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
+          <div style={{ display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
           
           <div><h3>Investments: Portfolio</h3></div>
           
@@ -75,7 +75,7 @@ export default function Dashboard() {
         
         <div className={ walletActivated ? "Programs_Overview" : "Feature_Disabled" }>
           
-          <div><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div style={{ display: "flex" }}><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Browse</p></div>
           
           <div><h3>Programs: Enrolled</h3></div>
           
@@ -97,7 +97,7 @@ export default function Dashboard() {
         
         <div className="Funds_Overview">
           
-          <div><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Request</p></div>
           
           <div><h3>Funds: Active</h3></div>
           
@@ -107,7 +107,7 @@ export default function Dashboard() {
       
         <div className="Inventory_Overview">
           
-          <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Add</p></div>
           
           <div><h3>Inventory: Latest Statistics</h3></div>
           
@@ -117,11 +117,11 @@ export default function Dashboard() {
       
         <div className="Enterprise_Overview">
           
-          <div><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link></div>
+          <div><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>add</p></div>
           
-          <div><h3>Enterprises: Approved</h3></div>
+          <div><h3>Enterprises: Verified</h3></div>
           
-          <div><p>Add your enterprise for approval.</p></div>
+          <div><p>Add your enterprise for verification.</p></div>
         
         </div>
         
@@ -134,6 +134,8 @@ export default function Dashboard() {
         </div>
         
         <div className="Listings_Overview">
+          
+          <div><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>add</p></div>
           
           <div><h3>Listings: Approved</h3></div>
           

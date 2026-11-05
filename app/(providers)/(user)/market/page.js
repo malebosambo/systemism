@@ -1,10 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
+import MarketplaceItemCard from "@/app/components/shopItemCard";
 
 export default function Market() {
+  
+  const [ cart, setCart ] = useState(0);
    
   const { user, profile, loading } = useAuth();
    
@@ -35,6 +38,8 @@ export default function Market() {
       
       <div><h1>Market</h1></div>
       
+      <div><input type="search" name="search marketplace" placeholder="Search Marketplace" /></div>
+      
     </main>
-  );
+  )
 }

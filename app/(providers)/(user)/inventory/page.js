@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
+import { GetProfile } from "@/app/lib/firestore";
 import InventoryItemCard from "@/app/components/inventoryItemCard";
 
 export default function Inventory() {
@@ -32,6 +33,8 @@ export default function Inventory() {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
+  const inventories = await GetInventory();
+  
   return (
     <main>
       
@@ -39,8 +42,10 @@ export default function Inventory() {
       
       <div><Link href="/enterprise/add">Add</Link></div>
       
-      <div></div>
+      <div><input type="search" name="search inventory" placeholder="Search Inventory" /></div>
+      
+      <div>{inventories.map((inventory) => (<InventoryItemCard item={inventory} />))}</div>
       
     </main>
   )
-};
+}

@@ -72,7 +72,7 @@ export async function CreateEnterprise(data, id) {
   
 }
 
-export function GetEnterprise(data) {
+export async function GetEnterprise(data) {
   
   const name = data.name;
   
@@ -83,4 +83,45 @@ export function GetEnterprise(data) {
   }
   
   return enterprise.data;
+  
+}
+
+export async function GetEnterprises() {
+  
+}
+
+export async function CreateInventory(data, id) {
+  
+  const inventory = data;
+  const name = inventory.name;
+  console.log(inventory);
+  
+  const newInventory = await setDoc(doc(db, "Profiles", id, "Inventory", name), inventory);
+  console.log("Successful write to db", newInventory);
+  
+  return newInventory;
+  
+}
+
+export async function GetInventories() {
+  
+}
+
+export async function GetInventory(data) {
+  
+  const name = data.name;
+  
+  const inventory = await getDoc(doc(db, "Inventory"));
+  
+  if (!inventory.exists) {
+    return null;
+  }
+  
+  return inventory.data;
+}
+
+export function CreateListing(data) {
+  
+  const listing = data;
+  
 }

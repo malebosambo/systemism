@@ -76,6 +76,7 @@ ul {
   background-size: cover;
 }
 
+
 @media only screen and (max-width: 600px) { 
   
   .Account_Overview {
@@ -92,6 +93,7 @@ ul {
     border: thin solid black;
     border-radius: 15px;
     display: flex;
+    height: 40px;
     justify-content: center;
     padding: 8px;
   }
@@ -109,6 +111,7 @@ ul {
     border: thin solid black;
     border-radius: 25px;
     color: black;
+    height: 40px;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -118,7 +121,7 @@ ul {
     align-items: center;
     background-color: #F9F9E1;
     border: thin solid black;
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     padding: 8px;
@@ -129,14 +132,16 @@ ul {
     border: 0.5px solid black;
     border-radius: 10px;
     display: flex;
+    height: 40px;
     margin-top: 2px;
     padding: 3px;
   }
   
   .Directory_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
+    height: 40px;
     margin-bottom: 12px;
     padding: 11px;
   }
@@ -154,6 +159,11 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 20px;
+  }
+  
+  .FormButtonDiv {
+    margin-bottom: 20px;
+    width: 100%;
   }
   
   .Form_EnterpriseDetails {
@@ -179,7 +189,7 @@ ul {
   }
   
   .Funds_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin: 12px 0;
@@ -287,7 +297,7 @@ ul {
   }
   
   .Input {
-    border: 1.5px solid grey;
+    border: 1px solid grey;
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 10px;
@@ -304,7 +314,7 @@ ul {
   }
   
   .Investments_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin: 12px 0;
@@ -354,7 +364,7 @@ ul {
   }
   
   .Marketplace_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -468,8 +478,16 @@ ul {
     display: none;
   }
   
+  .ProgramDetailsCard {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  
   .Programs_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -503,6 +521,10 @@ ul {
     height: 30px;
     margin-bottom: 20px;
     width: 100%;
+  }
+  
+  .Text > a {
+    color: skyblue;
   }
   
   .UserNavigation {

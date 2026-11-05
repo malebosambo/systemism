@@ -1,8 +1,6 @@
 import SignupForm from "./form";
 
-export default function Signup() 
-
-{
+export default function Signup() {
   
   return (
     <SignupForm />

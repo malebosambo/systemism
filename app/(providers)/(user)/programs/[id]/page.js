@@ -1,9 +1,9 @@
-export default function EnrolledProgram() {
+export default function EnrolledProgram({ program }) {
   
   return (
     <main>
       
-      <div><h1></h1></div>
+      <div><h1>{program.name}</h1></div>
       
     </main>
   )

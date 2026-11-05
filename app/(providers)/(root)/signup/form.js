@@ -121,21 +121,36 @@ export default function SignupForm() {
             </div>
           </div>
           
-          <div><input type="text" name="name" placeholder="First Name" onChange={handleChange} value={user.name} required className="Input" /></div>
+          <div>
+            <p>First Name</p>
+            <input type="text" name="name" placeholder="First Name" onChange={handleChange} value={user.name} required className="Input" />
+          </div>
 
-          <div><input type="text" name="surname" placeholder="Surname" onChange={handleChange} value={user.surname} required className="Input" /></div>
+          <div>
+            <p>Surname</p>
+            <input type="text" name="surname" placeholder="Surname" onChange={handleChange} value={user.surname} required className="Input" />
+          </div>
 
-          <div><input type="email" name="email" placeholder="Email" onChange={handleChange} value={user.email} required className="Input" /></div>
+          <div>
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Email" onChange={handleChange} value={user.email} required className="Input" />
+          </div>
 
-          <div><input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" /></div>
+          <div>
+            <p>Cellpohone</p>
+            <input type="telephone" name="cellphone" placeholder="Cellphone" onChange={handleChange} value={user.cellphone} required className="Input" />
+          </div>
 
-          <div><input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" /></div>
+          <div>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Password" onChange={handleChange} value={user.password} required className="Input" />
+          </div>
 
-          <div style={{ marginBottom: "20px" }}><button type="submit" className="Button">Create Account</button></div>
+          <div className="FormButtonDiv"><button type="submit" className="Button">Create Account</button></div>
         </form>
       </div>
       
-      <div className="FontColor"><p>Already have an account? Login <span><Link href="/login">here</Link></span></p></div>
+      <div><p>Already have an account? Login <span className="Text"><Link href="/login">here</Link></span></p></div>
       
     </main>
   )
