@@ -12,7 +12,9 @@ export default function AddListing() {
     category: "",
     location: "",
     website: "",
-    verification: false
+    verification: false,
+    services: [],
+    hours: []
   });
   
   function handleChange(e) {

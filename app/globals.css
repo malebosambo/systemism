@@ -22,6 +22,12 @@ ul {
   list-style-type: none;
 }
 
+.ComingSoon {
+  background-color: black;
+  border: 1.5px black solid;
+  border-radius: 10px 0;
+}
+
 .Feature_Disabled {
   border: 1.5px solid gray;
   border-radius: 6px;
@@ -29,6 +35,7 @@ ul {
   opacity: 0.5;
   padding: 11px;
   pointer-events: none;
+  smoothing: 50%
 }
 
 .FontColor > a > p {
@@ -67,6 +74,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .Home_Funding {
@@ -555,6 +563,14 @@ ul {
   
   h1 { 
     font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 38px;
+  }
+  
+  h3 {
+    font-size: 36px;
   }
   
   p {

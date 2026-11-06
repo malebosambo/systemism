@@ -33,8 +33,6 @@ export default function Inventory() {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
-  const inventories = await GetInventory();
-  
   return (
     <main>
       
