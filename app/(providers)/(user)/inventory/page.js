@@ -42,7 +42,7 @@ export default function Inventory() {
       
       <div><input type="search" name="search inventory" placeholder="Search Inventory" /></div>
       
-      <div>{inventories.map((inventory) => (<InventoryItemCard item={inventory} />))}</div>
+      <div>{inventories.map((inventory) => (<InventoryItemCard key={item.name} item={inventory} />))}</div>
       
     </main>
   )

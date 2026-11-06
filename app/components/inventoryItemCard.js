@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function InventoryItemCard({ item }) {
+export default function InventoryItemCard({ item, key }) {
   
   return (
     <>
-      <div>
+      <div key={key}>
         <div><Image src="" alt="Inventory Image" height={50} width={50} /></div>
         
         <div>
