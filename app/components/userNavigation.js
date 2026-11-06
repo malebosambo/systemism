@@ -51,7 +51,8 @@ export default function UserNavigation() {
       
         <div><Link href="/profile/settings">Settings</Link></div>
       
-      <div><button type="button" onClick={handleLogout} className="Button">Logout</button></div>
-    </div>  
-  );
+        <div><button type="button" onClick={handleLogout} className="Button">Logout</button></div>
+      </div>  
+    </>
+  )
 }
