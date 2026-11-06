@@ -55,7 +55,7 @@ export default function Dashboard() {
       
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         
-        <div className="ComingSoon"><p style={{ color: "white" }}>Coming soon...</p></div>
+        <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
         <div className={ walletActivated ? "Investments_Overview" : "Feature_Disabled" }>
           
           <div style={{ display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
@@ -76,7 +76,7 @@ export default function Dashboard() {
         
         <div className={ walletActivated ? "Programs_Overview" : "Feature_Disabled" }>
           
-          <div style={{ display: "flex" }}><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Browse</p></div>
+          <div style={{ display: "flex" }}><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
           
           <div><h3>Programs: Enrolled</h3></div>
           
@@ -86,9 +86,9 @@ export default function Dashboard() {
         
         <div className="Map_Overview">
           
-          <div><h3>Providers: Trending</h3></div>
+          <div><h3>Map: Trending</h3></div>
           
-          <div><p>Providers have not listed in this area.</p></div>
+          <div><p>Nothing is trending in your area.</p></div>
           
         </div>
         

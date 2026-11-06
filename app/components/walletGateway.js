@@ -5,7 +5,7 @@ export default function WalletGateway() {
   
   return (
     <>
-      <div><h2>Balance: R0.00</h2></div>
+      <div><h4>Balance: R0.00</h4></div>
         
       <div className="Wallet_Buttons">
         <div>

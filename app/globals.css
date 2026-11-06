@@ -25,7 +25,10 @@ ul {
 .ComingSoon {
   background-color: black;
   border: 1.5px black solid;
-  border-radius: 10px 0;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: -9px;
+  padding: 0 15px;
+  smoothing: 50%;
 }
 
 .Feature_Disabled {
@@ -145,7 +148,7 @@ ul {
     padding: 3px;
   }
   
-  .Directory_Overview {
+  .Map_Overview {
     background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;

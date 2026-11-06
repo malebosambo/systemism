@@ -30,25 +30,26 @@ export default function UserNavigation() {
   const profileType = profile.type;
   
   return (
-    <div className="UserNavigation">
-      <div><Link href="/dashboard">Dashboard</Link></div>
+    <>
+      <div className="UserNavigation">
+        <div><Link href="/dashboard">Dashboard</Link></div>
       
-      <div className={ profileType == "Personal" ? "" : "Hide" }>
-        <div><Link href="/investments">Investments</Link></div>
-        <div><Link href="/market">Market</Link></div>
-        <div><Link href="/programs">Programs</Link></div>
-        <div><Link href="/map">Map</Link></div>
-      </div>
+        <div className={ profileType == "Personal" ? "" : "Hide" }>
+          <div><Link href="/investments">Investments</Link></div>
+          <div><Link href="/market">Market</Link></div>
+          <div><Link href="/programs">Programs</Link></div>
+          <div><Link href="/map">Map</Link></div>
+        </div>
       
-      <div className={ profileType == "Business" ? "" : "Hide" }>
-        <div><Link href="/enterprise">Enterprises</Link></div>
-        <div><Link href="/funds">Funds</Link></div>
-        <div><Link href="/inventory">Inventory</Link></div>
-        <div><Link href="/hub">Hub</Link></div>
-        <div><Link href="/listings">Listings</Link></div>
-      </div>
+        <div className={ profileType == "Business" ? "" : "Hide" }>
+          <div><Link href="/enterprise">Enterprises</Link></div>
+          <div><Link href="/funds">Funds</Link></div>
+          <div><Link href="/inventory">Inventory</Link></div>
+          <div><Link href="/hub">Hub</Link></div>
+          <div><Link href="/listings">Listings</Link></div>
+        </div>
       
-      <div><Link href="/profile"><Image src="/icons/circled-profile.png" alt="Profile Icon" height={40} width={40} /></Link></div>
+        <div><Link href="/profile/settings">Settings</Link></div>
       
       <div><button type="button" onClick={handleLogout} className="Button">Logout</button></div>
     </div>  
