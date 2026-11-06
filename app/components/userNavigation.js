@@ -37,7 +37,7 @@ export default function UserNavigation() {
         <div><Link href="/investments">Investments</Link></div>
         <div><Link href="/market">Market</Link></div>
         <div><Link href="/programs">Programs</Link></div>
-        <div><Link href="/listings">Listings</Link></div>
+        <div><Link href="/map">Map</Link></div>
       </div>
       
       <div className={ profileType == "Business" ? "" : "Hide" }>
@@ -45,6 +45,7 @@ export default function UserNavigation() {
         <div><Link href="/funds">Funds</Link></div>
         <div><Link href="/inventory">Inventory</Link></div>
         <div><Link href="/hub">Hub</Link></div>
+        <div><Link href="/listings">Listings</Link></div>
       </div>
       
       <div><Link href="/profile"><Image src="/icons/circled-profile.png" alt="Profile Icon" height={40} width={40} /></Link></div>

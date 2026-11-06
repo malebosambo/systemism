@@ -1,4 +1,4 @@
-export default function Directory() {
+export default function Map() {
   
   return (
     <main>

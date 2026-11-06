@@ -84,7 +84,7 @@ export default function Dashboard() {
         
         </div>
         
-        <div className="Directory_Overview">
+        <div className="Map_Overview">
           
           <div><h3>Providers: Trending</h3></div>
           
