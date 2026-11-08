@@ -56,9 +56,9 @@ export default function Dashboard() {
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         
         <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
-        <div className={ walletActivated ? "Investments_Overview" : "Feature_Disabled" }>
+        <div className="Feature_Disabled">
           
-          <div style={{ display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /><p>Browse</p></Link></div>
+          <div style={{ display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
           
           <div><h3>Investments: Portfolio</h3></div>
           
