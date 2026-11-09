@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,51 +14,53 @@ export default function Home() {
         <div className="Paragraph"><p style={{ color: "white" }}>A platform built for economic participation.</p></div>
         
         <div className="Home_Buttons">
-          <div className="Button"><Link href="/profiles/personal">Personal</Link></div>
+          <div className="Button_Primary"><Link href="/profiles/personal">Personal</Link></div>
           
-          <div className="Button"><Link href="/profiles/business">Business</Link></div>
+          <div className="Button_Primary"><Link href="/profiles/business">Business</Link></div>
         </div>
       </div>
       
       <div className="Home_Investing">
         
-        <div><h1>Invest for now and the future</h1></div>
+        <div><h3>Invest for now and the future</h3></div>
         
         <div><p>Our investments provide short-term, medium-term and long-term returns.</p></div>
         
         <div className="Home_InvestingTerms">
           
           <div className="Home_InvestTime">
+            <div style={{ marginBottom: "5px" }}><h6>Short Term</h6></div>
             
-            <div style={{ marginBottom: "10px" }}><h4>Short Term</h4></div>
             <p>Medium to High Risk, Low to High Returns</p>
           
-            <div className="Circled_Icon">
+            <div className="Button_Secondary">
               <Link href="/investing/terms/short-term"><p>Browse</p>
               </Link>
             </div>
+            <div style={{ backgroundColor: "skyblue", padding: "5px" }}><p>Browse</p></div>
           </div>
         
           <div className="Home_InvestTime">
+            <div style={{ marginBottom: "5px" }}><h6>Medium Term</h6></div>
             
-            <div style={{ marginBottom: "10px" }}><h4>Medium Term</h4></div>
             <p>Low to Medium Risk, Low to Moderate Returns</p>
           
             <div className="Circled_Icon">
               <Link href="/investing/terms/medium-term"><p>Browse</p></Link>
             </div>
-            
           </div>
         
           <div className="Home_InvestTime">
+            <div style={{ marginBottom: "5px" }}><h6>Long Term</h6></div>
             
-            <div style={{ marginBottom: "10px" }}><h4>Long Term</h4></div>
-            <p>Low to High Risk, Low to High Returns</p>
+            <div>
+              <p>Low to High Risk.</p> 
+              <p>Low to High Returns</p>
+            </div>
           
             <div className="Circled_Icon">
               <Link href="/investing/terms/long-term"><p>Browse</p></Link>
             </div>
-            
           </div>
           
         </div>
@@ -65,7 +69,7 @@ export default function Home() {
       
       <div className="Home_Funding">
         
-        <div><h1 style={{ color: "white" }}>Access funding for any business stage</h1></div>
+        <div><h3 style={{ color: "white" }}>Access funding for any business stage</h3></div>
         
         <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
         
@@ -110,12 +114,26 @@ export default function Home() {
         
       </div>
       
+      <div className="Home_Newsletter">
+        
+        <div className="Form_Newsletter">
+          <form onSubmit="">
+            <div><input type="email" name="newsletter" onChange="" value={email} placeholder="Email" className="Input" /></div>
+            
+            <div><button type="submit" className="Button_Primary">Subscribe</button></div>
+          </form>
+        </div>
+        
+      </div>
+      
       <div className="Home_Marketplace">
+        
+        <div><h3>Marketplace</h3></div>
         
         <div className="Image_Placeholder"><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/></div>
         
         <div className="Vendor_Benefits">
-          <div><h1>Marketplace Vendor Benefits</h1></div>
+          <div><h3>Vendor Benefits</h3></div>
           
           <div style={{ marginBottom: "30px", marginTop: "25px", paddingLeft: "20px" }}>
               
@@ -126,7 +144,7 @@ export default function Home() {
           </div>
           
           <div className="Home_Buttons">
-            <div className="Button">
+            <div className="Button_Primary">
               <Link href="/enterprise/add">Start Application</Link>
             </div>
           </div>
@@ -136,7 +154,7 @@ export default function Home() {
       
       <div className="Home_Academy">
         
-        <div><h1 style={{ color: "white" }}>Get certified with our academy programs</h1></div><br />
+        <div><h3 style={{ color: "white" }}>Get certified with our academy programs</h3></div><br />
         
         <div><p style={{ color: "white" }}>Browse programs by selecting an industry below.</p></div>
         
@@ -148,7 +166,9 @@ export default function Home() {
       
       <div className="Home_Directory">
         
-        <div><h1>Search for a service provider</h1></div>
+        <div><h3>Search for a service provider</h3></div>
+        
+        <div style={{ marginBottom: "30px" }}><input type="search" name="business listing" placeholder="Search for a service" /></div>
         
         <div className="Listings_Map">
           <iframe
@@ -161,24 +181,24 @@ export default function Home() {
           />
         </div>
         
-        <div><h2>List your business</h2></div>
+        <div style={{ textAlign: "center" }}><h3>List your business</h3></div>
         
         <div>
           <div className="Listing_Process">
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit business details</p></div>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit your business details</p></div>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Verify your listing</p></div>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Verify your business details</p></div>
               
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your listing profile</p></div>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your verified listing</p></div>
             
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenue and reviews</p></div>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenues and reviews</p></div>
               
           </div>
           
           <div className="Home_Buttons">
-            <div className="Button">
-              <Link href="/directory">List On Directory</Link>
+            <div className="Button_Primary">
+              <Link href="/directory">List On The Directory</Link>
             </div>
           </div>
         </div>
@@ -187,15 +207,15 @@ export default function Home() {
       
       <div className="Home_Accelerator">
         
-        <div><h1 style={{ color: "white" }}>Accelerator</h1></div>
+        <div style={{ marginBottom: "15px" }}><h1 style={{ color: "white" }}>Accelerator</h1></div>
         
         <div>
           
-          <div><p>Conceptualization</p></div>
+          <div><p>Business Model</p></div>
           
-          <div><p>Compliance</p></div>
+          <div><p>Financing</p></div>
           
-          <div><p></p></div>
+          <div><p>Profit & Loss</p></div>
           
         </div>
         

@@ -25,11 +25,11 @@ export default function Header() {
       
       <div className="Logo">
         <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={100} style={{ border: "1px solid #F9F9E1" }} /></Link>
+          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={90} style={{ border: "1px solid #F9F9E1" }} /></Link>
         </div>
         
         <div className="Mobile_Menu_Open">
-          <button onClick={showMobileMenu} className="Button_Small"><Image src="/icons/menu.png" alt="Menu Icon" height={20} width={20} /></button>
+          <button onClick={showMobileMenu} className="Button_Small"><Image src="/icons/menu.png" alt="Menu Icon" height={30} width={30} /></button>
         </div>
       </div>
       

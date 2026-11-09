@@ -16,9 +16,9 @@ export default function Footer() {
           <div><h2 style={{ color: "white" }}>Contacts</h2></div>
           
           <p>E-mail:</p>
-          <div className="DivMargin"><Link href="admin@systemism.co.za">info@systemism.co.za</Link></div>
+          <div className="DivMargin"><Link href="admin@systemism.co.za"><p>admin@systemism.co.za</p></Link></div>
           <p>Tel:</p>
-          <div className="DivMargin"><Link href="+27630013711">063 001 3711</Link></div>
+          <div className="DivMargin"><Link href="+27601288732">060 128 8732</Link></div>
           <p>Address:</p>
           <div className="DivMargin"><Link href="">462B Cuba Crescent, Lulekani, Phalaborwa, 1392</Link></div>
         </div>
