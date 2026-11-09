@@ -98,7 +98,7 @@ export default function Dashboard() {
         
         <div className="Funds_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Request</p></div>
+          <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Request</p></div>
           
           <div><h3>Funds: Active</h3></div>
           
@@ -108,7 +108,7 @@ export default function Dashboard() {
       
         <div className="Inventory_Overview">
           
-          <div><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>Add</p></div>
+          <div style={{ display: "flex" }}><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
           
           <div><h3>Inventory: Latest Statistics</h3></div>
           
@@ -118,7 +118,7 @@ export default function Dashboard() {
       
         <div className="Enterprise_Overview">
           
-          <div><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>add</p></div>
+          <div style={{ display: "flex" }}><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>add</p></div>
           
           <div><h3>Enterprises: Verified</h3></div>
           
@@ -136,7 +136,7 @@ export default function Dashboard() {
         
         <div className="Listings_Overview">
           
-          <div><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p>add</p></div>
+          <div style={{ display: "flex" }}><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>add</p></div>
           
           <div><h3>Listings: Approved</h3></div>
           

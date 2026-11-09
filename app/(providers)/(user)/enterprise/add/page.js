@@ -41,15 +41,15 @@ export default function AddEnterprise() {
   }
   
   return (
-    <main className="Enterprise">
+    <main className="Enterprise_Add">
       
       <div><h1>Add Enterprise</h1></div>
       
       <div className="Form_EnterpriseDetails">
         <form onSubmit={handleOnSubmit}>
-          <div><input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} required /></div>
+          <div><input type="text" name="name" placeholder="Enterprise Name" onChange={handleChange} value={enterprise.name} className="Input" required /></div>
           
-          <div><input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} required /></div>
+          <div><input type="text" name="number" placeholder="Enterprise Number" onChange={handleChange} value={enterprise.number} className="Input" required /></div>
     
           <div>
             <p>Enterprise Type:</p>
@@ -82,15 +82,15 @@ export default function AddEnterprise() {
             <input type="date" name="finYearEnd" />
           </div>
           
-          <div><input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" required /></div>
+          <div><input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" className="Input" required /></div>
     
-          <div><input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} required /></div>
+          <div><input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} className="Input" required /></div>
           
-          <div><input type="textarea" name="postalAddress" placeholder="Postal Address" onChange={handleChange} value={enterprise.postalAddress} /></div>
+          <div><input type="textarea" name="postalAddress" placeholder="Postal Address" onChange={handleChange} value={enterprise.postalAddress} className="Input" /></div>
           
-          <div><input type="text" name="director" placeholder="Enterprise Director" onChange={handleChange} value={enterprise.director} required /></div>
+          <div><input type="text" name="director" placeholder="Enterprise Director" onChange={handleChange} value={enterprise.director} className="Input" required /></div>
     
-          <div><button type="submit">Add SMME</button></div>
+          <div><button type="submit" className="Button_Primary">Add SMME</button></div>
         </form>
         
       </div>

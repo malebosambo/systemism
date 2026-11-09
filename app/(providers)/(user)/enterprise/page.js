@@ -34,7 +34,7 @@ export default function Enterprises() {
   }
   
   return (
-    <main>
+    <main className="Enterprises">
       
       <div><h1>My Enterprises</h1></div>
       

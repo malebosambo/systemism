@@ -25,9 +25,10 @@ ul {
 .ComingSoon {
   background-color: black;
   border: 1.5px black solid;
-  border-radius: 10px 10px 0 0;
+  border-radius: 6px 6px 0 0;
+  margin: -9px -9px 10px -9px;
   padding: 0 15px;
-  smoothing: 50%;
+  smoothing: 100%;
 }
 
 .Feature_Disabled {
@@ -115,7 +116,7 @@ ul {
     margin-bottom: 10px;
   }
 
-  .Button {
+  .Button_Primary {
     background-color: #F9F9E1;
     border: 1px solid black;
     border-radius: 10px;
@@ -143,7 +144,7 @@ ul {
     align-items: center;
     background-color: #F9F9E1;
     border: thin solid black;
-    border-radius: 10px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     padding: 8px;
@@ -163,9 +164,30 @@ ul {
     margin-top: -10px;
   }
   
-  .Enterprise {
+  .Enterprises {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Enterprise_Add {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Enterprise_Details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Enterprise_Overview {
+    background-color: #F9F9E1;
+    border: 1.5px solid black;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 11px;
   }
   
   .Footer {
@@ -306,7 +328,7 @@ ul {
   }
   
   .Hub_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -327,7 +349,7 @@ ul {
   }
   
   .Inventory_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -356,7 +378,7 @@ ul {
   }
   
   .Listings_Overview {
-    background-color: darkgray;
+    background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 6px;
     margin-bottom: 12px;
