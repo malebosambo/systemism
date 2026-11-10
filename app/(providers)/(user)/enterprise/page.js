@@ -22,12 +22,21 @@ export default function Enterprises() {
       router.replace("/login");
     }
     
-    const enterprises = async () => {
-      const data = await GetEnterprises(profile.id);
-      setEnterprises(data);
-    }
+    let cancelled = false;
     
-    enterprise();
+    async function loadEnterprises() {
+      try {
+        const docs = await GetEnterprises(profile.id);
+        if (!cancelled) {
+          setEnterprises(docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+          })));
+        }
+      } catch (error) {
+        console.error("Could not load enterprises:", error);
+      }
+    }
   
   }, [user, loading, router]);
   
