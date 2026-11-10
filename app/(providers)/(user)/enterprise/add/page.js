@@ -82,7 +82,9 @@ export default function AddEnterprise() {
             <input type="date" name="finYearEnd" />
           </div>
           
-          <div><input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" className="Input" required /></div>
+          <div>
+            <label for="taxNumber">Tax Number</label>
+            <input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" className="Input" required /></div>
     
           <div><input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} className="Input" required /></div>
           

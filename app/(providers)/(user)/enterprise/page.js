@@ -33,12 +33,14 @@ export default function Enterprises() {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
+  
+  
   return (
     <main className="Enterprises">
       
       <div><h1>My Enterprises</h1></div>
       
-      <div><Link href="/enterprise/add">Add</Link></div>
+      <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
       
       <div></div>
       

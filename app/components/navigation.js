@@ -54,11 +54,11 @@ export default function Navigation() {
       
       <div className="Menu_Buttons">
         <div className="Menu_Button">
-          <div className="Button"><Link href="/login">Login</Link></div>
+          <div><Link href="/login">Login</Link></div>
         </div>
         
         <div className="Menu_Button">
-          <div className="Button"><Link href="/signup">Sign Up</Link></div>
+          <div className="Button_Secondary"><Link href="/signup">Sign Up</Link></div>
         </div>
       </div>
     </div>  

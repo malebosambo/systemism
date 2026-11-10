@@ -1,4 +1,4 @@
-import { collection, setDoc, getDoc, updateDoc, doc } from "firebase/firestore";
+import { collection, setDoc, getDoc, updateDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export async function GetProfile(data) {
@@ -59,6 +59,14 @@ export async function CreateInvestment(data) {
   
 }
 
+export async function GetInvestment() {
+  
+}
+
+export async function GetInvestments() {
+  
+}
+
 export async function CreateEnterprise(data, id) {
   
   const enterprise = data;
@@ -74,7 +82,7 @@ export async function CreateEnterprise(data, id) {
 
 export async function GetEnterprise(data) {
   
-  const name = data.name;
+  const name = data;
   
   const enterprise = getDoc(doc(db, "Enterprises", name));
   
@@ -87,6 +95,12 @@ export async function GetEnterprise(data) {
 }
 
 export async function GetEnterprises() {
+  
+  const collRef = collection(db, "Profiles", id, "Enterprises");
+  
+  const enterprises = await getDocs(collRef);
+  
+  console.log(enterprises);
   
 }
 

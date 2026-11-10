@@ -118,7 +118,7 @@ export default function Dashboard() {
       
         <div className="Enterprise_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>add</p></div>
+          <div style={{ display: "flex" }}><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
           
           <div><h3>Enterprises: Verified</h3></div>
           
@@ -136,7 +136,7 @@ export default function Dashboard() {
         
         <div className="Listings_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>add</p></div>
+          <div style={{ display: "flex" }}><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
           
           <div><h3>Listings: Approved</h3></div>
           
