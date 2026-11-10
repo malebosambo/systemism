@@ -37,7 +37,13 @@ export default function Enterprises() {
         console.error("Could not load enterprises:", error);
       }
     }
-  
+    
+    loadEnterprises();
+    
+    return () => {
+      cancelled = true;
+    }
+    
   }, [user, loading, router]);
   
   if (loading) {
