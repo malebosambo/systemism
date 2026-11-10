@@ -101,7 +101,7 @@ export async function GetEnterprises(id) {
   const enterprises = await getDocs(collRef);
   console.log(enterprises);
   
-  return enterprises;
+  return enterprises.docs;
   
 }
 

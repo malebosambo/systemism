@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -9,6 +9,8 @@ import { GetEnterprises } from "@/app/lib/firestore";
 import EnterpriseDetailsCard from "@/app/components/enterpriseDetailsCard";
 
 export default function Enterprises() {
+  
+  const [ enterprises, setEnterprises ] = useState([]);
   
   const { user, profile, loading } = useAuth();
   
@@ -19,6 +21,13 @@ export default function Enterprises() {
     if (loading === false && !user) {
       router.replace("/login");
     }
+    
+    const enterprises = async () => {
+      const data = await GetEnterprises(profile.id);
+      setEnterprises(data);
+    }
+    
+    enterprise();
   
   }, [user, loading, router]);
   
@@ -32,10 +41,6 @@ export default function Enterprises() {
   
   if (!profile) {
     return <div style={{ display: "none" }}>Loading profile...</div>
-  }
-  
-  const enterprises = async () => {
-    await GetEnterprises(profile.id);
   }
   
   return (

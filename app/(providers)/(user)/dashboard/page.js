@@ -56,9 +56,10 @@ export default function Dashboard() {
       <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
         
         <div className="Feature_Disabled">
+          
           <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
           
-          <div style={{ display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
+          <div style={{ alignItems: "center", display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
           
           <div><h3>Investments: Portfolio</h3></div>
           
@@ -96,7 +97,9 @@ export default function Dashboard() {
       
       <div className={ profileType == "Business" ? "Business" : "Hide" }>
         
-        <div className="Funds_Overview">
+        <div className="Feature_Disabled">
+          
+          <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
           
           <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Request</p></div>
           
