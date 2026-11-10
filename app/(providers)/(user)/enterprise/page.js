@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
+import { GetEnterprises } from "@/app/lib/firestore";
 import EnterpriseDetailsCard from "@/app/components/enterpriseDetailsCard";
 
 export default function Enterprises() {
@@ -33,7 +34,9 @@ export default function Enterprises() {
     return <div style={{ display: "none" }}>Loading profile...</div>
   }
   
-  
+  const enterprises = async () => {
+    await GetEnterprises(profile.id);
+  }
   
   return (
     <main className="Enterprises">
@@ -42,7 +45,7 @@ export default function Enterprises() {
       
       <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
       
-      <div></div>
+      <div>{enterprises.map((enterprise) => (<EnterpriseDetailsCard key={enterprise.name} enterprise={enterprise} />))}</div>
       
     </main>
   )

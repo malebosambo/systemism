@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function EnterpriseDetailsCard({ enterprise }) {
+export default function EnterpriseDetailsCard({ key, enterprise }) {
   
   return (
     <>
-      <div key={enterprise.name}><Link href="/enterprise/${enterprise.name}">
+      <div key={key}><Link href="/enterprise/${enterprise.name}">
         <div className="Enterprise_Logo"></div>
       
         <div className="Enterprise_Details">

@@ -94,13 +94,14 @@ export async function GetEnterprise(data) {
   
 }
 
-export async function GetEnterprises() {
+export async function GetEnterprises(id) {
   
   const collRef = collection(db, "Profiles", id, "Enterprises");
   
   const enterprises = await getDocs(collRef);
-  
   console.log(enterprises);
+  
+  return enterprises;
   
 }
 
