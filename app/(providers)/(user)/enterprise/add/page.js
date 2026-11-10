@@ -61,10 +61,10 @@ export default function AddEnterprise() {
           <div>
             <p>Enterprise Type:</p>
             <div>
-              <input type="radio" name="type-private" value="Private" /><label for="type-private">Private</label>
+              <input type="radio" name="type-private" value="Private" onChange={handleChange} checked={enterprise.type ===  "Private"} /><label for="type-private">Private</label>
             </div>
             <div>
-              <input type="radio" name="type-cc" value="Close Corporation" /><label for="type-cc">Close Corporation</label>
+              <input type="radio" name="type-cc" value="Close Corporation" onChange={handleChange} checked={enterprise.type === "Close Corporation"} /><label for="type-cc">Close Corporation</label>
             </div>
           </div>
           

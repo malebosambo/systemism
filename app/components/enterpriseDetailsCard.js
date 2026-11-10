@@ -7,9 +7,9 @@ export default function EnterpriseDetailsCard({ key, enterprise }) {
     <>
       <div key={key} className="EnterpriseDetailsCard">
         <Link href="/enterprise/${enterprise.name}">
-          <div className="Enterprise_Logo"><Image src="/SystemismLogoZoom.jpg" alt="Enterprise Logo" height={100} width={100} /></div>
+          <div><Image src="/SystemismLogoZoom.jpg" alt="Enterprise Logo" height={100} width={100} className="Enterprise_Logo" /></div>
       
-          <div className="Enterprise_Details">
+          <div className="EnterpriseDetails">
             <div><h4>{enterprise.name}</h4></div>
           
             <div>
@@ -20,7 +20,7 @@ export default function EnterpriseDetailsCard({ key, enterprise }) {
             </div>
           </div>
         
-          <div>
+          <div style={{ display: "flex", justifyContent: "space-evenly", padding: "20px" }}>
             <div><p>AR:</p></div>
             <div><p>BO:</p></div>
             <div><p>Tax:</p></div>

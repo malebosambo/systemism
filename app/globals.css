@@ -164,6 +164,10 @@ ul {
     margin-top: -10px;
   }
   
+  .EnterpriseDetails {
+    padding: 20px;
+  }
+  
   .EnterpriseDetailsCard {
     border: 1px solid black;
     background-color: #F9F9E1;
@@ -173,7 +177,15 @@ ul {
   .Enterprises {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 35px 20px;
+  }
+  
+  .Enterprises_List {
+    margin-top: 30px;
+  }
+  
+  .Enterprise_Logo {
+    width: 100%;
   }
   
   .Enterprise_Add {

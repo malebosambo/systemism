@@ -65,7 +65,7 @@ export default function Enterprises() {
       
       <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
       
-      <div>{enterprises.map((enterprise) => (<EnterpriseDetailsCard key={enterprise.name} enterprise={enterprise} />))}</div>
+      <div className="Enterprises_List">{enterprises.map((enterprise) => (<EnterpriseDetailsCard key={enterprise.name} enterprise={enterprise} />))}</div>
       
     </main>
   )
