@@ -1471,6 +1471,11 @@ ul {
     background-color: #F9F9E1;
   }
   
+  .Button_Hover {
+    padding: 5px 10px;
+    text-align: center;
+  }
+  
   .Button_Hover:hover {
     background-color: lightgray;
     border: 1px solid lightgrey;
@@ -1478,9 +1483,11 @@ ul {
   }
 
   .Button_Primary {
+    align-items: center;
     background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 10px;
+    display: flex;
     height: 30px;
     margin: 10px;
     padding: 10px 30px;
@@ -1765,14 +1772,18 @@ ul {
   }
   
   .Menu_Button {
+    margin: 10px;
     width: 50%;
   }
   
   .Menu_Buttons {
     display: flex;
-    flex-direction: column;
     padding: 5px;
     width: 100%;
+  }
+  
+  .Menu_Nav_Link > a > p {
+    color: white;
   }
 
   .Mobile_Menu_Btns {
@@ -1786,40 +1797,8 @@ ul {
   .Navigation {
     align-items: center;
     display: flex;
-    flex-direction: row;
     height: 100%;
-    padding-right: 10px;
-  }
-
-  .Navigation > div {
-    display: flex;
-    justify-content: space-around;
-    padding-right: 10px;
-  }
-
-  .Navigation > div > a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .Navigation > .Button {
-    padding: 5px;
-  }  
-
-  .Navigation > .Button > a {
-    color: black;
-  }
-  
-  .Navigation > div > a {
-    padding: 1.5px;
-  }
-  
-  .Navigation > div > a:active {
-    color: #F9F9E1;
-  }
-  
-  .Navigation > div > a:hover {
-    background-color: grey;
+    justify-content: space-between;
   }
   
   .Paragraph {

@@ -23,7 +23,8 @@ export default function Navigation() {
       <div className="Menu_Nav_Link"><Link href="/">Home</Link></div>
       
       <div>
-        <div><Link href="/personal">Personal</Link></div>
+        <div className="Menu_Nav_Link"><Link href="/personal">Personal</Link></div>
+        
         <div className={ personalSubMenu ? "ShowSubMenu" : "Hide" }>
           <div className="Menu_Nav_Link"><Link href="/investing">Investing</Link></div>
           
