@@ -22,8 +22,8 @@ export default function Navigation() {
       
       <div className="Menu_Nav_Link"><Link href="/">Home</Link></div>
       
-      <div onClick={showPersonalSubMenu}>
-        <div><p>Personal</p></div>
+      <div>
+        <div><Link href="/personal">Personal</Link></div>
         <div className={ personalSubMenu ? "ShowSubMenu" : "Hide" }>
           <div className="Menu_Nav_Link"><Link href="/investing">Investing</Link></div>
           
@@ -35,8 +35,8 @@ export default function Navigation() {
         </div>
       </div>
       
-      <div onClick={showBusinessSubMenu}>
-        <div><p>Business</p></div>
+      <div>
+        <div><Link href="/business">Business</Link></div>
         <div className={ businessSubMenu ? "ShowSubMenu" : "Hide" }>
           <div className="Menu_Nav_Link"><Link href="/funding">Funding</Link></div>
           
@@ -54,11 +54,11 @@ export default function Navigation() {
       
       <div className="Menu_Buttons">
         <div className="Menu_Button">
-          <div><Link href="/login">Login</Link></div>
+          <div className="Button_Hover"><Link href="/login">Login</Link></div>
         </div>
         
         <div className="Menu_Button">
-          <div className="Button_Secondary"><Link href="/signup">Sign Up</Link></div>
+          <div className="Button_Secondary"><Link href="/signup">Sign Up</Link></div> 
         </div>
       </div>
     </div>  

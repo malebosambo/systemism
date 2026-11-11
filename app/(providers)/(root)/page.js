@@ -31,7 +31,7 @@ export default function Home() {
         
         <div className="Home_InvestingTerms">
           
-          <div className="Home_InvestTime">
+          <div>
             <div style={{ marginBottom: "5px" }}><h6>Short Term</h6></div>
             
             <p>Medium to High Risk, Low to High Returns</p>
@@ -40,7 +40,6 @@ export default function Home() {
               <Link href="/investing/terms/short-term"><p>Browse</p>
               </Link>
             </div>
-            <div style={{ backgroundColor: "skyblue", padding: "5px" }}><p>Browse</p></div>
           </div>
         
           <div className="Home_InvestTime">
@@ -119,6 +118,10 @@ export default function Home() {
       
       <div className="Home_Newsletter">
         
+        <div>
+          <h2>Join our weekly newsletter.</h2>
+        </div>
+        
         <div className="Form_Newsletter">
           <form onSubmit="">
             <div><input type="email" name="newsletter" onChange="" value={email} placeholder="Email" className="Input" /></div>
@@ -133,16 +136,22 @@ export default function Home() {
         
         <div><h3>Marketplace</h3></div>
         
-        <div className="Image_Placeholder"><Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/></div>
+        <div className="Image_Placeholder">
+          <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/>
+        </div>
         
         <div className="Vendor_Benefits">
           <div><h3>Vendor Benefits</h3></div>
           
           <div style={{ marginBottom: "30px", marginTop: "25px", paddingLeft: "20px" }}>
+            
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Cost-Effective Start</p></div>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Add & edit inventory</p></div>
+            <div style={{ alignItems: "center", display: "flex", marginBottom: "10px" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p style={{ marginLeft: "20px" }}>Large Customer Reach</p></div>
               
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Accept payments</p></div>
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Operational Ease</p></div>
+            
+            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} /><p  style={{ marginLeft: "20px" }}>Better Insights</p></div>
               
           </div>
           
@@ -159,9 +168,11 @@ export default function Home() {
         
         <div><h3 style={{ color: "white" }}>Get certified with our academy programs</h3></div><br />
         
-        <div><p style={{ color: "white" }}>Browse programs by selecting an industry below.</p></div>
+        <div><p style={{ color: "white" }}>Browse programs by selecting a qualification type below.</p></div>
         
-        <div className="Program_Industries"></div>
+        <div className="Qualification_Type">
+          
+        </div>
         
         <div></div>
         
@@ -171,7 +182,7 @@ export default function Home() {
         
         <div><h3>Search for a service provider</h3></div>
         
-        <div style={{ marginBottom: "30px" }}><input type="search" name="business listing" placeholder="Search for a service" /></div>
+        <div style={{ marginBottom: "30px" }}><input type="search" name="business listing" placeholder="Search for a service" className="Input" /><button type="submit">Search</button></div>
         
         <div className="Listings_Map">
           <iframe
@@ -214,11 +225,17 @@ export default function Home() {
         
         <div>
           
-          <div><p>Business Model</p></div>
+          <div><p>Ideation & Discovery</p></div>
           
-          <div><p>Financing</p></div>
+          <div><p>Opportunity Evaluation & Planning</p></div>
           
-          <div><p>Profit & Loss</p></div>
+          <div><p>Startup & Launch</p></div>
+          
+          <div><p>Growth & Traction</p></div>
+          
+          <div><p>Maturity & Expansion</p></div>
+          
+          <div><p>Exit, Renewal & Succession</p></div>
           
         </div>
         

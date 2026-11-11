@@ -1470,18 +1470,24 @@ ul {
   .Account_Overview {
     background-color: #F9F9E1;
   }
+  
+  .Button_Hover:hover {
+    background-color: lightgray;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+  }
 
   .Button_Primary {
     background-color: #F9F9E1;
     border: 1.5px solid black;
     border-radius: 10px;
-    height: 40px;
+    height: 30px;
     margin: 10px;
     padding: 10px 30px;
     text-align: center;
   } 
 
-  .Button > a {
+  .Button_Primary > a > p {
     color: black;
   }
   
@@ -1489,10 +1495,13 @@ ul {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
   }
   
+  .Button_Secondary > a > p {
+    color: black;
+  }
   .Button_Small {
     align-items: center;
     background-color: #F9F9E1;
@@ -1549,6 +1558,12 @@ ul {
     flex-direction: row;
   }
   
+  .Form_Newsletter {
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
   .Funds_Overview {
     background-color: darkgrey;
     border: 2px solid black;
@@ -1600,7 +1615,6 @@ ul {
   
   .Home_Buttons {
     display: flex;
-    flex-direction: row;
     justify-content: center;
   }
 
@@ -1635,7 +1649,7 @@ ul {
   .Home_FundingOptions {
     align-content: space-between;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     margin-top: 40px;
     flex-wrap: wrap;
   }
@@ -1647,7 +1661,6 @@ ul {
   
   .Home_InvestingTerms {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     margin-top: 40px;
     width: 100%;
@@ -1667,20 +1680,20 @@ ul {
     text-align: center;
   }
   
-  .Home_Marketplace > .Image_Placeholder {
-    height: 400px;
-  }
-  
   .Home_Marketplace > .Vendor_Benefits > .Home_Buttons {
     display: flex;
     justify-content: center;
   }
   
   .Home_Newsletter {
-    align-items: center;
+    background-color: black;
     display: flex;
-    justify-content: center;
     padding: 90px 20px;
+    width: 100%;
+  }
+  
+  .Home_Newsletter > div {
+    width: 50%;
   }
   
   .Home_Partners {
@@ -1693,6 +1706,15 @@ ul {
   
   .Image_Placeholder {
     margin-top: 30px;
+  }
+  
+  .Input {
+    border: 1.5px solid grey;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
   }
   
   .Inventory_Overview {
@@ -1739,6 +1761,17 @@ ul {
   }
   
   .Marketplace_Screenshot {
+    width: 100%;
+  }
+  
+  .Menu_Button {
+    width: 50%;
+  }
+  
+  .Menu_Buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
     width: 100%;
   }
 
