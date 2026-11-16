@@ -27,12 +27,12 @@ const featuredProducts = [
 ];
 
 const acceleratorStages = [
-  "Ideation & discovery",
-  "Opportunity evaluation & planning",
-  "Startup & launch",
-  "Growth & traction",
-  "Maturity & expansion",
-  "Exit, renewal & succession",
+  { title: "Ideation & discovery", description: "Shape an early idea and understand the people it can serve." },
+  { title: "Opportunity evaluation & planning", description: "Test the opportunity and plan a practical path forward." },
+  { title: "Startup & launch", description: "Build the foundations and bring your business to market." },
+  { title: "Growth & traction", description: "Reach more customers and strengthen what is working." },
+  { title: "Maturity & expansion", description: "Improve operations and explore new ways to grow." },
+  { title: "Exit, renewal & succession", description: "Plan for continuity, transition, or the next chapter." },
 ];
 
 export default function Home() {
@@ -50,15 +50,15 @@ export default function Home() {
     <main className="homePage">
       <section className="homeHero" aria-labelledby="home-title">
         <div className="homeHero__content">
+          <a className="homeHero__scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a>
           <p className="homeEyebrow homeEyebrow--light">A platform for participation</p>
           <h1 id="home-title">Personal and business solutions</h1>
           <p className="homeHero__summary">A platform built for economic participation.</p>
           <div className="homeHero__actions">
-            <Link className="homeButton homeButton--light" href="/profiles/personal">Explore personal</Link>
-            <Link className="homeButton homeButton--outline" href="/profiles/Business">Explore business</Link>
+            <Link className="homeButton homeButton--primary homeButton--light" href="/profiles/personal">Explore personal</Link>
+            <Link className="homeButton homeButton--secondary homeButton--outline" href="/profiles/Business">Explore business</Link>
           </div>
         </div>
-        <a className="homeHero__scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a>
       </section>
 
       <section className="homeSection homeInvesting" id="investing" aria-labelledby="investing-title">
@@ -72,8 +72,9 @@ export default function Home() {
             <article className="homeInvestmentCard" key={option.name}>
               <span className="homeCardNumber">{option.number}</span>
               <h3>{option.name}</h3>
+              <hr className="homeInvestmentCard__divider" />
               <p>{option.description}</p>
-              <Link className="homeTextLink" href={option.href}>Browse options <span aria-hidden="true">↗</span></Link>
+              <Link className="homeTextLink homeButton homeButton--secondary" href={option.href}>Browse options <span aria-hidden="true">↗</span></Link>
             </article>
           ))}
         </div>
@@ -85,7 +86,7 @@ export default function Home() {
             <p className="homeEyebrow homeEyebrow--light">Support at every stage</p>
             <h2 id="funding-title">Access funding for your business</h2>
             <p>Find funding pathways designed around different needs and stages of your business journey.</p>
-            <Link className="homeButton homeButton--light" href="/funding">Explore funding</Link>
+            <Link className="homeButton homeButton--primary homeButton--light" href="/funding">Explore funding</Link>
           </div>
           <div className="homeFundingGrid">
             {fundingOptions.map((option) => (
@@ -93,6 +94,7 @@ export default function Home() {
                 <span className="homeFundingCard__arrow" aria-hidden="true">↗</span>
                 <h3>{option.title}</h3>
                 <p>{option.description}</p>
+                <span className="homeFundingCard__action">Learn more <span aria-hidden="true">→</span></span>
               </Link>
             ))}
           </div>
@@ -109,7 +111,7 @@ export default function Home() {
             <li>Connect with businesses and customers</li>
             <li>Make more informed decisions as you grow</li>
           </ul>
-          <Link className="homeButton homeButton--dark" href="/marketplace">Explore the marketplace</Link>
+          <Link className="homeButton homeButton--primary homeButton--dark" href="/marketplace">Explore the marketplace <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="homeMarketplace__visual">
           <Image
@@ -148,7 +150,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <Link className="homeProductCarousel__all" href="/marketplace">View the marketplace <span aria-hidden="true">↗</span></Link>
+          <Link className="homeProductCarousel__all homeButton homeButton--secondary" href="/marketplace">View the marketplace <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
 
@@ -157,7 +159,7 @@ export default function Home() {
           <p className="homeEyebrow homeEyebrow--light">Learn, build, grow</p>
           <h2 id="academy-title">Turn your ambition into action</h2>
           <p>Build practical skills and explore learning opportunities through Systemism Academy.</p>
-          <Link className="homeButton homeButton--light" href="/academy">Explore the academy</Link>
+          <Link className="homeButton homeButton--primary homeButton--light" href="/academy">Explore the academy</Link>
         </div>
         <div className="homeAcademy__index" aria-hidden="true">01 <span>Learn</span><br />02 <span>Apply</span><br />03 <span>Grow</span></div>
       </section>
@@ -167,7 +169,7 @@ export default function Home() {
           <p className="homeEyebrow">Find your next connection</p>
           <h2 id="directory-title">Find a service provider near you</h2>
           <p>Explore the directory to discover businesses and services that can support your next step.</p>
-          <Link className="homeButton homeButton--dark" href="/directory">Browse the directory</Link>
+          <Link className="homeButton homeButton--primary homeButton--dark" href="/directory">Browse the directory <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="homeDirectory__map" aria-label="Directory map preview">
           <div className="homeMapPin" aria-hidden="true">●</div>
@@ -180,11 +182,14 @@ export default function Home() {
           <p className="homeEyebrow homeEyebrow--light">Your journey, supported</p>
           <h2 id="accelerator-title">Grow your business at every stage</h2>
           <p>Move from your first idea to your next opportunity with support for the journey ahead.</p>
-          <Link className="homeButton homeButton--light" href="/accelerator">Discover the accelerator</Link>
+          <Link className="homeButton homeButton--primary homeButton--light" href="/accelerator">Discover the accelerator</Link>
         </div>
         <ol className="homeStageList">
           {acceleratorStages.map((stage, index) => (
-            <li key={stage}><span>0{index + 1}</span>{stage}</li>
+            <li key={stage.title}>
+              <span className="homeStageList__number">0{index + 1}</span>
+              <div><h3>{stage.title}</h3><p>{stage.description}</p></div>
+            </li>
           ))}
         </ol>
       </section>
@@ -198,61 +203,67 @@ export default function Home() {
       </section>
 
       <style jsx>{`
-        .homePage { --home-ink: #171815; --home-muted: #66675f; --home-cream: #f7f6df; --home-paper: #fbfaf6; --home-line: #e4e2d7; --home-dark: #171b18; background: var(--home-paper); color: var(--home-ink); overflow: hidden; }
+        .homePage { --home-ink: #171815; --home-muted: #66675f; --home-cream: #f7f6df; --home-paper: #fbfaf6; --home-line: #e4e2d7; --home-dark: #171b18; background: var(--home-paper); color: var(--home-ink); font-family: inherit; overflow: hidden; }
         .homePage *, .homePage *::before, .homePage *::after { box-sizing: border-box; }
         .homePage a { text-decoration: none; }
+        .homePage p { font-size: 1rem; line-height: 1.7; }
         .homeHero { align-items: center; background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); background-position: center; background-size: cover; color: white; display: flex; min-height: min(720px, calc(100svh - 110px)); padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); position: relative; }
         .homeHero__content { max-width: 700px; padding-right: 1.5rem; }
-        .homeEyebrow { color: #77786e; font-size: .76rem; font-weight: 700; letter-spacing: .16em; margin: 0 0 1rem; text-transform: uppercase; }
+        .homeEyebrow { color: #77786e; font-size: .76rem !important; font-weight: 700; letter-spacing: .16em; line-height: 1.4 !important; margin: 0 0 1rem; text-transform: uppercase; }
         .homeEyebrow--light { color: #e4e5cf; }
         .homeHero h1 { color: white; font-size: clamp(3rem, 7.5vw, 6.5rem); letter-spacing: -.055em; line-height: .99; margin: 0; max-width: 700px; }
-        .homeHero__summary { color: white; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.6; margin: 1.5rem 0 2rem; max-width: 520px; }
+        .homeHero__summary { color: white; font-size: clamp(1.05rem, 2vw, 1.25rem) !important; line-height: 1.65 !important; margin: 1.5rem 0 2rem; max-width: 520px; }
         .homeHero__actions { display: flex; flex-wrap: wrap; gap: .75rem; max-width: 560px; }
-        .homeButton { align-items: center; border: 1px solid transparent; border-radius: 12px; display: inline-flex; font-size: .95rem; font-weight: 700; justify-content: center; min-height: 52px; padding: .8rem 1.35rem; transition: transform .18s ease, background .18s ease; }
-        .homeButton:hover { transform: translateY(-2px); }
+        .homeButton { align-items: center; border: 1px solid transparent; border-radius: 10px; display: inline-flex; font-size: .93rem; font-weight: 700; gap: .45rem; justify-content: center; min-height: 50px; padding: .8rem 1.35rem; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+        .homeButton:hover { box-shadow: 0 8px 20px rgb(0 0 0 / 14%); transform: translateY(-2px); }
+        .homeButton:focus-visible, .homeTextLink:focus-visible, .homeFundingCard:focus-visible, .homeProductCard a:focus-visible { outline: 3px solid #87966c; outline-offset: 3px; }
+        .homeButton--primary { box-shadow: 0 3px 8px rgb(0 0 0 / 12%); }
+        .homeButton--secondary { background: transparent; border-color: #9c9b8e; color: var(--home-ink); }
         .homeButton--light { background: var(--home-cream); color: var(--home-ink); }
-        .homeButton--outline { border-color: rgb(255 255 255 / 75%); color: white; }
+        .homeButton--outline { border-color: rgb(255 255 255 / 78%); color: white; }
         .homeButton--dark { background: var(--home-ink); color: white; }
-        .homeHero__scroll { bottom: 2rem; color: white; font-size: .85rem; left: max(6vw, calc((100vw - 1200px) / 2)); position: absolute; }
-        .homeHero__scroll span { margin-left: .5rem; }
+        .homeHero__scroll { color: white; display: inline-flex; font-size: .88rem !important; font-weight: 700; gap: .45rem; line-height: 1.4 !important; margin: 0 0 2rem; text-decoration: underline !important; text-decoration-color: rgb(255 255 255 / 55%) !important; text-underline-offset: 5px; }
         .homeSection { margin: 0 auto; max-width: 1320px; padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem); }
         .homeSection__intro { max-width: 660px; }
         .homeSection h2, .homeAcademy h2, .homeAccelerator h2, .homePartners h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); letter-spacing: -.045em; line-height: 1.08; margin: 0 0 1rem; }
-        .homeSection__intro > p:last-child, .homeMarketplace__copy > p:not(.homeEyebrow), .homeDirectory__copy > p:not(.homeEyebrow), .homeAcademy__content > p:not(.homeEyebrow), .homeAccelerator .homeSection__intro > p:not(.homeEyebrow) { color: var(--home-muted); font-size: 1.08rem; line-height: 1.7; margin: 0; }
+        .homeSection__intro > p:last-child, .homeMarketplace__copy > p:not(.homeEyebrow), .homeDirectory__copy > p:not(.homeEyebrow), .homeAcademy__content > p:not(.homeEyebrow), .homeAccelerator .homeSection__intro > p:not(.homeEyebrow) { color: var(--home-muted); font-size: 1rem !important; line-height: 1.75 !important; margin: 0; max-width: 58ch; }
         .homeInvestmentGrid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.5rem; }
-        .homeInvestmentCard { background: var(--home-cream); border: 1px solid #e8e6d5; border-radius: 16px; display: flex; flex-direction: column; min-height: 280px; padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: 0 10px 26px rgb(14 15 12 / 4%); transition: transform .18s ease, box-shadow .18s ease; }
-        .homeInvestmentCard:hover { transform: translateY(-3px); box-shadow: 0 18px 32px rgb(14 15 12 / 8%); }
+        .homeInvestmentCard { background: var(--home-cream); border: 1px solid #e8e6d5; border-radius: 16px; box-shadow: 0 10px 26px rgb(14 15 12 / 4%); display: flex; flex-direction: column; min-height: 280px; padding: clamp(1.5rem, 3vw, 2.25rem); transition: transform .18s ease, box-shadow .18s ease; }
+        .homeInvestmentCard:hover { box-shadow: 0 18px 32px rgb(14 15 12 / 8%); transform: translateY(-3px); }
         .homeCardNumber { color: #77786e; font-size: .78rem; font-weight: 700; letter-spacing: .1em; }
-        .homeInvestmentCard h3 { font-size: 1.4rem; margin: 2rem 0 .7rem; }
-        .homeInvestmentCard p, .homeFundingCard p { color: var(--home-muted); line-height: 1.65; margin: 0 0 1.6rem; }
-        .homeTextLink { color: var(--home-ink); font-size: .95rem; font-weight: 700; margin-top: auto; }
-        .homeTextLink span { margin-left: .4rem; }
+        .homeInvestmentCard h3 { font-size: 1.4rem; margin: 1.6rem 0 .7rem; }
+        .homeInvestmentCard__divider { border: 0; border-top: 1px solid #d5d3c3; margin: 0 0 1rem; width: 100%; }
+        .homeInvestmentCard p { color: var(--home-muted); line-height: 1.65 !important; margin: 0 0 1.5rem; }
+        .homeTextLink { align-self: flex-start; margin-top: auto; min-height: 44px; padding: .65rem 1rem; }
+        .homeTextLink span { margin-left: .2rem; }
         .homeFunding { background: linear-gradient(105deg, rgb(13 17 15 / 92%), rgb(13 17 15 / 78%)), url('/root/funding.jpg') center / cover; color: white; }
         .homeFunding__inner { display: grid; gap: 3rem; grid-template-columns: .85fr 1.15fr; margin: 0 auto; max-width: 1320px; padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem); }
         .homeSection__intro--light h2, .homeSection__intro--light > p:not(.homeEyebrow) { color: white; }
         .homeSection__intro--light .homeButton { margin-top: 1.75rem; }
-        .homeFundingGrid { display: grid; gap: .75rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .homeFundingCard { background: rgb(255 255 255 / 7%); border: 1px solid rgb(255 255 255 / 20%); border-radius: 12px; color: white; min-height: 160px; padding: 1.25rem; transition: background .18s ease, transform .18s ease; }
-        .homeFundingCard:hover { background: rgb(255 255 255 / 13%); transform: translateY(-2px); }
-        .homeFundingCard h3 { color: white; font-size: 1.1rem; margin: 1rem 0 .45rem; }
-        .homeFundingCard p { color: #dedfd6; font-size: .9rem; margin: 0; }
-        .homeFundingCard__arrow { color: #e5e5c7; float: right; }
+        .homeFundingGrid { display: grid; gap: .85rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .homeFundingCard { background: linear-gradient(145deg, rgb(255 255 255 / 12%), rgb(255 255 255 / 5%)); border: 1px solid rgb(255 255 255 / 24%); border-radius: 14px; color: white; display: flex; flex-direction: column; min-height: 190px; padding: 1.35rem; transition: background .18s ease, transform .18s ease, border-color .18s ease; }
+        .homeFundingCard:hover { background: rgb(255 255 255 / 16%); border-color: rgb(255 255 255 / 48%); transform: translateY(-2px); }
+        .homeFundingCard h3 { color: white; font-size: 1.1rem; margin: .7rem 0 .45rem; }
+        .homeFundingCard p { color: #e2e3dc; font-size: .91rem !important; line-height: 1.6 !important; margin: 0 0 1rem; }
+        .homeFundingCard__arrow { align-self: flex-end; color: #e5e5c7; }
+        .homeFundingCard__action { border-top: 1px solid rgb(255 255 255 / 22%); color: #f7f6df; font-size: .83rem; font-weight: 700; margin-top: auto; padding-top: .8rem; }
+        .homeFundingCard__action span { margin-left: .25rem; }
         .homeMarketplace { align-items: center; display: grid; gap: clamp(2rem, 6vw, 5rem); grid-template-columns: 1fr 1fr; }
         .homeMarketplace__copy { max-width: 560px; }
         .homeBenefits { display: grid; gap: .85rem; list-style: none; margin: 1.75rem 0; padding: 0; }
-        .homeBenefits li { line-height: 1.5; padding-left: 1.75rem; position: relative; }
+        .homeBenefits li { line-height: 1.6 !important; padding-left: 1.75rem; position: relative; }
         .homeBenefits li::before { color: #5f6b42; content: '✓'; font-weight: 700; left: 0; position: absolute; }
-        .homeMarketplace__visual { background: var(--home-cream); border-radius: 18px; padding: clamp(.75rem, 2vw, 1.5rem); box-shadow: 0 20px 40px rgb(17 21 18 / 6%); }
+        .homeMarketplace__visual { background: var(--home-cream); border-radius: 18px; box-shadow: 0 20px 40px rgb(17 21 18 / 6%); padding: clamp(.75rem, 2vw, 1.5rem); }
         .homeMarketplace__visual :global(img) { border-radius: 10px; display: block; height: auto; width: 100%; }
         .homeProductCarousel { grid-column: 1 / -1; margin-top: 1.5rem; min-width: 0; }
         .homeProductCarousel__heading { align-items: end; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
         .homeProductCarousel__heading .homeEyebrow { margin-bottom: .6rem; }
         .homeProductCarousel__heading h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); letter-spacing: -.035em; margin: 0; }
-        .homeProductCarousel__note { color: var(--home-muted); font-size: .9rem; margin: .5rem 0 0; }
-        .homeCarouselControls { display: flex; gap: .5rem; flex-shrink: 0; }
+        .homeProductCarousel__note { color: var(--home-muted); font-size: .9rem !important; margin: .5rem 0 0; }
+        .homeCarouselControls { display: flex; flex-shrink: 0; gap: .5rem; }
         .homeCarouselControls button { align-items: center; background: white; border: 1px solid var(--home-line); border-radius: 50%; color: var(--home-ink); cursor: pointer; display: inline-flex; font-size: 1.2rem; height: 44px; justify-content: center; width: 44px; }
         .homeCarouselControls button:hover { background: var(--home-cream); }
-        .homeCarouselControls button:focus-visible, .homeProductTrack:focus-visible, .homeProductCard a:focus-visible { outline: 3px solid #71805b; outline-offset: 3px; }
+        .homeCarouselControls button:focus-visible, .homeProductTrack:focus-visible { outline: 3px solid #71805b; outline-offset: 3px; }
         .homeProductTrack { display: grid; gap: 1rem; grid-auto-columns: minmax(220px, 1fr); grid-auto-flow: column; overflow-x: auto; overscroll-behavior-inline: contain; padding: .2rem .1rem 1rem; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-color: #b7b7a4 transparent; scrollbar-width: thin; }
         .homeProductCard { background: white; border: 1px solid var(--home-line); border-radius: 14px; min-width: 0; overflow: hidden; scroll-snap-align: start; }
         .homeProductCard__art { align-items: center; display: flex; height: 190px; justify-content: center; overflow: hidden; position: relative; }
@@ -265,11 +276,11 @@ export default function Home() {
         .homeProductCard__art > span { color: rgb(36 41 32 / 72%); font-size: 4.5rem; position: relative; z-index: 1; }
         .homeProductCard__art small { bottom: .8rem; color: rgb(23 24 21 / 65%); font-size: .65rem; letter-spacing: .12em; position: absolute; text-transform: uppercase; }
         .homeProductCard__details { padding: 1rem 1.1rem 1.15rem; }
-        .homeProductCard__details > p { color: var(--home-muted); font-size: .78rem; margin: 0 0 .35rem; }
+        .homeProductCard__details > p { color: var(--home-muted); font-size: .78rem !important; margin: 0 0 .35rem; }
         .homeProductCard__details h4 { font-size: 1rem; margin: 0 0 .9rem; }
-        .homeProductCard__details a, .homeProductCarousel__all { color: var(--home-ink); font-size: .86rem; font-weight: 700; }
+        .homeProductCard__details a { color: var(--home-ink); font-size: .86rem; font-weight: 700; }
         .homeProductCard__details a span, .homeProductCarousel__all span { margin-left: .3rem; }
-        .homeProductCarousel__all { display: inline-block; margin-top: .65rem; }
+        .homeProductCarousel__all { margin-top: 1rem; }
         .homeAcademy { align-items: center; background: #222822; color: white; display: flex; justify-content: space-between; gap: 2rem; padding: clamp(4rem, 8vw, 7rem) max(6vw, calc((100vw - 1200px) / 2)); }
         .homeAcademy__content { max-width: 650px; }
         .homeAcademy h2, .homeAccelerator h2 { color: white; }
@@ -279,7 +290,7 @@ export default function Home() {
         .homeAcademy__index span { color: #b8bbae; font-size: 1rem; margin-left: .75rem; }
         .homeDirectory { align-items: center; display: grid; gap: 3rem; grid-template-columns: .9fr 1.1fr; }
         .homeDirectory__copy { max-width: 520px; }
-        .homeDirectory__copy .homeButton { margin-top: 1.5rem; }
+        .homeDirectory__copy .homeButton { margin-top: 2rem; }
         .homeDirectory__map { align-items: center; background: linear-gradient(135deg, #f1f0e5, #e5e8dc); border: 1px solid var(--home-line); border-radius: 18px; display: flex; flex-direction: column; height: 330px; justify-content: center; overflow: hidden; position: relative; }
         .homeDirectory__map::before, .homeDirectory__map::after { border: 1px solid #d5d8ca; border-radius: 50%; content: ''; height: 70%; position: absolute; transform: rotate(-25deg); width: 120%; }
         .homeDirectory__map::after { height: 45%; transform: rotate(25deg); width: 150%; }
@@ -290,19 +301,23 @@ export default function Home() {
         .homeAccelerator .homeSection__intro > p:not(.homeEyebrow) { color: #d7d9d0; }
         .homeAccelerator .homeButton { margin-top: 1.75rem; }
         .homeStageList { border-top: 1px solid #4d524c; list-style: none; margin: 0; padding: 0; }
-        .homeStageList li { align-items: center; border-bottom: 1px solid #4d524c; display: flex; gap: 1rem; min-height: 58px; }
-        .homeStageList li span { color: #c5c6a9; font-size: .76rem; letter-spacing: .1em; }
+        .homeStageList li { align-items: flex-start; border-bottom: 1px solid #4d524c; display: flex; gap: 1rem; padding: 1rem 0; }
+        .homeStageList__number { color: #c5c6a9; flex: 0 0 2rem; font-size: .76rem; letter-spacing: .1em; padding-top: .2rem; }
+        .homeStageList h3 { color: white; font-size: 1rem; margin: 0 0 .3rem; }
+        .homeStageList p { color: #c9cbc2; font-size: .88rem !important; line-height: 1.55 !important; margin: 0; max-width: 48ch; }
         .homePartners { background: var(--home-paper); padding: 4rem 1.25rem; text-align: center; }
         .homePartners h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
         .homePartners__logo { align-items: center; display: flex; justify-content: center; margin: 2rem auto 0; }
         .homePartners__logo :global(img) { height: auto; max-height: 100px; object-fit: contain; width: 150px; }
+
         @media (max-width: 760px) {
-          .homeHero { background-position: 58% center; min-height: 660px; padding: 4.5rem 1.25rem 5rem; }
+          .homeHero { align-items: flex-start; background-position: 58% center; background-size: auto 100%; min-height: min(610px, calc(100svh - 185px)); padding: 1.25rem 1.25rem 3.5rem; }
+          .homeHero__content { padding: 0; width: 100%; }
+          .homeHero__scroll { margin-bottom: 1.5rem; }
           .homeHero h1 { font-size: clamp(3rem, 12vw, 4.5rem); max-width: 560px; }
           .homeHero__summary { max-width: 380px; }
           .homeHero__actions { align-items: stretch; flex-direction: column; max-width: 420px; width: 100%; }
           .homeHero__actions .homeButton { width: 100%; }
-          .homeHero__scroll { bottom: 1.5rem; left: 1.25rem; }
           .homeInvestmentGrid { grid-template-columns: 1fr; }
           .homeInvestmentCard { min-height: 235px; }
           .homeFunding__inner { grid-template-columns: 1fr; }
@@ -317,9 +332,9 @@ export default function Home() {
           .homeDirectory__map { height: 260px; }
         }
         @media (max-width: 420px) {
-          .homeHero { min-height: 620px; }
+          .homeHero { min-height: min(590px, calc(100svh - 170px)); }
           .homeFundingGrid { grid-template-columns: 1fr; }
-          .homeFundingCard { min-height: 130px; }
+          .homeFundingCard { min-height: 160px; }
           .homeProductCarousel__heading { align-items: flex-start; }
           .homeCarouselControls button { height: 40px; width: 40px; }
         }
