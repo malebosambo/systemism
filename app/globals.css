@@ -72,11 +72,66 @@ ul {
   margin: -8px -8px 0 -8px;
 }
 
-.Home_Banner {
-  background-image: url("/root/CraftsSMME.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.HomeButton {
+  align-items: center; 
+  border: 1px solid transparent; 
+  border-radius: 12px; 
+  display: inline-flex; 
+  font-size: .95rem; 
+  font-weight: 700; 
+  justify-content: center; 
+  min-height: 52px; 
+  padding: .8rem 1.35rem; 
+  transition: transform .18s ease, background .18s ease;
+} 
+
+.HomeButton--Light {
+  background: var(--home-cream); 
+  color: var(--home-ink);
+}
+
+.HomeButton--Outline {
+  border-color: rgb(255 255 255 / 75%);
+  color: white;
+}
+
+.HomeHero {
+  align-items: center; 
+  background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); background-position: center; background-size: cover; color: white; display: flex; min-height: min(720px, calc(100svh - 110px)); padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); 
+  position: relative;
+}
+
+.HomeHero__Content {
+  max-width: 700px; 
+  padding-right: 1.5rem
+}
+
+.HomeEyebrow {
+  color: #77786e; 
+  font-size: .76rem; 
+  font-weight: 700; 
+  letter-spacing: .16em; 
+  margin: 0 0 1rem; 
+  text-transform: uppercase;
+}
+
+.HomeEyebrow--Light {
+  color: #e4e5cf;
+}
+
+.HomeHero__Actions {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .75rem; 
+  max-width: 560px;
+}
+
+.HomeHero__Summary {
+  color: white; 
+  font-size: clamp(1.05rem, 2vw, 1.35rem); 
+  line-height: 1.6; 
+  margin: 1.5rem 0 2rem; 
+  max-width: 520px;
 }
 
 .Home_Funding {
@@ -86,6 +141,9 @@ ul {
   background-size: cover;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .HomePage * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
 
 @media only screen and (max-width: 600px) { 
   
@@ -297,9 +355,9 @@ ul {
     color: white;
   }
 
-  .Home_Banner {
+  .HomeHero {
     margin: 0 -8px;
-    padding: 50px 20px;
+    min-height: 620px;
   }
   
   .Home_Buttons {
@@ -810,9 +868,35 @@ ul {
     color: white;
   }
 
-  .Home_Banner {
-    margin: 0 -8px;
-    padding: 90px 20px;
+  .HomeHero {
+    background-position: 58% center;
+    min-height: 660px; 
+    padding: 4.5rem 1.25rem 5rem;
+  }
+  
+  .HomeHero h1 {
+    font-size: clamp(3rem, 12vw, 4.5rem); 
+    max-width: 560px;
+  }
+  
+  .HomeHero__Actions {
+    align-items: stretch; 
+    flex-direction: column; 
+    max-width: 420px; 
+    width: 100%;
+  }
+  
+  .HomeHero__Actions .HomeButton {
+    width: 100%;
+  }
+  
+  .HomeHero__Scroll {
+    bottom: 1.5rem; 
+    left: 1.25rem;
+  }
+  
+  .HomeHero__Summary {
+    max-width: 380px;
   }
   
   .Home_Buttons {
@@ -1654,6 +1738,68 @@ ul {
   .Hide {
     display: none;
   }
+  
+  .HomeButton {
+  align-items: center; 
+  border: 1px solid transparent; 
+  border-radius: 12px; 
+  display: inline-flex; 
+  font-size: .95rem; 
+  font-weight: 700; 
+  justify-content: center; 
+  min-height: 52px; 
+  padding: .8rem 1.35rem; 
+  transition: transform .18s ease, background .18s ease;
+} 
+
+.HomeButton--Light {
+  background: var(--home-cream); 
+  color: var(--home-ink);
+}
+
+.HomeButton--Outline {
+  border-color: rgb(255 255 255 / 75%);
+  color: white;
+}
+
+.HomeHero {
+  align-items: center; 
+  background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); background-position: center; background-size: cover; color: white; display: flex; min-height: min(720px, calc(100svh - 110px)); padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); 
+  position: relative;
+}
+
+.HomeHero__Content {
+  max-width: 700px; 
+  padding-right: 1.5rem
+}
+
+.HomeEyebrow {
+  color: #77786e; 
+  font-size: .76rem; 
+  font-weight: 700; 
+  letter-spacing: .16em; 
+  margin: 0 0 1rem; 
+  text-transform: uppercase;
+}
+
+.HomeEyebrow--Light {
+  color: #e4e5cf;
+}
+
+.HomeHero__Actions {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .75rem; 
+  max-width: 560px;
+}
+
+.HomeHero__Summary {
+  color: white; 
+  font-size: clamp(1.05rem, 2vw, 1.35rem); 
+  line-height: 1.6; 
+  margin: 1.5rem 0 2rem; 
+  max-width: 520px;
+}
 
   .Home_Academy {
     background-color: black;

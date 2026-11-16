@@ -11,16 +11,22 @@ export default function Home() {
   return (
     <main className="Home">
       
-      <div className="Home_Banner">
-        <div><h1 style={{ color: "white" }}>Personal and business solutions</h1></div>
-        
-        <div className="Paragraph"><p style={{ color: "white" }}>A platform built for economic participation.</p></div>
-        
-        <div className="Home_Buttons">
-          <div className="Button_Primary"><Link href="/profiles/personal">Personal</Link></div>
+      <div className="HomeHero" aria-labelledby="home-title">
+        <div className="HomeHero__Content">
           
-          <div className="Button_Primary"><Link href="/profiles/business">Business</Link></div>
+          <div><p className="HomeEyebrow HomeEyebrow--Light"></p></div>
+          
+          <div><h1 id="Home-Title">Personal and business solutions</h1></div>
+        
+          <div><p className="HomeHero__Summary">A platform built for economic participation.</p></div>
+        
+          <div className="HomeHero__Actions">
+            <div><Link href="/profiles/personal" className="HomeButton HomeButton--Light">Explore Personal</Link></div>
+          
+            <div><Link href="/profiles/business" className="HomeButton HomeButton--Outline">Explore Business</Link></div>
+          </div>
         </div>
+        <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
       </div>
       
       <div className="Home_Investing">
