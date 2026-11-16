@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
-import { ReadListings } from "@/app/lib/firebase";
+import { ReadListings } from "@/app/lib/firestore";
 import ListingDetailsCard from "@/app/components/listingDetailsCard";
 
 export default function Listings() {

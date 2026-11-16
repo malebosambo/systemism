@@ -7,7 +7,7 @@ const client = new SMTPClient({
   "ssl": true
 });
 
-export async function Welcome(fullname,name, email) {
+export async function Welcome( fullname, name, email ) {
   
   try {
     
