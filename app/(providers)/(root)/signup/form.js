@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence, sendEmailVerification, signOut } from "firebase/auth";
 import { Timestamp } from "firebase/firestore";
 import { auth } from "@/firebase";
-import { CreateProfile } from "@/app/lib/firestore";
+import { WriteProfile } from "@/app/lib/firestore";
 
 export default function SignupForm() {
   
@@ -51,7 +51,7 @@ export default function SignupForm() {
         }
       );
       
-      await CreateProfile({
+      await WriteProfile({
         id: firebaseUser.uid,
         name: user.name.trim(),
         surname: user.surname.trim(),

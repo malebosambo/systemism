@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
-import { GetEnterprises } from "@/app/lib/firestore";
+import { ReadEnterprises } from "@/app/lib/firestore";
 import EnterpriseDetailsCard from "@/app/components/enterpriseDetailsCard";
 
 export default function Enterprises() {
@@ -26,7 +26,7 @@ export default function Enterprises() {
     
     async function loadEnterprises() {
       try {
-        const docs = await GetEnterprises(profile.id);
+        const docs = await ReadEnterprises(profile.id);
         if (!cancelled) {
           setEnterprises(docs.map((doc) => ({
             id: doc.id,

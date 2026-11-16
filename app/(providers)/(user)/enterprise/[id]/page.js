@@ -31,7 +31,7 @@ export default function ViewEnterprise() {
   }
   
   const enterprise = async () => {
-    await GetEnterprise();
+    await ReadEnterprise(id);
   } 
   
   return (

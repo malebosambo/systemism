@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
+import { ReadListings } from "@/app/lib/firebase";
 import ListingDetailsCard from "@/app/components/listingDetailsCard";
 
 export default function Listings() {
@@ -16,6 +17,28 @@ export default function Listings() {
   
     if (loading === false && !user) {
       router.replace("/login");
+    }
+    
+    let cancelled = false;
+    
+    async function loadListings() {
+      try {
+        const docs = await ReadListings(profile.id);
+        if (!cancelled) {
+          setInventories(docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+          })));
+        }
+      } catch (error) {
+        console.error("Could not load inventories:", error);
+      }
+    }
+    
+    loadListings();
+    
+    return () => {
+      cancelled = true;
     }
   
   }, [user, loading, router]);
@@ -39,7 +62,7 @@ export default function Listings() {
       
       <div><Link href="/listings/add" className="Button_Secondary">Add</Link></div>
       
-      <div></div>
+      <div>{listings.map((listing) => (<ListingDetailsCard key={listing.name} listing={listing} />))}</div>
       
     </main>
   )

@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useAuth } from "@/app/lib/authContext";
+import { WriteListing } from "@/app/lib/firestore";
 
 export default function AddListing() {
+  
+  const { profile } = useAuth();
   
   const [ listing, setListing ] = useState({
     name: "",
@@ -16,6 +20,10 @@ export default function AddListing() {
     services: [],
     hours: []
   });
+  
+  const handleOnSubmit = async () => {
+    await WriteListing(listing, profile.id);
+  }
   
   function handleChange(e) {
     const { name, value } = e.target;

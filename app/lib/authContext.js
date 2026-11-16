@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged, reload, signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
-import { GetProfile } from './firestore';
+import { ReadProfile } from './firestore';
 
 const AuthContext = createContext();
 
@@ -42,7 +42,7 @@ export function AuthProvider({ children }) {
           return;
         }
           
-        const dbProfile = await GetProfile(firebaseUser);
+        const dbProfile = await ReadProfile(firebaseUser);
           
         if (isMounted) {
           setProfile(dbProfile);

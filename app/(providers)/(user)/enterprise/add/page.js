@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useAuth } from "@/app/lib/authContext";
-import { CreateEnterprise } from "@/app/lib/firestore"
+import { WriteEnterprise } from "@/app/lib/firestore"
 
 export default function AddEnterprise() {
   
@@ -32,7 +32,7 @@ export default function AddEnterprise() {
   }
   
   const handleOnSubmit = async () => {
-    await CreateEnterprise(enterprise, profile.id);
+    await WriteEnterprise(enterprise, profile.id);
   }
   
   function handleChange(e) {

@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
-import { GetInventories } from "@/app/lib/firestore";
+import { ReadInventories } from "@/app/lib/firestore";
 import InventoryItemCard from "@/app/components/inventoryItemCard";
 
 export default function Inventory() {
@@ -25,7 +25,7 @@ export default function Inventory() {
     
     async function loadInventory() {
       try {
-        const docs = await GetInventories(profile.id);
+        const docs = await ReadInventories(profile.id);
         if (!cancelled) {
           setInventories(docs.map((doc) => ({
             id: doc.id,

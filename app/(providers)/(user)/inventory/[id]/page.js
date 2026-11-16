@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { GetInventory } from "@/app/lib/firestore";
+import { ReadInventory } from "@/app/lib/firestore";
 
 export default function ViewInventoryItem() {
   
@@ -31,7 +31,7 @@ export default function ViewInventoryItem() {
   }
   
   const product = async () => {
-    await GetInventory();
+    await ReadInventory(id);
   }
   
   return (

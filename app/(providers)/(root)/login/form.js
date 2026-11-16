@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword, setPersistence, browserLocalPersistence, signOut } from "firebase/auth";
 import { auth } from "@/firebase";
-import { GetProfile, UpdateProfile } from "@/app/lib/firestore";
+import { ReadProfile, UpdateProfile } from "@/app/lib/firestore";
 
 export default function LoginForm() {
   
@@ -37,7 +37,7 @@ export default function LoginForm() {
         return;
       }
       
-      const profile = await GetProfile(firebaseUser);
+      const profile = await ReadProfile(firebaseUser);
 
       const emailVerified = { emailVerified: true };
       

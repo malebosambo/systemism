@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useAuth } from "@/app/lib/authContext";
-import { CreateInventory } from "@/app/lib/firestore";
+import { WriteInventory } from "@/app/lib/firestore";
 
 export default function AddInventoryItem() {
   
@@ -22,7 +22,7 @@ export default function AddInventoryItem() {
   });
   
   const handleOnSubmit = async () => {
-    await CreateInventory(inventory, profile.id);
+    await WriteInventory(inventory, profile.id);
   }
   
   function handleChange(e) {
