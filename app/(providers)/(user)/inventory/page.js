@@ -4,10 +4,12 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
-import { GetProfile } from "@/app/lib/firestore";
+import { GetInventories } from "@/app/lib/firestore";
 import InventoryItemCard from "@/app/components/inventoryItemCard";
 
 export default function Inventory() {
+  
+  const [ inventory, setInventory ] = useState([]);
   
   const { user, profile, loading } = useAuth();
   
@@ -18,8 +20,30 @@ export default function Inventory() {
     if (loading === false && !user) {
       router.replace("/login");
     }
+    
+    let cancelled = false;
+    
+    async function loadInventory() {
+      try {
+        const docs = await GetInventories(profile.id);
+        if (!cancelled) {
+          setInventories(docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+          })));
+        }
+      } catch (error) {
+        console.error("Could not load inventories:", error);
+      }
+    }
+    
+    loadInventory();
+    
+    return () => {
+      cancelled = true;
+    }
   
-  }, [user, loading, router]);
+  }, [user, loading, router, profile]);
   
   if (loading) {
     return <div>Loading...</div>
@@ -34,15 +58,17 @@ export default function Inventory() {
   }
   
   return (
-    <main>
+    <main className="Inventory">
       
-      <div><h1>Inventory</h1></div>
+      <div><h1>My Inventory</h1></div>
       
-      <div><Link href="/enterprise/add">Add</Link></div>
+      <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
       
-      <div><input type="search" name="search inventory" placeholder="Search Inventory" /></div>
+      <div className="Inventory_Filters">
+        <input type="search" name="search inventory" placeholder="Search Inventory" />
+      </div>
       
-      <div>{inventories.map((inventory) => (<InventoryItemCard key={item.name} item={inventory} />))}</div>
+      <div className="Inventory_List">{inventory.map((product) => (<InventoryItemCard key={product.name} item={product} />))}</div>
       
     </main>
   )

@@ -21,9 +21,9 @@ export default function EnterpriseDetailsCard({ key, enterprise }) {
           </div>
         
           <div style={{ display: "flex", justifyContent: "space-evenly", padding: "20px" }}>
-            <div><p>AR:</p></div>
-            <div><p>BO:</p></div>
-            <div><p>Tax:</p></div>
+            <div><p>AR: {enterprise.annualReturns}</p></div>
+            <div><p>BO: {enterprise.beneficialOwnership}</p></div>
+            <div><p>Tax: {enterprise.taxReturns}</p></div>
           </div>
         </Link>
       </div>  

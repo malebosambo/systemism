@@ -17,7 +17,7 @@ export default function AddEnterprise() {
     "status": "",
     "finYearEnd": "",
     "taxNumber": 0,
-    "phyAddress": "",
+    "physicalAddress": "",
     "postalAddress": "",
     "directors": 0,
     "annualReturns": false,
@@ -96,8 +96,8 @@ export default function AddEnterprise() {
             <input type="number" name="taxNumber" value={enterprise.taxNumber} onChange={handleChange} placeholder="Tax Number" className="Input" required /></div>
     
           <div>
-            <label for="phyAddress">Physical Address</label>
-            <input type="textarea" name="phyAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.phyAddress} className="Input" required />
+            <label for="physicalAddress">Physical Address</label>
+            <input type="textarea" name="physicalAddress" placeholder="Physical Address" onChange={handleChange} value={enterprise.physicalAddress} className="Input" required />
           </div>
           
           <div>

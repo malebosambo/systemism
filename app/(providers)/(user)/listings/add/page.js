@@ -23,14 +23,28 @@ export default function AddListing() {
   }
 
   return (
-    <main>
+    <main className="Listing_Add">
       
       <div><h1>Add New Listing</h1></div>
       
-      <div><input type="text" name="listing name" value={listing.name} onChange={handleChange} placeholder="Listing" required /></div>
+      <div className="Form_ListingDetails">
+        <form onSubmit={handleOnSubmit}>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" value={listing.name} onChange={handleChange} placeholder="Listing" className="Input" required />
+          </div>
       
-      <div><input type="textarea" name="description" value={listing.description} onChange={handleChange} placeholder="Description" required /></div>
-
+          <div>
+            <label for="description">Description</label>
+            <input type="textarea" name="description" value={listing.description} onChange={handleChange} placeholder="Description" className="Input" required />
+          </div>
+            
+          <div>
+            <button type="submit" name="submit" className="Button_Primary">Submit</button>
+          </div>  
+        </form>
+      </div>
+      
     </main>
   )
 }

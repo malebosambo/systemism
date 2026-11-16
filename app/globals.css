@@ -228,6 +228,24 @@ ul {
     margin-bottom: 25px;
   }
   
+  .Form_InventoryDetails {
+    display: flex;
+    margin: 25px 0;
+  }
+  
+  .Form_InventoryDetails > div {
+    margin-bottom: 25px;
+  }
+  
+  .Form_ListingDetails {
+    display: flex;
+    margin: 25px 0;
+  }
+  
+  .Form_ListingDetails > div {
+    margin-bottom: 25px;
+  }
+  
   .Form_ProfileDetails {
     display: none;
   }
@@ -367,6 +385,32 @@ ul {
     width: 100%;
   }
   
+  .Inventory {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 20px;
+  }
+  
+  .Inventory_Add {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Inventory_Details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .Inventory_Filters {
+    margin-top: 20px;
+  }
+  
+  .Inventory_List {
+    margin-top: 30px;
+  }
+  
   .Inventory_Overview {
     background-color: #F9F9E1;
     border: 1.5px solid black;
@@ -387,8 +431,20 @@ ul {
     padding: 20px 10px;
   }
   
+  .Listings {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 20px;
+  }
+  
   .Listings_Map {
     margin: 25px -16 25px -15px;
+  }
+  
+  .Listing_Add {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
   
   .Listing_Process {
@@ -1554,6 +1610,10 @@ ul {
     margin-bottom: 10px;
     padding: 10px;
   }
+  
+  .Enterprises {
+    padding: 20px;
+  }
 
   .Footer {
     background-color: black;
@@ -1722,6 +1782,14 @@ ul {
     margin-bottom: 10px;
     padding: 5px;
     width: 100%;
+  }
+  
+  .Inventory {
+    padding: 20px;
+  }
+  
+  .Inventory_Filters {
+    margin: 20px 0;
   }
   
   .Inventory_Overview {

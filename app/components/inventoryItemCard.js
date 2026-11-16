@@ -1,21 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function InventoryItemCard({ item, key }) {
+export default function InventoryItemCard({ key, item }) {
   
   return (
     <>
-      <div key={key}>
-        <div><Image src="" alt="Inventory Image" height={50} width={50} /></div>
+      <div key={key} className="InventoryItem">
+        <Link href="/inventory/${inventory.name}">
+          <div><Image src="" alt="Inventory Image" height={50} width={50} /></div>
         
-        <div>
-          <h3>{item.name}</h3>
-          <h4>{item.price}</h4>
-          <h4>{item.description}</h4>
-          <h4>{item.category}</h4>
-          <h4>{item.stock}</h4>
-        </div>
+          <div>
+            <h3>{item.name}</h3>
+            <h4>{item.price}</h4>
+            <h4>{item.description}</h4>
+            <h4>{item.category}</h4>
+            <h4>{item.stock}</h4>
+            <h4>{item.vendor}</h4>
+          </div>
+        </Link>
       </div>
     </>
-  )
+  );
 }

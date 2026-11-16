@@ -118,10 +118,6 @@ export async function CreateInventory(data, id) {
   
 }
 
-export async function GetInventories() {
-  
-}
-
 export async function GetInventory(data) {
   
   const name = data.name;
@@ -133,6 +129,18 @@ export async function GetInventory(data) {
   }
   
   return inventory.data;
+  
+}
+
+export async function GetInventories(id) {
+  
+  const collRef = collection(db, "Profiles", id, "Inventories");
+  
+  const inventories = await getDocs(collRef);
+  console.log(inventories);
+  
+  return inventories.docs;
+  
 }
 
 export function CreateListing(data) {

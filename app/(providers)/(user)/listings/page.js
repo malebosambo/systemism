@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/app/lib/authContext";
+import ListingDetailsCard from "@/app/components/listingDetailsCard";
 
 export default function Listings() {
   
@@ -32,11 +33,11 @@ export default function Listings() {
   }
   
   return (
-    <main>
+    <main className="Listings">
       
       <div><h1>My Listings</h1></div>
       
-      <div><Link href="/listings/add">Add</Link></div>
+      <div><Link href="/listings/add" className="Button_Secondary">Add</Link></div>
       
       <div></div>
       

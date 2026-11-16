@@ -37,55 +37,55 @@ export default function ViewEnterprise() {
   return (
     <main className="Enterprise_Details">
     
-      <div><h1></h1></div>
+      <div><h1>{enterprise.name}</h1></div>
       
       <div>
-        <div><p>AR</p></div>
-        <div><p>BO</p></div>
-        <div><p>Tax Returns</p></div>
+        <div><p>AR: {enterprise.annualReturns}</p></div>
+        <div><p>BO: {enterprise.beneficialOwnership}</p></div>
+        <div><p>Tax Returns: {enterprise.taxReturns}</p></div>
       </div>
       
       <div>
         <div><h2>Registration Certificate</h2></div>
         
         <div>
-          <p>Number: </p>
+          <p>Number: {enterprise.number}</p>
         </div>
         
         <div>
-          <p>Registration Date: </p>
+          <p>Registration Date: {enterprise.registrationDate}</p>
         </div>
         
         <div>
-          <p>Start Date: </p>
+          <p>Start Date: {enterprise.startDate}</p>
         </div>
         
         <div>
-          <p>Type: </p>
+          <p>Type: {enterprise.type}</p>
         </div>
         
         <div>
-          <p>Status: </p>
+          <p>Status: {enterprise.status}</p>
         </div>
         
         <div>
-          <p>Financial Year End: </p>
+          <p>Financial Year End: {enterprise.finYearEnd}</p>
         </div>
         
         <div>
-          <p>Tax Number: </p>
+          <p>Tax Number: {enterprise.taxNumber}</p>
         </div>
         
         <div>
-          <p>Physical Address: </p>
+          <p>Physical Address: {enterprise.physicalAddress}</p>
         </div>
         
         <div>
-          <p>Postal Address: </p>
+          <p>Postal Address: {enterprise.postalAddress}</p>
         </div>
         
         <div>
-          <p>Director(s): </p>
+          <p>Director(s): {enterprise.directors}</p>
         </div>
       </div>
       
