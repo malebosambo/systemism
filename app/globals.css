@@ -2043,7 +2043,7 @@ ul {
   }
   
   .HomeFunding {
-    background: linear-gradient(105deg, rgb(13 17 15 / 92%), rgb(13 17 15 / 78%)), url('/root/funding.jpg') center / cover;
+    background: linear-gradient(105deg, rgb(13 17 15 / 92%), rgb(13 17 15 / 78%)), url('/public/root/funding.jpg') center / cover;
     color: white;
   }
   
@@ -2097,69 +2097,9 @@ ul {
   }
   
   .HomeFunding__Inner {
-    display: grid; gap: 3rem; 
-    grid-template-columns: .85fr 1.15fr; 
-    margin: 0 auto; 
-    max-width: 1320px;
-    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
-  }
-.HomeFunding {
-    background: linear-gradient(105deg, rgb(13 17 15 / 92%), rgb(13 17 15 / 78%)), url('/root/funding.jpg') center / cover;
-    color: white;
-  }
-  
-  .HomeFundingCard {
-    background: linear-gradient(145deg, rgb(255 255 255 / 12%), rgb(255 255 255 / 5%)); 
-    border: 1px solid rgb(255 255 255 / 24%); 
-    border-radius: 14px; 
-    color: white; 
-    display: flex; 
-    flex-direction: column; 
-    min-height: 190px; 
-    padding: 1.35rem; 
-    transition: background .18s ease, transform .18s ease, border-color .18s ease;
-  }
-  
-  .HomeFundingCard:hover {
-    background: rgb(255 255 255 / 16%); 
-    border-color: rgb(255 255 255 / 48%);
-    transform: translateY(-2px);
-  }
-  
-  .HomeFundingCard h3 { 
-    color: white; 
-    font-size: 1.1rem; 
-    margin: .7rem 0 .45rem; 
-  }
-  
-  .HomeFundingCard p { 
-    color: #e2e3dc; 
-    font-size: .91rem !important; 
-    line-height: 1.6 !important; 
-    margin: 0 0 1rem; 
-  }
-  
-  .HomeFundingCard__Action {
-    border-top: 1px solid rgb(255 255 255 / 22%); 
-    color: #f7f6df; 
-    font-size: .83rem; 
-    font-weight: 700; 
-    margin-top: auto; 
-    padding-top: .8rem;
-  }
-  
-  .HomeFundingCard__Action span { margin-left: .25rem; 
-  }
-  
-  .HomeFundingGrid {
     display: grid; 
-    gap: .85rem; 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .HomeFunding__Inner {
-    display: grid; gap: 3rem; 
-    grid-template-columns: .85fr 1.15fr; 
+    gap: 3rem; 
+    grid-template-columns: .5fr 1.15fr;
     margin: 0 auto; 
     max-width: 1320px;
     padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
@@ -2176,7 +2116,8 @@ ul {
     color: white; 
     display: inline-flex; 
     font-size: .88rem !important; 
-    font-weight: 700; gap: .45rem; 
+    font-weight: 700; 
+    gap: .45rem; 
     line-height: 1.4 !important; 
     margin: 0 0 2rem; 
     text-decoration: underline !important; 

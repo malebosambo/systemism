@@ -105,6 +105,7 @@ export default function Home() {
             <div>
               <Link href="/funding" className="HomeButton HomeButton--Primary HomeButton--Light">Explore funding</Link>
             </div>
+            
           </div>
         
           <div className="HomeFundingGrid">
