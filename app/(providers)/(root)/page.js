@@ -90,51 +90,84 @@ export default function Home() {
         
       </div>
       
-      <div className="Home_Funding">
+      <div className="HomeFunding">
         
-        <div><h3 style={{ color: "white" }}>Access funding for any business stage</h3></div>
+        <div className="HomeFunding__Inner">
+          
+          <div className="HomeSection__Intro HomeSection__Intro--Light">
+          
+            <p className="HomeEyebrow HomeEyebrow--Light">Funds at every stage</p>
+          
+            <div><h2>Access funding for any business stage</h2></div>
         
-        <div><p style={{ color: "white" }}>Apply for funding that is tailored for different stages of your business lifecycle.</p></div>
+            <p>Apply for funding that is tailored for different stages of your business lifecycle.</p>
+            
+            <div>
+              <Link href="/funding" className="HomeButton HomeButton--Primary HomeButton--Light">Explore funding</Link>
+            </div>
+          </div>
         
-        <div className="Home_FundingOptions">
+          <div className="HomeFundingGrid">
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link>
-            <p>Raise a crowdfunded project budget with flexible requirements.</p>
-          </div>
+            <div>
+              <Link href="/funding/peer-to-peer" className="HomeFundingCard">
+                <h3>Peer-to-Peer</h3>
+                <p>Raise a crowdfunded project budget with flexible requirements.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/equity"><h3>Equity</h3></Link>
-            <p>Sell some shares to investors for funding.</p>
-          </div>
+            <div>
+              <Link href="/funding/equity" className="HomeFundingCard">
+                <h3>Equity</h3>  
+                <p>Sell some shares to investors for funding.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/invoice-financing"><h3>Invoince Financing</h3></Link>
-            <p>Receive partial or full payment on an invoice sent to debtors.</p>
-          </div>
+            <div>
+              <Link href="/funding/invoice-financing">
+                <h3>Invoice Financing</h3>
+                <p>Receive partial or full payment on an invoice sent to debtors.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/asset-rental"><h3>Asset Rental</h3></Link>
-            <p>Rent available assets through contracts.</p>
-          </div>
+            <div className="Home_FundingOption">
+              <Link href="/funding/asset-rental">
+                <h3>Asset Rental</h3>
+                <p>Rent available assets through contracts.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/loan"><h3>Loan</h3></Link>
-            <p>Apply for long-term & low interest cash with flexible repayment.</p>
-          </div>
+            <div className="Home_FundingOption">
+              <Link href="/funding/loan">
+                <h3>Loan</h3>
+                <p>Apply for long-term & low interest cash with flexible repayment.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/credit"><h3>Credit</h3></Link>
-            <p>Check availability of an advance from vendors.</p>
-          </div>
+            <div className="Home_FundingOption">
+              <Link href="/funding/credit">
+                <h3>Credit</h3>
+                <p>Check availability of an advance from vendors.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           
-          <div className="Home_FundingOption">
-            <Link href="/funding/balance-sheet"><h3>Balance Sheet</h3></Link>
-            <p>Increase capital through your financial books.</p>
+            <div className="Home_FundingOption">
+              <Link href="/funding/balance-sheet">
+                <h3>Balance Sheet</h3>
+                <p>Increase capital through your financial books.</p>
+                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
           </div>
           
         </div>
-        
+      
       </div>
       
       <div className="Home_Newsletter">
