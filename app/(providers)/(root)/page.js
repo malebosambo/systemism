@@ -9,7 +9,7 @@ export default function Home() {
   const [ email, setEmail ] = useState("");
   
   return (
-    <main className="Home">
+    <main className="HomePage">
       
       <div className="HomeHero" aria-labelledby="home-title">
         <div className="HomeHero__Content">
@@ -29,21 +29,28 @@ export default function Home() {
         <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
       </div>
       
-      <div className="Home_Investing">
+      <div className="HomeSection HomeInvesting" id="Investing" aria-labelledby="Investing-Title">
         
-        <div><h3>Invest for now and the future</h3></div>
+        <div className="HomeSection__Intro">
+          <p className="HomeEyebrow">Build for your future.</p>
+          <h2 id="Investing-Title">Invest for now and the future</h2>
+          <p>Explore investment opportunities across short-, medium-, and long-term horizons.</p>
+        </div>
         
-        <div><p>Our investments provide short-term, medium-term and long-term returns.</p></div>
-        
-        <div className="Home_InvestingTerms">
+        <div className="HomeInvestmentGrid">
           
-          <div>
-            <div style={{ marginBottom: "5px" }}><h6>Short Term</h6></div>
+          <div className="HomeInvestmentCard">
+            
+            <span className="HomeCardNumber"></span>
+            
+            <div><h3>Short Term</h3></div>
+            
+            <hr className="HomeInvestmentCard__Divider" />
             
             <p>Medium to High Risk, Low to High Returns</p>
           
-            <div className="Button_Secondary">
-              <Link href="/investing/terms/short-term"><p>Browse</p>
+            <div>
+              <Link href="/investing/terms/short-term" className="HomeTextLink HomeButton HomeButton--Secondary">Browse options <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </div>
