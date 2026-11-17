@@ -42,13 +42,13 @@ export default function Home() {
           
           <div className="HomeInvestmentCard">
             
-            <span className="HomeCardNumber"></span>
+            <span className="HomeCardNumber">1</span>
             
             <div><h3>Short Term</h3></div>
             
             <hr className="HomeInvestmentCard__Divider" />
             
-            <p>Medium to High Risk, Low to High Returns</p>
+            <p>Medium to high risk, with the potential for low to high returns.</p>
           
             <div>
               <Link href="/investing/terms/short-term" className="HomeTextLink HomeButton HomeButton--Secondary">Browse options <span aria-hidden="true">↗</span>
@@ -56,26 +56,33 @@ export default function Home() {
             </div>
           </div>
         
-          <div className="Home_InvestTime">
-            <div style={{ marginBottom: "5px" }}><h6>Medium Term</h6></div>
+          <div className="HomeInvestmentCard">
             
-            <p>Low to Medium Risk, Low to Moderate Returns</p>
+            <span className="HomeCardNumber">2</span>
+            
+            <div><h3>Medium Term</h3></div>
+            
+            <hr className="HomeInvestmentCard__Divider" />
+            
+            <p>Low to medium risk, with the potential for low to moderate returns</p>
           
-            <div className="Circled_Icon">
-              <Link href="/investing/terms/medium-term"><p>Browse</p></Link>
+            <div>
+              <Link href="/investing/terms/medium-term" className="HomeTextLink HomeButton HomeButton--Secondary">Browse options <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
         
-          <div className="Home_InvestTime">
-            <div style={{ marginBottom: "5px" }}><h6>Long Term</h6></div>
+          <div className="HomeInvestmentCard">
             
-            <div>
-              <p>Low to High Risk.</p> 
-              <p>Low to High Returns</p>
-            </div>
+            <span className="HomeCardNumber">2</span>
+            
+            <div><h3>Long Term</h3></div>
+            
+            <hr className="HomeInvestmentCard__Divider" />
+            
+            <p>Explore a longer horizons with a range or risk and return profiles.</p>
           
-            <div className="Circled_Icon">
-              <Link href="/investing/terms/long-term"><p>Browse</p></Link>
+            <div>
+              <Link href="/investing/terms/long-term" className="HomeTextLink HomeButton HomeButton--Secondary">Browse options <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
           
