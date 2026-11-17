@@ -12,6 +12,7 @@ export default function Home() {
     <main className="HomePage">
       
       <div className="HomeHero" aria-labelledby="home-title">
+        
         <div className="HomeHero__Content">
           
           <div><p className="HomeEyebrow HomeEyebrow--Light">The system for everyone.</p></div>
@@ -187,15 +188,59 @@ export default function Home() {
         
       </div>
       
-      <div className="Home_Marketplace">
+      <div className="HomeSection HomeMarketplace" id="Marketplace" aria-labelledby="Marketplace-Title">
         
-        <div><h3>Marketplace</h3></div>
-        
-        <div className="Image_Placeholder">
-          <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/>
+        <div className="HomeProductCarousel" aria-labelledby="Products-Title">
+          
+          <div className="HomeProductCarousel__Heading">
+            
+            <div>
+              <p className="HomeEyebrow">A glimpse of what’s possible</p>
+              <h3 id="Products-Title">Explore the marketplace</h3>
+              <p className="HomeProductCarousel__Note">Sample categories shown as a design preview.</p>
+            </div>
+            
+            <div className="HomeCarouselControls" aria-label="Marketplace Product Carousel Controls">
+              <button type="button" onClick={() => scrollProducts(-1)} aria-label="Scroll products left">←</button>
+              <button type="button" onClick={() => scrollProducts(1)} aria-label="Scroll products right">→</button>
+            </div>
+          </div>
+          
+          <div className="HomeProductTrack" ref={productsTrack} role="region" aria-label="Featured Marketplace Products" tabIndex={0}>
+            {featuredProducts.map((product) => (
+              <article className="HomeProductCard" key={product.name}>
+                <div className={`HomeProductCard__Art HomeProductCard__Art--${product.color}`} aria-hidden="true">
+                  <span>{product.icon}</span>
+                  <small>Systemism marketplace</small>
+                </div>
+                <div className="HomeProductCard__Details">
+                  <p>{product.category}</p>
+                  <h4>{product.name}</h4>
+                  <Link href="/marketplace" aria-label={`Explore ${product.category} in the marketplace`}>Explore category <span aria-hidden="true">↗</span></Link>
+                </div>
+              </article>
+            ))}
+          </div>
+          <Link className="HomeProductCarousel__All HomeButton HomeButton--Secondary" href="/marketplace">View the marketplace <span aria-hidden="true">↗</span></Link>
         </div>
         
-        <div className="Vendor_Benefits">
+        <div className="HomeMarketplace__Copy">
+          <p className="HomeEyebrow"></p>
+        
+          <div><h2 id="Marketplace-Title">Marketplace</h2></div>
+          
+          <p>Place your products on our marketplace, connect with vendors, and find new ways to grow your business.</p>
+          
+          <ul className="HomeBenefits" aria-label="Marketplace Benefits">
+            <li>Use our marketplace to sell your products</li>
+            <li>Connect with customers and businesses</li>
+            <li>Monetize on your analaytics</li>
+          </ul>
+        
+          <div className="Image_Placeholder">
+            <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/>
+          </div>
+        
           <div><h3>Vendor Benefits</h3></div>
           
           <div style={{ marginBottom: "30px", marginTop: "25px", paddingLeft: "20px" }}>
@@ -210,10 +255,8 @@ export default function Home() {
               
           </div>
           
-          <div className="Home_Buttons">
-            <div className="Button_Primary">
-              <Link href="/enterprise/add">Start Application</Link>
-            </div>
+          <div>
+            <Link href="/enterprise/add" className="HomeButton HomeButton--Primary HomeButton--Dark">Become a vendor</Link>
           </div>
         </div>
         
