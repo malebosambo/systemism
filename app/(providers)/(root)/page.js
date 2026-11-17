@@ -14,7 +14,7 @@ export default function Home() {
       <div className="HomeHero" aria-labelledby="home-title">
         <div className="HomeHero__Content">
           
-          <div><p className="HomeEyebrow HomeEyebrow--Light"></p></div>
+          <div><p className="HomeEyebrow HomeEyebrow--Light">The system for everyone.</p></div>
           
           <div><h1 id="Home-Title">Personal and business solutions</h1></div>
         
@@ -26,6 +26,7 @@ export default function Home() {
             <div><Link href="/profiles/business" className="HomeButton HomeButton--Outline">Explore Business</Link></div>
           </div>
         </div>
+        
         <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
       </div>
       
@@ -137,7 +138,7 @@ export default function Home() {
         
         <div className="Form_Newsletter">
           <form onSubmit="">
-            <div><input type="email" name="newsletter" onChange="" value={email} placeholder="Email" className="Input" /></div>
+            <div><input type="email" name="newsletter" onChange="" value={email} placeholder="Email" /></div>
             
             <div><button type="submit" className="Button_Primary">Subscribe</button></div>
           </form>

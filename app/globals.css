@@ -1319,6 +1319,222 @@ ul {
   .Hide {
     display: none;
   }
+  
+  .HomeButton {
+    align-items: center; 
+    border: 1px solid transparent; 
+    border-radius: 12px; 
+    display: inline-flex; 
+    font-size: .95rem; 
+    font-weight: 700; 
+    justify-content: center; 
+    min-height: 52px; 
+    padding: .8rem 1.35rem; 
+    transition: transform .18s ease, background .18s ease;
+  } 
+  
+  .HomeButton:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 14%);
+    transform: translateY(-2px); 
+  }
+  
+  .HomeButton:focus-visible, .HomeTextLink:focus-visible, 
+  .HomeFundingCard:focus-visible, .HomeProductCard a:focus-visible {
+    outline: 3px solid #87966c; 
+    outline-offset: 3px;
+  }
+
+  .HomeButton--Light {
+    background: var(--home-cream); 
+    color: var(--home-ink);
+  }
+
+  .HomeButton--Outline {
+    border-color: rgb(255 255 255 / 75%);
+    color: white;
+  }
+  
+  .HomeButton--Primary {
+    box-shadow: 0 3px 8px rgb(0 0 0 / 12%);
+  }
+  
+  .HomeButton--Secondary {
+    background: transparent; 
+    border-color: #9c9b8e; 
+    color: var(--home-ink);
+  }
+  
+  .HomeButton--Dark {
+    background: var(--home-ink); 
+    color: white;
+  }
+  
+  .HomeCardNumber {
+    color: #77786e; 
+    font-size: .78rem; 
+    font-weight: 700; 
+    letter-spacing: .1em;
+  }
+  
+  .HomeHero {
+    align-items: center; 
+    background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); background-position: center; background-size: cover; color: white; display: flex; min-height: min(720px, calc(100svh - 110px)); padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); 
+    position: relative;
+  }
+  
+  .HomeHero__Content {
+    max-width: 700px; 
+    padding-right: 1.5rem
+  }
+  
+  .HomeEyebrow {
+    color: #77786e;
+    font-size: .76rem !important;
+    font-weight: 700;
+    letter-spacing: .16em;
+    line-height: 1.4 !important;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+  }
+
+  .HomeEyebrow--Light {
+    color: #e4e5cf;
+  }
+
+  .HomeHero__Actions {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .75rem; 
+    max-width: 560px;
+  }
+  
+  .HomeHero__Scroll {
+    color: white; 
+    display: inline-flex; 
+    font-size: .88rem !important; 
+    font-weight: 700; gap: .45rem; 
+    line-height: 1.4 !important; 
+    margin: 0 0 2rem; 
+    text-decoration: underline !important; 
+    text-decoration-color: rgb(255 255 255 / 55%) !important; 
+    text-underline-offset: 5px;
+  }
+
+  .HomeHero__Summary {
+    color: white; 
+    font-size: clamp(1.05rem, 2vw, 1.35rem); 
+    line-height: 1.6; 
+    margin: 1.5rem 0 2rem; 
+    max-width: 520px;
+  }
+  
+  .HomeInvesting {
+    
+  }
+  
+  .HomeInvestmentCard {
+    background: var(--home-cream); 
+    border: 1px solid #e8e6d5; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 26px rgb(14 15 12 / 4%); 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 280px; 
+    padding: clamp(1.5rem, 3vw, 2.25rem); 
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  
+  .HomeInvestmentCard:hover {
+    box-shadow: 0 18px 32px rgb(14 15 12 / 8%); 
+    transform: translateY(-3px);
+  }
+  
+  .HomeInvestmentCard h3 { 
+    font-size: 1.4rem; 
+    margin: 1.6rem 0 .7rem; 
+  }
+  
+  .HomeInvestmentCard p {
+    color: var(--home-muted); 
+    line-height: 1.65 !important; 
+    margin: 0 0 1.5rem;
+  }
+  
+  .HomeInvestmentCard__Divider {
+    border: 0; 
+    border-top: 1px solid #d5d3c3; 
+    margin: 0 0 1rem; 
+    width: 100%;
+  }
+  
+  .HomeInvestmentGrid {
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    margin-top: 2.5rem;
+  }
+
+  .HomePage {
+    home-ink: #171815;
+    --home-muted: #66675f;
+    --home-cream: #f7f6df;
+    --home-paper: #fbfaf6;
+    --home-line: #e4e2d7;
+    --home-dark: #171b18;
+    background: var(--home-paper);
+    color: var(--home-ink);
+    font-family: inherit;
+    overflow: hidden;
+  }
+
+  .HomePage a {
+    text-decoration: none;
+  }
+
+  .HomePage p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .HomePage *, .HomePage *::before, .HomePage *::after {
+    box-sizing: border-box;
+  }
+  
+  .HomeSection {
+    margin: 0 auto; 
+    max-width: 1320px; 
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
+  }
+  
+  .HomeSection h2, .HomeAcademy h2, .HomeAccelerator h2, .HomePartners h2 { 
+    font-size: clamp(2.2rem, 4.5vw, 4rem); 
+    letter-spacing: -.045em; 
+    line-height: 1.08; 
+    margin: 0 0 1rem; 
+  }
+  
+  .HomeSection__Intro {
+    max-width: 660px;
+  }
+  
+  .homeSection__intro > p:last-child, .homeMarketplace__copy > p:not(.homeEyebrow), .homeDirectory__copy > p:not(.homeEyebrow), .homeAcademy__content > p:not(.homeEyebrow), .homeAccelerator .homeSection__intro > p:not(.homeEyebrow) { 
+    color: var(--home-muted); 
+    font-size: 1rem !important; 
+    line-height: 1.75 !important; 
+    margin: 0; 
+    max-width: 58ch; 
+  }
+  
+  .HomeTextLink {
+    align-self: flex-start;
+    margin-top: auto; 
+    min-height: 44px;
+    padding: .65rem 1rem;
+  }
+  
+  .HomeTextLink span {
+    margin-left: .2rem;
+  }
 
   .Home_Academy {
     background-color: black;
