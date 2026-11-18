@@ -4,6 +4,15 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const featuredProducts = [
+  { name: "Handwoven home décor", category: "Home & living", icon: "✳", color: "sand" },
+  { name: "Locally made accessories", category: "Fashion & accessories", icon: "◈", color: "rose" },
+  { name: "Small business services", category: "Professional services", icon: "⌘", color: "sage" },
+  { name: "Artisan-crafted gifts", category: "Arts & crafts", icon: "✿", color: "lilac" },
+];
+
+
+
 export default function Home() {
   
   const [ email, setEmail ] = useState("");
