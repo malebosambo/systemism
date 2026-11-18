@@ -41,7 +41,7 @@ export default function Listings() {
       cancelled = true;
     }
   
-  }, [user, loading, router]);
+  }, [user, loading, router, profile]);
 
   if (loading) {
     return <div>Loading...</div>

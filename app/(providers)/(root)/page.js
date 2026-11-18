@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   
   const [ email, setEmail ] = useState("");
+  
+   const productsTrack = useRef(null);
+
+  const scrollProducts = (direction) => {
+    if (!productsTrack.current) return;
+    productsTrack.current.scrollBy({
+      left: direction * productsTrack.current.clientWidth * 0.8,
+      behavior: "smooth",
+    });
+  };
   
   return (
     <main className="HomePage">
@@ -262,88 +272,127 @@ export default function Home() {
         
       </div>
       
-      <div className="Home_Academy">
+      <div className="HomeAcademy" aria-labelledby="Academy-Title">
         
-        <div><h3 style={{ color: "white" }}>Get certified with our academy programs</h3></div><br />
+        <div className="HomeAcademy__Content">
+          
+          <p className="HomeEyebrow HomeEyebrow--Light">Learn,Build, Grow</p>
         
-        <div><p style={{ color: "white" }}>Browse programs by selecting a qualification type below.</p></div>
+          <div><h2 id="Academy-Title">Turn your ambition into action</h2></div>
         
-        <div className="Qualification_Type">
+          <p>Build practical skills and explore learning opportunities through the Academy.</p>
+        
+          <Link className="HomeButton HomeButton--Primary HomeButton--Light">Browse learning</Link>
           
         </div>
         
-        <div></div>
+        <div className="HomeAcademy__Index" aria-hidden="True">
+          01<span>Learn</span><br />
+          02<span>Apply</span><br />
+          03<span>Grow</span>
+        </div>
         
       </div>
       
-      <div className="Home_Directory">
+      <div className="HomeSection HomeDirectory" id="Directory" aria-labelledby="Directory-Title">
         
-        <div><h3>Search for a service provider</h3></div>
+        <div className="HomeDirectory__Copy">
+          
+          <p className="HomeEyebrow">Support and hire locals</p>
         
-        <div style={{ marginBottom: "30px" }}><input type="search" name="business listing" placeholder="Search for a service" className="Input" /><button type="submit">Search</button></div>
+          <div><h3 id="Directory-Title">Find a service provider near you</h3></div>
+          
+          <p>Explore the directory to discover businesses that provide services.</p>
         
-        <div className="Listings_Map">
-          <iframe
-            src="https://maps.app.goo.gl/pFnUxfgW8fqiQC3f9?g_st=ac"
-            title="Google Maps"
-            width="100%"
-            height="450"
-            loading="lazy"
-            sandbox="allow-scripts allow-same-origin"
-          />
         </div>
         
-        <div style={{ textAlign: "center" }}><h3>List your business</h3></div>
+        <div className="HomeDirectory__Map" aria-label="Directory Map Preview">
+          <div className="HomeMapPin" aria-hidden="True">●</div>
+        </div>
         
         <div>
-          <div className="Listing_Process">
+        
+          <div><h3>List your business</h3></div>
+        
+          <div>
+            <div className="Listing_Process">
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit your business details</p></div>
+              <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Submit your business details</p></div>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Verify your business details</p></div>
+              <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Verify your business details</p></div>
               
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your verified listing</p></div>
+              <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Share your verified listing</p></div>
             
-            <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenues and reviews</p></div>
+              <div style={{ alignItems: "center", display: "flex" }}><Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} /><p style={{ marginLeft: "20px" }}>Generate revenues and reviews</p></div>
               
-          </div>
+            </div>
           
-          <div className="Home_Buttons">
-            <div className="Button_Primary">
+            <div>
               <Link href="/directory">List On The Directory</Link>
             </div>
           </div>
+          
         </div>
         
       </div>
       
-      <div className="Home_Accelerator">
+      <div className="HomeAccelerator" aria-labelledby="Accelerator-Title">
         
-        <div style={{ marginBottom: "15px" }}><h1 style={{ color: "white" }}>Accelerator</h1></div>
+        <div className="HomeSection__Intro HomeSection__Intro--Light">
+          
+          <p className="HomeSection__Intro HomeSection__Intro--Light">Your business journey, supported</p>
+        
+          <div><h2 id="Accelerator-Title">Grow your business at every stage</h2></div>
+          
+          <p>Move from your first idea to your next opportunity with support for the journey ahead.</p>
+           
+          <Link className="HomeButton HomeButton--Primary HomeButton--Light" href="/accelerator">Discover the accelerator</Link>
+        
+        </div>
         
         <div>
+          <ol>
           
-          <div><p>Ideation & Discovery</p></div>
+            <li>
+              <span className="HomeStageList__Number">01</span>
+              <div><h3>Ideation & Discovery</h3><p></p></div>
+            </li>
           
-          <div><p>Opportunity Evaluation & Planning</p></div>
+            <li>
+              <span className="HomeStageList__Number">02</span>
+              <div><h3>Opportunity Evaluation & Planning</h3><p></p></div>
+            </li>
           
-          <div><p>Startup & Launch</p></div>
+            <li>
+              <span className="HomeStageList__Number">03</span>
+              <div><h3>Startup & Launch</h3><p></p></div>
+            </li>
           
-          <div><p>Growth & Traction</p></div>
+            <li>
+              <span className="HomeStageList__Number">04</span>
+              <div><h3>Growth & Traction</h3><p></p></div>
+            </li>
           
-          <div><p>Maturity & Expansion</p></div>
+            <li>
+              <span className="HomeStageList__Number">05</span>
+              <div><h3>Maturity & Expansion</h3><p></p></div>
+            </li>
           
-          <div><p>Exit, Renewal & Succession</p></div>
+            <li>
+              <span className="HomeStageList__Number">06</span>
+              <div><h3>Exit, Renewal & Succession</h3><p></p></div>
+            </li>
           
+          </ol>
         </div>
         
       </div>
       
-      <div className="Home_Partners">
+      <div className="HomePartners" aria-labelledby="Partners-Title">
         
-        <div style={{ textAlign: "center" }}><h1>Partners</h1></div>
+        <div><h2 id="Partners-Title">Partners</h2></div>
         
-        <div className="Partner_Logos">
+        <div className="HomePartners__Logo">
           <div><Image src="/root/partners/XM.png" alt="XM Logo" height={150} width={150} /></div>
         </div>
         
