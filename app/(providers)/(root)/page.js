@@ -11,8 +11,6 @@ const featuredProducts = [
   { name: "Artisan-crafted gifts", category: "Arts & crafts", icon: "✿", color: "lilac" },
 ];
 
-
-
 export default function Home() {
   
   const [ email, setEmail ] = useState("");
