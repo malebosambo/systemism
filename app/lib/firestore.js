@@ -104,10 +104,10 @@ export async function ReadEnterprise(data) {
 export async function ReadEnterprises(id) {
   
   if (id === null) {
-    return null;
+    return [];
   }
   
-  const enterprises = await getDocs(db("Profiles", id, "Enterprises"));
+  const enterprises = await getDocs(collection(db("Profiles", id, "Enterprises")));
 
   console.log("Successful read from db: ", enterprises);
   

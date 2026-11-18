@@ -18,14 +18,16 @@ export default function Enterprises() {
   
   useEffect(() => {
 
-    if (loading === false && !user) {
-      router.replace("/login");
+    if (loading || !user || !profile?.id) {
+      return; 
     }
     
     let cancelled = false;
     
     async function loadEnterprises() {
+      
       try {
+        
         const docs = await ReadEnterprises(profile.id);
         if (!cancelled) {
           setEnterprises(docs.map((doc) => ({
@@ -33,9 +35,13 @@ export default function Enterprises() {
             ...doc.data()
           })));
         }
+        
       } catch (error) {
+        
         console.error("Could not load enterprises:", error);
+        
       }
+      
     }
     
     loadEnterprises();
@@ -44,7 +50,7 @@ export default function Enterprises() {
       cancelled = true;
     }
     
-  }, [user, loading, router, profile]);
+  }, [user, loading, profile?.id]);
   
   if (loading) {
     return <div>Loading...</div>
