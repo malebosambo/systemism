@@ -141,6 +141,10 @@ ul {
   background-size: cover;
 }
 
+.MarketplaceScreenshot {
+  width: 100%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .HomePage * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
@@ -1176,7 +1180,8 @@ ul {
     width: 120%; 
   }
   
-  .HomeDirectory__Map > span { background: white; 
+  .HomeDirectory__Map > span { 
+    background: white; 
     border-radius: 30px; 
     box-shadow: 0 4px 18px rgb(0 0 0 / 8%); 
     color: #50534a; 
@@ -1184,23 +1189,6 @@ ul {
     padding: .75rem 1rem;
     position: relative; 
     z-index: 1; 
-  }
-  
-  .HomeHero {
-    align-items: center; 
-    background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); 
-    background-position: center; 
-    background-size: cover; 
-    color: white; 
-    display: flex; 
-    min-height: min(720px, calc(100svh - 110px)); 
-    padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); 
-    position: relative;
-  }
-
-  .HomeHero__Content {
-    max-width: 700px; 
-    padding-right: 1.5rem
   }
 
   .HomeEyebrow {
@@ -1274,17 +1262,45 @@ ul {
   .HomeFunding__Inner {
     display: grid; 
     gap: 3rem; 
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 35% 65%;
     margin: 0 auto; 
     max-width: 1320px;
     padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
+  }
+
+  .HomeHero {
+    align-items: center; 
+    background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); 
+    background-position: center; 
+    background-size: cover; 
+    color: white; 
+    display: flex;
+    margin: -10px -8px 0 -8px; 
+    min-height: min(720px, calc(100svh - 110px)); 
+    padding: clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2)); 
+    position: relative;
+  }
+
+  .HomeHero h1 {
+    color: white; 
+    font-size: clamp(3rem, 7.5vw, 6.5rem); 
+    letter-spacing: -.055em; 
+    line-height: .99; 
+    margin: 0; 
+    max-width: 700px;
   }
   
   .HomeHero__Actions {
     display: flex; 
     flex-wrap: wrap; 
-    gap: .75rem; 
+    gap: .75rem;
+    margin-bottom: 25px; 
     max-width: 560px;
+  }
+
+  .HomeHero__Content {
+    max-width: 700px; 
+    padding-right: 1.5rem;
   }
   
   .HomeHero__Scroll {

@@ -26,32 +26,38 @@ export default function Home() {
   return (
     <main className="HomePage">
       
-      <div className="HomeHero" aria-labelledby="home-title">
+      <div className="HomeHero" aria-labelledby="Home-Title">
         
         <div className="HomeHero__Content">
           
-          <div><p className="HomeEyebrow HomeEyebrow--Light">The system for everyone.</p></div>
+          <p className="HomeEyebrow HomeEyebrow--Light">The system for everyone.</p>
           
-          <div><h1 id="Home-Title">Personal and business solutions</h1></div>
+          <h1 id="Home-Title">Personal and business solutions</h1>
         
-          <div><p className="HomeHero__Summary">A platform built for economic participation.</p></div>
+          <p className="HomeHero__Summary">A platform built for economic participation.</p>
         
           <div className="HomeHero__Actions">
             <div><Link href="/profiles/personal" className="HomeButton HomeButton--Light">Explore Personal</Link></div>
           
             <div><Link href="/profiles/business" className="HomeButton HomeButton--Outline">Explore Business</Link></div>
-          </div> 
+          </div>
+
+          <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
+
         </div>
         
-        <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
       </div>
       
       <div className="HomeSection HomeInvesting" id="Investing" aria-labelledby="Investing-Title">
         
         <div className="HomeSection__Intro">
+
           <p className="HomeEyebrow">Build for your future.</p>
+
           <h2 id="Investing-Title">Invest for now and the future</h2>
+
           <p>Explore investment opportunities across short-, medium-, and long-term horizons.</p>
+
         </div>
         
         <div className="HomeInvestmentGrid">
@@ -114,9 +120,9 @@ export default function Home() {
           
             <p className="HomeEyebrow HomeEyebrow--Light">Funds at every stage</p>
           
-            <div><h2>Access funding for any business stage</h2></div>
+            <h2>Access funding for your business</h2>
         
-            <p>Apply for funding that is tailored for different stages of your business lifecycle.</p>
+            <p>Find funding pathways designed around different needs and stages of your business journey.</p>
             
             <div>
               <Link href="/funding" className="HomeButton HomeButton--Primary HomeButton--Light">Explore funding</Link>
@@ -143,39 +149,31 @@ export default function Home() {
             </div>
           
             <div>
-              <Link href="/funding/invoice-financing">
+              <Link href="/funding/invoice-financing" className="HomeFundingCard">
                 <h3>Invoice Financing</h3>
                 <p>Receive partial or full payment on an invoice sent to debtors.</p>
                 <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
               </Link>
             </div>
           
-            <div className="Home_FundingOption">
-              <Link href="/funding/asset-rental">
+            <div>
+              <Link href="/funding/asset-rental" className="HomeFundingCard">
                 <h3>Asset Rental</h3>
                 <p>Rent available assets through contracts.</p>
                 <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
               </Link>
             </div>
           
-            <div className="Home_FundingOption">
-              <Link href="/funding/loan">
-                <h3>Loan</h3>
-                <p>Apply for long-term & low interest cash with flexible repayment.</p>
+            <div>
+              <Link href="/funding/loan" className="HomeFundingCard">
+                <h3>Loan and Credit</h3>
+                <p>Long-term & low interest cash or advances from vendors.</p>
                 <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
               </Link>
             </div>
           
-            <div className="Home_FundingOption">
-              <Link href="/funding/credit">
-                <h3>Credit</h3>
-                <p>Check availability of an advance from vendors.</p>
-                <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
-              </Link>
-            </div>
-          
-            <div className="Home_FundingOption">
-              <Link href="/funding/balance-sheet">
+            <div>
+              <Link href="/funding/balance-sheet" className="HomeFundingCard">
                 <h3>Balance Sheet</h3>
                 <p>Increase capital through your financial books.</p>
                 <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
@@ -194,13 +192,18 @@ export default function Home() {
           <div className="HomeProductCarousel__Heading">
             
             <div>
-              <p className="HomeEyebrow">A glimpse of what’s possible</p>
+
+              <p className="HomeEyebrow">Shop needs and wants</p>
+
               <h3 id="Products-Title">Explore the marketplace</h3>
-              <p className="HomeProductCarousel__Note">Sample categories shown as a design preview.</p>
+
+              <p className="HomeProductCarousel__Note">Find products from your favourite local producer.</p>
+
             </div>
             
             <div className="HomeCarouselControls" aria-label="Marketplace Product Carousel Controls">
               <button type="button" onClick={() => scrollProducts(-1)} aria-label="Scroll products left">←</button>
+
               <button type="button" onClick={() => scrollProducts(1)} aria-label="Scroll products right">→</button>
             </div>
           </div>
@@ -220,25 +223,22 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <Link className="HomeProductCarousel__All HomeButton HomeButton--Secondary" href="/marketplace">View the marketplace <span aria-hidden="true">↗</span></Link>
+
+          <Link className="HomeProductCarousel__All HomeButton HomeButton--Secondary" href="/marketplace">Shop on marketplace <span aria-hidden="True">↗</span></Link>
         </div>
         
         <div className="HomeMarketplace__Copy">
-          <p className="HomeEyebrow"></p>
+          <p className="HomeEyebrow">Sell your products</p>
         
-          <div><h2 id="Marketplace-Title">Marketplace</h2></div>
+          <div><h2 id="Marketplace-Title">Marketplace vendors</h2></div>
           
           <p>Place your products on our marketplace, connect with vendors, and find new ways to grow your business.</p>
           
           <ul className="HomeBenefits" aria-label="Marketplace Benefits">
             <li>Use our marketplace to sell your products</li>
-            <li>Connect with customers and businesses</li>
+            <li>Connect with customers and other vendors</li>
             <li>Monetize on your analaytics</li>
           </ul>
-        
-          <div className="Image_Placeholder">
-            <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="Marketplace_Screenshot"/>
-          </div>
         
           <div><h3>Vendor Benefits</h3></div>
           
@@ -255,9 +255,13 @@ export default function Home() {
           </div>
           
           <div>
-            <Link href="/enterprise/add" className="HomeButton HomeButton--Primary HomeButton--Dark">Become a vendor</Link>
+            <Link href="/enterprise/add" className="HomeButton HomeButton--Light">Become a vendor</Link>
           </div>
         </div>
+
+        <div className="ImagePlaceholder">
+            <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="MarketplaceScreenshot"/>
+          </div>
         
       </div>
       
