@@ -819,7 +819,7 @@ ul {
   }
   
   .HomeProductCarousel__Heading {
-    align-items: end; 
+    align-items: flex-end; 
     display: flex; 
     justify-content: space-between; 
     gap: 1rem; 
@@ -1544,7 +1544,7 @@ ul {
   }
   
   .HomeProductCarousel__Heading {
-    align-items: end; 
+    align-items: flex-end; 
     display: flex; 
     justify-content: space-between; 
     gap: 1rem; 

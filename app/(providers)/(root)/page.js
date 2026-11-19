@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,8 +12,6 @@ const featuredProducts = [
 ];
 
 export default function Home() {
-  
-  const [ email, setEmail ] = useState("");
   
    const productsTrack = useRef(null);
 
@@ -42,7 +40,7 @@ export default function Home() {
             <div><Link href="/profiles/personal" className="HomeButton HomeButton--Light">Explore Personal</Link></div>
           
             <div><Link href="/profiles/business" className="HomeButton HomeButton--Outline">Explore Business</Link></div>
-          </div>
+          </div> 
         </div>
         
         <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
@@ -189,22 +187,6 @@ export default function Home() {
       
       </div>
       
-      <div className="Home_Newsletter">
-        
-        <div>
-          <h2>Join our weekly newsletter.</h2>
-        </div>
-        
-        <div className="Form_Newsletter">
-          <form onSubmit="">
-            <div><input type="email" name="newsletter" onChange="" value={email} placeholder="Email" /></div>
-            
-            <div><button type="submit" className="Button_Primary">Subscribe</button></div>
-          </form>
-        </div>
-        
-      </div>
-      
       <div className="HomeSection HomeMarketplace" id="Marketplace" aria-labelledby="Marketplace-Title">
         
         <div className="HomeProductCarousel" aria-labelledby="Products-Title">
@@ -289,7 +271,7 @@ export default function Home() {
         
           <p>Build practical skills and explore learning opportunities through the Academy.</p>
         
-          <Link className="HomeButton HomeButton--Primary HomeButton--Light">Browse learning</Link>
+          <Link href="/academy" className="HomeButton HomeButton--Primary HomeButton--Light">Browse learning</Link>
           
         </div>
         
