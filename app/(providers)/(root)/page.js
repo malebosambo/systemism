@@ -177,6 +177,7 @@ export default function Home() {
                 <span className="HomeFundingCard__Action">Learn more <span aria-hidden="true">→</span></span>
               </Link>
             </div>
+            
           </div>
           
         </div>
@@ -193,7 +194,7 @@ export default function Home() {
 
               <p className="HomeEyebrow">Shop needs and wants</p>
 
-              <h3 id="Products-Title">Explore the marketplace</h3>
+              <h2 id="Products-Title">Explore the marketplace</h2>
 
               <p className="HomeProductCarousel__Note">Find products from your favourite local producer.</p>
 
@@ -238,33 +239,33 @@ export default function Home() {
             <li>Monetize on your analaytics</li>
           </ul>
         
-          <h3>Vendor Benefits</h3>
+          <h3>Vendor benefits:</h3>
           
           <div style={{ marginBottom: "30px", marginTop: "25px" }}>
             
             <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={16} width={16} />
+              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Cost-Effective Start</p>
             </div>
               
             <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={16} width={16} />
+              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Large Customer Reach</p>
             </div>
               
             <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} />
+              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Operational Ease</p>
             </div>
             
             <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={20} width={20} />
+              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Better Insights</p>
             </div>
               
           </div>
           
-          <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Become a vendor</Link>
+          <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Start vendor application</Link>
         </div>
 
         <div className="ImagePlaceholder">
@@ -279,7 +280,7 @@ export default function Home() {
           
           <p className="HomeEyebrow HomeEyebrow--Light">Learn, Build, Grow</p>
         
-          <h2 id="Academy-Title">Turn your ambition into action</h2>
+          <h2 id="Academy-Title">Turn your free time into an occupational qualification</h2>
         
           <p>Build practical skills and explore learning opportunities through the Academy.</p>
         
@@ -301,11 +302,11 @@ export default function Home() {
           
           <p className="HomeEyebrow">Support and hire locals</p>
         
-          <h3 id="Directory-Title">Find a service provider near you</h3>
+          <h2 id="Directory-Title">Find a service provider near you</h2>
           
-          <p>Explore the directory to discover businesses that provide services.</p>
+          <p>Explore our map directory to discover businesses that provide services.</p>
           
-          <Link href="/map" className="HomeButton HomeButton--Primary HomeButton--Light"></Link>
+          <Link href="/map" className="HomeButton HomeButton--Primary HomeButton--Light">Explore map</Link>
         
         </div>
         
@@ -315,16 +316,16 @@ export default function Home() {
         
         <div>
         
-          <h3>Listing benefits</h3>
+          <h3>Listing benefits:</h3>
         
-          <div className="Listing_Process">
+          <div style={{ marginBottom: "20px" }}>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}>
+            <div style={{ alignItems: "center", display: "flex" }}>
               <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Submit your business details</p>
             </div>
               
-            <div style={{ alignItems: "center", display: "flex", marginBottom: "5px" }}>
+            <div style={{ alignItems: "center", display: "flex" }}>
               <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
               <p style={{ marginLeft: "20px" }}>Verify your business details</p>
             </div>
@@ -351,7 +352,7 @@ export default function Home() {
         
         <div className="HomeSection__Intro HomeSection__Intro--Light">
           
-          <p className="HomeSection__Intro HomeSection__Intro--Light">Your business journey, supported</p>
+          <p className="HomeEyebrow HomeEyebrow--Light">YOUR BUSINESS JOURNEY, SUPPORTED</p>
         
           <h2 id="Accelerator-Title">Grow your business at every stage</h2>
           
@@ -364,33 +365,33 @@ export default function Home() {
         <ol className="HomeStageList">
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Ideation & Discovery</h3><p></p></div>
+            <span className="HomeStageList__Number">01</span>
+            <div><h3>Ideation & Discovery</h3><p>Shape an early idea and understand the people it can serve.</p></div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Opportunity Evaluation & Planning</h3><p></p></div>
+            <span className="HomeStageList__Number">02</span>
+            <div><h3>Opportunity Evaluation & Planning</h3><p></p>Test the opportunity and plan a practical path forward.</div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Startup & Launch</h3><p></p></div>
+            <span className="HomeStageList__Number">03</span>
+            <div><h3>Startup & Launch</h3><p>Build the foundations and bring your business to market.</p></div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Growth & Traction</h3><p></p></div>
+            <span className="HomeStageList__Number">04</span>
+            <div><h3>Growth & Traction</h3><p>Reach more customers and strengthen what is working.</p></div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Maturity & Expansion</h3><p></p></div>
+            <span className="HomeStageList__Number">05</span>
+            <div><h3>Maturity & Expansion</h3><p>Reach more customers and strengthen what is working.</p></div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number"></span>
-            <div><h3>Exit, Renewal & Succession</h3><p></p></div>
+            <span className="HomeStageList__Number">06</span>
+            <div><h3>Exit, Renewal & Succession</h3><p>Plan for continuity, transition, or the next chapter.</p></div>
           </li>
           
         </ol>
