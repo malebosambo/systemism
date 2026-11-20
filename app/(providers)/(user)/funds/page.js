@@ -32,16 +32,14 @@ export default function Funds() {
   }
   
   return (
-    <div className="Funds">
-      <div>
-        <h1>Funds</h1>
-      </div>
-    
-      <div>
-        <Link href="/funds/request">Request</Link>
-      </div>
+    <main className="Funds">
       
-      <div><p>Nothing to display.</p></div>
-    </div>
+      <h1>Funds</h1>
+    
+      <Link href="/funds/request" className="HomeButton HomeButton--Secondary">Request</Link>
+      
+      <p>Nothing to display.</p>
+      
+    </main>
   )
 }

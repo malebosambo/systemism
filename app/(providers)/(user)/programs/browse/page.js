@@ -4,13 +4,14 @@ import ProgramDetailsCard from "@/app/components/programDetailsCard";
 export default function BrowsePrograms() {
   
   return (
-    <main>
+    <main className="BrowsePrograms">
       
-      <div><h1>Browse Programs</h1></div>
+      <h1>Browse Programs</h1>
       
-      <div><input type="search" name="search programs" placeholder="Search Programs" /></div>
+      <input type="search" name="search programs" placeholder="Search Programs" />
       
       <div>{programs.map((program) => (<ProgramDetailsCard key={program.name} program={program} />))}</div>
+      
     </main>
   )
 }

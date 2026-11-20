@@ -1,9 +1,9 @@
 export default function Accelerator() {
   
   return (
-    <main>
+    <main className="Accelerator">
       
-      <div><h1>Accelerator</h1></div>
+      <h1>Accelerator</h1>
       
     </main>
   )

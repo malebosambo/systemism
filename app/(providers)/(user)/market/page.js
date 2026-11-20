@@ -34,11 +34,11 @@ export default function Market() {
   }
   
   return (
-    <main>
+    <main className="Marketplace">
       
-      <div><h1>Market</h1></div>
+      <h1>Market</h1>
       
-      <div><input type="search" name="search marketplace" placeholder="Search Marketplace" /></div>
+      <input type="search" name="search marketplace" placeholder="Search Marketplace" />
       
     </main>
   )

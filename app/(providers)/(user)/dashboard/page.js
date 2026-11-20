@@ -47,9 +47,9 @@ export default function Dashboard() {
       
       <div className="Account_Overview">
         
-        <div><h1>Hello, {profile.name || user.email}</h1></div>
+        <h1>Hello, {profile.name || user.email}</h1>
         
-        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={handleOnClick} className="ActivateButton">Activate Wallet</button></div></div> : <WalletGateway />}
+        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={handleOnClick} className="HomeButton HomeButton--Primary">Activate Wallet</button></div></div> : <WalletGateway />}
         
       </div>
       
@@ -57,39 +57,51 @@ export default function Dashboard() {
         
         <div className="Feature_Disabled">
           
-          <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
+          <div className="ComingSoon">
+            <p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p>
+          </div>
           
-          <div style={{ alignItems: "center", display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
+          <Link href="/investments/catalogue" className="HomeButton HomeButton--Secondary">Browse</Link>
           
-          <div><h3>Investments: Portfolio</h3></div>
+          <div>
+            <h3>Investments: Portfolio</h3>
+          </div>
           
-          <div><p>You have not added investments into your potfolio.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>You have not added investments into your potfolio.</p>
         
         </div>
         
         <div className="Marketplace_Overview">
           
-          <div><h3>Marketplace: Promotions</h3></div>
+          <h3>Marketplace: Promotions</h3>
           
-          <div><p>Promotions are not available in this area.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Promotions are not available in this area.</p>
           
         </div>
         
         <div className={ walletActivated ? "Programs_Overview" : "Feature_Disabled" }>
           
-          <div style={{ display: "flex" }}><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
+          <Link href="/programs/browse" className="HomeButton HomeButton--Secondary">Browse</Link>
           
-          <div><h3>Programs: Enrolled</h3></div>
+          <h3>Programs: Enrolled</h3>
           
-          <div><p>You are not enrolled in a program.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>You are not enrolled in a program.</p>
         
         </div>
         
         <div className="Map_Overview">
           
-          <div><h3>Map: Trending</h3></div>
+          <h3>Map: Trending</h3>
           
-          <div><p>Nothing is trending in your area.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Nothing is trending in your area.</p>
           
         </div>
         
@@ -99,55 +111,68 @@ export default function Dashboard() {
         
         <div className="Feature_Disabled">
           
-          <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
+          <div className="ComingSoon">
+            <p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p>
+          </div>
           
-          <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Request</p></div>
+          <Link href="/funds/request" className="HomeButton HomeButton--Secondary">Request</Link>
           
-          <div><h3>Funds: Active</h3></div>
+          <h3>Funds: Active</h3>
           
-          <div><p>Request funding for your enterprise.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Request funding for your business.</p>
         
         </div>
       
         <div className="Inventory_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
+          <Link href="/inventory/add" className="HomeButton HomeButton--Secondary">Add</Link>
           
-          <div><h3>Inventory: Latest Statistics</h3></div>
+          <h3>Inventory: Latest Statistics</h3>
           
-          <div><p>Add inventory to the marketplace.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Add inventory to the marketplace.</p>
         
         </div>
       
         <div className="Enterprise_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
+          <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Add</Link>
           
-          <div><h3>Enterprises: Verified</h3></div>
+          <h3>Enterprises: Verified</h3>
           
-          <div><p>Add your enterprise for verification.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Add your enterprise for verification.</p>
         
         </div>
         
         <div className="Hub_Overview">
           
-          <div><h3>Hub: Tasks</h3></div>
+          <h3>Hub: Tasks</h3>
           
-          <div><p>Start your entrepreneurship journey.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Start your entrepreneurship journey.</p>
           
         </div>
         
         <div className="Listings_Overview">
           
-          <div style={{ display: "flex" }}><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
+          <Link href="/listing/add" className="HomeButton HomeButton--Secondary">Link</Link>
           
-          <div><h3>Listings: Approved</h3></div>
+          <h3>Listings: Approved</h3>
           
-          <div><p>Submit a listing for approval.</p></div>
+          <hr className="HomeInvestmentCard__Divider" />
+          
+          <p>Submit a listing for approval.</p>
           
         </div>
     
       </div>
+      ''
     </div>
   );
 }

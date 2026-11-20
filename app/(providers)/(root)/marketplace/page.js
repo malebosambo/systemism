@@ -1,13 +1,11 @@
 export default function Marketplace() {
   
   return (
-    <main>
+    <main className="Marketplace">
       
-      <div><h1>Marketplace</h1></div>
+      <h1>Marketplace</h1>
       
-      <div><input type="search" name="search marketplace" placeholder="Search Marketplace" /></div>
-      
-      <div></div>
+      <input type="search" name="search marketplace" placeholder="Search Marketplace" />
       
     </main>
   )

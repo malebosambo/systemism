@@ -60,13 +60,11 @@ export default function Inventory() {
   return (
     <main className="Inventory">
       
-      <div><h1>My Inventory</h1></div>
+      <h1>My Inventory</h1>
       
-      <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
+      <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Add</Link>
       
-      <div className="Inventory_Filters">
-        <input type="search" name="search inventory" placeholder="Search Inventory" />
-      </div>
+      <input type="search" name="search inventory" placeholder="Search Inventory" />
       
       <div className="Inventory_List">{inventory.map((product) => (<InventoryItemCard key={product.name} item={product} />))}</div>
       

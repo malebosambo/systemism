@@ -58,9 +58,9 @@ export default function Listings() {
   return (
     <main className="Listings">
       
-      <div><h1>My Listings</h1></div>
+      <h1>My Listings</h1>
       
-      <div><Link href="/listings/add" className="Button_Secondary">Add</Link></div>
+      <Link href="/listings/add" className="HomeButton HomeButton--Secondary">Add</Link>
       
       <div>{listings.map((listing) => (<ListingDetailsCard key={listing.name} listing={listing} />))}</div>
       

@@ -40,9 +40,9 @@ export default function ResetPassword() {
   return (
     <main className="ResetPassword">
       
-      <div><h1>Reset Password</h1></div>
+      <h1>Reset Password</h1>
       
-      <div><p>Please enter your user account email address below and press &quot;submit&quot; to receive the reset password email.</p></div>
+      <p>Please enter your user account email address below and press &quot;submit&quot; to receive the reset password email.</p>
       
       <div>
         <form onSubmit={SendResetPasswordEmail}>

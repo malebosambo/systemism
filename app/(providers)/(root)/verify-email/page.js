@@ -57,9 +57,9 @@ export default function VerifyEmail() {
   return (
     <main className="Verify_Email">
       
-      <div style={{ marginBottom: "20px" }}><h1>Verify your email</h1></div>
+      <h1>Verify your email</h1>
       
-      <div style={{ marginBottom: "30px" }}><p>We created your account. Please check your email and click the verification link before logging in.</p></div>
+      <p>We created your account. Please check your email and click the verification link before logging in.</p>
       
       <div className="Form_VerifyEmail">
         <form onSubmit={resendVerificationEmail}>

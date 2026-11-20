@@ -1,17 +1,20 @@
-import { SMTPClient } from "emailjs";
+import { client } from "nodemailer";
 
-const client = new SMTPClient({
-  "user": "noreply@systemism.co.za",
-  "password": "",
+const smtp = client({
+  "auth": {
+    "user": "noreply@systemism.co.za",
+    "password": ""
+  },
   "host": "://smtp.vox.co.za",
-  "ssl": true
+  "secure": true,
+  "port": 587
 });
 
 export async function Welcome( fullname, name, email ) {
   
   try {
     
-    const emailWelcome = await client.sendAsync({
+    const emailWelcome = await smtp.sendAsync({
       text: "",
       from: "no-reply no-reply@systemism.co.za",
       to: `${fullname} ${email}`,

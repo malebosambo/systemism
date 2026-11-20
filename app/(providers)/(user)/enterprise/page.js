@@ -67,9 +67,9 @@ export default function Enterprises() {
   return (
     <main className="Enterprises">
       
-      <div><h1>My Enterprises</h1></div>
+      <h1>My Enterprises</h1>
       
-      <div className="Button_Secondary"><Link href="/enterprise/add">Add</Link></div>
+      <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Add</Link>
       
       <div className="Enterprises_List">{enterprises.map((enterprise) => (<EnterpriseDetailsCard key={enterprise.name} enterprise={enterprise} />))}</div>
       

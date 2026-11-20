@@ -33,7 +33,7 @@ export default function AddListing() {
   return (
     <main className="Listing_Add">
       
-      <div><h1>Add New Listing</h1></div>
+      <h1>Add New Listing</h1>
       
       <div className="Form_ListingDetails">
         <form onSubmit={handleOnSubmit}>
@@ -48,7 +48,7 @@ export default function AddListing() {
           </div>
             
           <div>
-            <button type="submit" name="submit" className="Button_Primary">Submit</button>
+            <button type="submit" name="submit" className="HomeButton HomeButton--Primary">Submit</button>
           </div>  
         </form>
       </div>

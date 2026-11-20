@@ -63,7 +63,7 @@ export default function LoginForm() {
   return (
     <main className="Login">
       
-      <div className="Heading"><h1>Login</h1></div>
+      <h1>Login</h1>
       
       <div className="Login_Form">
         <form onSubmit={handleSubmit}>

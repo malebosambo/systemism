@@ -32,15 +32,11 @@ export default function Investments() {
   }
   
   return (
-    <main>
+    <main className="Investments">
       
-      <div><h1>My Investments</h1></div>
+      <h1>My Investments</h1>
       
-      <div><Link href="/investments/catalogue">Invest</Link></div>
-      
-      <div>
-        
-      </div>
+      <Link href="/investments/catalogue" className="HomeButton HomeButton--Secondary">Invest</Link>
       
     </main>
   )

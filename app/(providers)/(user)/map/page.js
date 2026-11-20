@@ -1,11 +1,11 @@
 export default function Map() {
   
   return (
-    <main>
+    <main className="Map">
       
-      <div><h1>Directory</h1></div>
+      <h1>Directory</h1>
       
-      <div><input type="search" name="search directory" placeholder="Search Directory" /></div>
+      <input type="search" name="search directory" placeholder="Search Directory" />
       
     </main>
   )

@@ -33,7 +33,7 @@ export default function AddInventoryItem() {
   return (
     <main className="Inventory_Add">
       
-      <div><h1>Add New Inventory</h1></div>
+      <h1>Add New Inventory</h1>
       
       <div className="Form_InventoryDetails">
         <form onSubmit={handleOnSubmit}>
@@ -89,7 +89,7 @@ export default function AddInventoryItem() {
             </select>
           </div>
           
-          <div><button type="submit" name="submit" className="Button_Primary">Submit</button></div>
+          <div><button type="submit" name="submit" className="HomeButton HomeButton--Primary">Submit</button></div>
         </form>
       </div>
       

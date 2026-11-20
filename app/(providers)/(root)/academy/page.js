@@ -4,11 +4,11 @@ import ProgramDetailsCard from "@/app/components/programDetailsCard";
 export default function Academy() {
   
   return (
-    <main>
+    <main className="Academy">
       
-      <div><h1>Academy Programs</h1></div>
+      <h1>Academy Programs</h1>
       
-      <div><input type="search" name="search programs" placeholder="Search Programs" /></div>
+      <input type="search" name="search programs" placeholder="Search Programs" />
       
       <div>{programs.map((program) => (<ProgramDetailsCard key={program.name} program={program} />))}</div>
       

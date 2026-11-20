@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Funding() {
   
   return (
-    <main>
+    <main className="Funding">
       
-      <div><h1>Funding</h1></div>
+      <h1>Funding</h1>
       
       <div>
         <div><Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link></div>

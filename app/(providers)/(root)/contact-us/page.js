@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <main className="Contacts">
       
-      <div><h1>Contact Us</h1></div>
+      <h1>Contact Us</h1>
       
       <div>
         <h2>Basic Details:</h2>

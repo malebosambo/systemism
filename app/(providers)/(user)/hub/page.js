@@ -33,7 +33,9 @@ export default function Hub() {
   return (
     <main className="Hub">
       
-      <div><h1>Hub</h1></div>
+      <h1>Hub</h1>
+      
+      <Link href="/hub/application" className="HomeButton HomeButton--Secondary">Apply</Link>
       
     </main>
   )

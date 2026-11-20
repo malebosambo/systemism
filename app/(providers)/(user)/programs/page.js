@@ -33,11 +33,11 @@ export default function Programs() {
   }
   
   return (
-    <main>
+    <main className="Programs">
       
-      <div><h1>My Programs</h1></div>
+      <h1>My Programs</h1>
       
-      <div><Link href="/programs/browse">Browse</Link></div>
+      <Link href="/programs/browse" className="HomeButton HomeButton--Secondary">Browse</Link>
       
     </main>
   )

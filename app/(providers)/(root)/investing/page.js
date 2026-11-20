@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Investing() {
   
   return (
-    <main>
+    <main className="Investing">
       
-      <div><h1>Investing</h1></div>
+      <h1>Investing</h1>
       
       <div>
         <div><Link href="/investing/private-companies"><h2>Private Companies</h2></Link></div>
