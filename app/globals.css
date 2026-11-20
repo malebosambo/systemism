@@ -83,23 +83,22 @@ ul {
     flex-direction: column;
   }
 
-  .HomeHero {
-    margin: 0 -8px;
-    min-height: 620px;
+  .HomeHero { 
+    min-height: min(590px, calc(100svh - 170px)); 
   }
   
   .HomeFundingGrid { 
     grid-template-columns: 1fr; 
   }
-  
+          
   .HomeFundingCard { 
     min-height: 160px; 
   }
-  
+          
   .HomeProductCarousel__Heading { 
     align-items: flex-start; 
   }
-  
+          
   .HomeCarouselControls button { 
     height: 40px; 
     width: 40px; 
@@ -109,96 +108,90 @@ ul {
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   
-  .Footer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .HomeHero {
+  .HomeHero { 
     align-items: flex-start; 
     background-position: 58% center; 
     background-size: auto 100%; 
     min-height: min(610px, calc(100svh - 185px)); 
-    padding: 1.25rem 1.25rem 3.5rem;
+    padding: 1.25rem 1.25rem 3.5rem; 
   }
-  
-  .HomeHero h1 {
+          
+  .HomeHero__Content { 
+    padding: 0; 
+    width: 100%; 
+  }
+          
+  .HomeHero__Scroll { 
+    margin-bottom: 1.5rem; 
+  }
+          
+  .HomeHero h1 { 
     font-size: clamp(3rem, 12vw, 4.5rem); 
-    max-width: 560px;
+    max-width: 560px; 
   }
-  
-  .HomeHero__Actions {
+          
+  .HomeHero__Summary { 
+    max-width: 380px; 
+  }
+          
+  .HomeHero__Actions { 
     align-items: stretch; 
     flex-direction: column; 
     max-width: 420px; 
-    width: 100%;
+    width: 100%; 
   }
-  
+          
   .HomeHero__Actions .HomeButton {
-    width: 100%;
+    width: 100%; 
   }
-  
-  .HomeHero__Content {
-    padding: 0;
-    width: 100%;
-  }
-  
-  .HomeHero__Scroll {
-    margin-bottom: 1.5rem;
-  }
-  
-  .HomeHero__Summary {
-    max-width: 380px;
-  }
-  
+          
   .HomeInvestmentGrid { 
     grid-template-columns: 1fr; 
   }
-  
+          
   .HomeInvestmentCard { 
     min-height: 235px; 
   }
-  
+          
   .HomeFunding__Inner { 
     grid-template-columns: 1fr; 
   }
-  
+          
   .HomeFundingGrid { 
     grid-template-columns: 1fr 1fr; 
   }
-  
+          
   .HomeMarketplace, .HomeDirectory, .HomeAccelerator { 
     grid-template-columns: 1fr; 
   }
-  
+          
   .HomeMarketplace__Visual { 
     grid-row: 1; 
   }
-  
+          
   .HomeProductCarousel { 
     grid-column: auto; 
   }
-
+          
   .HomeProductTrack { 
     grid-auto-columns: minmax(230px, 78%); 
   }
-  
+          
   .HomeAcademy { 
     align-items: flex-start; 
     flex-direction: column; 
   }
-  
- .HomeAcademy__Index { 
-   font-size: 1.15rem; 
-   min-width: auto; 
+          
+  .HomeAcademy__Index { 
+    font-size: 1.15rem; 
+    min-width: auto; 
   }
- 
-  .HomeAcademy__Index span { 
+          
+  .homeAcademy__index span { 
     font-size: .9rem; 
   }
-  
-  .HomeDirectory__Map { 
+          
+  .homeDirectory__map { 
     height: 260px; 
   }
 
