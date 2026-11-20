@@ -981,7 +981,11 @@ ul {
     min-height: 52px; 
     padding: .8rem 1.35rem; 
     transition: transform .18s ease, background .18s ease;
-  } 
+  }
+  
+  .HomeButton > a > p {
+    color: white;
+  }
   
   .HomeButton:hover {
     box-shadow: 0 8px 20px rgb(0 0 0 / 14%);
