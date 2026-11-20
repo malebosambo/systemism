@@ -996,10 +996,6 @@ ul {
 
   .HomeButton--Light {
     background: var(--home-cream); 
-    color: var(--home-ink);
-  }
-  
-  .HomeButton--Light > a > p {
     color: black;
   }
 
