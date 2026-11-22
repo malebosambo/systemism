@@ -101,7 +101,7 @@ export default function Home() {
             
             <hr className="HomeInvestmentCard__Divider" />
             
-            <p>Explore a longer horizons with a range or risk and return profiles.</p>
+            <p>Explore longer horizons with a range or risk and return profiles.</p>
           
             <div>
               <Link href="/investing/terms/long-term" className="HomeTextLink HomeButton HomeButton--Secondary">Browse options <span aria-hidden="true">↗</span></Link>
@@ -224,9 +224,11 @@ export default function Home() {
           </div>
 
           <Link className="HomeProductCarousel__All HomeButton HomeButton--Secondary" href="/marketplace">Shop on marketplace <span aria-hidden="True">↗</span></Link>
+          
         </div>
         
         <div className="HomeMarketplace__Copy">
+          
           <p className="HomeEyebrow">Sell your products</p>
         
           <h2 id="Marketplace-Title">Marketplace vendors</h2>
@@ -241,31 +243,36 @@ export default function Home() {
         
           <h3>Vendor benefits:</h3>
           
-          <div style={{ marginBottom: "30px", marginTop: "25px" }}>
+          <div style={{ marginBottom: "30px", marginTop: "20px" }}>
             
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Cost-Effective Start</p>
-            </div>
+            <ul>
               
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Large Customer Reach</p>
-            </div>
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Cost-Effective Start</p>
+              </div></li>
               
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Operational Ease</p>
-            </div>
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Large Customer Reach</p>
+              </div></li>
+              
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Operational Ease</p>
+              </div></li>
             
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Better Insights</p>
-            </div>
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Better Insights</p>
+              </div></li>
+              
+            </ul>
               
           </div>
           
           <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Start vendor application</Link>
+          
         </div>
 
         <div className="ImagePlaceholder">
@@ -319,30 +326,34 @@ export default function Home() {
           <h3>Listing benefits:</h3>
         
           <div style={{ marginBottom: "20px" }}>
-              
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Submit your business details</p>
-            </div>
-              
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Verify your business details</p>
-            </div>
-              
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Share your verified listing</p>
-            </div>
             
-            <div style={{ alignItems: "center", display: "flex" }}>
-              <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
-              <p style={{ marginLeft: "20px" }}>Generate revenues and reviews</p>
-            </div>
+            <ul>  
+              
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Submit your business details</p>
+              </div></li>
+              
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Verify your business details</p>
+              </div></li>
+              
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Share your verified listing</p>
+              </div></li>
+            
+              <li><div style={{ alignItems: "center", display: "flex" }}>
+                <Image src="/icons/circled-right.png" alt="Circled Right Icon" height={15} width={15} />
+                <p style={{ marginLeft: "20px" }}>Generate revenues and reviews</p>
+              </div></li>
+              
+            </ul>
           
           </div>
           
-          <Link href="/directory" className="HomeButton HomeButton--Primary HomeButton--Light">List On The Directory</Link>
+          <Link href="/directory" className="HomeButton HomeButton--Primary HomeButton--Light">List on the directory</Link>
           
         </div>
         
@@ -350,15 +361,19 @@ export default function Home() {
       
       <div className="HomeAccelerator" aria-labelledby="Accelerator-Title">
         
-        <div className="HomeSection__Intro HomeSection__Intro--Light">
-          
-          <p className="HomeEyebrow HomeEyebrow--Light">YOUR BUSINESS JOURNEY, SUPPORTED</p>
+        <div style={{ padding: "clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2))" }}>
         
-          <h2 id="Accelerator-Title">Grow your business at every stage</h2>
+          <div className="HomeSection__Intro HomeSection__Intro--Light">
           
-          <p>Move from your first idea to your next opportunity with support for the journey ahead.</p>
+            <p className="HomeEyebrow HomeEyebrow--Light">Your business journey, supported</p>
+        
+            <h2 id="Accelerator-Title">Grow your business at every stage</h2>
+          
+            <p>Move from your first idea to your next opportunity with support for the journey ahead.</p>
            
-          <Link className="HomeButton HomeButton--Primary HomeButton--Light" href="/accelerator">Discover the accelerator</Link>
+            <Link className="HomeButton HomeButton--Primary HomeButton--Light" href="/accelerator">Discover the accelerator</Link>
+        
+          </div>
         
         </div>
         
@@ -366,32 +381,50 @@ export default function Home() {
           
           <li>
             <span className="HomeStageList__Number">01</span>
-            <div><h3>Ideation & Discovery</h3><p>Shape an early idea and understand the people it can serve.</p></div>
+            <div>
+              <h3>Ideation & Discovery</h3>
+              <p>Shape an early idea and understand the people it can serve.</p>
+            </div>
           </li>
           
           <li>
             <span className="HomeStageList__Number">02</span>
-            <div><h3>Opportunity Evaluation & Planning</h3><p></p>Test the opportunity and plan a practical path forward.</div>
+            <div>
+              <h3>Opportunity Evaluation & Planning</h3>
+              <p>Test the opportunity and plan a practical path forward.</p>
+            </div>
           </li>
           
           <li>
-            <span className="HomeStageList__Number">03</span>
-            <div><h3>Startup & Launch</h3><p>Build the foundations and bring your business to market.</p></div>
+             <span className="HomeStageList__Number">03</span>
+            <div>
+              <h3>Startup & Launch</h3>
+              <p>Build the foundations and bring your business to market.</p>
+            </div>
           </li>
           
           <li>
             <span className="HomeStageList__Number">04</span>
-            <div><h3>Growth & Traction</h3><p>Reach more customers and strengthen what is working.</p></div>
+            <div>
+              <h3>Growth & Traction</h3>
+              <p>Reach more customers and strengthen what is working.</p>
+            </div>
           </li>
           
           <li>
             <span className="HomeStageList__Number">05</span>
-            <div><h3>Maturity & Expansion</h3><p>Reach more customers and strengthen what is working.</p></div>
+            <div>
+              <h3>Maturity & Expansion</h3>
+              <p>Reach more customers and strengthen what is working.</p>
+            </div>
           </li>
           
           <li>
             <span className="HomeStageList__Number">06</span>
-            <div><h3>Exit, Renewal & Succession</h3><p>Plan for continuity, transition, or the next chapter.</p></div>
+            <div>
+              <h3>Exit, Renewal & Succession</h3>
+              <p>Plan for continuity, transition, or the next chapter.</p>
+            </div>
           </li>
           
         </ol>
