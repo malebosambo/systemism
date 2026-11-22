@@ -30,7 +30,7 @@ export default function Home() {
         
         <div className="HomeHero__Content">
           
-          <p className="HomeEyebrow HomeEyebrow--Light">The system for everyone.</p>
+          <p className="HomeEyebrow HomeEyebrow--Light">The system for everyone</p>
           
           <h1 id="Home-Title">Personal and business solutions</h1>
         
@@ -52,7 +52,7 @@ export default function Home() {
         
         <div className="HomeSection__Intro">
 
-          <p className="HomeEyebrow">Build for your future.</p>
+          <p className="HomeEyebrow">Build for your future</p>
 
           <h2 id="Investing-Title">Invest for now and the future</h2>
 
@@ -223,7 +223,7 @@ export default function Home() {
             ))}
           </div>
 
-          <Link className="HomeProductCarousel__All HomeButton HomeButton--Secondary" href="/marketplace">Shop on marketplace <span aria-hidden="True">↗</span></Link>
+          <Link className="HomeProductCarousel__All HomeButton HomeButton--Light" href="/marketplace">Shop on marketplace <span aria-hidden="True">↗</span></Link>
           
         </div>
         
@@ -271,13 +271,13 @@ export default function Home() {
               
           </div>
           
-          <Link href="/enterprise/add" className="HomeButton HomeButton--Secondary">Start vendor application</Link>
+          <Link href="/enterprise/add" className="HomeButton HomeButton--Light">Start vendor application</Link>
           
         </div>
 
         <div className="ImagePlaceholder">
-            <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="MarketplaceScreenshot"/>
-          </div>
+          <Image src="/root/marketplace-console.png" alt="Marketplace" height={250} width={300} className="MarketplaceScreenshot"/>
+        </div>
         
       </div>
       
