@@ -9,36 +9,43 @@ import logo from "../../public/SystemismLogoZoom.jpg"
 
 export default function Header() {
   
-  const [ mobileMenu, setMobileMenu ] = useState(false);
+  const [ menuOpen, setMenuOpen ] = useState(false);
   
   const pathname = usePathname();
   
   useEffect(() => {
-    setMobileMenu(false);
+    setMenuOpen(false);
   }, [pathname]);
 
   const showMobileMenu = () => setMobileMenu(!mobileMenu);  
   
   return (
 
-    <div className="Header">
+    <div className="SiteHeader">
       
-      <div className="Logo">
-        <div className="Image_Logo">
-          <Link href="/"><Image src={logo} alt="Company Logo" height={60} width={90} style={{ border: "1px solid #F9F9E1" }} /></Link>
-        </div>
+      <div className="SiteHeader__Bar">
+        <Link href="/" className="SiteHeader__Brand">
+          <Image src={logo} alt="Company Logo" height={60} width={90} style={{ border: "1px solid #F9F9E1" }} />
+        </Link>
+      
+        <div className="SiteHeader__DesktopNav"><Navigation /></div>
         
-        <div className="Mobile_Menu_Open">
-          <button onClick={showMobileMenu} className="Button_Small"><Image src="/icons/menu.png" alt="Menu Icon" height={30} width={30} /></button>
-        </div>
+        <button type="button" onClick={() => setMenuOpen((isOpen) => !isOpen)} className="SiteHeader__MenuButton">
+          <span className={`SiteHeader__MenuIcon${menuOpen ? "Is-Open" : ""}`} aria-hidden="True">
+            <span />
+            <span />
+            <span />
+          </span>
+        </button>
       </div>
       
-      <div className="Menu"><Navigation /></div>
-      
-      <div className={ mobileMenu ? "Mobile_Menu_Visible" : "Hide" }>
-        <div className={ mobileMenu ? "Mobile_Menu" : "" }><Navigation /></div>
-        <div className={ mobileMenu ? "Mobile_Menu_Close" : "" }><button onClick={showMobileMenu} className={ mobileMenu ? "Button_Small" : "Hide" }><Image src="/icons/close.png" alt="Menu Icon" height={20} width={20} /></button></div>
+      <div id="Site-Mobile-Navigation" className={`SiteHeader__MobilePanel${menuOpen ? "Is-Open" : ""}`} aria-hidden={!menuOpen} inert={!menuOpen}>
+        <Navigation />
       </div>
+      
+      {menuOpen && (
+        <button type="button" onClick={() => setMenuOpen(false)} className="SiteHeader__Backdrop" aria-label="Close navigation menu" />
+      )}
       
     </div>
   );
