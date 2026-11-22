@@ -18,6 +18,7 @@ export default function Funding() {
       <h1>Funding</h1>
       
       <div>
+        
         <div><Link href="/funding/peer-to-peer"><h3>Peer-to-Peer</h3></Link></div>
         <div><Link href="/funding/peer-to-business"><h3>Peer-to-Business</h3></Link></div>
         <div><Link href="/funding/loan"><h3>Loan</h3></Link></div> 
@@ -26,27 +27,32 @@ export default function Funding() {
         <div><Link href="/funding/equity"><h3>Equity</h3></Link></div> 
         <div><Link href="/funding/credit"><h3>Credit</h3></Link></div>
         <div><Link href="/funding/balance-sheet"><h3>Balance Sheet</h3></Link></div>
+        
       </div>
       
       <div>
-        <div className="fundingIntro">
-          <p className="fundingEyebrow">Explore funding options</p>
+        
+        <div className="FundingIntro">
+          
+          <p className="FundingEyebrow">Explore funding options</p>
         
           <h2 id="funding-options-title">Start with the need</h2>
         
           <p>Each funding pathway works differently. Choose an option to learn more about its purpose and next steps.</p>
+          
         </div>
       
-        <div className="fundingGrid">
+        <div className="FundingGrid">
           {fundingOptions.map((option, index) => (
-            <Link className="fundingCard" href={option.href} key={option.title}>
-              <span className="fundingCard__number">0{index + 1}</span>
+            <Link className="FundingCard" href={option.href} key={option.title}>
+              <span className="FundingCard__Number">0{index + 1}</span>
               <h3>{option.title}</h3>
               <p>{option.description}</p>
               <strong>Learn about this option <span aria-hidden="true">↗</span></strong>
             </Link>
           ))}
         </div>
+        
       </div>
       
     </main>
