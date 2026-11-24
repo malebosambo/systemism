@@ -66,6 +66,10 @@ ul {
   color: white;
 }
 
+.SiteHeader {
+  margin: -8px -8px 0 -8px;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   .HomePage * { 
@@ -2915,14 +2919,6 @@ ul {
   .Footer_Details {
     display: flex;
     flex-direction: row;
-  }
-  
-  .Header {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   } 
   
   .HomeAcademy {
@@ -3640,6 +3636,99 @@ ul {
   
   .HomeTextLink span {
     margin-left: .2rem;
+  }
+
+  .SiteHeader {
+    --header-ink: #171815;
+    --header-cream: #f7f6df;
+    background: var(--header-ink);
+    color: #fff;
+    position: relative;
+    z-index: 50;
+  }
+        
+  .SiteHeader__Bar {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 88px;
+    padding: .7rem clamp(1.25rem, 4vw, 3.5rem);
+    position: relative;
+    z-index: 2;
+  }
+
+  .SiteHeader__Brand { 
+    align-items: center; 
+    display: inline-flex; 
+    flex: 0 0 auto; 
+    line-height: 0; 
+  }
+        
+  .SiteHeader__Brand :global(img) { 
+    border: 1px solid rgb(247 246 223 / 70%); 
+    display: block; 
+    height: auto; 
+    max-height: 58px; 
+    object-fit: contain; 
+    width: 150px; 
+  }
+        
+  .SiteHeader__DesktopNav { 
+    margin-left: auto; 
+  }
+        
+  .SiteHeader__MenuButton {
+    align-items: center;
+    background: var(--header-cream);
+    border: 0;
+    border-radius: 50%;
+    color: var(--header-ink);
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    justify-content: center;
+    padding: 0;
+    width: 50px;
+  }
+
+  .SiteHeader__MenuButton:focus-visible, .SiteHeader__Brand:focus-visible, .SiteHeader__Backdrop:focus-visible { 
+    outline: 3px solid #d6daa9; 
+    outline-offset: 4px; 
+  }
+
+  .SiteHeader__MenuIcon { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    width: 23px; 
+  }
+        
+  .SiteHeader__MenuIcon span { 
+    background: currentColor; 
+    border-radius: 2px; 
+    display: block; 
+    height: 2px; 
+    transition: transform .18s ease, opacity .18s ease; 
+    width: 100%; 
+  }
+        
+  .SiteHeader__MenuIcon.Is-Open span:first-child { 
+    transform: translateY(7px) rotate(45deg); 
+  }
+        
+  .SiteHeader__MenuIcon.Is-Open span:nth-child(2) { 
+    opacity: 0; 
+  }
+        
+  .SiteHeader__MenuIcon.Is-Open span:last-child { 
+    transform: translateY(-7px) rotate(-45deg); 
+  }
+        
+  .SiteHeader__MobilePanel, .SiteHeader__Backdrop { 
+    display: none; 
   }
 
   .RootNav {
