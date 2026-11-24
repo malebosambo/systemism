@@ -18,37 +18,37 @@ export default function Navigation() {
   }
   
   return (
-    <div className="RootNavigation" aria-label="Main navigation">
+    <div className="RootNav" aria-label="Main navigation">
       
       <Link className="RootNav__Link" href="/">Home</Link>
       
       <div>
-        <div className="Menu_Nav_Link"><Link href="/personal">Personal</Link></div>
+        <div className="Menu_Nav_Link"><Link href="/personal" className="RootNav__Link">Personal</Link><span onClick="">o</span></div>
         
-        <div className={ personalSubMenu ? "ShowSubMenu" : "Hide" }>
-          <div className="Menu_Nav_Link"><Link href="/investing">Investing</Link></div>
+        <div style={{ display: "none" }}>
+          <Link href="/investing" className="RootNav__Link">Investing</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/marketplace">Marketplace</Link></div>
+          <Link href="/marketplace" className="RootNav__Link">Marketplace</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/directory">Directory</Link></div>
+          <Link href="/directory" className="RootNav__Link">Directory</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/academy">Academy</Link></div>
+          <Link href="/academy" className="RootNav__Link">Academy</Link>
         </div>
       </div>
       
       <div>
-        <Link href="/business">Business</Link>
+        <Link href="/business" className="RootNav__Link">Business</Link><span onClick="">o</span>
         
-        <div className={ businessSubMenu ? "ShowSubMenu" : "Hide" }>
-          <div className="Menu_Nav_Link"><Link href="/funding">Funding</Link></div>
+        <div style={{ display: "none" }}>
+          <Link href="/funding" className="RootNav__Link">Funding</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/vendor">Vendor</Link></div>
+          <Link href="/vendor" className="RootNav__Link">Vendor</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/listing">Listing</Link></div>
+          <Link href="/listing" className="RootNav__Link">Listing</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/accelerator">Accelerator</Link></div>
+          <Link href="/accelerator" className="RootNav__Link">Accelerator</Link>
           
-          <div className="Menu_Nav_Link"><Link href="/complaince">Compliance</Link></div>
+          <Link href="/complaince" className="RootNav__Link">Compliance</Link>
         </div>
       </div>
       
