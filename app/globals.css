@@ -94,6 +94,160 @@ ul {
     padding: 20px;
   }
   
+  .FundingPage { 
+    --ink: #1b1d18; 
+    --muted: #65685f; 
+    --cream: #f6f5e6; 
+    --paper: #fbfaf6; 
+    background: var(--paper); 
+    color: var(--ink); 
+  }
+
+  .FundingPage * { 
+    box-sizing: border-box;
+  }
+        
+  .FundingHero { 
+    background: linear-gradient(120deg,#202820,#343c31); 
+    color: white; 
+    padding: clamp(4rem,9vw,7.5rem) max(1.25rem,calc((100vw - 1120px)/2)); 
+  }
+
+  .FundingHero h1 { 
+    color: white; 
+    font-size: clamp(2.8rem,7vw,5.5rem); 
+    letter-spacing: -.05em; 
+    line-height: 1.02; 
+    margin: 0; 
+    max-width: 850px; 
+  }
+
+  .FundingHero > p:not(.FundingEyebrow) { 
+    color: #f0f0eb; 
+    font-size: 1.08rem; 
+    line-height: 1.75; 
+    margin: 1.25rem 0 1.75rem; 
+    max-width: 640px; 
+  }
+
+  .FundingEyebrow { 
+    color: #77796f; 
+    font-size: .75rem; 
+    font-weight: 700; 
+    letter-spacing: .15em; 
+    margin: 0 0 1rem; 
+    text-transform: uppercase; 
+  }
+
+  .FundingHero .FundingEyebrow { 
+    color: #e4e6d3; 
+  }
+
+  .FundingButton { 
+    align-items: center; 
+    border-radius: 9px; 
+    display: inline-flex; 
+    font-size: .92rem; 
+    font-weight: 700; 
+    gap: .5rem; 
+    min-height: 50px; 
+    padding:.75rem 1.2rem; 
+    text-decoration: none; 
+  }
+
+  .FundingButton--Light { 
+    background: var(--cream); 
+    color: var(--ink); 
+  }
+
+  .FundingContent { 
+    margin: auto; 
+    max-width: 1200px; 
+    padding: clamp(3.5rem,7vw,6rem) 1.25rem; 
+  }
+
+  .FundingIntro { 
+    max-width: 660px; 
+  }
+
+  .FundingIntro h2 { 
+    font-size: clamp(2rem,4vw,3.2rem); 
+    letter-spacing: -.04em; 
+    line-height: 1.1; 
+    margin: 0 0 .8rem; 
+  }
+
+  .FundingIntro > p:last-child { 
+    color: var(--muted); 
+    line-height: 1.7; 
+    margin: 0; 
+  }
+
+  .FundingGrid { 
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0,1fr)); 
+    margin-top: 2rem; 
+  }
+  
+  .FundingCard { 
+    background: white; 
+    border: 1px solid #e8e6dc; 
+    border-radius: 14px; 
+    color: var(--ink); 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 225px; 
+    padding: 1.5rem; 
+    text-decoration: none; 
+    transition: transform .18s ease, box-shadow .18s ease; 
+  }
+
+  .FundingCard:hover { 
+    box-shadow: 0 12px 28px rgb(22 24 20 / 8%); 
+    transform: translateY(-2px); 
+  }
+
+  .FundingCard__Number { 
+    color: #77796f; 
+    font-size: .78rem; 
+    font-weight: 700; 
+    letter-spacing: .12em;
+  }
+
+  .FundingCard h3 { 
+    font-size: 1.2rem; 
+    margin: 1.3rem 0 .55rem; 
+  }
+
+  .FundingCard p { 
+    color: var(--muted); 
+    line-height: 1.65; 
+    margin: 0 0 1.2rem; 
+  }
+
+  .FundingCard strong { 
+    font-size: .88rem; 
+    margin-top: auto; 
+  }
+
+  .FundingCard strong span { 
+    margin-left: .35rem;
+  }
+
+  .FundingNote { 
+    background: var(--cream); 
+    border-radius: 12px; 
+    margin-top: 2rem; 
+    padding: 1.25rem 1.5rem; 
+  }
+
+  .FundingNote p { 
+    color: var(--muted); 
+    line-height: 1.65; 
+    margin: .35rem 0 0; 
+  }
+  
   .Hide {
     display: none;
   }
@@ -765,6 +919,537 @@ ul {
   .ImagePlaceholder {
     margin-top: 30px;
   }
+  
+  .InvestingPage { 
+    --ink: #1b1d18; 
+    --muted: #65685f; 
+    --cream: #f6f5e6; 
+    --paper: #fbfaf6; 
+    background: var(--paper); 
+    color: var(--ink); 
+  }
+
+  .InvestingPage * { 
+    box-sizing: border-box; 
+  }
+        
+  .InvestingHero { 
+    background: linear-gradient(120deg, #202820, #343c31); 
+    color: white; 
+    padding: clamp(4rem, 9vw, 7.5rem) max(1.25rem, calc((100vw - 1120px)/2)); 
+  }
+        
+  .InvestingHero h1 { 
+    color: white; 
+    font-size: clamp(2.8rem, 7vw, 5.5rem); 
+    letter-spacing :-.05em; 
+    line-height: 1.02; 
+    margin: 0; 
+    max-width: 800px; 
+  }
+        
+  .InvestingHero > p:not(.InvestingEyebrow) { 
+    color: #f0f0eb; 
+    font-size: 1.08rem; 
+    line-height: 1.75; 
+    margin: 1.25rem 0 1.75rem; 
+    max-width: 620px; 
+  }
+
+  .InvestingEyebrow { 
+    color: #77796f; 
+    font-size: .75rem; 
+    font-weight: 700; 
+    letter-spacing: .15em; 
+    margin: 0 0 1rem; 
+    text-transform: uppercase; 
+  }
+        
+  .InvestingHero .InvestingEyebrow { 
+    color: #e4e6d3; 
+  }
+        
+  .InvestingButton { 
+    align-items: center; 
+    border-radius: 9px; 
+    display: inline-flex; 
+    font-size: .92rem; 
+    font-weight: 700; 
+    gap: .5rem; 
+    min-height: 50px; 
+    padding: .75rem 1.2rem; 
+    text-decoration: none; 
+  }
+        
+  .InvestingButton--Light { 
+    background: var(--cream); 
+    color: var(--ink); 
+  }
+        
+  .InvestingContent { 
+    margin: auto; 
+    max-width: 1200px; 
+    padding: clamp(3.5rem, 7vw, 6rem) 1.25rem; 
+  }
+        
+  .InvestingIntro { 
+    max-width: 660px; 
+  }
+        
+  .InvestingIntro h2 { 
+    font-size: clamp(2rem, 4vw, 3.2rem); 
+    letter-spacing: -.04em; 
+    line-height: 1.1; 
+    margin: 0 0 .8rem; 
+  }
+        
+  .InvestingIntro > p:last-child { 
+    color: var(--muted); 
+    line-height: 1.7; 
+    margin: 0; 
+  }
+        
+  .InvestingGrid {
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    margin-top: 2rem; 
+  }
+        
+  .InvestingCard { 
+    background: white; 
+    border: 1px solid #e8e6dc; 
+    border-radius: 14px; 
+    color: var(--ink); 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 230px; 
+    padding: 1.5rem; 
+    text-decoration: none; 
+    transition: transform .18s ease, box-shadow .18s ease; 
+  }
+
+        
+  .InvestingCard:hover, .HorizonCard:hover { 
+    box-shadow: 0 12px 28px rgb(22 24 20 / 8%); 
+    transform:translateY(-2px); 
+  }
+        
+  .InvestingCard > span { 
+    color: #77796f; 
+    font-size: .78rem; 
+    font-weight: 700; 
+    letter-spacing: .12em; 
+  }
+        
+  .InvestingCard h3 { 
+    font-size: 1.2rem; 
+    margin: 1.35rem 0 .5rem; 
+  }
+        
+  .InvestingCard p, .HorizonCard p { 
+    color: var(--muted); 
+    line-height: 1.65; 
+    margin: 0 0 1.25rem; 
+  }
+        
+  .InvestingCard strong { 
+    font-size: .88rem; 
+    margin-top: auto; 
+  }
+        
+  .InvestingCard strong span { 
+    margin-left: .35rem; 
+  }
+        
+  .HorizonSection { 
+    background: var(--cream); 
+  }
+        
+  .HorizonContent { 
+    padding-top: clamp(3.5rem, 7vw, 5.5rem); 
+  }
+        
+  .HorizonGrid { 
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    margin-top: 2rem; 
+  }
+        
+  .HorizonCard { 
+    background: rgba(255,255,255,.75); 
+    border: 1px solid #e5e2d0; 
+    border-radius: 14px; 
+    color: var(--ink); 
+    min-height: 190px; 
+    padding: 1.5rem; 
+    text-decoration: none; 
+    transition: transform .18s ease, box-shadow .18s ease; 
+  }
+        
+  .HorizonCard h3 { 
+    margin: 0 0 .7rem; 
+  }
+        
+  .HorizonCard span { 
+    font-size: .88rem; 
+    font-weight: 700; 
+  }
+        
+  .HorizonCard b { 
+    margin-left: .25rem; 
+  }
+
+  .InvestingDisclaimer {
+    color: var(--muted); 
+    font-size: .82rem; 
+    line-height: 1.6; 
+    margin: 2rem 0 0; 
+    max-width: 760px; 
+  }
+  
+  .PublicPage { 
+    --ink: #1b1d18; 
+    --muted: #65685f; 
+    --cream: #f6f5e6; 
+    --paper: #fbfaf6; 
+    background: var(--paper); 
+    color: var(--ink); 
+  }
+        
+  .PublicPage * { 
+    box-sizing: border-box; 
+  }
+        
+  .PublicHero { 
+    background: linear-gradient(120deg, #202820, #343c31); 
+    color: white; 
+    padding: clamp(4rem, 9vw, 7.5rem) max(1.25rem, calc((100vw - 1120px)/2)); 
+  }
+        
+  .PublicHero h1 { 
+    color: white; 
+    font-size: clamp(2.8rem, 7vw, 5.5rem); 
+    letter-spacing: -.05em; 
+    line-height: 1.02; 
+    margin: 0; 
+    max-width: 850px; 
+  }
+        
+  .PublicEyebrow { 
+    color: #74776c; 
+    font-size: .75rem; 
+    font-weight: 700; 
+    letter-spacing: .15em; 
+    margin: 0 0 1rem; 
+    text-transform: uppercase; 
+  }
+        
+  .PublicHero .PublicEyebrow { 
+    color: #e4e6d3; 
+  }
+        
+  .PublicLead { 
+    color: #f0f0eb; 
+    font-size: 1.12rem; 
+    line-height: 1.75; 
+    margin: 1.3rem 0 2rem; 
+    max-width: 620px; 
+  }
+  
+  .PublicActions { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .75rem; 
+  }
+        
+  .PublicButton { 
+    align-items: center; 
+    border: 1px solid transparent; 
+    border-radius: 9px; 
+    display: inline-flex; 
+    font-size: .92rem; 
+    font-weight: 700; 
+    gap: .45rem; 
+    justify-content: center; 
+    min-height: 50px; 
+    padding: .75rem 1.2rem; 
+    text-decoration: none; 
+  }
+        
+  .PublicButton--Primary { 
+    background: var(--cream); 
+    color: var(--ink); 
+  }
+        
+  .PublicButton--Secondary { 
+    border-color: #c9cbbd; 
+    color: white; 
+  }
+  
+  .PublicButton--Dark { 
+    background: var(--ink); 
+    color: white; 
+    white-space: nowrap; 
+  }
+        
+  .PublicContent { 
+    margin: auto; 
+    max-width: 1200px; 
+    padding: clamp(3.5rem, 7vw, 6rem) 1.25rem; 
+  }
+        
+  .PublicSectionIntro { 
+    max-width: 650px; 
+  }
+        
+  .PublicSectionIntro h2, .VendorCallout h2 { 
+    font-size: clamp(2rem, 4vw, 3.2rem); 
+    letter-spacing: -.04em; 
+    line-height: 1.1; 
+    margin: 0 0 .8rem; 
+  }
+        
+  .PublicSectionIntro > p:last-child, .PublicCard p, .VendorCallout p:not(.PublicEyebrow) { 
+    color: var(--muted); 
+    line-height: 1.7; 
+    margin: 0; 
+  }
+  
+  .PublicCardGrid { 
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    margin-top: 2rem; 
+  }
+        
+  .PublicCard { 
+    background: white; 
+    border: 1px solid #e8e6dc; 
+    border-radius: 14px; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 250px; 
+    padding: 1.5rem; 
+  }
+  
+  .PublicCard__Number { 
+    color: #77796f; 
+    font-size: .8rem; 
+    font-weight: 700; 
+    letter-spacing: .12em; 
+  }
+        
+  .PublicCard h3 { 
+    font-size: 1.25rem; 
+    margin: 1.5rem 0 .6rem; 
+  }
+        
+  .PublicCard p { 
+    margin-bottom: 1.4rem; 
+  }
+  
+  .PublicCard__Link { 
+    color: var(--ink); 
+    font-size: .9rem; 
+    font-weight: 700; 
+    margin-top: auto; 
+    text-decoration: none; 
+  }
+  
+  .PublicCard__Link span { 
+    margin-left: .3rem; 
+  }
+  
+  .PublicPage { 
+    --ink: #1b1d18; 
+    --muted: #65685f; 
+    --cream: #f6f5e6; 
+    --paper: #fbfaf6; 
+    background: var(--paper); 
+    color: var(--ink); 
+  }
+        
+  .PublicPage * { 
+    box-sizing: border-box; 
+  }
+        
+  .PublicHero { 
+    background: linear-gradient(120deg, #202820, #343c31); 
+    color: white; 
+    padding: clamp(4rem, 9vw, 7.5rem) max(1.25rem, calc((100vw - 1120px)/2)); 
+  }
+        
+  .PublicHero h1 { 
+    color: white; 
+    font-size: clamp(2.8rem, 7vw, 5.5rem); 
+    letter-spacing: -.05em; 
+    line-height: 1.02; 
+    margin: 0; 
+    max-width: 820px; 
+  }
+  
+  .PublicEyebrow { 
+    color: #74776c; 
+    font-size: .75rem; 
+    font-weight: 700; 
+    letter-spacing: .15em; 
+    margin: 0 0 1rem; 
+    text-transform: uppercase; 
+  }
+  
+  .PublicHero .PublicEyebrow { 
+    color: #e4e6d3; 
+  }
+  
+  .PublicLead { 
+    color: #f0f0eb; 
+    font-size: 1.12rem; 
+    line-height: 1.75; 
+    margin: 1.3rem 0 2rem; 
+    max-width: 600px; 
+  }
+  
+  .PublicActions { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .75rem; 
+  }
+        
+  .PublicButton { 
+    align-items: center; 
+    border: 1px solid transparent;
+    border-radius: 9px; 
+    display: inline-flex; 
+    font-size: .92rem; 
+    font-weight: 700; 
+    gap: .45rem; 
+    justify-content: center; 
+    min-height: 50px; 
+    padding: .75rem 1.2rem; 
+    text-decoration: none; 
+  }
+        
+  .PublicButton--Primary { 
+    background: var(--cream); 
+    color: var(--ink); 
+  }
+        
+  .PublicButton--Secondary { 
+    border-color: #c9cbbd; 
+    color: white; 
+  }
+        
+  .PublicButton--Light { 
+    background: white; 
+    color: var(--ink); 
+    white-space: nowrap; 
+  }
+  
+  .PublicContent { 
+    margin: auto; 
+    max-width: 1200px; 
+    padding: clamp(3.5rem, 7vw, 6rem) 1.25rem; 
+  }
+  
+  .PublicSectionIntro { 
+    max-width: 650px; 
+  }
+        
+  .PublicSectionIntro h2,.PublicCallout h2 { 
+    font-size: clamp(2rem, 4vw, 3.2rem); 
+    letter-spacing: -.04em; 
+    line-height: 1.1; 
+    margin: 0 0 .8rem; 
+  }
+  
+  .PublicSectionIntro > p:last-child, .PublicCard p, .PublicCallout p:not(.PublicEyebrow) { 
+    color: var(--muted); 
+    line-height: 1.7; 
+    margin: 0; 
+  }
+  
+  .PublicCardGrid { 
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    margin-top: 2rem; 
+  }
+  
+  .PublicCard { 
+    background: white; 
+    border: 1px solid #e8e6dc; 
+    border-radius: 14px; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 250px; 
+    padding: 1.5rem; 
+  }
+  
+  .PublicCard__Number { 
+    color: #77796f; 
+    font-size: .8rem; 
+    font-weight: 700; 
+    letter-spacing: .12em; 
+  }
+        
+  .PublicCard h3 { 
+    font-size: 1.25rem; 
+    margin: 1.5rem 0 .6rem; 
+  }
+  
+  .PublicCard p { 
+    margin-bottom: 1.4rem; 
+  }
+  
+  .PublicCard__Link { 
+    color: var(--ink); 
+    font-size: .9rem; 
+    font-weight: 700; 
+    margin-top: auto; 
+    text-decoration: none; 
+  }
+  
+  .PublicCard__Link span { 
+    margin-left: .3rem; 
+  }
+        
+  .PublicCallout { 
+    align-items: center; 
+    background: var(--cream); 
+    display: flex; 
+    gap: 2rem; 
+    justify-content: space-between; 
+    padding: clamp(2.5rem, 6vw, 4rem) max(1.25rem, calc((100vw - 1120px)/2)); 
+  }
+        
+  .PublicCallout h2 { 
+    font-size: clamp(1.8rem, 3.5vw, 2.7rem); 
+  }
+        
+  .PublicCallout p:not(.PublicEyebrow) { 
+    margin-bottom: 0; 
+  }
+  
+  .VendorCallout { 
+    align-items: center; 
+    background: var(--cream); 
+    border-radius: 14px; 
+    display: flex; 
+    gap: 2rem; 
+    justify-content: space-between;
+    margin-top: 2rem; 
+    padding: clamp(1.5rem, 4vw, 2.5rem); 
+  }
+        
+  .VendorCallout h2 { 
+    font-size: clamp(1.7rem, 3vw, 2.5rem); 
+  }
+  
+  .VendorCallout p:not(.PublicEyebrow) { 
+    margin-bottom: 0; 
+  }
 
   .RootNav { 
     align-items: stretch; 
@@ -842,6 +1527,16 @@ ul {
   .RootNav__Login, .RootNav__Signup { 
     min-height: 48px; 
     width: 100%; 
+  }
+  
+  .RootNavGroup_Business {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .RootNavGroup_Personal {
+    display: flex;
+    flex-direction: column;
   }
   
   .SiteHeader {

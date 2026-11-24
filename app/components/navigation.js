@@ -17,7 +17,7 @@ export default function Navigation() {
       <Link className="RootNav__Link" href="/">Home</Link>
       
       <div>
-        <div><Link href="/personal" className="RootNav__Link">Personal</Link><span onClick={handleOnClick}>o</span></div>
+        <Link href="/personal" className="RootNav__Link">Personal</Link><span onClick={handleOnClick}>o</span>
         
         <div className={ openSubMenu ? "RootNavGroup_Personal" : "Hide" }>
           <Link href="/investing" className="RootNav__Link">Investing</Link>
@@ -33,7 +33,7 @@ export default function Navigation() {
       <div>
         <Link href="/business" className="RootNav__Link">Business</Link><span onClick="">o</span>
         
-        <div style={{ display: "none" }}>
+        <div className={ openSubMenu ? "RootNavGroup_Business" : "Hide" }>
           <Link href="/funding" className="RootNav__Link">Funding</Link>
           
           <Link href="/vendor" className="RootNav__Link">Vendor</Link>
