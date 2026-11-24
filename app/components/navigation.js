@@ -18,9 +18,9 @@ export default function Navigation() {
   }
   
   return (
-    <div className="Navigation">
+    <div className="RootNavigation" aria-label="Main navigation">
       
-      <div className="Menu_Nav_Link"><Link href="/">Home</Link></div>
+      <Link className="RootNav__Link" href="/">Home</Link>
       
       <div>
         <div className="Menu_Nav_Link"><Link href="/personal">Personal</Link></div>
@@ -37,7 +37,8 @@ export default function Navigation() {
       </div>
       
       <div>
-        <div><Link href="/business">Business</Link></div>
+        <Link href="/business">Business</Link>
+        
         <div className={ businessSubMenu ? "ShowSubMenu" : "Hide" }>
           <div className="Menu_Nav_Link"><Link href="/funding">Funding</Link></div>
           
@@ -51,16 +52,12 @@ export default function Navigation() {
         </div>
       </div>
       
-      <div><Link href="/contact-us">Contact Us</Link></div>
+      <Link href="/contact-us" className="RootNav__Link">Contact Us</Link>
       
-      <div className="Menu_Buttons">
-        <div className="Menu_Button">
-          <div className="Button_Hover"><Link href="/login">Login</Link></div>
-        </div>
+      <div className="RootNav__Actions">
+        <Link href="/login" className="RootNav__Login">Login</Link>
         
-        <div className="Menu_Button">
-          <div className="Button_Secondary"><Link href="/signup">Sign Up</Link></div> 
-        </div>
+        <Link href="/signup" className="RootNav_Signup">Sign Up</Link> 
       </div>
     </div>  
   );

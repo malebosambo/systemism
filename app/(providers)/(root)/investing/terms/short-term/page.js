@@ -1,9 +1,12 @@
 export default function ShortTerm() {
   
   return (
-    <main>
+    <main className="InvestingShortTerm">
       
-      <div><h1>Short Term</h1></div>
+      <div>
+        <h1>Short Term</h1>
+      </div>
+      
     </main>
   )
 }

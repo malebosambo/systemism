@@ -17,7 +17,7 @@ export default function Header() {
     setMenuOpen(false);
   }, [pathname]);
 
-  const showMobileMenu = () => setMobileMenu(!mobileMenu);  
+  const showMobileMenu = () => setMenuOpen(!menuOpen);  
   
   return (
 

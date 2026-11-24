@@ -1,9 +1,11 @@
 export default function BalanceSheet() {
   
   return (
-    <main>
+    <main className="FundingBalanceSheet">
       
-      <div><h1>Balance Sheet</h1></div>
+      <div>
+        <h1>Balance Sheet</h1>
+      </div>
       
     </main>
   )

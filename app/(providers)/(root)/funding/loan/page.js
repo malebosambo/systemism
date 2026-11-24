@@ -1,9 +1,11 @@
 export default function Loan() {
   
   return (
-    <main>
+    <main className="FundingLoan">
       
-      <div><h1>Loan</h1></div>
+      <div>
+        <h1>Loan</h1>
+      </div>
       
     </main>
   )

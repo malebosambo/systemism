@@ -1,8 +1,12 @@
 export default function Currencies() {
   
   return (
-    <>
-      <div><h1>Currencies</h1></div>
-    </>
+    <main className="InvestingCurrencies">
+      
+      <div>
+        <h1>Currencies</h1>
+      </div>
+      
+    </main>
   )
 }

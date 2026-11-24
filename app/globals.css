@@ -173,8 +173,6 @@ ul {
   .SiteHeader * { transition-duration: .01ms !important; }
 }
 
-
-
 @media only screen and (max-width: 600px) { 
   
   .Footer {
@@ -856,27 +854,32 @@ ul {
     margin-top: 30px;
   }
   
-  .SiteHeader__Bar { 
-    min-height: 78px; 
+  .SiteHeader__Bar {
+    min-height: 76px;
   }
-  
-  .SiteHeader__DesktopNav { 
-    display: none; 
+
+  .SiteHeader__Brand :global(img) {
+    max-height: 50px;
+    width: 138px;
   }
-  
-  .SiteHeader__MenuButton { 
-    display: inline-flex; 
+
+  .SiteHeader__DesktopNav {
+    display: none;
   }
-  
+
+  .SiteHeader__MenuButton {
+    display: inline-flex;
+  }
+
   .SiteHeader__MobilePanel {
     background: var(--header-ink);
     border-top: 1px solid rgb(255 255 255 / 12%);
     box-shadow: 0 18px 30px rgb(0 0 0 / 20%);
     display: block;
     inset: 100% 0 auto;
-    max-height: calc(100dvh - 78px);
+    max-height: calc(100dvh - 76px);
     overflow-y: auto;
-    padding: 1.25rem clamp(1rem, 5vw, 2rem) 1.5rem;
+    padding: 1rem clamp(1.25rem, 5vw, 2rem) 1.5rem;
     position: absolute;
     transform: translateY(-8px);
     transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
@@ -884,19 +887,19 @@ ul {
     opacity: 0;
     z-index: 3;
   }
-          
+
   .SiteHeader__MobilePanel.Is-Open {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
   }
-  
+
   .SiteHeader__Backdrop {
     background: rgb(0 0 0 / 34%);
     border: 0;
     display: block;
     inset: 100% 0 auto;
-    min-height: calc(100dvh - 78px);
+    min-height: calc(100dvh - 76px);
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -921,7 +924,7 @@ ul {
     color: white; 
   }
 
-.HomeAcademy__Content .HomeButton { 
+  .HomeAcademy__Content .HomeButton { 
     margin-top: 1.75rem; 
   }
   
@@ -929,15 +932,15 @@ ul {
     color: #d7d9d0; 
   }
 
-.HomeAccelerator .HomeButton { 
+  .HomeAccelerator .HomeButton { 
     margin-top: 1.75rem; 
   }
 
-.HomeAccelerator .HomeSection__Intro > p:not(.HomeEyebrow) { 
+  .HomeAccelerator .HomeSection__Intro > p:not(.HomeEyebrow) { 
     color: #d7d9d0; 
   }
 
-.HomeBenefits li { 
+  .HomeBenefits li { 
     line-height: 1.6 !important; 
     padding-left: 1.75rem; 
     position: relative; 
@@ -1036,15 +1039,15 @@ ul {
     outline-offset: 3px; 
   }
 
-.HomeDirectory__Copy .HomeButton { 
+  .HomeDirectory__Copy .HomeButton { 
     margin-top: 2rem;
   }
 
-.HomeDirectory_Map {
-  height: 260px;
-}
+  .HomeDirectory_Map {
+    height: 260px;
+  }
 
-.HomeEyebrow {
+  .HomeEyebrow {
     color: #77786e;
     font-size: .76rem !important;
     font-weight: 700;
@@ -1058,7 +1061,7 @@ ul {
     color: #e4e5cf;
   }
 
-.HomeFunding {
+  .HomeFunding {
     background: linear-gradient(105deg, rgb(13 17 15 / 92%), rgb(13 17 15 / 78%)), url('/root/funding.jpg') center / cover;
     color: white;
   }
@@ -1107,13 +1110,13 @@ ul {
      margin-left: .25rem; 
   }
 
-.HomeFundingGrid {
+  .HomeFundingGrid {
     display: grid; 
     gap: .85rem; 
     grid-template-columns: 1fr;
   }
 
-.HomeHero {
+  .HomeHero {
     align-items: center; 
     background-image: linear-gradient(90deg, rgb(9 17 16 / 78%) 0%, rgb(9 17 16 / 52%) 48%, rgb(9 17 16 / 14%) 100%), url('/root/CraftsSMME.jpg'); 
     background-position: center; 
@@ -1148,7 +1151,7 @@ ul {
     padding-right: 1.5rem;
   }
   
-    .HomeHero__Scroll {
+  .HomeHero__Scroll {
     color: white; 
     display: inline-flex; 
     font-size: .88rem !important; 
@@ -1221,7 +1224,7 @@ ul {
     z-index: 1; 
   }
 
-.HomeMarketplace__Copy {
+  .HomeMarketplace__Copy {
     max-width: 560px;
   }
   
@@ -1239,7 +1242,7 @@ ul {
     width: 100%;
   }
 
-.HomePage {
+  .HomePage {
     home-ink: #171815;
     --home-muted: #66675f;
     --home-cream: #f7f6df;
@@ -1381,7 +1384,7 @@ ul {
     box-sizing: border-box;
   }
 
-.HomeProductCarousel__Heading {
+  .HomeProductCarousel__Heading {
     align-items: flex-start; 
     display: flex; 
     justify-content: space-between; 
@@ -1406,7 +1409,7 @@ ul {
     max-width: 660px;
   }
 
-.HomeSection__Intro--Light h2, .HomeSection__Intro--Light > p:not(.HomeEyebrow) { 
+  .HomeSection__Intro--Light h2, .HomeSection__Intro--Light > p:not(.HomeEyebrow) { 
     color: white; 
   }
   
@@ -1462,27 +1465,32 @@ ul {
     margin-left: .2rem;
   }
   
-  .SiteHeader__Bar { 
-    min-height: 78px; 
+  .SiteHeader__Bar {
+    min-height: 76px;
   }
-          
-  .SiteHeader__DesktopNav { 
-    display: none; 
+
+  .SiteHeader__Brand :global(img) {
+    max-height: 50px;
+    width: 138px;
   }
-          
-  .SiteHeader__MenuButton { 
-    display: inline-flex; 
+
+  .SiteHeader__DesktopNav {
+    display: none;
   }
-          
+
+  .SiteHeader__MenuButton {
+    display: inline-flex;
+  }
+
   .SiteHeader__MobilePanel {
     background: var(--header-ink);
     border-top: 1px solid rgb(255 255 255 / 12%);
     box-shadow: 0 18px 30px rgb(0 0 0 / 20%);
     display: block;
     inset: 100% 0 auto;
-    max-height: calc(100dvh - 78px);
+    max-height: calc(100dvh - 76px);
     overflow-y: auto;
-    padding: 1.25rem clamp(1rem, 5vw, 2rem) 1.5rem;
+    padding: 1rem clamp(1.25rem, 5vw, 2rem) 1.5rem;
     position: absolute;
     transform: translateY(-8px);
     transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
@@ -1490,19 +1498,19 @@ ul {
     opacity: 0;
     z-index: 3;
   }
-          
+
   .SiteHeader__MobilePanel.Is-Open {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
   }
-          
+
   .SiteHeader__Backdrop {
     background: rgb(0 0 0 / 34%);
     border: 0;
     display: block;
     inset: 100% 0 auto;
-    min-height: calc(100dvh - 78px);
+    min-height: calc(100dvh - 76px);
     position: fixed;
     width: 100%;
     z-index: 1;

@@ -42,7 +42,7 @@ export default function Home() {
             <div><Link href="/profiles/business" className="HomeButton HomeButton--Outline">Explore Business</Link></div>
           </div>
 
-          <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="true">↓</span></a></div>
+          <div><a className="HomeHero__Scroll" href="#investing">Discover what you can do <span aria-hidden="True">↓</span></a></div>
 
         </div>
         

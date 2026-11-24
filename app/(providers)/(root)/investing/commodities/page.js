@@ -1,8 +1,12 @@
 export default function Commodities() {
   
   return (
-    <>
-      <div><h1>Commodities</h1></div>
-    </>
+    <main className="InvestingCommodities">
+      
+      <div>
+        <h1>Commodities</h1>
+      </div>
+      
+    </main>
   )
 }

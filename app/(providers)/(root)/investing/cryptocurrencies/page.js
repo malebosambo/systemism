@@ -1,8 +1,12 @@
 export default function Cryptocurrencies() {
   
   return (
-    <>
-      <div><h1>Cryptocurrencies</h1></div>
-    </>
+    <main className="InvestingCryptocurrencies">
+      
+      <div>
+        <h1>Cryptocurrencies</h1>
+      </div>
+      
+    </main>
   )
 }

@@ -1,9 +1,12 @@
 export default function LongTerm() {
   
   return (
-    <main>
+    <main className="InvestingLongTerm">
       
-      <div><h1>Long Term</h1></div>
+      <div>
+        <h1>Long Term</h1>
+      </div>
+      
     </main>
   )
 }

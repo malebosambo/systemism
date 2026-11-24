@@ -1,9 +1,11 @@
 export default function AssetRental() {
   
   return (
-    <main>
+    <main className="FundingAssetRental">
       
-      <div><h1>Asset Rental</h1></div>
+      <div>
+        <h1>Asset Rental</h1>
+      </div>
       
     </main>
   )
