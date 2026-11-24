@@ -16,12 +16,28 @@ export default function Header() {
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+  
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    
+    window.addEventListener("keydown", handleKeyDown);
+    
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    
+  }, [menuOpen]);
 
-  const showMobileMenu = () => setMenuOpen(!menuOpen);  
+
+  const showMobileMenu = () => setMenuOpen(!menuOpen);
+  
+  const closeMenu = () => setMenuOpen(false);
   
   return (
 
-    <div className="SiteHeader">
+    <div className="SiteHeader"> 
       
       <div className="SiteHeader__Bar">
         <Link href="/" className="SiteHeader__Brand">
@@ -30,7 +46,7 @@ export default function Header() {
       
         <div className="SiteHeader__DesktopNav"><Navigation /></div>
         
-        <button type="button" onClick={() => setMenuOpen((isOpen) => !isOpen)} className="SiteHeader__MenuButton">
+        <button type="button" onClick={() => setMenuOpen((isOpen) => !isOpen)} className="SiteHeader__MenuButton" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} aria-controls="Site-Mobile-Navigation">
           <span className={`SiteHeader__MenuIcon${menuOpen ? "Is-Open" : ""}`} aria-hidden="True">
             <span />
             <span />

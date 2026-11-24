@@ -66,6 +66,11 @@ ul {
   color: white;
 }
 
+.RootNavGroup_Personal {
+  display: flex;
+  padding: 10px;
+}
+
 .SiteHeader {
   margin: -8px -8px 0 -8px;
 }
@@ -87,6 +92,10 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 20px;
+  }
+  
+  .Hide {
+    display: none;
   }
   
   .HomeAcademy {
@@ -835,8 +844,32 @@ ul {
     width: 100%; 
   }
   
+  .SiteHeader {
+    --header-ink: #171815;
+    --header-cream: #f7f6df;
+    background: var(--header-ink);
+    color: #fff;
+    position: relative;
+    z-index: 50;
+  }
+  
   .SiteHeader__Bar {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin: 0 auto;
     min-height: 76px;
+    padding: .7rem clamp(1.25rem, 4vw, 3.5rem);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .SiteHeader__Brand { 
+    align-items: center; 
+    display: inline-flex; 
+    flex: 0 0 auto; 
+    line-height: 0; 
   }
 
   .SiteHeader__Brand :global(img) {
@@ -847,9 +880,51 @@ ul {
   .SiteHeader__DesktopNav {
     display: none;
   }
-
+  
   .SiteHeader__MenuButton {
+    align-items: center;
+    background: var(--header-cream);
+    border: 0;
+    border-radius: 50%;
+    color: var(--header-ink);
+    cursor: pointer;
     display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    padding: 0;
+    width: 50px;
+  }
+  
+  .SiteHeader__MenuButton:focus-visible, .SiteHeader__Brand:focus-visible, .SiteHeader__Backdrop:focus-visible { 
+    outline: 3px solid #d6daa9; 
+    outline-offset: 4px; 
+  }
+  
+  .SiteHeader__MenuIcon { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    width: 23px; 
+  }
+  
+  .SiteHeader__MenuIcon span { background: currentColor; 
+    border-radius: 2px; 
+    display: block; 
+    height: 2px; 
+    transition: transform .18s ease, opacity .18s ease; 
+    width: 100%; 
+  }
+  
+  .SiteHeader__MenuIcon.Is-Open span:first-child { 
+    transform: translateY(7px) rotate(45deg); 
+  }
+    
+  .SiteHeader__MenuIcon.Is-Open span:nth-child(2) { 
+    opacity: 0; 
+  }
+        
+  .SiteHeader__MenuIcon.Is-Open span:last-child { 
+    transform: translateY(-7px) rotate(-45deg); 
   }
 
   .SiteHeader__MobilePanel {
