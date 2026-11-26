@@ -2504,6 +2504,10 @@ ul {
     background: var(--home-cream); 
     color: black;
   }
+  
+  .HomeButton--Light > a {
+    color: black;
+  }
 
   .HomeButton--Outline {
     border-color: rgb(255 255 255 / 75%);
@@ -3042,11 +3046,11 @@ ul {
   .HomeSection__Intro {
     max-width: 660px;
   }
-  
+  /*
   .HomeSection__Intro--Light {
     
   }
-  
+  */
   .HomeSection__Intro > p:last-child, .HomeMarketplace__Copy > p:not(.HomeEyebrow), .HomeDirectory__Copy > p:not(.HomeEyebrow), .HomeAcademy__Content > p:not(.HomeEyebrow), .HomeAccelerator .HomeSection__Intro > p:not(.HomeEyebrow) { 
     color: var(--home-muted); 
     font-size: 1rem !important; 
@@ -3140,6 +3144,10 @@ ul {
     justify-content: space-between; 
     gap: 2rem; 
     padding: clamp(4rem, 8vw, 7rem) max(6vw, calc((100vw - 1200px) / 2));
+  }
+  
+  .Hide {
+    display: none;
   }
   
   .HomeAcademy h2, .HomeAccelerator h2 { 
@@ -4098,10 +4106,24 @@ ul {
     color: #171815;
     gap: .45rem; 
   }
+  
+  .RootNav__Signup > a { 
+    color: w;
+  }
         
   .RootNav__Signup:hover { 
     background: #eeedcf; 
     transform: translateY(-1px); 
-  } 
-
+  }
+  
+  .RootNavGroup_Business {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .RootNavGroup_Personal {
+    display: flex;
+    flex-direction: column;
+  }
+ 
 }

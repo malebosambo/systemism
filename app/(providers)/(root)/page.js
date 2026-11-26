@@ -247,10 +247,10 @@ export default function Home() {
             
             <ul>
               
-              <li><div style={{ alignItems: "center", display: "flex" }}>
+              <li>
                 <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
                 <p style={{ marginLeft: "20px" }}>Cost-Effective Start</p>
-              </div></li>
+              </li>
               
               <li><div style={{ alignItems: "center", display: "flex" }}>
                 <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
@@ -361,7 +361,7 @@ export default function Home() {
       
       <div className="HomeAccelerator" aria-labelledby="Accelerator-Title">
         
-        <div style={{ padding: "clamp(4rem, 9vw, 8rem) max(6vw, calc((100vw - 1200px) / 2))" }}>
+        <div>
         
           <div className="HomeSection__Intro HomeSection__Intro--Light">
           
