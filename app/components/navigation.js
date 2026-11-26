@@ -5,10 +5,18 @@ import Link from 'next/link'
 
 export default function Navigation() {
   
-  const [ openSubMenu, setOpenSubMenu ] = useState(false);
+  const [ personalMenu, setPersonalMenu ] = useState(false);
   
-  const handleOnClick = () => {
-    setOpenSubMenu(!openSubMenu);
+  const [ businessMenu, setBusinessMenu ] = useState(false);
+  
+  const handlePersonalOnClick = () => {
+    setPersonalMenu(!personalMenu);
+    setBusinessMenu(!businessMenu)
+  }
+  
+  const handleBusinessOnClick = () => {
+    setBusinessMenu(!businessMenu);
+    setPersonalMenu(!personalMenu);
   }
   
   return (
@@ -17,9 +25,9 @@ export default function Navigation() {
       <Link className="RootNav__Link" href="/">Home</Link>
       
       <div>
-        <Link href="/personal" className="RootNav__Link">Personal</Link><span onClick={handleOnClick}>o</span>
+        <Link href="/personal" className="RootNav__Link">Personal</Link><span onClick={handlePersonalOnClick}>o</span>
         
-        <div className={ openSubMenu ? "RootNavGroup_Personal" : "Hide" }>
+        <div className={ personalMenu ? "RootNavGroup_Personal" : "Hide" }>
           <Link href="/investing" className="RootNav__Link">Investing</Link>
           
           <Link href="/marketplace" className="RootNav__Link">Marketplace</Link>
@@ -31,9 +39,9 @@ export default function Navigation() {
       </div>
       
       <div>
-        <Link href="/business" className="RootNav__Link">Business</Link><span onClick="">o</span>
+        <Link href="/business" className="RootNav__Link">Business</Link><span onClick={handleBusinessOnClick}>o</span>
         
-        <div className={ openSubMenu ? "RootNavGroup_Business" : "Hide" }>
+        <div className={ businessMenu ? "RootNavGroup_Business" : "Hide" }>
           <Link href="/funding" className="RootNav__Link">Funding</Link>
           
           <Link href="/vendor" className="RootNav__Link">Vendor</Link>
