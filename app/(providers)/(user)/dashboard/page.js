@@ -1,153 +1,27 @@
 "use client";
 
-import { useEffect } from "react";
-import Link from 'next/link';
-import Image from "next/image";
-import { useRouter, redirect } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/lib/authContext";
 import { UpdateProfile } from "@/app/lib/firestore";
-import WalletGateway from "@/app/components/walletGateway";
 
-export default function Dashboard() {
-  
-  const { user, profile, loading } = useAuth();
-  
-  const router = useRouter();
-  
-  useEffect(() => {
+const personalShortcuts=[{title:"Investments",description:"Browse opportunities and keep track of your investment journey.",href:"/investments",action:"View investments",mark:"↗"},{title:"Marketplace",description:"Explore products and services from the Systemism community.",href:"/market",action:"Explore marketplace",mark:"▦"},{title:"Programs",description:"Find learning opportunities and manage your enrolments.",href:"/programs",action:"View programs",mark:"▤"},{title:"Directory map",description:"Discover businesses and services around you.",href:"/map",action:"Open directory",mark:"⌖"}];
+const businessShortcuts=[{title:"Enterprises",description:"Add an enterprise and keep its verification details organised.",href:"/enterprise",action:"Manage enterprises",mark:"▣"},{title:"Funding",description:"Review funding activity and explore available pathways.",href:"/funds",action:"View funding",mark:"↗"},{title:"Inventory",description:"Manage products and prepare them for the marketplace.",href:"/inventory",action:"Manage inventory",mark:"▦"},{title:"Business hub",description:"Continue building your business with useful tools and tasks.",href:"/hub",action:"Open business hub",mark:"◈"},{title:"Listings",description:"Manage your business listings and their review status.",href:"/listings",action:"Manage listings",mark:"▤"}];
 
-    if (loading === false && !user) {
-      router.replace("/login");
-    }
-  
-  }, [user, loading, router]);
-  
-  if (loading) {
-    return <div>Loading...</div>
-  }
-  
-  if (!user) {
-    return null;
-  }
-  
-  if (!profile) {
-    return <div style={{ display: "none" }}>Loading profile...</div>
-  }
-  
-  const handleOnClick = async () => {
-    UpdateProfile({ walletActivated: true}, profile.id);
-    redirect("/dashboard");
-  }
-  
-  const profileType = profile.type;
-  const walletActivated = profile.walletActivated;
-
-  return (
-    <div className="Dashboard">
-      
-      <div className="Account_Overview">
-        
-        <div><h1>Hello, {profile.name || user.email}</h1></div>
-        
-        {!walletActivated ? <div><p>To interact with the features please activate your wallet.</p><div><button onClick={handleOnClick} className="ActivateButton">Activate Wallet</button></div></div> : <WalletGateway />}
-        
-      </div>
-      
-      <div className={ profileType == "Personal" ? "Personal" : "Hide" }>
-        
-        <div className="Feature_Disabled">
-          
-          <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
-          
-          <div style={{ alignItems: "center", display: "flex" }}><Link href="/investments/catalogue"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
-          
-          <div><h3>Investments: Portfolio</h3></div>
-          
-          <div><p>You have not added investments into your potfolio.</p></div>
-        
-        </div>
-        
-        <div className="Marketplace_Overview">
-          
-          <div><h3>Marketplace: Promotions</h3></div>
-          
-          <div><p>Promotions are not available in this area.</p></div>
-          
-        </div>
-        
-        <div className={ walletActivated ? "Programs_Overview" : "Feature_Disabled" }>
-          
-          <div style={{ display: "flex" }}><Link href="/programs/browse"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Browse</p></div>
-          
-          <div><h3>Programs: Enrolled</h3></div>
-          
-          <div><p>You are not enrolled in a program.</p></div>
-        
-        </div>
-        
-        <div className="Map_Overview">
-          
-          <div><h3>Map: Trending</h3></div>
-          
-          <div><p>Nothing is trending in your area.</p></div>
-          
-        </div>
-        
-      </div>
-      
-      <div className={ profileType == "Business" ? "Business" : "Hide" }>
-        
-        <div className="Feature_Disabled">
-          
-          <div className="ComingSoon"><p style={{ color: "white", fontWeight: "bold" }}>Coming soon...</p></div>
-          
-          <div style={{ display: "flex" }}><Link href="/funds/request"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Request</p></div>
-          
-          <div><h3>Funds: Active</h3></div>
-          
-          <div><p>Request funding for your enterprise.</p></div>
-        
-        </div>
-      
-        <div className="Inventory_Overview">
-          
-          <div style={{ display: "flex" }}><Link href="/inventory/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
-          
-          <div><h3>Inventory: Latest Statistics</h3></div>
-          
-          <div><p>Add inventory to the marketplace.</p></div>
-        
-        </div>
-      
-        <div className="Enterprise_Overview">
-          
-          <div style={{ display: "flex" }}><Link href="/enterprise/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
-          
-          <div><h3>Enterprises: Verified</h3></div>
-          
-          <div><p>Add your enterprise for verification.</p></div>
-        
-        </div>
-        
-        <div className="Hub_Overview">
-          
-          <div><h3>Hub: Tasks</h3></div>
-          
-          <div><p>Start your entrepreneurship journey.</p></div>
-          
-        </div>
-        
-        <div className="Listings_Overview">
-          
-          <div style={{ display: "flex" }}><Link href="/listing/add"><Image src="/icons/circled-add.png" alt="Add Icon" height={40} width={40} /></Link><p style={{ fontWeight: "bold", marginLeft: "5px" }}>Add</p></div>
-          
-          <div><h3>Listings: Approved</h3></div>
-          
-          <div><p>Submit a listing for approval.</p></div>
-          
-        </div>
-    
-      </div>
-    </div>
-  );
+export default function Dashboard(){
+ const {user,profile,loading}=useAuth();const router=useRouter();const [walletSaving,setWalletSaving]=useState(false);const [walletError,setWalletError]=useState("");
+ useEffect(()=>{if(!loading&&!user)router.replace("/login")},[user,loading,router]);
+ const shortcuts=useMemo(()=>profile?.type===\"Business\"?businessShortcuts:personalShortcuts,[profile?.type]);
+ if(loading||!user)return <main className="dashboardLoading" aria-live="polite">Loading your dashboard…</main>; 
+ const greetingName=profile?.name?.trim()||user.displayName||user.email||"there";const walletActivated=profile?.walletActivated===true;
+ async function activateWallet(){if(!profile?.id||walletSaving)return;setWalletError(\"\");setWalletSaving(true);try{await UpdateProfile({walletActivated:true},profile.id);router.refresh()}catch(error){console.error("Wallet activation update failed",error);setWalletError("We couldn’t update your wallet status. Please try again.")}finally{setWalletSaving(false)}}
+ return <main className="dashboardPage"><div className="dashboardPage__container"><section className="dashboardWelcome" aria-labelledby="dashboard-title"><div><p className="dashboardEyebrow">Your Systemism account</p><h1 id="dashboard-title">Welcome, {greetingName}</h1><p className="dashboardWelcome__summary">Here’s a clear starting point for your {profile?.type===\"Business\"?"business":"personal"} journey.</p></div><div className="dashboardWelcome__profile"><span className="dashboardProfileBadge">{profile?.type||"Member"}</span><Link href="/profile/settings">Account settings <span aria-hidden="true">↗</span></Link></div></section>
+ {!profile?<section className="dashboardSetup"><span aria-hidden="true">!</span><div><h2>Finish setting up your profile</h2><p>Your account is signed in, but profile details could not be found.</p><Link className="dashboardButton dashboardButton--primary" href="/profile/settings">Open account settings</Link></div></section>:<><section className={`walletStatus${walletActivated?" is-active":""}`} aria-labelledby="wallet-title"><div className="walletStatus__copy"><span className="walletStatus__icon" aria-hidden="true">{walletActivated?"✓":"◌"}</span><div><p className="dashboardEyebrow">Account access</p><h2 id="wallet-title">{walletActivated?"Your wallet is active":"Activate your wallet"}</h2><p>{walletActivated?"Your wallet status is active. Continue exploring the tools available to your account.":"Activate your wallet to enable account features that depend on it."}</p>{walletError&&<p className="walletStatus__error" role="alert">{walletError}</p>}</div></div>{!walletActivated&&<button className="dashboardButton dashboardButton--primary" disabled={walletSaving||!profile?.id} onClick={activateWallet} type="button">{walletSaving?"Activating…":"Activate wallet"}</button>}</section>
+ <section className="dashboardSection" aria-labelledby="shortcuts-title"><div className="dashboardSection__heading"><div><p className="dashboardEyebrow">Your workspace</p><h2 id="shortcuts-title">Pick up where you want to go</h2></div><span>{shortcuts.length} areas</span></div><div className="dashboardCards">{shortcuts.map((item)=><article className="dashboardCard" key={item.href}><span className="dashboardCard__mark" aria-hidden="true">{item.mark}</span><h3>{item.title}</h3><p>{item.description}</p><Link href={item.href}>{item.action} <span aria-hidden="true">→</span></Link></article>)}</div></section>
+ <section className="dashboardAccountStrip" aria-label="Account summary"><div><span className="dashboardAccountStrip__label">Signed in as</span><strong>{user.email||"Verified account"}</strong></div><div><span className="dashboardAccountStrip__label">Profile</span><strong>{profile.type||"Member"}</strong></div><Link href="/profile/settings">Review account details <span aria-hidden="true">↗</span></Link></section></>}</div>
+ <style jsx>{`
+ .dashboardPage{--dash-ink:#1b1d18;--dash-muted:#66685f;--dash-paper:#f7f7f2;--dash-line:#e4e5dc;--dash-cream:#f4f3df;background:var(--dash-paper);color:var(--dash-ink);min-height:calc(100vh - 78px);padding:clamp(1.5rem,4vw,3.5rem) 1.25rem 4rem}.dashboardPage *{box-sizing:border-box}.dashboardPage__container{margin:0 auto;max-width:1200px}.dashboardLoading{align-items:center;color:#66685f;display:flex;justify-content:center;min-height:45vh}.dashboardWelcome{align-items:flex-end;background:linear-gradient(120deg,#202820,#343c31);border-radius:18px;color:#fff;display:flex;gap:2rem;justify-content:space-between;padding:clamp(1.6rem,4vw,3rem)}.dashboardEyebrow{color:#77796f;font-size:.72rem;font-weight:800;letter-spacing:.14em;margin:0 0 .7rem;text-transform:uppercase}.dashboardWelcome .dashboardEyebrow{color:#d5d8c8}.dashboardWelcome h1{color:#fff;font-size:clamp(2rem,4.4vw,3.5rem);letter-spacing:-.045em;line-height:1.08;margin:0}.dashboardWelcome__summary{color:#e4e5dd;line-height:1.65;margin:.8rem 0 0}.dashboardWelcome__profile{align-items:flex-end;display:flex;flex-direction:column;gap:.9rem}.dashboardProfileBadge{background:rgb(255 255 255 / 12%);border:1px solid rgb(255 255 255 / 22%);border-radius:99px;color:#f7f6df;font-size:.78rem;font-weight:700;padding:.5rem .85rem}.dashboardWelcome__profile a{color:#fff;font-size:.86rem;font-weight:700;text-decoration:underline;text-underline-offset:4px}.walletStatus{align-items:center;background:#fff;border:1px solid var(--dash-line);border-radius:14px;display:flex;gap:1.5rem;justify-content:space-between;margin-top:1.2rem;padding:1.25rem 1.4rem}.walletStatus.is-active{background:#f0f3e9;border-color:#dbe2d1}.walletStatus__copy{align-items:flex-start;display:flex;gap:1rem}.walletStatus__icon{align-items:center;background:var(--dash-cream);border-radius:50%;color:#363c30;display:flex;flex:0 0 42px;font-size:1.2rem;font-weight:800;height:42px;justify-content:center}.walletStatus h2{font-size:1.08rem;margin:0 0 .35rem}.walletStatus p:not(.dashboardEyebrow){color:var(--dash-muted);font-size:.9rem;line-height:1.6;margin:0}.walletStatus .walletStatus__error{color:#a32b23}.dashboardButton{align-items:center;border:1px solid transparent;border-radius:8px;cursor:pointer;display:inline-flex;font:inherit;font-size:.88rem;font-weight:750;justify-content:center;min-height:44px;padding:.65rem 1rem;text-decoration:none;white-space:nowrap}.dashboardButton--primary{background:#222820;color:#fff}.dashboardSection{margin-top:2.5rem}.dashboardSection__heading{align-items:flex-end;display:flex;justify-content:space-between;margin-bottom:1.1rem}.dashboardSection__heading h2{font-size:clamp(1.45rem,3vw,2rem);letter-spacing:-.035em;margin:0}.dashboardCards{display:grid;gap:1rem;grid-template-columns:repeat(3,minmax(0,1fr))}.dashboardCard{background:#fff;border:1px solid var(--dash-line);border-radius:14px;display:flex;flex-direction:column;min-height:210px;padding:1.25rem}.dashboardCard__mark{align-items:center;background:var(--dash-cream);border-radius:10px;display:flex;font-size:1.2rem;height:42px;justify-content:center;width:42px}.dashboardCard h3{font-size:1.04rem;margin:1.05rem 0 .4rem}.dashboardCard p{color:var(--dash-muted);font-size:.88rem;line-height:1.6}.dashboardCard a{color:#283126;font-size:.84rem;font-weight:750;margin-top:auto;text-decoration:none}.dashboardAccountStrip{align-items:center;background:#eeefe8;border-radius:12px;display:flex;justify-content:space-between;margin-top:1.75rem;padding:1rem 1.2rem}.dashboardAccountStrip>div{display:grid}.dashboardAccountStrip__label{color:var(--dash-muted);font-size:.72rem}.dashboardAccountStrip strong{font-size:.86rem}.dashboardAccountStrip>a{color:#283126;font-size:.84rem;font-weight:750}.dashboardSetup{align-items:flex-start;background:#fff;border:1px solid var(--dash-line);border-radius:14px;display:flex;gap:1rem;margin-top:1.2rem;padding:1.5rem}
+ @media(max-width:800px){.dashboardWelcome{align-items:flex-start;flex-direction:column}.dashboardWelcome__profile{align-items:flex-start;flex-direction:row;justify-content:space-between;width:100%}.dashboardCards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.dashboardPage{padding-inline:.9rem}.walletStatus{align-items:stretch;flex-direction:column}.dashboardCards{grid-template-columns:1fr}.dashboardCard{min-height:175px}.dashboardSection__heading{align-items:flex-start;flex-direction:column}.dashboardAccountStrip{align-items:flex-start;flex-direction:column;gap:.8rem}}
+ `}</style></main>
 }
