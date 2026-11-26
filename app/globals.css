@@ -2505,7 +2505,7 @@ ul {
     color: black;
   }
   
-  .HomeButton--Light > a {
+  .HomeButton--Light > a > p {
     color: black;
   }
 

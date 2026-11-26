@@ -242,12 +242,10 @@ export default function Home() {
           </ul>
         
           <h3>Vendor benefits:</h3>
-          
-          <div style={{ marginBottom: "30px", marginTop: "20px" }}>
             
             <ul>
               
-              <li>
+              <li style={{ alignItems: "center", display: "flex" }}>
                 <Image src="/icons/circle.png" alt="Circle Icon" height={15} width={15} />
                 <p style={{ marginLeft: "20px" }}>Cost-Effective Start</p>
               </li>
@@ -268,8 +266,6 @@ export default function Home() {
               </div></li>
               
             </ul>
-              
-          </div>
           
           <Link href="/enterprise/add" className="HomeButton HomeButton--Light">Start vendor application</Link>
           

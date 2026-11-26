@@ -10,13 +10,13 @@ export default function Navigation() {
   const [ businessMenu, setBusinessMenu ] = useState(false);
   
   const handlePersonalOnClick = () => {
-    setPersonalMenu(!personalMenu);
-    setBusinessMenu(!businessMenu)
+    setPersonalMenu(true);
+    setBusinessMenu(false)
   }
   
   const handleBusinessOnClick = () => {
-    setBusinessMenu(!businessMenu);
-    setPersonalMenu(!personalMenu);
+    setBusinessMenu(true);
+    setPersonalMenu(false);
   }
   
   return (
