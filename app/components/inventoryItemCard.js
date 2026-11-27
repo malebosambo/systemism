@@ -5,19 +5,23 @@ export default function InventoryItemCard({ key, item }) {
   
   return (
     <>
-      <div key={key} className="InventoryItem">
+      <div key={key} className="InventoryProductCard">
+        
         <Link href="/inventory/${inventory.name}">
+          
           <div><Image src="" alt="Inventory Image" height={50} width={50} /></div>
         
-          <div>
-            <h3>{item.name}</h3>
-            <h4>{item.price}</h4>
-            <h4>{item.description}</h4>
-            <h4>{item.category}</h4>
-            <h4>{item.stock}</h4>
-            <h4>{item.vendor}</h4>
+          <div className="InventoryProductCard__Details">
+            <h4>{item.name}</h4>
+            <p>{item.price}</p>
+            <p>{item.description}</p>
+            <p>{item.category}</p>
+            <p>{item.stock}</p>
+            <p>{item.vendor}</p>
           </div>
+          
         </Link>
+        
       </div>
     </>
   );

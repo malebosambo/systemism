@@ -75,6 +75,10 @@ ul {
   margin: -8px -8px 0 -8px;
 }
 
+@keyframes accountPulse{to{
+  opacity: .35;
+  transform: scale(.8);
+}}
 
 @media (prefers-reduced-motion: reduce) {
   .HomePage * { 
@@ -86,8 +90,458 @@ ul {
   .SiteHeader * { transition-duration: .01ms !important; }
 }
 
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 600px) {
   
+  .AccountAccessLoading {
+    align-items: center;
+    background: #f8f8f3;
+    color: #383b33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 55vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .AccountAccessLoading span {
+    animation: accountPulse 1s ease-in-out infinite alternate;
+    background: #252b24;
+    border-radius: 50%; height: 14px;
+    width: 14px;
+  }
+  
+  .AccountAccessLoading p {
+    color: #65685f;
+    font-size: .95rem;
+    margin: 1rem 0 0;
+  }
+  
+  .AccountSettings {
+    --settings-ink: #1b1d18;
+    --settings-muted: #66685f;
+    --settings-line: #e4e5dc;
+    background: #f7f7f2; 
+    color: var(--settings-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+  
+  .AccountSettings * {
+    box-sizing: border-box;
+  }
+  
+  .AccountSettings__Container {
+    margin: auto; 
+    max-width: 1120px;
+  }
+  
+  .SettingsLoading {
+    align-items: center; 
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+  
+  .AccountSettings__Heading {
+    margin-bottom: 1.75rem;
+  }
+  
+  .AccountSettings__Heading > p, .AccountSettings__PanelHeading > div > p {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  
+  .AccountSettings__Heading h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -.045em;
+  }
+  
+  .AccountSettings__Heading > span {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Layout {
+    align-items: start;
+    display: grid; 
+    gap: 1.2rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  
+  .AccountSettings__Menu {
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 12px;
+    display: grid; 
+    gap: .25rem; 
+    padding: .5rem;
+  }
+  
+  .AccountSettings__Menu button {
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    color: #4e5149;
+    cursor: pointer;
+    font: inherit;
+    min-height: 44px;
+    padding: .6rem .75rem;
+    text-align: left;
+  }
+  
+  .AccountSettings__Menu button.Is-Active {
+    background: #eff0e7;
+    color: #20251d;
+    font-weight: 750;
+  }
+  
+  .AccountSettings__panel { 
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 14px;
+    min-height: 340px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+  }
+  
+  .AccountSettings__PanelHeading {
+    align-items: center; 
+    border-bottom: 1px solid var(--settings-line);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+  }
+  
+  .AccountSettings__Badge {
+    background: #f1f1e7;
+    border-radius: 99px;
+    padding:.45rem .75rem;
+  }
+  
+  .AccountSettings__Details > div {
+    border-bottom: 1px solid #eeefe9;
+    display: grid;
+    grid-template-columns: minmax(130px, .7fr) 1.3fr;
+    padding: 1rem 0;
+  }
+  
+  .AccountSettings__Details dt {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Details dd {
+    font-weight: 650;
+    margin: 0;
+  }
+  
+  .AccountSettings__Note {
+    background: #f6f6ef; 
+    border-radius: 8px;
+    color: var(--settings-muted);
+    line-height: 1.65;
+    padding: .9rem 1rem;
+  }
+  
+  .AccountSettings__SecurityRow{
+    align-items: center;
+    border-bottom: 1px solid #eeefe9;
+    display: flex;
+    gap: .9rem;
+    padding: 1.1rem 0;
+  }
+  
+  .AccountSettings__SecurityRow > div {
+    flex: 1;
+  }
+  
+  .AccountSettings__SecurityRow h3 {
+    margin: 0;
+  }
+  
+  .AccountSettings__SecurityRow p {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Link {
+    color: #283126;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  
+  .DashboardPage {
+    --dash-ink: #1b1d18;
+    --dash-muted: #66685f;
+    --dash-paper: #f7f7f2;
+    --dash-line: #e4e5dc;
+    --dash-cream: #f4f3df;
+    background: var(--dash-paper);
+    color: var(--dash-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+    
+  .DashboardPage * { 
+    box-sizing: border-box;
+  }
+  
+  .DashboardPage__Container { 
+    margin: 0 auto;
+    max-width: 1200px
+  }
+
+  .DashboardLoading {
+    align-items: center;
+    color: #66685f;
+    display: flex; 
+    justify-content: center; 
+    min-height: 45vh;
+  }
+
+  .DashboardWelcome { 
+    align-items: flex-start;
+    background: linear-gradient(120deg, #202820, #343c31);
+    border-radius: 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: clamp(1.6rem, 4vw, 3rem);
+  }
+  
+  .DashboardEyebrow {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin: 0 0 .7rem;
+    text-transform: uppercase;
+  }
+  
+  .DashboardWelcome .DashboardEyebrow {
+    color: #d5d8c8;
+  }
+  
+  .DashboardWelcome h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4.4vw, 3.5rem);
+    letter-spacing: -.045em;
+    line-height: 1.08;
+    margin: 0;
+  }
+  
+  .DashboardWelcome__Summary {
+    color: #e4e5dd;
+    line-height: 1.65;
+    margin: .8rem 0 0;
+  }
+  
+  .DashboardWelcome__Profile {
+    align-items: flex-start;
+    display: flex; 
+    flex-direction: row; 
+    gap: .9rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .DashboardProfileBadge {
+    background: rgb(255 255 255 / 12%);
+    border: 1px solid rgb(255 255 255 / 22%);
+    border-radius: 99px;
+    color: #f7f6df; 
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .5rem .85rem;
+  }
+  
+  .DashboardWelcome__Profile a {
+    color: #fff;
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  .WalletStatus {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex; 
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding: 1.25rem 1.4rem;
+  }
+  
+  .WalletStatus.Is-Active {
+    background: #f0f3e9;
+    border-color: #dbe2d1;
+  }
+  
+  .WalletStatus__Copy {
+    align-items: flex-start;
+    display: flex; 
+    gap: 1rem;
+  }
+  
+  .WalletStatus__Icon {
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 50%;
+    color: #363c30;
+    display: flex;
+    flex: 0 0 42px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    height: 42px;
+    justify-content: center;
+  }
+  
+  .WalletStatus h2 {
+    font-size: 1.08rem;
+    margin: 0 0 .35rem;
+  }
+  
+  .WalletStatus p:not(.DashboardEyebrow) {
+    color: var(--dash-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .WalletStatus .WalletStatus__Error {
+    color: #a32b23;
+  }
+  
+  .DashboardButton {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 750;
+    justify-content: center;
+    min-height: 44px;
+    padding: .65rem 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .DashboardButton-Primary {
+    background: #222820;
+    color: #fff;
+  }
+  
+  .DashboardSection {
+    margin-top:2.5rem;
+  }
+  
+  .DashboardSection__Heading {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+  }
+  
+  .DashboardSection__Heading h2 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -.035em;
+    margin:0;
+  }
+  
+  .DashboardCards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .DashboardCard {
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding:1.25rem;
+  }
+
+  .DashboardCard__Mark{
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.2rem;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+  }
+  
+  .DashboardCard h3 { 
+    font-size: 1.04rem;
+    margin:1.05rem 0 .4rem;
+  }
+  
+  .DashboardCard p {
+    color: var(--dash-muted);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+  
+  .DashboardCard a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750;
+    margin-top: auto;
+    text-decoration: none;
+  }
+  
+  .DashboardAccountStrip {
+    align-items: center;
+    background: #eeefe8;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    padding:1rem 1.2rem;
+  }
+  
+  .DashboardAccountStrip > div {
+    display: grid;
+  }
+  
+  .DashboardAccountStrip__Label {
+    color: var(--dash-muted);
+    font-size: .72rem;
+  }
+  
+  .DashboardAccountStrip strong {
+    font-size: .86rem;
+  }
+  
+  .DashboardAccountStrip > a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750px;
+  }
+  
+  .DashboardSetup {
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    padding:1.5rem;
+  }
+
   .Footer {
     display: flex;
     flex-direction: column;
@@ -920,6 +1374,33 @@ ul {
     margin-top: 30px;
   }
   
+  .InventoryProductCard {
+    background: white; 
+    border: 1px solid var(--home-line); 
+    border-radius: 14px;
+  }
+  
+  .InventoryProductCard__Details {
+    padding: 1rem 1.1rem 1.15rem;
+  }
+  
+  .InventoryProductCard__Details h4 { 
+    font-size: 1rem; 
+    margin: 0 0 .9rem; 
+  }
+  
+  .InventoryProductCard__Details > p { 
+    color: var(--home-muted); 
+    font-size: .78rem !important; 
+    margin: 0 0 .35rem; 
+  }
+  
+  .InventoryProductCard__Details a { 
+    color: var(--home-ink); 
+    font-size: .86rem; 
+    font-weight: 700; 
+  }
+  
   .InvestingPage { 
     --ink: #1b1d18; 
     --muted: #65685f; 
@@ -1680,6 +2161,456 @@ ul {
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   
+  .AccountAccessLoading {
+    align-items: center;
+    background: #f8f8f3;
+    color: #383b33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 55vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .AccountAccessLoading span {
+    animation: accountPulse 1s ease-in-out infinite alternate;
+    background: #252b24;
+    border-radius: 50%; height: 14px;
+    width: 14px;
+  }
+  
+  .AccountAccessLoading p {
+    color: #65685f;
+    font-size: .95rem;
+    margin: 1rem 0 0;
+  }
+  
+  .AccountSettings {
+    --settings-ink: #1b1d18;
+    --settings-muted: #66685f;
+    --settings-line: #e4e5dc;
+    background: #f7f7f2; 
+    color: var(--settings-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+  
+  .AccountSettings * {
+    box-sizing: border-box;
+  }
+  
+  .AccountSettings__Container {
+    margin: auto; 
+    max-width: 1120px;
+  }
+  
+  .SettingsLoading {
+    align-items: center; 
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+  
+  .AccountSettings__Heading {
+    margin-bottom: 1.75rem;
+  }
+  
+  .AccountSettings__Heading > p, .AccountSettings__PanelHeading > div > p {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  
+  .AccountSettings__Heading h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -.045em;
+  }
+  
+  .AccountSettings__Heading > span {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Layout {
+    align-items: start;
+    display: grid; 
+    gap: 1.2rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  
+  .AccountSettings__Menu {
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 12px;
+    display: grid; 
+    gap: .25rem; 
+    padding: .5rem;
+  }
+  
+  .AccountSettings__Menu button {
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    color: #4e5149;
+    cursor: pointer;
+    font: inherit;
+    min-height: 44px;
+    padding: .6rem .75rem;
+    text-align: left;
+  }
+  
+  .AccountSettings__Menu button.Is-Active {
+    background: #eff0e7;
+    color: #20251d;
+    font-weight: 750;
+  }
+  
+  .AccountSettings__panel { 
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 14px;
+    min-height: 340px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+  }
+  
+  .AccountSettings__PanelHeading {
+    align-items: center; 
+    border-bottom: 1px solid var(--settings-line);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+  }
+  
+  .AccountSettings__Badge {
+    background: #f1f1e7;
+    border-radius: 99px;
+    padding:.45rem .75rem;
+  }
+  
+  .AccountSettings__Details > div {
+    border-bottom: 1px solid #eeefe9;
+    display: grid;
+    grid-template-columns: minmax(130px, .7fr) 1.3fr;
+    padding: 1rem 0;
+  }
+  
+  .AccountSettings__Details dt {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Details dd {
+    font-weight: 650;
+    margin: 0;
+  }
+  
+  .AccountSettings__Note {
+    background: #f6f6ef; 
+    border-radius: 8px;
+    color: var(--settings-muted);
+    line-height: 1.65;
+    padding: .9rem 1rem;
+  }
+  
+  .AccountSettings__SecurityRow{
+    align-items: center;
+    border-bottom: 1px solid #eeefe9;
+    display: flex;
+    gap: .9rem;
+    padding: 1.1rem 0;
+  }
+  
+  .AccountSettings__SecurityRow > div {
+    flex: 1;
+  }
+  
+  .AccountSettings__SecurityRow h3 {
+    margin: 0;
+  }
+  
+  .AccountSettings__SecurityRow p {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Link {
+    color: #283126;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  
+  .DashboardPage {
+  --dash-ink: #1b1d18;
+  --dash-muted: #66685f;
+  --dash-paper: #f7f7f2;
+  --dash-line: #e4e5dc;
+  --dash-cream: #f4f3df;
+  background: var(--dash-paper);
+  color: var(--dash-ink);
+  min-height: calc(100vh – 78px);
+  padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+}
+
+.DashboardPage * {
+  box-sizing: border-box;
+}
+
+.DashboardPage__Container {
+  margin: 0 auto;
+  max-width: 1200px
+}
+
+.DashboardLoading {
+  align-items: center;
+  color: #66685f;
+  display: flex;
+  justify-content: center;
+  min-height: 45vh;
+}
+
+.DashboardWelcome {
+  align-items: flex-start;
+  background: linear-gradient(120deg, #202820, #343c31);
+  border-radius: 18px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: clamp(1.6rem, 4vw, 3rem);
+}
+
+.DashboardEyebrow {
+  color: #77796f;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin: 0 0 .7rem;
+  text-transform: uppercase;
+}
+
+.DashboardWelcome .DashboardEyebrow {
+  color: #d5d8c8;
+}
+
+.DashboardWelcome h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
+  letter-spacing: -.045em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.DashboardWelcome__Summary {
+  color: #e4e5dd;
+  line-height: 1.65;
+  margin: .8rem 0 0;
+}
+
+.DashboardWelcome__Profile {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: .9rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.DashboardProfileBadge {
+  background: rgb(255 255 255 / 12%);
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 99px;
+  color: #f7f6df;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .5rem .85rem;
+}
+
+.DashboardWelcome__Profile a {
+  color: #fff;
+  font-size: .86rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.WalletStatus {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--dash-line);
+  border-radius: 14px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  padding: 1.25rem 1.4rem;
+}
+
+.WalletStatus.Is-Active {
+  background: #f0f3e9;
+  border-color: #dbe2d1;
+}
+
+.WalletStatus__Copy {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+}
+
+.WalletStatus__Icon {
+  align-items: center;
+  background: var(--dash-cream);
+  border-radius: 50%;
+  color: #363c30;
+  display: flex;
+  flex: 0 0 42px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  height: 42px;
+  justify-content: center;
+}
+
+.WalletStatus h2 {
+  font-size: 1.08rem;
+  margin: 0 0 .35rem;
+}
+
+.WalletStatus p:not(.DashboardEyebrow) {
+  color: var(--dash-muted);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.WalletStatus .WalletStatus__Error {
+  color: #a32b23;
+}
+
+.DashboardButton {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: .88rem;
+  font-weight: 750;
+  justify-content: center;
+  min-height: 44px;
+  padding: .65rem 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.DashboardButton-Primary {
+  background: #222820;
+  color: #fff;
+}
+
+.DashboardSection {
+  margin-top: 2.5rem;
+}
+
+.DashboardSection__Heading {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.DashboardSection__Heading h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -.035em;
+  margin: 0;
+}
+
+.DashboardCards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.DashboardCard {
+  background: #fff;
+  border: 1px solid var(--dash-line);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  padding: 1.25rem;
+}
+
+.DashboardCard__Mark {
+  align-items: center;
+  background: var(--dash-cream);
+  border-radius: 10px;
+  display: flex;
+  font-size: 1.2rem;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.DashboardCard h3 {
+  font-size: 1.04rem;
+  margin: 1.05rem 0 .4rem;
+}
+
+.DashboardCard p {
+  color: var(--dash-muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+
+.DashboardCard a {
+  color: #283126;
+  font-size: .84rem;
+  font-weight: 750;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.DashboardAccountStrip {
+  align-items: center;
+  background: #eeefe8;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+  padding: 1rem 1.2rem;
+}
+
+.DashboardAccountStrip>div {
+  display: grid;
+}
+
+.DashboardAccountStrip__Label {
+  color: var(--dash-muted);
+  font-size: .72rem;
+}
+
+.DashboardAccountStrip strong {
+  font-size: .86rem;
+}
+
+.DashboardAccountStrip>a {
+  color: #283126;
+  font-size: .84rem;
+  font-weight: 750px;
+}
+
+.DashboardSetup {
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--dash-line);
+  border-radius: 14px;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  padding: 1.5rem;
+}
+
   .Footer {
     display: flex;
     flex-direction: column;
@@ -2369,11 +3300,429 @@ ul {
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   
-  .Dashboard {
+  .AccountSettings {
+    --settings-ink: #1b1d18;
+    --settings-muted: #66685f;
+    --settings-line: #e4e5dc;
+    background: #f7f7f2; 
+    color: var(--settings-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+  
+  .AccountSettings * {
+    box-sizing: border-box;
+  }
+  
+  .AccountSettings__Container {
+    margin: auto; 
+    max-width: 1120px;
+  }
+  
+  .SettingsLoading {
+    align-items: center; 
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+  
+  .AccountSettings__Heading {
+    margin-bottom: 1.75rem;
+  }
+  
+  .AccountSettings__Heading > p, .AccountSettings__PanelHeading > div > p {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  
+  .AccountSettings__Heading h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -.045em;
+  }
+  
+  .AccountSettings__Heading > span {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Layout {
+    align-items: start;
+    display: grid; 
+    gap: 1.2rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  
+  .AccountSettings__Menu {
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 12px;
+    display: grid; 
+    gap: .25rem; 
+    padding: .5rem;
+  }
+  
+  .AccountSettings__Menu button {
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    color: #4e5149;
+    cursor: pointer;
+    font: inherit;
+    min-height: 44px;
+    padding: .6rem .75rem;
+    text-align: left;
+  }
+  
+  .AccountSettings__Menu button.Is-Active {
+    background: #eff0e7;
+    color: #20251d;
+    font-weight: 750;
+  }
+  
+  .AccountSettings__panel { 
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 14px;
+    min-height: 340px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+  }
+  
+  .AccountSettings__PanelHeading {
+    align-items: center; 
+    border-bottom: 1px solid var(--settings-line);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+  }
+  
+  .AccountSettings__Badge {
+    background: #f1f1e7;
+    border-radius: 99px;
+    padding:.45rem .75rem;
+  }
+  
+  .AccountSettings__Details > div {
+    border-bottom: 1px solid #eeefe9;
+    display: grid;
+    grid-template-columns: minmax(130px, .7fr) 1.3fr;
+    padding: 1rem 0;
+  }
+  
+  .AccountSettings__Details dt {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Details dd {
+    font-weight: 650;
+    margin: 0;
+  }
+  
+  .AccountSettings__Note {
+    background: #f6f6ef; 
+    border-radius: 8px;
+    color: var(--settings-muted);
+    line-height: 1.65;
+    padding: .9rem 1rem;
+  }
+  
+  .AccountSettings__SecurityRow{
+    align-items: center;
+    border-bottom: 1px solid #eeefe9;
+    display: flex;
+    gap: .9rem;
+    padding: 1.1rem 0;
+  }
+  
+  .AccountSettings__SecurityRow > div {
+    flex: 1;
+  }
+  
+  .AccountSettings__SecurityRow h3 {
+    margin: 0;
+  }
+  
+  .AccountSettings__SecurityRow p {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Link {
+    color: #283126;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  
+  .DashboardPage {
+    --dash-ink: #1b1d18;
+    --dash-muted: #66685f;
+    --dash-paper: #f7f7f2;
+    --dash-line: #e4e5dc;
+    --dash-cream: #f4f3df;
+    background: var(--dash-paper);
+    color: var(--dash-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+
+  .DashboardPage * {
+    box-sizing: border-box;
+  }
+
+  .DashboardPage__Container {
+    margin: 0 auto;
+    max-width: 1200px
+  }
+
+  .DashboardLoading {
+    align-items: center;
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+
+.DashboardWelcome {
+    align-items: flex-start;
+    background: linear-gradient(120deg, #202820, #343c31);
+    border-radius: 18px;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: clamp(1.6rem, 4vw, 3rem);
+  }
+
+  .DashboardEyebrow {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin: 0 0 .7rem;
+    text-transform: uppercase;
+  }
+
+  .DashboardWelcome .DashboardEyebrow {
+    color: #d5d8c8;
+  }
+
+  .DashboardWelcome h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4.4vw, 3.5rem);
+    letter-spacing: -.045em;
+    line-height: 1.08;
+    margin: 0;
+  }
+
+  .DashboardWelcome__Summary {
+    color: #e4e5dd;
+    line-height: 1.65;
+    margin: .8rem 0 0;
+  }
+
+  .DashboardWelcome__Profile {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: .9rem;
+    justify-content: space-between;
     width: 100%;
+  }
+
+  .DashboardProfileBadge {
+    background: rgb(255 255 255 / 12%);
+    border: 1px solid rgb(255 255 255 / 22%);
+    border-radius: 99px;
+    color: #f7f6df;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .5rem .85rem;
+  }
+
+  .DashboardWelcome__Profile a {
+    color: #fff;
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .WalletStatus {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .WalletStatus.Is-Active {
+    background: #f0f3e9;
+    border-color: #dbe2d1;
+  }
+
+  .WalletStatus__Copy {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .WalletStatus__Icon {
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 50%;
+    color: #363c30;
+    display: flex;
+    flex: 0 0 42px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    height: 42px;
+    justify-content: center;
+  }
+
+  .WalletStatus h2 {
+    font-size: 1.08rem;
+    margin: 0 0 .35rem;
+  }
+
+  .WalletStatus p:not(.DashboardEyebrow) {
+    color: var(--dash-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .WalletStatus .WalletStatus__Error {
+    color: #a32b23;
+  }
+
+  .DashboardButton {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 750;
+    justify-content: center;
+    min-height: 44px;
+    padding: .65rem 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .DashboardButton-Primary {
+    background: #222820;
+    color: #fff;
+  }
+
+  .DashboardSection {
+    margin-top: 2.5rem;
+  }
+
+  .DashboardSection__Heading {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+  }
+
+  .DashboardSection__Heading h2 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -.035em;
+    margin: 0;
+  }
+
+  .DashboardCards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .DashboardCard {
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 1.25rem;
+  }
+
+  .DashboardCard__Mark {
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.2rem;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+  }
+
+  .DashboardCard h3 {
+    font-size: 1.04rem;
+    margin: 1.05rem 0 .4rem;
+  }
+
+  .DashboardCard p {
+    color: var(--dash-muted);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  .DashboardCard a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750;
+    margin-top: auto;
+    text-decoration: none;
+  }
+
+  .DashboardAccountStrip {
+    align-items: center;
+    background: #eeefe8;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .DashboardAccountStrip > div {
+    display: grid;
+  }
+
+  .DashboardAccountStrip__Label {
+    color: var(--dash-muted);
+    font-size: .72rem;
+  }
+
+  .DashboardAccountStrip strong {
+    font-size: .86rem;
+  }
+
+  .DashboardAccountStrip > a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750px;
+  }
+
+  .DashboardSetup {
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    padding: 1.5rem;
   }
 
   .Footer {
@@ -3119,11 +4468,429 @@ ul {
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
   
-  .Dashboard {
+  .AccountSettings {
+    --settings-ink: #1b1d18;
+    --settings-muted: #66685f;
+    --settings-line: #e4e5dc;
+    background: #f7f7f2; 
+    color: var(--settings-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+  
+  .AccountSettings * {
+    box-sizing: border-box;
+  }
+  
+  .AccountSettings__Container {
+    margin: auto; 
+    max-width: 1120px;
+  }
+  
+  .SettingsLoading {
+    align-items: center; 
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+  
+  .AccountSettings__Heading {
+    margin-bottom: 1.75rem;
+  }
+  
+  .AccountSettings__Heading > p, .AccountSettings__PanelHeading > div > p {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  
+  .AccountSettings__Heading h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -.045em;
+  }
+  
+  .AccountSettings__Heading > span {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Layout {
+    align-items: start;
+    display: grid; 
+    gap: 1.2rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  
+  .AccountSettings__Menu {
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 12px;
+    display: grid; 
+    gap: .25rem; 
+    padding: .5rem;
+  }
+  
+  .AccountSettings__Menu button {
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    color: #4e5149;
+    cursor: pointer;
+    font: inherit;
+    min-height: 44px;
+    padding: .6rem .75rem;
+    text-align: left;
+  }
+  
+  .AccountSettings__Menu button.Is-Active {
+    background: #eff0e7;
+    color: #20251d;
+    font-weight: 750;
+  }
+  
+  .AccountSettings__panel { 
+    background: #fff;
+    border: 1px solid var(--settings-line);
+    border-radius: 14px;
+    min-height: 340px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+  }
+  
+  .AccountSettings__PanelHeading {
+    align-items: center; 
+    border-bottom: 1px solid var(--settings-line);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+  }
+  
+  .AccountSettings__Badge {
+    background: #f1f1e7;
+    border-radius: 99px;
+    padding:.45rem .75rem;
+  }
+  
+  .AccountSettings__Details > div {
+    border-bottom: 1px solid #eeefe9;
+    display: grid;
+    grid-template-columns: minmax(130px, .7fr) 1.3fr;
+    padding: 1rem 0;
+  }
+  
+  .AccountSettings__Details dt {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Details dd {
+    font-weight: 650;
+    margin: 0;
+  }
+  
+  .AccountSettings__Note {
+    background: #f6f6ef; 
+    border-radius: 8px;
+    color: var(--settings-muted);
+    line-height: 1.65;
+    padding: .9rem 1rem;
+  }
+  
+  .AccountSettings__SecurityRow{
+    align-items: center;
+    border-bottom: 1px solid #eeefe9;
+    display: flex;
+    gap: .9rem;
+    padding: 1.1rem 0;
+  }
+  
+  .AccountSettings__SecurityRow > div {
+    flex: 1;
+  }
+  
+  .AccountSettings__SecurityRow h3 {
+    margin: 0;
+  }
+  
+  .AccountSettings__SecurityRow p {
+    color: var(--settings-muted);
+  }
+  
+  .AccountSettings__Link {
+    color: #283126;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  
+  .DashboardPage {
+    --dash-ink: #1b1d18;
+    --dash-muted: #66685f;
+    --dash-paper: #f7f7f2;
+    --dash-line: #e4e5dc;
+    --dash-cream: #f4f3df;
+    background: var(--dash-paper);
+    color: var(--dash-ink);
+    min-height: calc(100vh – 78px);
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+
+  .DashboardPage * {
+    box-sizing: border-box;
+  }
+
+  .DashboardPage__Container {
+    margin: 0 auto;
+    max-width: 1200px
+  }
+
+  .DashboardLoading {
+    align-items: center;
+    color: #66685f;
+    display: flex;
+    justify-content: center;
+    min-height: 45vh;
+  }
+
+  .DashboardWelcome {
+    align-items: flex-start;
+    background: linear-gradient(120deg, #202820, #343c31);
+    border-radius: 18px;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: clamp(1.6rem, 4vw, 3rem);
+  }
+
+  .DashboardEyebrow {
+    color: #77796f;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin: 0 0 .7rem;
+    text-transform: uppercase;
+  }
+
+  .DashboardWelcome .DashboardEyebrow {
+    color: #d5d8c8;
+  }
+
+  .DashboardWelcome h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4.4vw, 3.5rem);
+    letter-spacing: -.045em;
+    line-height: 1.08;
+    margin: 0;
+  }
+
+  .DashboardWelcome__Summary {
+    color: #e4e5dd;
+    line-height: 1.65;
+    margin: .8rem 0 0;
+  }
+
+  .DashboardWelcome__Profile {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: .9rem;
+    justify-content: space-between;
     width: 100%;
+  }
+
+  .DashboardProfileBadge {
+    background: rgb(255 255 255 / 12%);
+    border: 1px solid rgb(255 255 255 / 22%);
+    border-radius: 99px;
+    color: #f7f6df;
+    font-size: .78rem;
+    font-weight: 700;
+    padding: .5rem .85rem;
+  }
+
+  .DashboardWelcome__Profile a {
+    color: #fff;
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .WalletStatus {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding: 1.25rem 1.4rem;
+  }
+
+  .WalletStatus.Is-Active {
+    background: #f0f3e9;
+    border-color: #dbe2d1;
+  }
+
+  .WalletStatus__Copy {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .WalletStatus__Icon {
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 50%;
+    color: #363c30;
+    display: flex;
+    flex: 0 0 42px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    height: 42px;
+    justify-content: center;
+  }
+
+  .WalletStatus h2 {
+    font-size: 1.08rem;
+    margin: 0 0 .35rem;
+  }
+
+  .WalletStatus p:not(.DashboardEyebrow) {
+    color: var(--dash-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .WalletStatus .WalletStatus__Error {
+    color: #a32b23;
+  }
+
+  .DashboardButton {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 750;
+    justify-content: center;
+    min-height: 44px;
+    padding: .65rem 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .DashboardButton-Primary {
+    background: #222820;
+    color: #fff;
+  }
+
+  .DashboardSection {
+    margin-top: 2.5rem;
+  }
+
+  .DashboardSection__Heading {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+  }
+
+  .DashboardSection__Heading h2 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -.035em;
+    margin: 0;
+  }
+
+  .DashboardCards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .DashboardCard {
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 1.25rem;
+  }
+
+  .DashboardCard__Mark {
+    align-items: center;
+    background: var(--dash-cream);
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.2rem;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+  }
+
+  .DashboardCard h3 {
+    font-size: 1.04rem;
+    margin: 1.05rem 0 .4rem;
+  }
+
+  .DashboardCard p {
+    color: var(--dash-muted);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  .DashboardCard a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750;
+    margin-top: auto;
+    text-decoration: none;
+  }
+
+  .DashboardAccountStrip {
+    align-items: center;
+    background: #eeefe8;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .DashboardAccountStrip > div {
+    display: grid;
+  }
+
+  .DashboardAccountStrip__Label {
+    color: var(--dash-muted);
+    font-size: .72rem;
+  }
+
+  .DashboardAccountStrip strong {
+    font-size: .86rem;
+  }
+
+  .DashboardAccountStrip > a {
+    color: #283126;
+    font-size: .84rem;
+    font-weight: 750px;
+  }
+
+  .DashboardSetup {
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--dash-line);
+    border-radius: 14px;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    padding: 1.5rem;
   }
 
   .Footer {

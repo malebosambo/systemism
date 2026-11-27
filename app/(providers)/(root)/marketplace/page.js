@@ -7,6 +7,10 @@ export default function Marketplace() {
       
       <input type="search" name="search marketplace" placeholder="Search Marketplace" />
       
+      <div>
+        
+      </div>
+      
     </main>
   )
 }

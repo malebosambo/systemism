@@ -210,15 +210,18 @@ export default function Home() {
           <div className="HomeProductTrack" ref={productsTrack} role="region" aria-label="Featured Marketplace Products" tabIndex={0}>
             {featuredProducts.map((product) => (
               <article className="HomeProductCard" key={product.name}>
+                
                 <div className={`HomeProductCard__Art HomeProductCard__Art--${product.color}`} aria-hidden="true">
                   <span>{product.icon}</span>
                   <small>Systemism marketplace</small>
                 </div>
+                
                 <div className="HomeProductCard__Details">
                   <p>{product.category}</p>
                   <h4>{product.name}</h4>
                   <Link href="/marketplace" aria-label={`Explore ${product.category} in the marketplace`}>Explore category <span aria-hidden="true">↗</span></Link>
                 </div>
+                
               </article>
             ))}
           </div>

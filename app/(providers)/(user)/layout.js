@@ -8,6 +8,7 @@ import UserHeader from "../../components/userHeader";
 import "../../globals.css";
 
 export default function UserLayout({ children }) {
+  
   const { user, loading } = useAuth();
   const router = useRouter();
   
@@ -19,6 +20,15 @@ export default function UserLayout({ children }) {
     }
     }, [ user, loading, router ]
   )
+  
+  if (loading || !user) {
+    return (
+      <main className="AccountAccessLoading" aria-live="Polite" aria-busy="True">
+        <span aria-hidden="True" />
+        <p>{ loading ? "Loading your secure account…" : "Taking you to sign in…" }</p>
+      </main>
+    )
+  }
   
   return (
     <>
